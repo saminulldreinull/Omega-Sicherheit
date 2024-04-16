@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "Omega-Sicherheit",
+			"path": ".."
+		},
+		{
+			"name": "omega_stuff",
+			"path": "../../../../omega_stuff"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "omega_stuff"
+	}
+}
