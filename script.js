@@ -4,10 +4,10 @@ let i = 0;
 function displayNextWord() {
     let typewriter = document.getElementById("typewriter");
     typewriter.textContent = words[i];
-    typewriter.style.animation = 'fadeInLeftToRight 3s forwards'; // Langsameres Fade-In
+    typewriter.style.animation = 'fadeInLeftToRight 3s forwards'; 
 
     setTimeout(() => {
-        typewriter.style.animation = 'fadeOutRightToLeft 3s forwards'; // Langsameres Fade-Out
+        typewriter.style.animation = 'fadeOutRightToLeft 3s forwards'; 
 
         setTimeout(() => {
             i = (i + 1) % words.length;
