@@ -1,46 +1,107 @@
 const words = ["OMEGA SECURITY", "HIER WIRD IHNEN MIT SICHERHEIT GEHOLFEN!"];
 let i = 0;
 
-function displayNextWord() {
+function animateWords() {
     let typewriter = document.getElementById("typewriter");
     typewriter.textContent = words[i];
-    typewriter.style.animation = 'fadeInLeftToRight 3s forwards'; 
+    typewriter.style.animation = 'fadeInLeftToRight 3s forwards'; // Langsameres Fade-In
 
     setTimeout(() => {
-        typewriter.style.animation = 'fadeOutRightToLeft 3s forwards'; 
+        typewriter.style.animation = 'fadeOutRightToLeft 3s forwards'; // Langsameres Fade-Out
 
         setTimeout(() => {
             i = (i + 1) % words.length;
-            displayNextWord();
+            animateWords();
         }, 3000); // Zeit nach Fade-Out bis zum nächsten Wort
     }, 5000); // Zeit, wie lange das Wort sichtbar ist, verlängert
 }
 
-window.addEventListener('scroll', function() {
-    var header = document.querySelector('header'); // Wählen Sie den Header aus.
-    var section = document.getElementById('facts-section'); // Ersetzen Sie 'sectionId' mit der tatsächlichen ID Ihrer Section.
-    var sectionTop = section.offsetTop; // Top-Position der Section relativ zum Dokument.
-    var sectionHeight = section.offsetHeight; // Höhe der Section.
-    var logo = document.getElementById('logo');
-    var logoContainer = document.getElementById('logo-container');
+document.addEventListener('DOMContentLoaded', animateWords);
 
+// Variablen für die Elemente
+var logo = document.getElementById('logo');
+var logoContainer = document.getElementById('logo-container');
+var header = document.querySelector('header');
+var landingPage = document.getElementById('landing-page');
 
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        header.style.backgroundColor = 'rgb(0,0,77)'; // Ersetzen Sie 'neueFarbe' mit der gewünschten Farbe.
-        logo.classList.add('logo-shrinked')
-        logoContainer.classList.add('logo-container-shrinked');
-        logo.classList.remove('logo');
-        logoContainer.classList.remove('logo-container');
-    } else {
-        header.style.backgroundColor = 'transparent'; 
-        logo.classList.remove('logo-shrinked');
-        logoContainer.classList.remove('logo-container-shrinked');
-        logo.classList.add('logo');
-        logoContainer.classList.add('logo-container');
+// Funktion, die prüft, ob die erste Section verlassen wurde
+function checkSection() {
+  // Bestimmen Sie die Position der ersten Section
+  var landingPageHeight = landingPage.offsetHeight;
+  var landingPageTop = landingPage.getBoundingClientRect().top + window.scrollY;
 
+  // Prüfen, ob sich der Benutzer auf der ersten Section befindet
+  if (window.scrollY < landingPageTop + landingPageHeight) {
+    // Anpassungen, wenn innerhalb der ersten Section
+    header.style.backgroundColor = 'transparent';
+    logo.classList.remove('logo-shrinked');
+    logoContainer.classList.remove('logo-container-shrinked');
+    if (!logo.classList.contains('logo')) {
+      logo.classList.add('logo');
     }
+    if (!logoContainer.classList.contains('logo-container')) {
+      logoContainer.classList.add('logo-container');
+    }
+  } else {
+    // Anpassungen, wenn außerhalb der ersten Section
+    logo.classList.add('logo-shrinked');
+    logoContainer.classList.add('logo-container-shrinked');
+    logo.classList.remove('logo');
+    logoContainer.classList.remove('logo-container');
+    header.style.backgroundColor = 'rgb(0,0,77)';
+  }
+}
+
+// Event Listener für das Scroll-Event
+window.addEventListener('scroll', checkSection);
+
+// Funktion beim Laden der Seite und beim Scrollen ausführen
+document.addEventListener('DOMContentLoaded', checkSection);
+
+// Easing-Funktion
+function easeInOutCubic(x) {
+    return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+}
+
+// Funktion zum Animieren der Zahlen mit der Easing-Funktion
+function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const elapsed = timestamp - startTimestamp;
+        let progress = elapsed / duration;
+        progress = easeInOutCubic(progress); // Anwendung der Easing-Funktion
+
+        const currentValue = Math.floor(progress * (end - start) + start);
+        obj.textContent = "+" + currentValue;
+
+        if (elapsed < duration) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Verwendung von IntersectionObserver, um die Animation auszulösen
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                animateValue(target, 0, parseInt(target.getAttribute('data-target')), 2000);
+                observer.unobserve(target); // Stoppt die Beobachtung nach der Animation
+            }
+        });
+    }, { threshold: 0.5 });
+
+    // Alle Zielelemente hinzufügen
+    document.querySelectorAll('.key-number').forEach(element => {
+        observer.observe(element);
+    });
+
+    displayNextWord();  // Starte das Text-Schreibeffekt nach dem DOM geladen ist
 });
 
 
 
-document.addEventListener('DOMContentLoaded', displayNextWord);
+
