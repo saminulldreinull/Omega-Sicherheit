@@ -58,25 +58,38 @@ window.addEventListener('scroll', checkSection);
 // Funktion beim Laden der Seite und beim Scrollen ausführen
 document.addEventListener('DOMContentLoaded', checkSection);
 
-// Easing-Funktion
-function easeInOutCubic(x) {
-    return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+
+
+
+
+
+
+
+
+
+
+
+// Lineare Easing-Funktion
+function linear(x) {
+    return x; // Gibt einfach den Input direkt zurück
 }
 
-// Funktion zum Animieren der Zahlen mit der Easing-Funktion
+// Funktion zum Animieren der Zahlen mit der linearen Easing-Funktion
 function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
         if (!startTimestamp) startTimestamp = timestamp;
-        const elapsed = timestamp - startTimestamp;
+        const elapsed = Math.min(timestamp - startTimestamp, duration); // Verhindert Überschreitung des Zielwerts
         let progress = elapsed / duration;
-        progress = easeInOutCubic(progress); // Anwendung der Easing-Funktion
+        progress = linear(progress); // Anwendung der linearen Easing-Funktion
 
         const currentValue = Math.floor(progress * (end - start) + start);
         obj.textContent = "+" + currentValue;
 
         if (elapsed < duration) {
             window.requestAnimationFrame(step);
+        } else {
+            obj.textContent = "+" + end; // Stellen Sie sicher, dass das Endziel genau erreicht wird.
         }
     };
     window.requestAnimationFrame(step);
@@ -101,7 +114,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     displayNextWord();  // Starte das Text-Schreibeffekt nach dem DOM geladen ist
 });
-
-
-
-

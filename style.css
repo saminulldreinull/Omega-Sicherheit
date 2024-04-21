@@ -81,7 +81,7 @@ header {
 
 nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;;
 }
 
 .nav-link {
@@ -202,10 +202,13 @@ video {
 
 .facts {
     display: flex;
+    position: relative;
     gap: 5vw;
     padding-left: 2vw;
     padding-bottom: 2vh;
 }
+
+
 
 
 
@@ -214,16 +217,23 @@ video {
     font-weight: 900;
     width: 100%;  
 }
-
+ 
 .label {
     font-weight: bold;
     font-size: 18px;
 }
 
+
 .key-figure-container, .label {
     min-width: 50%;
     min-height: 50%;
 }
+
+.key-figure-container {
+    bottom: 100%;
+    position: absolute;
+}
+
 
 .service-column {
     display:flex;
@@ -240,8 +250,17 @@ video {
     align-items: end;
     padding-left: 5vw;
     padding-right: 5vw;
-    
 }
+/* 
+.service-container:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 0, 77);
+}
+
+.service-container:hover .icon path {
+    fill: white;
+} */
 
 .service-container {
     background-color: rgb(237,237,237);
@@ -276,7 +295,7 @@ video {
 }
 
 .service-label {
-
+font-size: 20px;
 
 }
 
