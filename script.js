@@ -19,16 +19,16 @@ function animateWords() {
 document.addEventListener('DOMContentLoaded', animateWords);
 
 // Variablen für die Elemente
-var logo = document.getElementById('logo');
-var logoContainer = document.getElementById('logo-container');
-var header = document.querySelector('header');
-var landingPage = document.getElementById('landing-page');
+let logo = document.getElementById('logo');
+let logoContainer = document.getElementById('logo-container');
+let header = document.querySelector('header');
+let landingPage = document.getElementById('landing-page');
 
 // Funktion, die prüft, ob die erste Section verlassen wurde
 function checkSection() {
   // Bestimmen Sie die Position der ersten Section
-  var landingPageHeight = landingPage.offsetHeight;
-  var landingPageTop = landingPage.getBoundingClientRect().top + window.scrollY;
+  let landingPageHeight = landingPage.offsetHeight;
+  let landingPageTop = landingPage.getBoundingClientRect().top + window.scrollY;
 
   // Prüfen, ob sich der Benutzer auf der ersten Section befindet
   if (window.scrollY < landingPageTop + landingPageHeight) {
@@ -57,17 +57,6 @@ window.addEventListener('scroll', checkSection);
 
 // Funktion beim Laden der Seite und beim Scrollen ausführen
 document.addEventListener('DOMContentLoaded', checkSection);
-
-
-
-
-
-
-
-
-
-
-
 
 // Lineare Easing-Funktion
 function linear(x) {
@@ -112,5 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    displayNextWord();  // Starte das Text-Schreibeffekt nach dem DOM geladen ist
+    animateWords();  // Starte das Text-Schreibeffekt nach dem DOM geladen ist
 });
+
