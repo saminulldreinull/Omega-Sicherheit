@@ -1,24 +1,26 @@
+/* -------------------------------------Landing Page------------------------------------------------------- */
 const words = ["OMEGA SECURITY", "HIER WIRD IHNEN MIT SICHERHEIT GEHOLFEN!"];
 let i = 0;
 
 function animateWords() {
     let typewriter = document.getElementById("typewriter");
     typewriter.textContent = words[i];
-    typewriter.style.animation = 'fadeInLeftToRight 3s forwards'; // Langsameres Fade-In
+    typewriter.style.animation = 'fadeInLeftToRight 3s forwards';
 
     setTimeout(() => {
-        typewriter.style.animation = 'fadeOutRightToLeft 3s forwards'; // Langsameres Fade-Out
+        typewriter.style.animation = 'fadeOutRightToLeft 3s forwards'; 
 
         setTimeout(() => {
             i = (i + 1) % words.length;
             animateWords();
-        }, 3000); // Zeit nach Fade-Out bis zum nächsten Wort
-    }, 5000); // Zeit, wie lange das Wort sichtbar ist, verlängert
+        }, 3000);
+    }, 5000); 
 }
 
 document.addEventListener('DOMContentLoaded', animateWords);
+/* -----------------------------------------End--------------------------------------------------------------- */
 
-// Variablen für die Elemente
+
 let logo = document.getElementById('logo');
 let logoContainer = document.getElementById('logo-container');
 let header = document.querySelector('header');
@@ -101,9 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    animateWords();  // Starte das Text-Schreibeffekt nach dem DOM geladen ist
 });
 
+/* ------------------------------------------------------------------------------------------------------------ */
 
 const races = document.querySelector(".races");
 console.log(races.offsetWidth)
