@@ -10,6 +10,10 @@ html {
     box-sizing: border-box;
 }
 
+section {
+    overflow-x: hidden;
+    /* scroll-snap-align: start; */
+}
 
 header::before {
     content: "";
@@ -21,6 +25,10 @@ header::before {
     left: 0;
     backdrop-filter: blur(1px); /* The blur effect you want */
     -webkit-backdrop-filter: blur(1px);
+}
+
+.service-section {
+    scroll-snap-type: none; /* Deaktivieren des Scroll-Snaps spezifisch für diese Section */
 }
 
 header {
@@ -220,31 +228,32 @@ video {
 .races {
     padding-top: 5vh;
     margin-left: 20vw;
-    padding-right:40vw;
+    padding-right: 40vw;
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
+    gap: 4vw;
     flex-wrap: nowrap;
 }
 .service-container {
     box-sizing: border-box;
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
     height: 65vh;
-    width: 120vh;
+    width: auto;
     display: flex;
     position: relative;
 }
 
+.image-container {
+    width: 60vw;
+    height: 65vh;
+}
+
 .service-image {
-    border-radius: 30px;
+    border-radius: 20px;
     height: 100%;
     width: 100%;
     object-fit: fill;
-}
-
-.image-container {
-    width: 90%;
-    height: 100%;
 }
 
 .service-text-container {
@@ -260,10 +269,102 @@ video {
 }
 
 .service-description-container {
-    font-size: 1.5vh;
+    text-wrap: wrap;
+    font-size: 2vh;
+    font-size: clamp(0.8rem, 1.2vw, 2rem);
+    text-wrap: nowrap;
+    width: 45%;
 }
 .service-label-container {
     font-size: 5vh;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     font-weight: 800;
 }
 
+.service-information-container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    top: 50%;
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 2rem);
+    line-height: 1.5;
+}
+
+
+
+.service-information-container {
+    display: none;
+    transition: opacity 0.5s;
+}
+
+.service-container:hover .service-information-container {
+    display: block;
+    opacity: 1;
+}
+
+.service-container:hover .service-label,
+.service-container:hover .service-description {
+    cursor: pointer;
+    display: none;
+}
+
+.service-container:hover .service-image {
+  
+    filter: brightness(50%);
+}
+
+.service-image {
+    transition: opacity 0.5s;
+}  
+
+@media screen and (max-width: 600px) {
+
+    .service-information-container{
+     
+    }
+    .races {
+        padding-left: 80px;
+        margin-right: 20vw;
+    }
+    .image-container,
+    .service-container {
+        width: 95vw;
+        height: 40vh;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+  
+    .races {
+        padding-left: 50px;
+        padding-right: 500px;
+    }
+    .image-container,.service-container{
+        width: 90vw;
+        height: 50vh;
+    }
+}
+@media screen and (min-width: 768px) {
+    .races{
+        padding-left: 40px;
+        margin-right: 20vw;
+    }
+    
+    .service-container,.image-container {
+        width: 50vw;
+        height: 50vh;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .image-container,
+    .service-container {
+        width: 55vw;
+        height: 65vh;
+    }
+}

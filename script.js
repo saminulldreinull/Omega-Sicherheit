@@ -1,4 +1,5 @@
-/* -------------------------------------Landing Page------------------------------------------------------- */
+
+  
 const words = ["OMEGA SECURITY", "HIER WIRD IHNEN MIT SICHERHEIT GEHOLFEN!"];
 let i = 0;
 
@@ -18,23 +19,19 @@ function animateWords() {
 }
 
 document.addEventListener('DOMContentLoaded', animateWords);
-/* -----------------------------------------End--------------------------------------------------------------- */
 
 
+/* Header change */
 let logo = document.getElementById('logo');
 let logoContainer = document.getElementById('logo-container');
 let header = document.querySelector('header');
 let landingPage = document.getElementById('landing-page');
 
-// Funktion, die prüft, ob die erste Section verlassen wurde
 function checkSection() {
-  // Bestimmen Sie die Position der ersten Section
   let landingPageHeight = landingPage.offsetHeight;
   let landingPageTop = landingPage.getBoundingClientRect().top + window.scrollY;
 
-  // Prüfen, ob sich der Benutzer auf der ersten Section befindet
   if (window.scrollY < landingPageTop + landingPageHeight) {
-    // Anpassungen, wenn innerhalb der ersten Section
     header.style.backgroundColor = 'transparent';
     logo.classList.remove('logo-shrinked');
     logoContainer.classList.remove('logo-container-shrinked');
@@ -45,7 +42,6 @@ function checkSection() {
       logoContainer.classList.add('logo-container');
     }
   } else {
-    // Anpassungen, wenn außerhalb der ersten Section
     logo.classList.add('logo-shrinked');
     logoContainer.classList.add('logo-container-shrinked');
     logo.classList.remove('logo');
@@ -54,25 +50,23 @@ function checkSection() {
   }
 }
 
-// Event Listener für das Scroll-Event
+
 window.addEventListener('scroll', checkSection);
 
-// Funktion beim Laden der Seite und beim Scrollen ausführen
 document.addEventListener('DOMContentLoaded', checkSection);
 
-// Lineare Easing-Funktion
+/* key-figure animation */
 function linear(x) {
-    return x; // Gibt einfach den Input direkt zurück
+    return x; 
 }
 
-// Funktion zum Animieren der Zahlen mit der linearen Easing-Funktion
 function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
         if (!startTimestamp) startTimestamp = timestamp;
-        const elapsed = Math.min(timestamp - startTimestamp, duration); // Verhindert Überschreitung des Zielwerts
+        const elapsed = Math.min(timestamp - startTimestamp, duration); 
         let progress = elapsed / duration;
-        progress = linear(progress); // Anwendung der linearen Easing-Funktion
+        progress = linear(progress); 
 
         const currentValue = Math.floor(progress * (end - start) + start);
         obj.textContent = "+" + currentValue;
@@ -80,33 +74,31 @@ function animateValue(obj, start, end, duration) {
         if (elapsed < duration) {
             window.requestAnimationFrame(step);
         } else {
-            obj.textContent = "+" + end; // Stellen Sie sicher, dass das Endziel genau erreicht wird.
+            obj.textContent = "+" + end; 
         }
     };
     window.requestAnimationFrame(step);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Verwendung von IntersectionObserver, um die Animation auszulösen
+    
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const target = entry.target;
                 animateValue(target, 0, parseInt(target.getAttribute('data-target')), 2000);
-                observer.unobserve(target); // Stoppt die Beobachtung nach der Animation
+                observer.unobserve(target); 
             }
         });
     }, { threshold: 0.5 });
-
-    // Alle Zielelemente hinzufügen
     document.querySelectorAll('.key-number').forEach(element => {
         observer.observe(element);
     });
 
 });
+/* key figure animation ende */
 
-/* ------------------------------------------------------------------------------------------------------------ */
-
+/* horizontal scroll gsap */
 const races = document.querySelector(".races");
 console.log(races.offsetWidth)
 
@@ -121,7 +113,6 @@ const tween = gsap.to(races, {
 	ease: "none",
 });
 
-
 ScrollTrigger.create({
 	trigger:".racesWrapper",
 	start:"top 20%",
@@ -132,3 +123,4 @@ ScrollTrigger.create({
 	invalidateOnRefresh:true,
 	markers:false
 })
+

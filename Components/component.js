@@ -1,8 +1,3 @@
-// master GSAP and ScrollTrigger
-// https://www.creativeCodingClub.com
-// Unlock over 250 video lessons
-
-
 const races = document.querySelector(".races");
 console.log(races.offsetWidth)
 
@@ -17,7 +12,6 @@ const tween = gsap.to(races, {
 	ease: "none",
 });
 
-
 ScrollTrigger.create({
 	trigger:".racesWrapper",
 	start:"top 20%",
@@ -28,4 +22,6 @@ ScrollTrigger.create({
 	invalidateOnRefresh:true,
 	markers:false
 })
+
+
 
