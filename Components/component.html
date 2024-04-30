@@ -1,156 +1,20 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <script src="component.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="component.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Batak&family=Patua+One&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-    <title>Omega Security GmbH</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omega Header</title>
+  <link rel="stylesheet" href="component.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="component.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Batak&family=Patua+One&family=Titan+One&display=swap"
+    rel="stylesheet"
+  />
+</head>
 <body>
-  <section class="service-section">
-    <div class="racesWrapper">
-        <div class="races">
   
-            <!-- Alarmaufschaltung -->
-            <div class="service-container">
-                <div class="image-container">
-                    <img class="service-image" alt="Alarmaufschaltung" src="../images/alarmaufschaltung.webp"/>
-                </div>
-                <div class="service-text-container">
-                    <div class="service-description-container">
-                        <p class="service-description">Effiziente Alarmaufschaltung, zuverlässiger Service.</p>
-                    </div>
-                    <div class="service-label-container">
-                        <p class="service-label">Alarmaufschaltung</p>
-                    </div>
-                    <div class="service-information-container">
-                        <p class="service-information">Sichern Sie Ihr Eigentum effektiv mit unserer professionellen Alarmaufschaltung. Dieser Service verbindet Ihr Alarmsystem direkt mit unserer Sicherheitszentrale, die rund um die Uhr besetzt ist. Im Alarmfall reagieren wir sofort und leiten die notwendigen Maßnahmen ein, um Ihr Objekt zu schützen. Ob Einbruch, Brand oder andere Notfälle, unsere schnelle Reaktionszeit minimiert potenzielle Schäden.</p>
-                    </div>
-                </div>
-            </div>
-  
-            <!-- Baustellenbewachung -->
-            <div class="service-container">
-                <div class="image-container">
-                    <img class="service-image" alt="Baustellenbewachung" src="../images/berliner_baustelle.webp"/>
-                </div>
-                <div class="service-text-container">
-                    <div class="service-description-container">
-                        <p class="service-description">Absicherung von Baustellen</p>
-                    </div>
-                    <div class="service-label-container">
-                        <p class="service-label">Baustellenbewachung</p>
-                    </div>
-                    <div class="service-information-container">
-                        <p class="service-information">Sichern Sie Ihre Baustelle effektiv mit unserer professionellen Baustellenbewachung. Wir überwachen Ihre Baustelle rund um die Uhr, um Diebstahl, Vandalismus und unbefugten Zutritt zu verhindern. Unsere Sicherheitskräfte sind speziell geschult, um auf Baustellen für Ordnung und Sicherheit zu sorgen.</p>
-                    </div>
-                </div>
-            </div>
-  
-            <!-- Doorman -->
-            <div class="service-container">
-                <div class="image-container">
-                    <img class="service-image" alt="Doorman" src="../images/doorman.webp"/>
-                </div>
-                <div class="service-text-container">
-                    <div class="service-description-container">
-                        <p class="service-description">Stilvoller Empfang, effektiver Schutz</p>
-                    </div>
-                    <div class="service-label-container">
-                        <p class="service-label">Doorman</p>
-                    </div>
-                    <div class="service-information-container">
-                        <p class="service-information">Unsere professionellen Doormen verleihen Ihrem Geschäft oder Event eine zusätzliche Ebene der Sicherheit und Eleganz. Sie sind nicht nur für den Einlass verantwortlich, sondern repräsentieren auch das positive Image Ihres Unternehmens. Unsere gut ausgebildeten Mitarbeiter beherrschen sowohl Sicherheits- als auch Kundenserviceaufgaben mit Bravour.</p>
-                    </div>
-                </div>
-            </div>
-  
-            <!-- Empfangs- und Pfortendienst -->
-            <div class="service-container">
-                <div class="image-container">
-                    <img class="service-image" alt="Empfangs- und Pfortendienst" src="../images/pforte.webp"/>
-                </div>
-                <div class="service-text-container">
-                    <div class="service-description-container">
-                        <p class="service-description">Empfangsdienste mit Stil</p>
-                    </div>
-                    <div class="service-label-container">
-                        <p class="service-label">Empfangs- und Pfortendienst</p>
-                    </div>
-                    <div class="service-information-container">
-                        <p class="service-information">Steigern Sie das Ansehen Ihres Unternehmens mit unserem erstklassigen Empfangs- und Pfortendienst. Unsere Empfangsmitarbeiter sind speziell geschult, um Besucher professionell zu begrüßen und gleichzeitig Sicherheitsprotokolle zu überwachen. Sie sorgen für einen reibungslosen Besucherfluss und verstärken das Sicherheitsgefühl bei Ihren Gästen und Mitarbeitern.</p>
-                    </div>
-  
-                  </div>
-                </div>
-    
-                <!-- Revier- und Streifendienst -->
-                <div class="service-container">
-                    <div class="image-container">
-                        <img class="service-image" alt="Revier- und Streifendienst" src="../images/security car parked.webp"/>
-                    </div>
-                    <div class="service-text-container">
-                        <div class="service-description-container">
-                            <p class="service-description">Mobile Überwachung rundum</p>
-                        </div>
-                        <div class="service-label-container">
-                            <p class="service-label">Revier- und Streifendienst</p>
-                        </div>
-                        <div class="service-information-container">
-                            <p class="service-information">Unser Revier- und Streifendienst bietet flexible und effektive Überwachungslösungen. Durch regelmäßige Streifenfahrten und Fußpatrouillen gewährleisten wir die Sicherheit verschiedener Objekte, besonders nachts. Dieser Service ist ideal, um großflächige Areale wie Industrieparks oder Wohngebiete zu sichern.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Veranstaltungsschutz -->
-                <div class="service-container">
-                    <div class="image-container">
-                        <img class="service-image" alt="Veranstaltungsschutz" src="../images/veranstaltungsschutz.webp"/>
-                    </div>
-                    <div class="service-text-container">
-                        <div class="service-description-container">
-                            <p class="service-description">Sicherheit für Ihre Events</p>
-                        </div>
-                        <div class="service-label-container">
-                            <p class="service-label">Veranstaltungsschutz</p>
-                        </div>
-                        <div class="service-information-container">
-                            <p class="service-information">Gewährleisten Sie die Sicherheit Ihrer Veranstaltung mit unserem spezialisierten Veranstaltungsschutz. Unser erfahrenes Sicherheitsteam kümmert sich um die Prävention von Zwischenfällen und sorgt für einen reibungslosen Ablauf. Ob Firmenevents, Konzerte oder private Feiern, wir bieten maßgeschneiderte Sicherheitslösungen. Vertrauen Sie auf unsere Expertise, um Ihre Gäste sicher zu halten.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Werk- und Objektschutz -->
-                <div class="service-container">
-                    <div class="image-container">
-                        <img class="service-image" alt="Werk- und Objektschutz" src="../images/werk-_objektschutz.webp"/>
-                    </div>
-                    <div class="service-text-container">
-                        <div class="service-description-container">
-                            <p class="service-description">Schutz für Anlagen & Gebäude</p>
-                        </div>
-                        <div class="service-label-container">
-                            <p class="service-label">Werk- und Objektschutz</p>
-                        </div>
-                        <div class="service-information-container">
-                            <p class="service-information">Schützen Sie Ihre Industrieanlagen und Geschäftsgebäude mit unserem zuverlässigen Werk- und Objektschutz. Wir sorgen für die Sicherheit Ihrer Objekte durch kontinuierliche Überwachung und präventive Maßnahmen. Mit modernster Technologie und geschultem Personal minimieren wir Risiken und bieten Schutz vor Diebstahl, Vandalismus und anderen Bedrohungen.</p>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-    </section>
-    
+ 
 </body>
 </html>

@@ -5,6 +5,7 @@
     <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -17,9 +18,10 @@
     <title>Omega Security GmbH</title>
   </head>
   <body>
-    <header class="header">
+    <header class = "header">
       <div class="logo-container" id="logo-container">
-        <svg
+        <svg 
+        alt = "Omega Security GmbH"
           class="logo"
           id="logo"
           viewBox="0 0 72.152344 70.920394"
@@ -27,6 +29,8 @@
           xmlns="http://www.w3.org/2000/svg"
           xmlns:svg="http://www.w3.org/2000/svg"
         >
+        <title>Logo von Omega Security GmbH</title>
+        <desc>Die Berliner Siegessäule, die vom griechischen Buchstaben Omega umhüllt dargestellt wird. </desc>
           <defs id="defs66" />
           <g id="surface1" transform="translate(-3.2126731,-262.88485)">
             <path
@@ -222,21 +226,25 @@
           </g>
         </svg>
       </div>
-
-      <div class="nav-container">
-        <nav>
-          <a class="nav-link">HOME</a>
-          <a class="nav-link">ÜBER UNS</a>
-          <a class="nav-link">LEISTUNGEN</a>
-          <a class="nav-link">KONTAKT</a>
-        </nav>
-      </div>
-      <div class=""></div>
-    </header>
+      <nav class = "nav-menu">
+          <ul class='nav-bar'>
+              <input type='checkbox' id='check' />
+              <span class="menu">
+                <li class="nav-item"><a class="nav-link" href="#about">HOME</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">ÜBER UNS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#service-introduction">LEISTUNGEN</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">KONTAKT</a></li>
+  
+                  <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+              </span>
+              <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+          </ul>
+      </nav>
+      </header>
     </div>
     <section id = "landing-page">
       <div class="w-full h-full flex justify-center items-center">
-        <h1 id="typewriter"></h1>
+        <h1 id="typewriter">Omega Security </h1>
       </div>
 
       <video autoplay muted loop>
@@ -305,7 +313,7 @@
                       <p class="service-description">Effiziente Alarmaufschaltung, zuverlässiger Service.</p>
                   </div>
                   <div class="service-label-container">
-                      <p class="service-label">Alarmaufschaltung</p>
+                      <h4 class="service-label">Alarmaufschaltung</h4>
                   </div>
                  <div class="service-information-container">
                       <p class="service-information">Sichern Sie Ihr Eigentum effektiv mit unserer professionellen Alarmaufschaltung. Dieser Service verbindet Ihr Alarmsystem direkt mit unserer Sicherheitszentrale, die rund um die Uhr besetzt ist. Im Alarmfall reagieren wir sofort und leiten die notwendigen Maßnahmen ein, um Ihr Objekt zu schützen. Ob Einbruch, Brand oder andere Notfälle, unsere schnelle Reaktionszeit minimiert potenzielle Schäden.</p>
@@ -322,7 +330,7 @@
                       <p class="service-description">Absicherung von Baustellen</p>
                   </div>
                   <div class="service-label-container">
-                      <p class="service-label">Baustellenbewachung</p>
+                      <h4 class="service-label">Baustellenbewachung</h4>
                   </div>
                  <div class="service-information-container">
                       <p class="service-information">Sichern Sie Ihre Baustelle effektiv mit unserer professionellen Baustellenbewachung. Wir überwachen Ihre Baustelle rund um die Uhr, um Diebstahl, Vandalismus und unbefugten Zutritt zu verhindern. Unsere Sicherheitskräfte sind speziell geschult, um auf Baustellen für Ordnung und Sicherheit zu sorgen.</p>
@@ -339,7 +347,7 @@
                       <p class="service-description">Stilvoller Empfang, effektiver Schutz</p>
                   </div>
                   <div class="service-label-container">
-                      <p class="service-label">Doorman</p>
+                      <h4 class="service-label">Doorman</h4>
                   </div>
                  <div class="service-information-container">
                       <p class="service-information">Unsere professionellen Doormen verleihen Ihrem Geschäft oder Event eine zusätzliche Ebene der Sicherheit und Eleganz. Sie sind nicht nur für den Einlass verantwortlich, sondern repräsentieren auch das positive Image Ihres Unternehmens. Unsere gut ausgebildeten Mitarbeiter beherrschen sowohl Sicherheits- als auch Kundenserviceaufgaben mit Bravour.</p>
@@ -356,7 +364,7 @@
                       <p class="service-description">Empfangsdienste mit Stil</p>
                   </div>
                   <div class="service-label-container">
-                      <p class="service-label">Empfangs- und Pfortendienst</p>
+                      <h4 class="service-label">Empfangs- und Pfortendienst</h4>
                   </div>
                 <div class="service-information-container">
                       <p class="service-information">Steigern Sie das Ansehen Ihres Unternehmens mit unserem erstklassigen Empfangs- und Pfortendienst. Unsere Empfangsmitarbeiter sind speziell geschult, um Besucher professionell zu begrüßen und gleichzeitig Sicherheitsprotokolle zu überwachen. Sie sorgen für einen reibungslosen Besucherfluss und verstärken das Sicherheitsgefühl bei Ihren Gästen und Mitarbeitern.</p>
@@ -374,7 +382,7 @@
                           <p class="service-description">Mobile Überwachung rundum</p>
                       </div>
                       <div class="service-label-container">
-                          <p class="service-label">Revier- und Streifendienst</p>
+                          <h4 class="service-label">Revier- und Streifendienst</h4>
                       </div>
                      <div class="service-information-container">
                           <p class="service-information">Unser Revier- und Streifendienst bietet flexible und effektive Überwachungslösungen. Durch regelmäßige Streifenfahrten und Fußpatrouillen gewährleisten wir die Sicherheit verschiedener Objekte, besonders nachts. Dieser Service ist ideal, um großflächige Areale wie Industrieparks oder Wohngebiete zu sichern.</p>
@@ -391,7 +399,7 @@
                           <p class="service-description">Sicherheit für Ihre Events</p>
                       </div>
                       <div class="service-label-container">
-                          <p class="service-label">Veranstaltungsschutz</p>
+                          <h4 class="service-label">Veranstaltungsschutz</h4>
                       </div>
                      <div class="service-information-container">
                           <p class="service-information">Gewährleisten Sie die Sicherheit Ihrer Veranstaltung mit unserem spezialisierten Veranstaltungsschutz. Unser erfahrenes Sicherheitsteam kümmert sich um die Prävention von Zwischenfällen und sorgt für einen reibungslosen Ablauf. Ob Firmenevents, Konzerte oder private Feiern, wir bieten maßgeschneiderte Sicherheitslösungen. Vertrauen Sie auf unsere Expertise, um Ihre Gäste sicher zu halten.</p>
@@ -408,7 +416,7 @@
                           <p class="service-description">Schutz für Anlagen & Gebäude</p>
                       </div>
                       <div class="service-label-container">
-                          <p class="service-label">Werk- und Objektschutz</p>
+                          <h4 class="service-label">Werk- und Objektschutz</h4>
                       </div>
                       <div class="service-information-container">
                           <p class="service-information">Schützen Sie Ihre Industrieanlagen und Geschäftsgebäude mit unserem zuverlässigen Werk- und Objektschutz. Wir sorgen für die Sicherheit Ihrer Objekte durch kontinuierliche Überwachung und präventive Maßnahmen. Mit modernster Technologie und geschultem Personal minimieren wir Risiken und bieten Schutz vor Diebstahl, Vandalismus und anderen Bedrohungen.</p>

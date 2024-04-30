@@ -28,26 +28,18 @@ let header = document.querySelector('header');
 let landingPage = document.getElementById('landing-page');
 
 function checkSection() {
-  let landingPageHeight = landingPage.offsetHeight;
-  let landingPageTop = landingPage.getBoundingClientRect().top + window.scrollY;
+    let landingPageHeight = landingPage.offsetHeight;
+    let landingPageTop = landingPage.getBoundingClientRect().top + window.scrollY;
 
-  if (window.scrollY < landingPageTop + landingPageHeight) {
-    header.style.backgroundColor = 'transparent';
-    logo.classList.remove('logo-shrinked');
-    logoContainer.classList.remove('logo-container-shrinked');
-    if (!logo.classList.contains('logo')) {
-      logo.classList.add('logo');
+    if (window.scrollY < landingPageTop + landingPageHeight) {
+        header.style.backgroundColor = 'transparent';
+        logo.classList.remove('logo-shrinked');
+        logoContainer.classList.remove('logo-container-shrinked');
+    } else {
+        logo.classList.add('logo-shrinked');
+        logoContainer.classList.add('logo-container-shrinked');
+        header.style.backgroundColor = 'rgb(0,0,77)';
     }
-    if (!logoContainer.classList.contains('logo-container')) {
-      logoContainer.classList.add('logo-container');
-    }
-  } else {
-    logo.classList.add('logo-shrinked');
-    logoContainer.classList.add('logo-container-shrinked');
-    logo.classList.remove('logo');
-    logoContainer.classList.remove('logo-container');
-    header.style.backgroundColor = 'rgb(0,0,77)';
-  }
 }
 
 
@@ -123,4 +115,5 @@ ScrollTrigger.create({
 	invalidateOnRefresh:true,
 	markers:false
 })
+
 

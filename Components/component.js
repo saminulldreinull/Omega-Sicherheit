@@ -1,27 +1,36 @@
-const races = document.querySelector(".races");
-console.log(races.offsetWidth)
+window.onload = () => {
+    let openMenu = document.querySelector(".open-menu");
+  
+    openMenu.addEventListener("click", (e) => {
+      document.documentElement.style.overflow = 'hidden';
+    });
+  
+    let closeMenu = document.querySelector(".close-menu");
+    closeMenu.addEventListener("click", (e) => {
+      document.documentElement.style.overflow = 'visible';
+    });
+  
+    let navLinks = document.querySelectorAll(".nav-item");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        closeMenu.click(); 
+      });
+    });
+  
+    window.addEventListener("scroll", (event) => {
+      let scroll = this.scrollY;
+      if (scroll > 10) {
+        document.querySelector("header").classList.add("shadow");
+      } else {
+        document.querySelector("header").classList.remove("shadow");
+      }
+    });
+  };
 
-function getScrollAmount() {
-	let racesWidth = races.scrollWidth;
-	return -(racesWidth - window.innerWidth);
-}
-
-const tween = gsap.to(races, {
-	x: getScrollAmount,
-	duration: 3,
-	ease: "none",
-});
-
-ScrollTrigger.create({
-	trigger:".racesWrapper",
-	start:"top 20%",
-	end: () => `+=${getScrollAmount() * -1}`,
-	pin:true,
-	animation:tween,
-	scrub:1,
-	invalidateOnRefresh:true,
-	markers:false
-})
-
-
-
+  window.addEventListener('resize', () => {
+    const checkbox = document.getElementById('check');
+    if (window.innerWidth > 1028 && checkbox.checked) {
+      checkbox.checked = false;
+      document.documentElement.style.overflow = 'visible';
+    }
+  });
