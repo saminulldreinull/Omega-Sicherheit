@@ -375,8 +375,9 @@ video {
 }
 
 .image-container,.service-container {
-    width: clamp(20rem,90vw,50rem);
-    height: clamp(18rem,70vh,30rem);
+
+    width: 110vw;
+    height: 40vh;
 }
 
 .service-image {
@@ -401,13 +402,13 @@ video {
 .service-description-container {
     text-wrap: wrap;
     font-size: 2vh;
-    font-size: clamp(0.8rem, 1.2vw, 2rem);
+    font-size: clamp(0.6rem, 1.2vw, 2rem);
     text-wrap: nowrap;
     width: 45%;
 }
 .service-label-container {
     font-size: 5vh;
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 800;
 }
 
@@ -456,11 +457,18 @@ video {
     }
     .image-container,
     .service-container {
-        width: 95vw;
-        height: 100vh;
+        width: 90vw!important;
+        height: 30vh!important;
     }
 }
 
+@media(max-width: 390px) {
+    .image-container,
+    .service-container {
+        width: 49vw;
+        height: 50vh;
+    }
+}
 @media (max-width: 768px) {
     .races {
         padding-left: 50px;
