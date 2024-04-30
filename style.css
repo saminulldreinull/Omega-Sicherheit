@@ -452,6 +452,7 @@ video {
     .service-information-container {
     }
     .races {
+        padding-top: 20vh;
         padding-left: 80px;
         margin-right: 20vw;
     }
