@@ -20,12 +20,12 @@ section {
 }
 
 .logo-container {
+    padding-top: 1vh;
     position: absolute;
     top: 0;
     left: 3%;
     height: auto;
     width: auto;
-    padding-top: 1vh;
 }
 
 .logo {
@@ -43,8 +43,8 @@ section {
 .logo {
     
     flex: 0 0 auto;
-    width: clamp(3.5rem, 7.5vw, 5rem);
-    height: clamp(3.5rem, 7.5vh, 5rem);
+    width: clamp(2.5rem, 7.5vw, 5rem);
+    height: clamp(2.5rem, 7.5vh, 5rem);
 }
 
 header::before {
@@ -65,7 +65,7 @@ header {
     top: 0;
     position: fixed;
     width: 100vw;
-    height: 10vh;
+    height: clamp(4.5rem, 7.5vh, 5rem);
     z-index: 1000;
     display: flex;
     justify-content: center;
