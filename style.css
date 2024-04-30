@@ -296,13 +296,12 @@ video {
 .about-us-text {
     word-wrap: break-word;
     font-weight: 800;
-    font-size: clamp(2rem, 2vw + 2rem, 60px);
+    font-size: clamp(0.5rem, 5vw, 4rem);
 }
 
 .keyword,
 .label {
     color: rgb(129, 164, 205);
-    white-space: nowrap;
 }
 
 .about-us,
@@ -314,19 +313,19 @@ video {
     display: flex;
     position: relative;
     gap: 7vw;
-    padding-left: 2vw;
-    padding-bottom: 2vh;
+    padding-left: clamp(0.5rem,1.5vw,1.3rem);
+    padding-bottom: clamp(1rem, 2vw ,1.5rem)
 }
 
 .key-figure {
-    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 900;
     width: 100%;
 }
 
 .label {
     font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .key-figure-container,
@@ -392,11 +391,11 @@ video {
     position: absolute;
     height: 100%;
     width: 100%;
-    padding-bottom: 10vh;
-    padding-left: 2.8vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: clamp(2.5rem,9vw,6rem);
+    padding-left: clamp(1rem,3vw,2rem);
 }
 
 .service-description-container {
