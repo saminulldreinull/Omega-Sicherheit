@@ -19,14 +19,13 @@ section {
     scroll-snap-type: none;
 }
 
-
 .logo-container {
     position: absolute;
     top: 0;
     left: 3%;
-  height: auto;
-  width: auto;
-   padding-top: 1vh;
+    height: auto;
+    width: auto;
+    padding-top: 1vh;
 }
 
 .logo {
@@ -39,18 +38,15 @@ section {
 }
 
 .logo-shrinked path {
-    fill: #FFF; /* Beispiel, um sicherzustellen, dass es sichtbar bleibt, wenn sich die Farbe des Headers ändert */
+    fill: #fff; /* Beispiel, um sicherzustellen, dass es sichtbar bleibt, wenn sich die Farbe des Headers ändert */
 }
 .logo-big {
     flex: 0 0 auto;
-    width: clamp(3rem,7.5vw,4rem);
-    height: clamp(3rem,7.5vh,4rem);
+    width: clamp(3rem, 7.5vw, 4rem);
+    height: clamp(3rem, 7.5vh, 4rem);
 }
 
-
-
-
- header::before {
+header::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -58,10 +54,9 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    backdrop-filter: blur(3px); 
+    backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-} 
-
+}
 
 header {
     opacity: 100%;
@@ -75,7 +70,7 @@ header {
     justify-content: center;
     align-items: center;
 }
-  
+
 .nav-branding {
     width: auto;
     font-size: clamp(2rem, 1.5vw, 1.25rem);
@@ -83,51 +78,57 @@ header {
     padding-top: 2vh;
     text-decoration: none;
     color: white;
-  }
-  
-  .nav-branding span {
+}
+
+.nav-branding span {
     padding-left: 0.5rem;
     font-size: clamp(0.75rem, 1.5vw, 1rem);
-  }
-  
-  body.open-nav-branding {
+}
+
+body.open-nav-branding {
     overflow: hidden;
-  }
-  
-  .nav-menu {
+}
+
+.nav-menu {
     color: white;
     width: auto;
     display: flex;
     flex-direction: row;
     padding-right: 4vh;
     font-weight: bold;
-  } 
-  
-  a.nav-link:hover {
+}
+
+a.nav-link:hover {
     color: black;
     transition: 0.7s ease;
-  }
-  /*----header-end----*/
-  
-  .nav-bar {
+}
+/*----header-end----*/
+
+.nav-bar {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;
-    
-  }
-  .logo img {width: 40px;}
-  .menu {display: flex;}
-  .menu li {padding-left: 6vw;}
-  .menu li a {
+}
+.logo img {
+    width: 40px;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    padding-left: 6vw;
+}
+.menu li a {
     display: inline-block;
     text-decoration: none;
     color: var(--color1);
     text-align: center;
     transition: 0.15s ease-in-out;
     position: relative;
-  }
-  .menu li a::after {
+}
+.menu li a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -135,50 +136,89 @@ header {
     width: 0;
     height: 1px;
     transition: 0.15s ease-in-out;
-  }
-  
-  span.menu {
+}
+
+span.menu {
     width: 100%;
-  } 
-  
-  .menu li a:hover:after {width: 100%;}
-  .open-menu , .close-menu {
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+.open-menu,
+.close-menu {
     position: absolute;
     color: var(--color1);
     cursor: pointer;
     font-size: 1.5rem;
     display: none;
-  }
-  .open-menu {
+}
+.open-menu {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-  }
-  .close-menu {
+}
+.close-menu {
     top: 20px;
     right: 20px;
-  }
-  #check {display: none;}
-  @media(max-width: 1028px){
+}
+#check {
+    display: none;
+}
+@media (max-width: 1028px) {
     .menu {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
+        align-items: center; /* Zentriert die Elemente horizontal im Container */
+        justify-content: center; /* Zentriert die Elemente vertikal im Container */
+        width: 100%; /* Stellt sicher, dass das Menü die volle Breite einnimmt */
         height: 100vh;
         position: fixed;
         top: 0;
+        gap: 5vh;
         right: -100%;
         z-index: 100;
-        background-color: var(--color2);
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparenter schwarzer Hintergrund */
         transition: all 0.2s ease-in-out;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
     }
-    .menu li {margin-top: 40px;}
-    .menu li a {padding: 10px;}
-    .open-menu , .close-menu {display: block;}
-    #check:checked ~ .menu {right: 0;}
-  }
 
+    .menu li {
+        width: 100%; /* Lässt die Listenelemente die volle Breite einnehmen */
+        padding: 10px 20px; /* Fügt Padding für bessere Klickbarkeit und Optik hinzu */
+        box-sizing: border-box;
+        display: flex; /* Flexbox für jedes Listenelement verwenden */
+        justify-content: center; /* Zentriert den Link im Listenelement */
+    }
+    
+    .menu li a {
+        flex: 0 1 auto; /* Erlaubt dem Link, zu wachsen und zu schrumpfen */
+        width: 80%; /* Breite des Links auf 80% der Listenelementbreite setzen */
+        text-align: left; /* Text linksbündig ausrichten */
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .menu li a:hover {
+        color: #ccc;
+    }
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0; /* Bewegt das Menü nach rechts in die Ansicht */
+    }
+}
+
+
+
+
+:root {
+    --color2: rgb(0, 0, 77); /* Rot */
+}
 video {
     width: 100vw;
     height: 100vh;
@@ -381,8 +421,6 @@ video {
     line-height: 1.5;
 }
 
-
-
 .service-information-container {
     display: none;
     transition: opacity 0.5s;
@@ -400,18 +438,15 @@ video {
 }
 
 .service-container:hover .service-image {
-  
     filter: brightness(50%);
 }
 
 .service-image {
     transition: opacity 0.5s;
-}  
+}
 
 @media screen and (max-width: 600px) {
-
-    .service-information-container{
-     
+    .service-information-container {
     }
     .races {
         padding-left: 80px;
@@ -424,30 +459,29 @@ video {
     }
 }
 
-
 @media screen and (max-width: 768px) {
-  
     .races {
         padding-left: 50px;
         padding-right: 500px;
     }
-    .image-container,.service-container{
+    .image-container,
+    .service-container {
         width: 90vw;
         height: 50vh;
     }
 }
 @media screen and (min-width: 768px) {
-    .races{
+    .races {
         padding-left: 40px;
         margin-right: 20vw;
     }
-    
-    .service-container,.image-container {
+
+    .service-container,
+    .image-container {
         width: 50vw;
         height: 50vh;
     }
 }
-
 
 @media only screen and (min-width: 992px) {
     .image-container,
