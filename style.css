@@ -463,13 +463,7 @@ video {
     }
 }
 
-@media(max-width: 390px) {
-    .image-container,
-    .service-container {
-        width: 49vw;
-        height: 50vh;
-    }
-}
+
 @media (max-width: 768px) {
     .races {
         padding-left: 50px;
