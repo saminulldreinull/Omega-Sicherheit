@@ -16,6 +16,7 @@ section {
 }
 
 .service-section {
+    background-color: rgb(220,220,220);
     scroll-snap-type: none;
 }
 
@@ -294,9 +295,8 @@ video {
     padding-left: 2vw;
 }
 .about-us-text {
-    word-wrap: break-word;
     font-weight: 800;
-    font-size: clamp(0.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 .keyword,
@@ -314,11 +314,11 @@ video {
     position: relative;
     gap: 7vw;
     padding-left: clamp(0.5rem,1.5vw,1.3rem);
-    padding-bottom: clamp(1rem, 2vw ,1.5rem)
+    padding-bottom: clamp(0.6rem, 1vw ,1.2rem)
 }
 
 .key-figure {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 5vw, 3rem);
     font-weight: 900;
     width: 100%;
 }
@@ -342,15 +342,15 @@ video {
 @media screen and (max-width: 768px) {
     .about-us {
         padding-top: 40%;
+        padding-left: 30px;
+        padding-right: 20px;
     }
 
     .facts {
         display: flex;
-        justify-content: space-evenly;
+        gap: 14vw;
     }
-    .about-us-text {
-        font-size: 2.5rem; /* Kleinere Schriftgröße für kleine Bildschirme */
-    }
+   
 }
 
 /* ------------------------------------------------------------------------ */
@@ -460,6 +460,9 @@ video {
         width: 90vw!important;
         height: 30vh!important;
     }
+
+
+
 }
 
 
