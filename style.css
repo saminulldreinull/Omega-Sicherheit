@@ -29,8 +29,8 @@ section {
 }
 
 .logo {
-    width: 7.5vw;
-    height: 7.5vh;
+   /*  width: 7.5vw;
+    height: 7.5vh; */
     color: white;
 }
 .logo path {
@@ -40,10 +40,11 @@ section {
 .logo-shrinked path {
     fill: #fff; /* Beispiel, um sicherzustellen, dass es sichtbar bleibt, wenn sich die Farbe des Headers ändert */
 }
-.logo-big {
+.logo {
+    
     flex: 0 0 auto;
-    width: clamp(3rem, 7.5vw, 4rem);
-    height: clamp(3rem, 7.5vh, 4rem);
+    width: clamp(3.5rem, 7.5vw, 5rem);
+    height: clamp(3.5rem, 7.5vh, 5rem);
 }
 
 header::before {
@@ -250,6 +251,7 @@ video {
     z-index: 250;
     position: absolute;
     left: 50%;
+    font-size: clamp(1rem, 2vw, 2rem);
     top: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
@@ -372,9 +374,9 @@ video {
     position: relative;
 }
 
-.image-container {
-    width: 60vw;
-    height: 65vh;
+.image-container,.service-container {
+    width: clamp(20rem,90vw,50rem);
+    height: clamp(18rem,70vh,30rem);
 }
 
 .service-image {
@@ -445,7 +447,7 @@ video {
     transition: opacity 0.5s;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .service-information-container {
     }
     .races {
@@ -455,11 +457,11 @@ video {
     .image-container,
     .service-container {
         width: 95vw;
-        height: 40vh;
+        height: 100vh;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .races {
         padding-left: 50px;
         padding-right: 500px;
@@ -470,7 +472,7 @@ video {
         height: 50vh;
     }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .races {
         padding-left: 40px;
         margin-right: 20vw;
@@ -483,10 +485,11 @@ video {
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) {
     .image-container,
     .service-container {
         width: 55vw;
         height: 65vh;
     }
 }
+ 
