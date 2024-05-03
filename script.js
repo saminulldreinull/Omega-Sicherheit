@@ -1,5 +1,3 @@
-
-  
 const words = ["OMEGA SECURITY", "HIER WIRD IHNEN MIT SICHERHEIT GEHOLFEN!"];
 let i = 0;
 
@@ -21,7 +19,6 @@ function animateWords() {
 document.addEventListener('DOMContentLoaded', animateWords);
 
 
-/* Header change */
 let logo = document.getElementById('logo');
 let logoContainer = document.getElementById('logo-container');
 let header = document.querySelector('header');
@@ -47,7 +44,6 @@ window.addEventListener('scroll', checkSection);
 
 document.addEventListener('DOMContentLoaded', checkSection);
 
-/* key-figure animation */
 function linear(x) {
     return x; 
 }
@@ -88,8 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-/* key figure animation ende */
-
+ 
 /* horizontal scroll gsap */
 const races = document.querySelector(".races");
 console.log(races.offsetWidth)
@@ -158,4 +153,4 @@ window.onload = () => {
     myVideo.play().catch(error => {
         console.log("Autoplay wurde nicht gestartet:", error);
     });
-});
+}); 

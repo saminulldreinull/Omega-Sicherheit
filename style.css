@@ -16,7 +16,6 @@ section {
 }
 
 .service-section {
-    background-color: rgb(220,220,220);
     scroll-snap-type: none;
 }
 
@@ -373,14 +372,11 @@ video {
     position: relative;
 }
 
-.image-container,.service-container {
 
-    width: 110vw;
-    height: 40vh;
-}
+    
 
 .service-image {
-    border-radius: 20px;
+    border-radius: 22px;
     height: 100%;
     width: 100%;
     object-fit: fill;
@@ -428,10 +424,10 @@ video {
     transition: opacity 0.5s;
 }
 
-.service-container:hover .service-information-container {
+/* .service-container:hover .service-information-container {
     display: block;
     opacity: 1;
-}
+} */
 
 .service-container:hover .service-label,
 .service-container:hover .service-description {
@@ -447,54 +443,29 @@ video {
     transition: opacity 0.5s;
 }
 
-@media (max-width: 600px) {
-    .service-information-container {
+
+  @media (min-width:375px) {
+      .races {
+          padding-left: 20vh;
+      }
+      
+      .service-container,.image-container {
+          width: 85vw;
+          height: clamp(50vw,65vw,75vw);
+        }
     }
-    .races {
-        padding-top: 20vh;
-        padding-left: 80px;
-        margin-right: 20vw;
-    }
-    .image-container,
-    .service-container {
-        width: 90vw!important;
-        height: 30vh!important;
+    
+    @media(min-width:767px) {
+        .service-container,.image-container {
+            width: 60vw;
+            height: 40vw;
+          } 
     }
 
-
-
-}
-
-
-@media (max-width: 768px) {
-    .races {
-        padding-left: 50px;
-        padding-right: 500px;
+    @media(min-width:1200px) {
+        .service-container,.image-container {
+            width: 60vw;
+            height: 70vh;
+          } 
     }
-    .image-container,
-    .service-container {
-        width: 90vw;
-        height: 50vh;
-    }
-}
-@media (min-width: 768px) {
-    .races {
-        padding-left: 40px;
-        margin-right: 20vw;
-    }
-
-    .service-container,
-    .image-container {
-        width: 50vw;
-        height: 50vh;
-    }
-}
-
-@media (min-width: 992px) {
-    .image-container,
-    .service-container {
-        width: 55vw;
-        height: 65vh;
-    }
-}
- 
+    
