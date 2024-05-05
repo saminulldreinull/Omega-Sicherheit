@@ -1,36 +1,64 @@
-window.onload = () => {
-    let openMenu = document.querySelector(".open-menu");
-  
-    openMenu.addEventListener("click", (e) => {
-      document.documentElement.style.overflow = 'hidden';
-    });
-  
-    let closeMenu = document.querySelector(".close-menu");
-    closeMenu.addEventListener("click", (e) => {
-      document.documentElement.style.overflow = 'visible';
-    });
-  
-    let navLinks = document.querySelectorAll(".nav-item");
-    navLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        closeMenu.click(); 
-      });
-    });
-  
-    window.addEventListener("scroll", (event) => {
-      let scroll = this.scrollY;
-      if (scroll > 10) {
-        document.querySelector("header").classList.add("shadow");
-      } else {
-        document.querySelector("header").classList.remove("shadow");
-      }
-    });
-  };
+// Selecting elements
+const tickerWrapper = document.querySelector('.tickerwrapper');
+const list = tickerWrapper.querySelector('ul.list');
+const clonedList = list.cloneNode(true);
 
-  window.addEventListener('resize', () => {
-    const checkbox = document.getElementById('check');
-    if (window.innerWidth > 1028 && checkbox.checked) {
-      checkbox.checked = false;
-      document.documentElement.style.overflow = 'visible';
-    }
-  });
+// Calculating the width of the list
+let listWidth = 12; // Start with initial width if needed
+list.querySelectorAll('li').forEach(li => {
+    listWidth += li.offsetWidth;
+});
+
+// Calculate end position
+const endPos = tickerWrapper.offsetWidth - listWidth;
+
+// Setting styles
+list.style.width = `${listWidth}px`;
+clonedList.style.width = `${listWidth}px`;
+
+// Adding cloned list to the DOM
+clonedList.classList.add('cloned');
+tickerWrapper.appendChild(clonedList);
+
+// GSAP Animation
+const infinite = gsap.timeline({ repeat: -1, paused: false, defaults: {ease: "none", force3D: true} });
+
+infinite.fromTo(list, { x: 0 }, { duration: 20, x: -listWidth })
+        .fromTo(clonedList, { x: listWidth }, { duration: 20, x: 0 }, 0)
+        .set(list, { x: listWidth })
+        .to(clonedList, { duration: 20, x: -listWidth }, 20)
+        .to(list, { duration: 20, x: 0 }, 20);
+
+// Pause/Play functionality
+tickerWrapper.addEventListener('mouseenter', () => {
+    infinite.pause();
+});
+tickerWrapper.addEventListener('mouseleave', () => {
+    infinite.play();
+});
+
+/* horizontal scroll gsap */
+const races = document.querySelector(".races");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
+}
+
+const tween = gsap.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
+
+ScrollTrigger.create({
+	trigger:".racesWrapper",
+	start:"top 20%",
+	end: () => `+=${getScrollAmount() * -1}`,
+	pin:true,
+	animation:tween,
+	scrub:1,
+	invalidateOnRefresh:true,
+	markers:false
+})
