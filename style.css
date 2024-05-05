@@ -459,7 +459,6 @@ video {
 }
 @media (min-width: 767px) {
     .races {
-        background-color: red;
         padding-right: clamp(15vmax, 28vmax, 40vmax);
     }
     .service-container,
