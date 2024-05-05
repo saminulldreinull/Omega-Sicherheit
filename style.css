@@ -2,8 +2,11 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 * {
+    /*  overflow: hidden;
+    overflow-x: hidden; */
     margin: 0;
     padding: 0;
     font-family: "Inter Tight", sans-serif;
@@ -29,19 +32,18 @@ section {
 }
 
 .logo {
-   /*  width: 7.5vw;
+    /*  width: 7.5vw;
     height: 7.5vh; */
     color: white;
 }
 .logo path {
-    fill: white; /* Stelle sicher, dass dies sichtbar ist gegenüber dem neuen Header-Hintergrund */
+    fill: white;
 }
 
 .logo-shrinked path {
-    fill: #fff; /* Beispiel, um sicherzustellen, dass es sichtbar bleibt, wenn sich die Farbe des Headers ändert */
+    fill: #fff;
 }
 .logo {
-    
     flex: 0 0 auto;
     width: clamp(2.5rem, 7.5vw, 5rem);
     height: clamp(2.5rem, 7.5vh, 5rem);
@@ -192,7 +194,7 @@ span.menu {
         display: flex; /* Flexbox für jedes Listenelement verwenden */
         justify-content: center; /* Zentriert den Link im Listenelement */
     }
-    
+
     .menu li a {
         flex: 0 1 auto; /* Erlaubt dem Link, zu wachsen und zu schrumpfen */
         width: 80%; /* Breite des Links auf 80% der Listenelementbreite setzen */
@@ -201,7 +203,7 @@ span.menu {
         text-decoration: none;
         transition: color 0.3s;
     }
-    
+
     .menu li a:hover {
         color: #ccc;
     }
@@ -210,12 +212,9 @@ span.menu {
         display: block;
     }
     #check:checked ~ .menu {
-        right: 0; /* Bewegt das Menü nach rechts in die Ansicht */
+        right: 0;
     }
 }
-
-
-
 
 :root {
     --color2: rgb(0, 0, 77); /* Rot */
@@ -312,8 +311,8 @@ video {
     display: flex;
     position: relative;
     gap: 7vw;
-    padding-left: clamp(0.5rem,1.5vw,1.3rem);
-    padding-bottom: clamp(0.6rem, 1vw ,1.2rem)
+    padding-left: clamp(0.5rem, 1.5vw, 1.3rem);
+    padding-bottom: clamp(0.6rem, 1vw, 1.2rem);
 }
 
 .key-figure {
@@ -349,19 +348,21 @@ video {
         display: flex;
         gap: 14vw;
     }
-   
 }
 
 /* ------------------------------------------------------------------------ */
+
+.service-section {
+    display: block;
+    white-space: nowrap; /* Verhindert Umbruch in neue Zeilen */
+    width: calc(100% + 5vw); /* Passen Sie diesen Wert entsprechend an */
+}
 .races {
     padding-top: 5vh;
-    margin-left: 10vw;
-    padding-right: 30vw;
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
     gap: 4vw;
-    flex-wrap: nowrap;
 }
 .service-container {
     box-sizing: border-box;
@@ -371,9 +372,6 @@ video {
     display: flex;
     position: relative;
 }
-
-
-    
 
 .service-image {
     border-radius: 22px;
@@ -390,8 +388,8 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: clamp(2.5rem,9vw,6rem);
-    padding-left: clamp(1rem,3vw,2rem);
+    padding-bottom: clamp(2.5rem, 9vw, 6rem);
+    padding-left: clamp(1rem, 3vw, 2rem);
 }
 
 .service-description-container {
@@ -443,29 +441,41 @@ video {
     transition: opacity 0.5s;
 }
 
+@media (min-width: 370px) {
+    .races {
+        padding-right: clamp(20vmax, 50vmax, 60vmax);
+    }
+    .service-container,
+    .image-container {
+        width: 85vw;
+        height: clamp(50vw, 65vw, 75vw);
+    }
+}
 
-  @media (min-width:375px) {
-      .races {
-          padding-left: 20vh;
-      }
-      
-      .service-container,.image-container {
-          width: 85vw;
-          height: clamp(50vw,65vw,75vw);
-        }
+@media (min-width: 576px) {
+    .races {
+        padding-right: clamp(10vmax, 30vmax, 40vmax);
     }
-    
-    @media(min-width:767px) {
-        .service-container,.image-container {
-            width: 60vw;
-            height: 40vw;
-          } 
+}
+@media (min-width: 767px) {
+    .races {
+        background-color: red;
+        padding-right: clamp(15vmax, 28vmax, 40vmax);
     }
+    .service-container,
+    .image-container {
+        width: 60vw;
+        height: 40vw;
+    }
+}
 
-    @media(min-width:1200px) {
-        .service-container,.image-container {
-            width: 60vw;
-            height: 70vh;
-          } 
+@media (min-width: 1200px) {
+    .races {
+        padding-right: 5vmax;
     }
-    
+    .service-container,
+    .image-container {
+        width: 60vw;
+        height: 70vh;
+    }
+}

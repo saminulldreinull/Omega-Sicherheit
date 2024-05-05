@@ -111,6 +111,8 @@ ScrollTrigger.create({
 	markers:false
 })
 
+
+
 window.onload = () => {
     let openMenu = document.querySelector(".open-menu");
   
@@ -139,7 +141,7 @@ window.onload = () => {
       }
     });
   };
-
+  
   window.addEventListener('resize', () => {
     const checkbox = document.getElementById('check');
     if (window.innerWidth > 1028 && checkbox.checked) {
