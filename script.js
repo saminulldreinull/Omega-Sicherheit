@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
  
 /* horizontal scroll gsap */
-const races = document.querySelector(".races");
+ const races = document.querySelector(".races");
 console.log(races.offsetWidth)
 
 function getScrollAmount() {
@@ -109,9 +109,67 @@ ScrollTrigger.create({
 	scrub:1,
 	invalidateOnRefresh:true,
 	markers:false
-})
+}) 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const first = document.querySelector('.first');
+  const second = document.querySelector('.second');
+
+const updateWidthAndAnimations = () => {
+  const tickerWidth = first.offsetWidth;
+  const duration = tickerWidth / 50; // Erhöht die Dauer
+
+  first.style.animationDuration = `${duration}s`;
+  second.style.animationDuration = `${duration}s`;
+
+  // Update GSAP Animations
+  gsap.to('.first', {
+    x: () => `-${tickerWidth}px`,
+    ease: 'linear',
+    repeat: -1,
+    duration: duration
+  });
+
+  gsap.to('.second', {
+    x: () => `-${tickerWidth}px`,
+    ease: 'linear',
+    repeat: -1,
+    duration: duration
+  });
+};
 
 
+  // Execute initially and on window resize
+  updateWidthAndAnimations();
+  window.addEventListener('resize', updateWidthAndAnimations);
+
+  // GSAP animations for the infinite loop
+  gsap.to('.first', {
+    x: () => `-${first.offsetWidth}px`,
+    ease: 'linear',
+    repeat: -1,
+    duration: 30 // Duration of animation in seconds
+  });
+
+  gsap.to('.second', {
+    x: () => `-${second.offsetWidth}px`,
+    ease: 'linear',
+    repeat: -1,
+    duration: 30 // Duration of animation in seconds
+  });
+
+  // Pause animation on hover
+  document.querySelectorAll('.animated-ticker__container').forEach(container => {
+    container.addEventListener('mouseenter', () => {
+      gsap.globalTimeline.pause();
+    });
+    container.addEventListener('mouseleave', () => {
+      gsap.globalTimeline.resume();
+    });
+  });
+
+
+});
 
 
 window.onload = () => {
