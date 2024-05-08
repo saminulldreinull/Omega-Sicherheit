@@ -1,8 +1,8 @@
 html {
     scroll-behavior: smooth;
-/*     scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    overflow-x: hidden; */
+    overflow-x: hidden; 
     font-family: "Inter Tight", sans-serif;
 }
 * {
@@ -13,7 +13,7 @@ html {
 }
 
 section {
-    /* overflow-x: hidden; */
+     overflow-x: hidden; 
 }
 
 
@@ -297,7 +297,7 @@ video {
     background-color: aliceblue;
     height: 100vh;
     font-weight: 800;
-    padding-top: 10vh;
+    padding-top: 15vh;
 }
 
 .explained-content {
@@ -307,35 +307,43 @@ video {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 20vh;
+    gap: 30vh;
 }
 
 .about-us-text {
 /*     padding-top: 12%;
     padding-left: 2vw; */
+    /* font-size: clamp(1rem, 4.3vmax, 6vw); */
     font-weight: 800;
-    font-size: clamp(1rem, 4.3vmax, 6vw);
     word-break: keep-all;
+    /* width: 100vw; */
+    container-type: inline-size;
+}
+
+.about-us-text > p {
+    font-size: 4.6cqi;
+}
+
+.fact-container {
+    display: flex;
+    flex-direction: row;
     width: 100vw;
+    justify-content: flex-start;
 }
 
 .facts {
-    padding-left: clamp(1vmax,2vmax,4vmax);
      position: relative; 
     display: flex;
-    gap: 7vw;
     flex-direction: row;
-  
 }
 
 .key-figure-container {
     position: absolute;
     bottom: 100%;
- 
 }
 
 .key-figure {
-    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-size: clamp(3.5vmax, 6vmax, 3.5rem);
     font-weight: 900;
     width: 100%;
 }
@@ -361,19 +369,14 @@ video {
 }
 
 @media screen and (max-width: 768px) {
-    .about-us {
-        padding-top: 40%;
-        padding-left: 30px;
-        padding-right: 20px;
-    }
-
     .facts {
         display: flex;
-        gap: 14vw;
+        justify-content: space-evenly;
+       
     }
 }
-/*----------*/
 
+/*----------*/
 #service-section {
     background-color: #f8f9fa;
     transform: translateZ(0);

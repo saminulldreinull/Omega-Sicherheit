@@ -42,7 +42,7 @@ gsap.registerPlugin(ScrollTrigger);document.querySelectorAll('.reveal-type').for
         scrollTrigger: {
             trigger: element,
             start: 'top 80%',
-            end: 'top 28%',
+            end: 'bottom 55%',
             scrub: true,
             markers: false,
             toggleActions: 'play none none reverse'
