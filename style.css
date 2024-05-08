@@ -1,3 +1,10 @@
+@import 'ProjectShowcaseItem-684469d7.css';@import 'AnimatedTicker-1aa37f12.css';.heading-marquee.svelte-a3s7zn {
+    width: 100%;
+    position: relative;
+    color: #FFFFFF;
+    min-height: 120px
+  }
+  
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -5,6 +12,7 @@ html {
     overflow-x: hidden;
     font-family: "Inter Tight", sans-serif;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -219,11 +227,18 @@ span.menu {
     --color2: rgb(0, 0, 77); /* Rot */
 }
 video {
+    position: fixed;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     z-index: -1;
     filter: brightness(50%);
+}
+
+#landing-page {
+    height: 100vh;
+    overflow: hidden; /* Verhindert Scrollbalken innerhalb des Elements */
+    position: relative;
 }
 
 @keyframes fadeInLeftToRight {
@@ -276,14 +291,23 @@ video {
 }
 
 /* --------------------------------------------------------------- */
-
 #facts-section {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    justify-content: space-between;
+    min-height: 100vh; /* Stellt sicher, dass die Section den vollen Bildschirm einnimmt */
+    background: white; /* Hintergrundfarbe für Sichtbarkeit */
+    position: relative;
+    z-index: 2; /* Höher als das Video, aber niedriger als die Service-Section */
+}
+
+#service-section {
+/*     background-color: #f8f9fa; 
+    transform: translateZ(0);
+    will-change: transform;
+    position: relative;
+    z-index: 3; / */
+    background-color: rgb(230,230,230);
+    display: block;
+    white-space: nowrap; /* Verhindert Umbruch in neue Zeilen */
+    width: calc(100% + 5vw); /* Passen Sie diesen Wert entsprechend an */
 }
 
 .about-us {
@@ -353,19 +377,8 @@ video {
 /* ------------------------------------------------------------------------ */
 
 
-.service-section {
-    background-color: rgb(230,230,230);
-    display: block;
-    white-space: nowrap; /* Verhindert Umbruch in neue Zeilen */
-    width: calc(100% + 5vw); /* Passen Sie diesen Wert entsprechend an */
-}
 
-@import 'ProjectShowcaseItem-684469d7.css';@import 'AnimatedTicker-1aa37f12.css';.heading-marquee.svelte-a3s7zn {
-    width: 100%;
-    position: relative;
-    color: #FFFFFF;
-    min-height: 120px
-  }
+
   
   @media only screen and (min-width: 1024px) {
     .heading-marquee.svelte-a3s7zn {
@@ -390,7 +403,7 @@ video {
     background: #EBEBEB;
     position: relative;
     padding: 60px 0 1px;
-    overflow-x: clip
+    overflow-x: clip;
   }
   
   @media only screen and (min-width: 1024px) {
@@ -472,7 +485,7 @@ video {
         margin-right: 38px;
         margin-top: 120px;
         width: 780px;
-        aspect-ratio: auto
+        aspect-ratio: auto;
     }
   }
   
@@ -487,7 +500,7 @@ video {
     top: 35vh;
     transform: translateY(calc(-50% - 120px));
   }
-  
+    
   @media only screen and (min-width: 1024px) {
     .animated-ticker--our-work.svelte-asjtnf {
         transform:translateY(calc(-50% - 250px))
@@ -571,7 +584,24 @@ video {
         transform: translateX(-100%)
     }
   }
-  
+
+.animated-ticker {
+    display: block; /* Stellt sicher, dass der Ticker nicht auf 'none' gesetzt ist */
+    visibility: visible; /* Stellt sicher, dass der Ticker nicht auf 'hidden' gesetzt ist */
+    position: absolute; /* oder 'relative', je nach Bedarf */
+    top: 20px; /* oder ein anderer Wert, um ihn zu positionieren */
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Stellt sicher, dass er über anderen Elementen liegt */
+}
+
+
+.is-visible {
+    opacity: 1; /* Voll sichtbar */
+    transform: translateY(0px); /* Kehrt in die ursprüngliche Position zurück */
+}
+
+
 .races {
     margin-left: 5vmax;
     padding-top: 5vh;
@@ -642,13 +672,13 @@ video {
     display: block;
     opacity: 1;
 } */
-
+/* 
 .service-container:hover .service-label,
 .service-container:hover .service-description {
     cursor: pointer;
     display: none;
 }
-
+ */
 .service-container:hover .service-image {
     filter: brightness(50%);
 }
@@ -686,7 +716,7 @@ video {
 
 @media (min-width: 1200px) {
     .races {
-        padding-right: 5vmax;
+        padding-right: 10vmax;
     }
     .service-container,
     .image-container {

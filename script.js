@@ -215,3 +215,34 @@ window.onload = () => {
         console.log("Autoplay wurde nicht gestartet:", error);
     });
 }); 
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+document.addEventListener('scroll', function() {
+  const scrollPosition = window.scrollY;
+  const video = document.querySelector('video');
+
+  // Bewegt das Video halb so schnell wie den Scroll-Vorgang
+  video.style.transform = 'translateY(' + (-scrollPosition / 2) + 'px)';
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const factsSection = document.querySelector('#facts-section');
+  const ticker = document.querySelector('.animated-ticker');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+              ticker.style.opacity = '1';
+              ticker.style.transform = 'translateY(0%)'; // Bewegt in sichtbare Position
+          } else {
+              ticker.style.opacity = '0';
+              ticker.style.transform = 'translateY(100%)'; // Versteckt den Ticker wieder
+          }
+      });
+  }, { threshold: 0 });
+
+  observer.observe(factsSection);
+});
+
