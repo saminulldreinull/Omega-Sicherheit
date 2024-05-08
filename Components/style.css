@@ -1,8 +1,8 @@
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+/*     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: hidden; */
     font-family: "Inter Tight", sans-serif;
 }
 * {
@@ -13,7 +13,7 @@ html {
 }
 
 section {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 
@@ -291,16 +291,23 @@ video {
 
 .explained-section {
     margin-top: 10vh;
+    gap: 30vh;
     display: flex;
+    justify-content: space-between;
     background-color: aliceblue;
     height: 100vh;
     font-weight: 800;
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
 
 .explained-content {
-    justify-content: flex-start;
+    width: 100%;
+    padding-left: clamp(1vmax,1.5vmax,6vw);
+    padding-right: clamp(1vw,3vw,4vw);
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20vh;
 }
 
 .about-us-text {
@@ -310,24 +317,20 @@ video {
     font-size: clamp(1rem, 4.3vmax, 6vw);
     word-break: keep-all;
     width: 100vw;
-    padding-left: clamp(1vmax,1.5vmax,6vw);
-    padding-right: clamp(1vw,3vw,4vw);
 }
 
 .facts {
     padding-left: clamp(1vmax,2vmax,4vmax);
      position: relative; 
     display: flex;
-    flex-direction: row;
     gap: 7vw;
-    /* padding: 0 clamp(0.5rem, 1vw, 1.3rem) 0 0; */
-/*     padding-left: clamp(0.5rem, 1vw, 1.3rem) ; */
+    flex-direction: row;
+  
 }
 
 .key-figure-container {
     position: absolute;
     bottom: 100%;
-    background-color: red;
  
 }
 
