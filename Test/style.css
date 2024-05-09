@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.explained-content {
+    width: 100%;
+    padding-left: clamp(1vmax,1.5vmax,6vw);
+    padding-right: clamp(1vw,3vw,4vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30vh;
+}
+
+.about-us-text-container {
+    background-color: red;
+    padding-top: 12vmax;
+     font-size: clamp(2.3rem, 4.3vmax, 6vw); 
+    font-weight: 800;
+     width: 100vw;
+}
+.fact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-start;
+}
+
+.facts {
+     position: relative; 
+    display: flex;
+    flex-direction: row;
+}
+
+.key-figure-container {
+    position: absolute;
+    bottom: 100%;
+}
+
+.key-figure {
+    font-size: clamp(3.5vmax, 6vmax, 3.5rem);
+    font-weight: 900;
+    width: 100%;
+}
+
+.key-figure {
+    color: rgb(0, 0, 77);
+}
+
+.label {
+    font-weight: bold;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.key-figure-container,
+.label {
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.keyword,
+.label {
+    color: rgb(129, 164, 205);
+}
+
+@media screen and (max-width: 768px) {
+    .facts {
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+}
+
+/* Standardmäßig werden alle <br>-Elemente versteckt */
+  /* Small Breakpoint (s: 400px) */
+ 
+  
+  /* Medium Breakpoint (m: 576px) */
+  @media (min-width: 576px) {
+    .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-m {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 576px an */
+    }
+  }
+  
+  /* Large Breakpoint (l: 768px) */
+  @media (min-width: 768px) {
+    .break-m, .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-l {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 768px an */
+    }
+  }
+  
+  /* Extra Large Breakpoint (xl: 1028px) */
+  @media (min-width: 1028px) {
+    .break-l, .break-m, .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-xl {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 1028px an */
+    }
+  }
+  
+
+/*----------*/

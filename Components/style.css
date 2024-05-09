@@ -290,6 +290,7 @@ video {
  */
 
 .explained-section {
+    overflow-y: hidden;
     margin-top: 10vh;
     gap: 30vh;
     display: flex;
@@ -297,7 +298,6 @@ video {
     background-color: aliceblue;
     height: 100vh;
     font-weight: 800;
-    padding-top: 15vh;
 }
 
 .explained-content {
@@ -310,19 +310,71 @@ video {
     gap: 30vh;
 }
 
-.about-us-text {
-/*     padding-top: 12%;
-    padding-left: 2vw; */
-    /* font-size: clamp(1rem, 4.3vmax, 6vw); */
+.about-us-text-container {
+ padding-top: 12%;
+    font-size: clamp(2.3rem, 4.3vmax, 6vw); 
     font-weight: 800;
     word-break: keep-all;
-    /* width: 100vw; */
-    container-type: inline-size;
+     width: 100vw; 
 }
 
 .about-us-text > p {
-    font-size: 4.6cqi;
+    font-size: 4.5cqi;
 }
+
+
+/* Standardmäßig werden alle <br>-Elemente versteckt */
+  /* Small Breakpoint (s: 400px) */
+
+  @media (max-width: 400px) {
+    .explained-content {
+        padding-top: 10vh;
+        gap: 20vh;
+    }
+    .fact-container {
+        padding-bottom: 10vh;
+    }
+    .break-s {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 400px an */
+    }
+  }
+
+  @media (min-width: 400px) {
+    .break-s {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 400px an */
+    }
+  }
+  
+  /* Medium Breakpoint (m: 576px) */
+  @media (min-width: 576px) {
+    .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-m {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 576px an */
+    }
+  }
+  
+  /* Large Breakpoint (l: 768px) */
+  @media (min-width: 768px) {
+    .break-m, .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-l {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 768px an */
+    }
+  }
+  
+  /* Extra Large Breakpoint (xl: 1028px) */
+  @media (min-width: 1028px) {
+    .break-l, .break-m, .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-xl {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 1028px an */
+    }
+  }
+  
 
 .fact-container {
     display: flex;
