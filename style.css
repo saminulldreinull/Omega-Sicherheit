@@ -1,18 +1,10 @@
-@import 'ProjectShowcaseItem-684469d7.css';@import 'AnimatedTicker-1aa37f12.css';.heading-marquee.svelte-a3s7zn {
-    width: 100%;
-    position: relative;
-    color: #FFFFFF;
-    min-height: 120px
-  }
-  
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: hidden; 
     font-family: "Inter Tight", sans-serif;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -21,13 +13,9 @@ html {
 }
 
 section {
-    overflow-x: hidden;
-    /* scroll-snap-align: start; */
+     overflow-x: hidden; 
 }
 
-.service-section {
-    scroll-snap-type: none;
-}
 
 .logo-container {
     padding-top: 1vh;
@@ -179,33 +167,33 @@ span.menu {
     .menu {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Zentriert die Elemente horizontal im Container */
-        justify-content: center; /* Zentriert die Elemente vertikal im Container */
-        width: 100%; /* Stellt sicher, dass das Menü die volle Breite einnimmt */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
         height: 100vh;
         position: fixed;
         top: 0;
         gap: 5vh;
         right: -100%;
         z-index: 100;
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparenter schwarzer Hintergrund */
+        background-color: rgba(0, 0, 0, 0.5);
         transition: all 0.2s ease-in-out;
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
     }
 
     .menu li {
-        width: 100%; /* Lässt die Listenelemente die volle Breite einnehmen */
-        padding: 10px 20px; /* Fügt Padding für bessere Klickbarkeit und Optik hinzu */
+        width: 100%;
+        padding: 10px 20px;
         box-sizing: border-box;
-        display: flex; /* Flexbox für jedes Listenelement verwenden */
-        justify-content: center; /* Zentriert den Link im Listenelement */
+        display: flex;
+        justify-content: center;
     }
 
     .menu li a {
-        flex: 0 1 auto; /* Erlaubt dem Link, zu wachsen und zu schrumpfen */
-        width: 80%; /* Breite des Links auf 80% der Listenelementbreite setzen */
-        text-align: left; /* Text linksbündig ausrichten */
+        flex: 0 1 auto;
+        width: 80%; 
+        text-align: left;
         color: white;
         text-decoration: none;
         transition: color 0.3s;
@@ -237,7 +225,7 @@ video {
 
 #landing-page {
     height: 100vh;
-    overflow: hidden; /* Verhindert Scrollbalken innerhalb des Elements */
+    overflow: hidden; 
     position: relative;
 }
 
@@ -272,7 +260,7 @@ video {
     display: inline-block;
     overflow: hidden;
     opacity: 1;
-    animation-timing-function: ease-in-out; /* Weicher Übergang */
+    animation-timing-function: ease-in-out; /
 }
 
 #typewriter::after {
@@ -290,59 +278,130 @@ video {
     }
 }
 
-/* --------------------------------------------------------------- */
-#facts-section {
-    min-height: 100vh; /* Stellt sicher, dass die Section den vollen Bildschirm einnimmt */
-    background: white; /* Hintergrundfarbe für Sichtbarkeit */
-    position: relative;
-    z-index: 2; /* Höher als das Video, aber niedriger als die Service-Section */
-}
 
-#service-section {
-/*     background-color: #f8f9fa; 
-    transform: translateZ(0);
-    will-change: transform;
-    position: relative;
-    z-index: 3; / */
-    background-color: rgb(230,230,230);
-    display: block;
-    white-space: nowrap; /* Verhindert Umbruch in neue Zeilen */
-    width: calc(100% + 5vw); /* Passen Sie diesen Wert entsprechend an */
-}
 
-.about-us {
+
+/* #facts-section {
+    min-height: 100vh; 
+    background: white;
+    position: relative;
+    z-index: 2; 
+}
+ */
+
+.explained-section {
+    overflow-y: hidden;
+    margin-top: 10vh;
+    gap: 30vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
     height: 100vh;
-    width: 100vw;
-    padding-top: 12%;
-    padding-left: 2vw;
-}
-.about-us-text {
     font-weight: 800;
-    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
-.keyword,
-.label {
-    color: rgb(129, 164, 205);
+.explained-content {
+    width: 100%;
+    padding-left: clamp(1vmax,1.5vmax,6vw);
+    padding-right: clamp(1vw,3vw,4vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30vh;
 }
 
-.about-us,
-.key-figure {
-    color: rgb(0, 0, 77);
+.about-us-text-container {
+ padding-top: 12%;
+    font-size: clamp(2.3rem, 4.3vmax, 6vw); 
+    font-weight: 800;
+    word-break: keep-all;
+     width: 100vw; 
+}
+
+.about-us-text > p {
+    font-size: 4.5cqi;
+}
+
+
+/* Standardmäßig werden alle <br>-Elemente versteckt */
+  /* Small Breakpoint (s: 400px) */
+
+  @media (max-width: 400px) {
+    .explained-content {
+        padding-top: 10vh;
+        gap: 20vh;
+    }
+    .fact-container {
+        padding-bottom: 10vh;
+    }
+    .break-s {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 400px an */
+    }
+  }
+
+  @media (min-width: 400px) {
+    .break-s {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 400px an */
+    }
+  }
+  
+  /* Medium Breakpoint (m: 576px) */
+  @media (min-width: 576px) {
+    .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-m {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 576px an */
+    }
+  }
+  
+  /* Large Breakpoint (l: 768px) */
+  @media (min-width: 768px) {
+    .break-m, .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-l {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 768px an */
+    }
+  }
+  
+  /* Extra Large Breakpoint (xl: 1028px) */
+  @media (min-width: 1028px) {
+    .break-l, .break-m, .break-s {
+      display: none; /* Versteckt <br> für kleinere Breakpoints */
+    }
+    .break-xl {
+      display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 1028px an */
+    }
+  }
+  
+
+.fact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-start;
 }
 
 .facts {
+     position: relative; 
     display: flex;
-    position: relative;
-    gap: 7vw;
-    padding-left: clamp(0.5rem, 1.5vw, 1.3rem);
-    padding-bottom: clamp(0.6rem, 1vw, 1.2rem);
+    flex-direction: row;
+}
+
+.key-figure-container {
+    position: absolute;
+    bottom: 100%;
 }
 
 .key-figure {
-    font-size: clamp(2.5rem, 5vw, 3rem);
+    font-size: clamp(3.5vmax, 6vmax, 3.5rem);
     font-weight: 900;
     width: 100%;
+}
+
+.key-figure {
+    color: rgb(0, 0, 77);
 }
 
 .label {
@@ -356,255 +415,32 @@ video {
     min-height: 50%;
 }
 
-.key-figure-container {
-    bottom: 100%;
-    position: absolute;
+.keyword,
+.label {
+    color: rgb(129, 164, 205);
 }
 
 @media screen and (max-width: 768px) {
-    .about-us {
-        padding-top: 40%;
-        padding-left: 30px;
-        padding-right: 20px;
-    }
-
     .facts {
         display: flex;
-        gap: 14vw;
+        justify-content: space-evenly;
+       
     }
 }
 
-/* ------------------------------------------------------------------------ */
-
-
-
-
-  
-  @media only screen and (min-width: 1024px) {
-    .heading-marquee.svelte-a3s7zn {
-        min-height:200px
-    }
-  }
-  
-  .heading-marquee__text.svelte-a3s7zn {
-    font-size: 100px;
-    line-height: 1;
-    font-family: "Satoshi-Black", Helvetica, Arial, sans-serif
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .heading-marquee__text.svelte-a3s7zn {
-        font-size:140px
-    }
-  }
-  
-  .project-showcase.svelte-2afsi3 {
-    width: 100%;
-    background: #EBEBEB;
-    position: relative;
-    padding: 60px 0 1px;
-    overflow-x: clip;
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .project-showcase.svelte-2afsi3 {
-        min-height:700px;
-        padding: 134px 0 160px;
-        --scroll-badge-scale: 0
-    }
-  
-    .project-showcase.svelte-2afsi3:hover {
-        --scroll-badge-opacity: 1;
-        --scroll-badge-scale: 1
-    }
-  }
-  
-  .project-showcase__wrapper.svelte-2afsi3 {
-    min-height: 300px;
-    height: 30vh;
-    width: 100%;
-    margin-bottom: 100px
-  }
-  
-  .project-showcase__list.svelte-2afsi3 {
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 20px;
-    padding-right: 20px
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .project-showcase__list.svelte-2afsi3 {
-        padding-left:var(--padding-left, 30px);
-        padding-right: 20vw
-    }
-  }
-  
-  @media only screen and (min-width: 1024px) {
-  }
-  
-  @media only screen and (min-width: 1024px) {
-  }
-  
-  @media only screen and (min-width: 1440px) {
-  }
-  
-  @media only screen and (min-width: 1440px) {
-  }
-  
-  @media only screen and (min-width: 1440px) {
-  }
-  
-  @media only screen and (min-width: 1440px) {
-  }
-  
-  .project-showcase__list.svelte-2afsi3 {
-    display: flex
-  }
-  
-  .project-showcase__item.svelte-2afsi3 {
-    min-height: 250px;
-    margin-right: 20px;
-    margin-top: 60px;
-    width: calc(100vw - 40px);
-    aspect-ratio: 4 / 3
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .project-showcase__item.svelte-2afsi3 {
-        width:500px
-    }
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .project-showcase__item.svelte-2afsi3 {
-        height:500px;
-        margin-right: 38px;
-        margin-top: 120px;
-        width: 780px;
-        aspect-ratio: auto;
-    }
-  }
-  
-  
-  .animated-ticker--absolute.svelte-asjtnf {
-    position: absolute;
-    background-color: rgb(230,230,230);
-  }
-  
-  .animated-ticker--our-work.svelte-asjtnf {
-  
-    top: 35vh;
-    transform: translateY(calc(-50% - 120px));
-  }
-    
-  @media only screen and (min-width: 1024px) {
-    .animated-ticker--our-work.svelte-asjtnf {
-        transform:translateY(calc(-50% - 250px))
-    }
-  }
-  
-  .animated-ticker__link.svelte-asjtnf {
-    display: inline-block
-  }
-  
-  .animated-ticker__item.svelte-asjtnf {
-    padding-right: 10em;
-  }
-  
-  .animated-ticker__item--tight.svelte-asjtnf {
-    padding-right: 4rem;
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .animated-ticker__item--tight.svelte-asjtnf {
-        padding-right:5rem
-    }
-  }
-  
-  .animated-ticker__item--modified.svelte-asjtnf {
-    padding-right: 2rem
-  }
-  
-  .animated-ticker__item--space-reduced.svelte-asjtnf {
-    padding-right: 1rem
-  }
-  
-  .animated-ticker__container.svelte-asjtnf {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
+/*----------*/
+#service-section {
+    background-color: #f8f9fa;
+    transform: translateZ(0);
     will-change: transform;
-  }
-  
-  .animated-ticker__wrapper.svelte-asjtnf {
     position: relative;
-    margin: 0;
-    align-items: center;
-    display: flex;
-  }
-  
-  .animated-ticker.svelte-asjtnf .first,.animated-ticker.svelte-asjtnf .second {
-    display: flex;
-    align-items: center;
-    flex: 1 0 auto;
-    -webkit-animation: svelte-asjtnf-marquee 0s linear infinite;
-    animation: svelte-asjtnf-marquee 0s linear infinite
-  }
-  
-  .animated-ticker__container.svelte-asjtnf:hover .first,.animated-ticker__container.svelte-asjtnf:hover .second {
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused
-  }
-  
-  @-moz-document url-prefix() {
-    @media only screen and (min-width: 1024px) {
-    }
-  }
-  
-  @-webkit-keyframes svelte-asjtnf-marquee {
-    from {
-        transform: translateX(0%)
-    }
-  
-    to {
-        transform: translateX(-100%)
-    }
-  }
-  
-  @keyframes svelte-asjtnf-marquee {
-    from {
-        transform: translateX(0%)
-    }
-  
-    to {
-        transform: translateX(-100%)
-    }
-  }
-
-.animated-ticker {
-    display: block; /* Stellt sicher, dass der Ticker nicht auf 'none' gesetzt ist */
-    visibility: visible; /* Stellt sicher, dass der Ticker nicht auf 'hidden' gesetzt ist */
-    position: absolute; /* oder 'relative', je nach Bedarf */
-    top: 20px; /* oder ein anderer Wert, um ihn zu positionieren */
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Stellt sicher, dass er über anderen Elementen liegt */
+    z-index: 3; 
+    scroll-snap-type: none;
+    
 }
-
-
-.is-visible {
-    opacity: 1; /* Voll sichtbar */
-    transform: translateY(0px); /* Kehrt in die ursprüngliche Position zurück */
-}
-
-
 .races {
     margin-left: 5vmax;
-    padding-top: 5vh;
+  padding-top: 10vh; 
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
