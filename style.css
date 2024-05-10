@@ -332,7 +332,7 @@ video {
         gap: 20vh;
     }
     .fact-container {
-        padding-bottom: 10vh;
+        margin-bottom: 10vh;
     }
     .break-s {
       display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 400px an */
@@ -340,6 +340,15 @@ video {
   }
 
   @media (min-width: 400px) {
+    .explained-content {
+        padding-top: 5vh;
+        gap: 20vh;
+    }
+    .fact-container {
+        margin-bottom: 5vh;
+    }
+
+
     .break-s {
       display: inline; /* Zeigt <br> nur auf Bildschirmen größer als 400px an */
     }
@@ -347,6 +356,7 @@ video {
   
   /* Medium Breakpoint (m: 576px) */
   @media (min-width: 576px) {
+    
     .break-s {
       display: none; /* Versteckt <br> für kleinere Breakpoints */
     }
@@ -367,6 +377,10 @@ video {
   
   /* Extra Large Breakpoint (xl: 1028px) */
   @media (min-width: 1028px) {
+    .fact-container {
+        margin-bottom: 2vh;
+    }
+
     .break-l, .break-m, .break-s {
       display: none; /* Versteckt <br> für kleinere Breakpoints */
     }
@@ -560,3 +574,4 @@ video {
         height: 60vh;
     }
 }
+
