@@ -18,7 +18,7 @@ section {
 
 
 .logo-container {
-    padding-top: 1vh;
+    padding-top: 0.6vh;
     position: absolute;
     top: 0;
     left: 3%;
@@ -39,9 +39,10 @@ section {
     fill: #fff;
 }
 .logo {
+    position: absolute;
     flex: 0 0 auto;
-    width: clamp(2.5rem, 7.5vw, 5rem);
-    height: clamp(2.5rem, 7.5vh, 5rem);
+    width: clamp(3.5rem, 8vw, 5rem);
+    height: clamp(3.5rem, 8vh, 5rem);
 }
 
 header::before {
@@ -62,7 +63,7 @@ header {
     top: 0;
     position: fixed;
     width: 100vw;
-    height: clamp(4.5rem, 7.5vh, 5rem);
+    height: clamp(4.5rem, 7.5vh, 5.5rem);
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -220,7 +221,7 @@ video {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(50%);
+    filter: brightness(70%);
 }
 
 #landing-page {
