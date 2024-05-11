@@ -543,11 +543,10 @@ video {
  height: clamp(1rem,4vh,1.5rem);
 }
 
-.service-container:hover .service-image {
-    filter: brightness(50%);
-}
+
 
 .service-image {
+    filter: brightness(80%);
     transition: opacity 0.5s;
 }
 
