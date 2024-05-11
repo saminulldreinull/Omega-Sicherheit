@@ -492,29 +492,30 @@ video {
 
 .service-description-container {
     text-wrap: wrap;
-    font-size: 2vh;
-    font-size: clamp(0.7rem, 1.3vw, 2rem);
-    text-wrap: nowrap;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    letter-spacing: 0.06rem;
+    font-weight: 500;
+    text-wrap: wrap;
     width: -moz-fit-content;
     width: fit-content;
 }
 .service-label-container {
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 5vh;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .service-button-container {
-    top: 85%;
+    top: clamp(75%,78%,80%);
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
-    height: fit-content;  
     width: -moz-fit-content;
     width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;  
 }
 
 .button-container:hover{
@@ -559,12 +560,26 @@ video {
         width: 85vw;
         height: clamp(50vw, 65vw, 75vw);
     }
+
+    .service-text-container {
+        gap:2vmin;
+        padding-left: 8vw;
+        padding-bottom: 15vh;˙
+    }
 }
 
 @media (min-width: 576px) {
     .races {
         padding-right: clamp(10vmax, 25vmax, 35vmax);
     }
+
+    .service-text-container {
+        gap:2vh;
+        padding-left:6vw;
+        padding-bottom: 15vh;
+    }
+  
+
 }
 @media (min-width: 767px) {
     .races {
@@ -575,9 +590,17 @@ video {
         width: 60vw;
         height: 40vw;
     }
+    .service-text-container {
+        padding-left: 3vw;
+    }
+    
 }
 
 @media (min-width: 1200px) {
+
+    .service-text-container {
+        padding-left: 2vw;
+    }
     .races {
         padding-right: 10vmax;
     }
