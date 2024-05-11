@@ -478,6 +478,7 @@ video {
 }
 
 .service-text-container {
+    gap: 1.5vh;
     color: white;
     position: absolute;
     height: 100%;
@@ -492,44 +493,56 @@ video {
 .service-description-container {
     text-wrap: wrap;
     font-size: 2vh;
-    font-size: clamp(0.6rem, 1.2vw, 2rem);
+    font-size: clamp(0.7rem, 1.3vw, 2rem);
     text-wrap: nowrap;
-    width: 45%;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 .service-label-container {
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: 5vh;
     font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 800;
 }
 
-.service-information-container {
+.service-button-container {
+    top: 85%;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-left: 2vw;
-    padding-right: 2vw;
-    top: 50%;
-    width: 100%;
-    font-size: clamp(1rem, 2vw, 2rem);
-    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: fit-content;  
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
-.service-information-container {
-    display: none;
-    transition: opacity 0.5s;
-}
-
-/* .service-container:hover .service-information-container {
-    display: block;
-    opacity: 1;
-} */
-/* 
-.service-container:hover .service-label,
-.service-container:hover .service-description {
+.button-container:hover{
     cursor: pointer;
-    display: none;
 }
- */
+
+.service-button {
+    margin-right: 0.5vw;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 0; /* Entfernen von Padding */
+     font-size: clamp(0.8rem, 1vw, 1rem); 
+}
+
+.service-button a {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Verwenden Sie nur die benötigte Breite */
+}
+
+.button-icon {
+    display: flex;
+ height: clamp(1rem,4vh,1.5rem);
+}
+
 .service-container:hover .service-image {
     filter: brightness(50%);
 }
