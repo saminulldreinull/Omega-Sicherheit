@@ -454,6 +454,8 @@ video {
     
 }
 .races {
+        transform: translateZ(0);
+        will-change: transform;
     margin-left: 5vmax;
   padding-top: 10vh; 
     width: -moz-fit-content;
