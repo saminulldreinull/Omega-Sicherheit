@@ -11,15 +11,17 @@ const tween = gsap.to(races, {
     force3D: true
 });
 
-ScrollTrigger.create({
-	trigger:".racesWrapper",
-	start:"top 20%",
-	end: () => `+=${getScrollAmount() * -1}`,
-	pin:true,
-	animation:tween,
-	scrub:1,
-	invalidateOnRefresh:true,
-	markers:false
-})  
 
+  
+  ScrollTrigger.create({
+	trigger: ".racesWrapper",
+	start: "top 20%",
+	end: () => `+=${races.scrollWidth}`,
+	pin: true,
+	animation: tween,
+	scrub: true,
+	invalidateOnRefresh: true,
+	onRefresh: () => tween.invalidate()
+  });
+  
 
