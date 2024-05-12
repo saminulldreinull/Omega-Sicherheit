@@ -19,8 +19,6 @@
     
 }
 
-
-
 .logo-container {
 padding-top: 0.6vh;
 position: absolute;
@@ -301,7 +299,7 @@ color: white;
     }
     .button-range-slider {
         padding: 0;
-        width: 100vw;
+        width: 100%;
     }
 }
 

@@ -4,7 +4,6 @@ html {
     overflow-y: scroll;
     overflow-x: hidden; 
     font-family: "Inter Tight", sans-serif;
-    font-display: swap;
 }
 * {
     margin: 0;
@@ -16,6 +15,15 @@ html {
 section {
      overflow-x: hidden; 
 }
+
+.logo-link {
+    display: block;     /* Ermöglicht, dass das Element die volle Breite einnimmt */
+    position: relative; /* Für Positionierungskontext */
+    width: 100%;        /* Breite auf 100% des Elternelements setzen */
+    height: 100%;       /* Höhe auf 100% des Elternelements setzen */
+    text-decoration: none; /* Entfernt Unterstreichung von Links */
+  }
+  
 
 .logo-container {
     padding-top: 0.6vh;
@@ -221,7 +229,7 @@ video {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(70%);
+    filter: brightness(60%);
 }
 
 #landing-page {
@@ -286,7 +294,7 @@ video {
     gap: 30vh;
     display: flex;
     justify-content: space-between;
-    background-color: aliceblue;
+    background-color: rgb(250, 253, 255);
     height: 100vh;
     font-weight: 800;
 }
