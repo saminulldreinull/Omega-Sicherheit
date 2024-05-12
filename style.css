@@ -4,6 +4,7 @@ html {
     overflow-y: scroll;
     overflow-x: hidden; 
     font-family: "Inter Tight", sans-serif;
+    font-display: swap;
 }
 * {
     margin: 0;
@@ -308,10 +309,6 @@ video {
     font-weight: 800;
     word-break: keep-all;
      width: 100vw; 
-}
-
-.about-us-text > p {
-    font-size: 4.5cqi;
 }
 
   @media (max-width: 400px) {
