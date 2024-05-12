@@ -243,7 +243,7 @@ display: none;
 
 .service-text {
     font-size: clamp(1.5rem,3vw,1.5rem);
-    line-height: clamp(0.8rem,5vw,2rem);
+
     letter-spacing: 0.1vw;
 }
 
@@ -253,51 +253,56 @@ display: none;
     width: 35vw;
 }
 
-.button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    height: fit-content;  /* Höhe des Container-Elements */
-    width: 15vw;
-    background-color: rgb(129, 164, 205);
-    border-radius: 30px;
-    padding-left: 1vw;
+.button-range-slider {
+    width: 100%;
+    height: auto;
 }
 
-.button-container:hover{
-    cursor: pointer;
+.button-container { 
+    width: 220px;
+    height: 3rem;
+    display: flex;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: rgb(129, 164, 205);
 }
 
 .contact-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 8vh;
-    width: 25vw;
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    padding: 0; /* Entfernen von Padding */
-}
-
-.contact-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto; /* Verwenden Sie nur die benötigte Breite */
+text-decoration: none;
+color: white;
 }
 
 .button-icon {
+    padding-right: 0.5vw;
     display: flex;
- height: 4vh;
+ height: 3.5vh;
+} 
+
+
+@media (max-width: 400px) {
+    .service-text-content-container{
+        padding-left: 100px;
+        top: 55%;
+        width: 100vw;
+ 
+    }
+
+
+    .service-text-container {
+        width: auto;
+    }
+    .service-attention-text{
+        width: auto;
+    } 
+
+    .landing-page{
+    }
+    .button-range-slider {
+        padding: 0;
+        width: 100vw;
+    }
 }
-
-
-/* Sie könnten das Icon und den Text weiter zusammenbringen, indem Sie negative Margin verwenden */
-.contact-button a {
-    margin-left: -5px; /* Negativer Margin, um den Text näher zum Icon zu schieben */
-}
-
 
 
