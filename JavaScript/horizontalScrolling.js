@@ -5,9 +5,10 @@ function getScrollAmount() {
 }
 
 const tween = gsap.to(races, {
-	x: getScrollAmount,
-	duration: 3,
-	ease: "none",
+    x: getScrollAmount,
+    duration: 3,
+    ease: "none",
+    force3D: true
 });
 
 ScrollTrigger.create({
