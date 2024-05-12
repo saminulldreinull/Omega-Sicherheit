@@ -1,5 +1,3 @@
-
-
 let logo = document.getElementById('logo');
 let logoContainer = document.getElementById('logo-container');
 let header = document.querySelector('header');
@@ -11,12 +9,14 @@ function checkSection() {
 
     if (window.scrollY < landingPageTop + landingPageHeight) {
         header.style.backgroundColor = 'transparent';
+        header.style.willChange = 'background-color';  // Hinzufügen des will-change
         logo.classList.remove('logo-shrinked');
         logoContainer.classList.remove('logo-container-shrinked');
     } else {
+        header.style.backgroundColor = 'rgb(0,0,77)';
+        header.style.willChange = 'background-color';  // Hinzufügen des will-change
         logo.classList.add('logo-shrinked');
         logoContainer.classList.add('logo-container-shrinked');
-        header.style.backgroundColor = 'rgb(0,0,77)';
     }
 }
 
@@ -48,15 +48,15 @@ window.onload = () => {
         document.querySelector("header").classList.remove("shadow");
       }
     });
-  };
-  
-  window.addEventListener('resize', () => {
+};
+
+window.addEventListener('resize', () => {
     const checkbox = document.getElementById('check');
     if (window.innerWidth > 1028 && checkbox.checked) {
       checkbox.checked = false;
       document.documentElement.style.overflow = 'visible';
     }
-  });
+});
 
 window.addEventListener('scroll', checkSection);
 

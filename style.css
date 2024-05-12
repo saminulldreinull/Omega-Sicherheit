@@ -249,6 +249,7 @@ video {
 }
 
 #typewriter {
+    will-change: transform;
     color: white;
     z-index: 250;
     position: absolute;
@@ -312,6 +313,8 @@ video {
 }
 
 .about-us-text-container {
+    will-change: transform;
+    transform: translateZ(0);
  padding-top: 12%;
     font-size: clamp(2.3rem, 4.3vmax, 6vw); 
     font-weight: 800;
@@ -418,6 +421,10 @@ video {
 .key-figure {
     color: rgb(0, 0, 77);
 }
+.key-number {
+    /* Vorbereitung für Animationen, die wahrscheinlich erfolgen werden */
+    will-change: transform;
+}
 
 .label {
     font-weight: bold;
@@ -508,6 +515,8 @@ video {
 }
 
 .service-button-container {
+    will-change: transform;
+    transform: translateZ(0);
     top: clamp(75%,78%,80%);
     position: absolute;
     justify-content: center;
@@ -538,6 +547,10 @@ video {
     padding-left: 8px;
     display: flex;
  height: clamp(1rem,4vh,1.5rem);
+}
+
+button-icon path {
+    fill:#ffffff;
 }
 
 
