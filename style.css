@@ -508,10 +508,9 @@ video {
 .service-button-container {
     top: clamp(75%,78%,80%);
     position: absolute;
+    justify-content: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
     width: -moz-fit-content;
     width: fit-content;
     height: -moz-fit-content;
@@ -522,17 +521,11 @@ video {
     cursor: pointer;
 }
 
-.service-button {
-    margin-right: 0.5vw;
-    display: flex;
-    text-decoration: none;
+.service-button  {
+    font-size: clamp(0.8rem, 1vw, 1rem); 
     color: white;
-    padding: 0; /* Entfernen von Padding */
-     font-size: clamp(0.8rem, 1vw, 1rem); 
-}
-
-.service-button a {
-    
+    text-decoration: none;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -540,6 +533,7 @@ video {
 }
 
 .button-icon {
+    padding-left: 8px;
     display: flex;
  height: clamp(1rem,4vh,1.5rem);
 }
