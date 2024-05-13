@@ -230,10 +230,7 @@ display: none;
     flex-direction: column;
     gap:3vh;
 }
-.service-text-content-container p,h4 {
-    word-wrap: break-word;
-    hyphens: auto;
-}
+
 .service-heading {
     font-size: clamp(2rem,5vw,3.5rem);
 }
@@ -284,6 +281,16 @@ justify-content: center;
     height: 4.5vh;
 }
 
+@media(max-width:450px) {
+    .service-text-content-container {
+        margin-top: 5vh;
+    }
+   /*  .service-text-content-container p,h4 {
+        word-wrap: break-word;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    } */
+}
 @media(max-width:768px) {
 
     .service-text-content-container{
@@ -296,9 +303,9 @@ justify-content: center;
         padding-right: 10px;
     }
    
+
     .button-container {
-        align-items: space-aro
-        ;
+        align-items: space-around;
         justify-content: space-around;
     }
     .service-text{

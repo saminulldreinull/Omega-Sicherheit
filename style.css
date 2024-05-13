@@ -432,10 +432,11 @@ video {
     }
 }
  #service-section {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
     will-change: transform;
     background-color: #f8f9fa;
     transform: translateZ(0);
-    will-change: transform;
     position: relative;
     z-index: 3;
     scroll-snap-type: none;
@@ -452,6 +453,8 @@ video {
     gap: 4vw;
 }
 .service-container {
+      transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
     will-change: transform;
     box-sizing: border-box;
     flex: 0 0 auto;
@@ -462,6 +465,9 @@ video {
 }
 
 .service-image {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
     border-radius: 22px;
     height: 100%;
     width: 100%;
@@ -469,6 +475,9 @@ video {
 }
 
 .service-text-container {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
     gap: 1.5vh;
     color: white;
     position: absolute;
@@ -482,6 +491,9 @@ video {
 }
 
 .service-description-container {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
     text-wrap: wrap;
     font-size: clamp(1rem, 1.3vw, 2rem);
     letter-spacing: 0.06rem;
@@ -515,6 +527,9 @@ video {
 }
 
 .service-button {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
     font-size: clamp(0.8rem, 1vw, 1rem);
     color: white;
     text-decoration: none;
