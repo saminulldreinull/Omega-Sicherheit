@@ -230,7 +230,10 @@ display: none;
     flex-direction: column;
     gap:3vh;
 }
-
+.service-text-content-container p,h4 {
+    word-wrap: break-word;
+    hyphens: auto;
+}
 .service-heading {
     font-size: clamp(2rem,5vw,3.5rem);
 }
