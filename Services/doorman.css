@@ -15,7 +15,7 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
-    filter: brightness(70%);
+    filter: brightness(50%);
     
 }
 
@@ -240,7 +240,7 @@ display: none;
 }
 
 .service-text {
-    font-size: clamp(1.5rem,3vw,1.5rem);
+    font-size: clamp(1rem,3vw,1.5rem);
 
     letter-spacing: 0.1vw;
 }
@@ -252,55 +252,65 @@ display: none;
 }
 
 .button-range-slider {
-    width: 100%;
+    width: 220px;
     height: auto;
 }
 
-.button-container { 
-    width: 220px;
-    height: 3rem;
+.button-container {
     display: flex;
-    gap:5px;
     align-items: center;
-    justify-content: center;
-    border-radius: 30px;
+justify-content: center;
     background-color: rgb(129, 164, 205);
+    height: 3rem;
+    border-radius: 30px;
+    color: white;
 }
 
 .contact-button {
-text-decoration: none;
-color: white;
-}
-
-.button-icon {
-    padding-right: 0.5vw;
+    gap:5px;
+    color: white;
+    text-decoration: none;
     display: flex;
- height: 3.5vh;
-} 
-
-
-@media (max-width: 400px) {
-    .service-text-content-container{
-        padding-left: 100px;
-        top: 55%;
-        width: 100vw;
- 
-    }
-
-
-    .service-text-container {
-        width: auto;
-    }
-    .service-attention-text{
-        width: auto;
-    } 
-
-    .landing-page{
-    }
-    .button-range-slider {
-        padding: 0;
-        width: 100%;
-    }
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
+.button-icon{
+    padding-top: 2px;
+    height: 4.5vh;
+}
 
+@media(max-width:768px) {
+
+    .service-text-content-container{
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        width: 100%;
+        left: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+   
+    .button-container {
+        align-items: space-aro
+        ;
+        justify-content: space-around;
+    }
+    .service-text{
+        font-size: clamp(1rem,10vw,2rem);
+    }
+    .service-attention-text,.service-heading {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .button-range-slider {
+        width: clamp(18rem,90vw,70%);
+    }
+
+    .contact-button{
+        gap: 30px;
+    }
+}
