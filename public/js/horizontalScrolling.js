@@ -6,7 +6,7 @@ function getScrollAmount() {
 }
 
 const tween = gsap.to(races, {
-    x: () => getScrollAmount(),  // Stelle sicher, dass dies eine Funktion ist, falls sich die Breite dynamisch ändert
+    x: () => getScrollAmount(),
     duration: 3,
     ease: "none",
     force3D: true
@@ -16,7 +16,7 @@ ScrollTrigger.create({
     trigger: ".racesWrapper",
     start: "top 20%",
     end: () => `+=${document.querySelector(".races").scrollWidth}`,
-    pin: true,
+    pin: true, 
     animation: tween,
     scrub: true,
     invalidateOnRefresh: true,
