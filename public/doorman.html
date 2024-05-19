@@ -11,6 +11,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script>
+      if (window.location.hostname === 'localhost') {
+        document.write('<base href="http://localhost:5500/">');
+      } else {
+        document.write('<base href="https://saminulldreinull.github.io/Omega-Sicherheit/">');
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" ></script>
@@ -24,7 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Alata&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Batak&family=Patua+One&family=Titan+One&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="public/css/service.css" />
+    <link rel="stylesheet" href="css/service.css" />
   </head>
   <header class="header">
     
@@ -58,7 +65,7 @@
     </nav>
   </header>
     <div class="landing-page">
-      <img class="doorman-image" src="../images/doorman.webp" alt="" />
+      <img class="doorman-image" src="images/doorman.webp" alt="" />
     </div>
     <div class="service-text-content-container">
       <div class="service-heading-container">

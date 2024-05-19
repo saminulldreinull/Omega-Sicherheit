@@ -4,29 +4,33 @@
 <head>
   <meta charset="UTF-8" />
   <script>
-    if (window.location.hostname === 'localhost') {
-      document.write('<base href="http://localhost:5500/">');
-    } else {
-      document.write('<base href="https://saminulldreinull.github.io/Omega-Sicherheit/">');
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      var baseTag = document.createElement('base');
+      if (window.location.hostname === 'localhost') {
+        baseTag.href = 'http://localhost:5500/';
+      } else {
+        baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+      }
+      document.head.appendChild(baseTag);
+    });
   </script>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
   <script src="https://unpkg.com/split-type"></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
 
-  <script src="js/animateLandingSectionWords.js" async></script>
-  <script src="js/parallaxScrolling.js" async></script>
-  <script src="js/changingHeader.js" async></script>
-  <script src="js/textRevealAnimation.js" async></script>
-  <script src="js/animateKeyNumbers.js" defer></script>
-  <script src="js/horizontalScrolling.js" async></script>
-  <script src="js/buttonHover.js" async></script>
-  <script src="js/contactForm.js" defer></script>
+  <script src="js/horizontalScrolling.js" defer ></script>
+  <script src="js/animateLandingSectionWords.js" defer ></script>
+  <script src="js/parallaxScrolling.js" defer ></script>
+  <script src="js/changingHeader.js" defer ></script>
+  <script src="js/textRevealAnimation.js" defer ></script>
+  <script src="js/animateKeyNumbers.js" defer ></script>
+  <script src="js/buttonHover.js" defer ></script>
+  <script src="js/contactForm.js" defer ></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
@@ -134,7 +138,7 @@
               <h4 class="service-label">Alarmaufschaltung</h4>
             </div>
             <div class="button-container">
-              <a href="Services/alarmaufschaltung.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="alarmaufschaltung.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         
@@ -163,7 +167,7 @@
               <h4 class="service-label">Baustellenbewachung</h4>
             </div>
             <div class="button-container">
-              <a href="Services/baustellenbewachung.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="baustellenbewachung.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         
@@ -192,7 +196,7 @@
               <h4 class="service-label">Doorman</h4>
             </div>
             <div class="button-container">
-              <a href="Services/doorman.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="doorman.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         
@@ -221,7 +225,7 @@
               <h4 class="service-label">Empfangs- und Pfortendienst</h4>
             </div>
             <div class="button-container">
-              <a href="Services/empfangs-pfortendienst.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="empfangs-pfortendienst.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         
@@ -251,7 +255,7 @@
               <h4 class="service-label">Gemeinschaftsunterkünfte</h4>
             </div>
             <div class="button-container">
-              <a href="Services/gemeinschaftsunterkünfte.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="gemeinschaftsunterkünfte.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         
@@ -280,7 +284,7 @@
               <h4 class="service-label">Revier- und Streifendienst</h4>
             </div>
             <div class="button-container">
-              <a href="Services/revier-_streifendienst.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="revier-_streifendienst.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         
@@ -309,7 +313,7 @@
               <h4 class="service-label">Veranstaltungsschutz</h4>
             </div>
             <div class="button-container">
-              <a href="Services/veranstaltungsschutz.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="veranstaltungsschutz.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         
@@ -338,7 +342,7 @@
               <h4 class="service-label">Werk- und Objektschutz</h4>
             </div>
             <div class="button-container">
-              <a href="Services/werk_-objektschutz.html" class="service-button">ERFAHREN SIE MEHR
+              <a href="werk_-objektschutz.html" class="service-button">ERFAHREN SIE MEHR
               <div class="button-icon-container">
                 <svg class = "button-icon" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve" fill="#ffffff" stroke="#ffffff">
         

@@ -8,7 +8,6 @@ html {
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 }
 
@@ -442,6 +441,11 @@ video {
     scroll-snap-type: none;
     margin-bottom: 50vh;/* beachte */
 }
+
+.racesWrapper {
+    overflow: hidden;
+}
+
 
 .races {
     will-change: transform;
