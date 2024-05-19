@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     if (form) {
       form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Verhindert das Standard-Formularverhalten
+        event.preventDefault();
   
         const formData = new FormData(form);
         const jsonData = JSON.stringify(Object.fromEntries(formData));

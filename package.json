@@ -23,6 +23,6 @@
     "nodemailer": "^6.9.13"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^4.0.0"
   }
 }
