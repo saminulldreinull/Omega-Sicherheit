@@ -672,7 +672,7 @@ color: rgb(0, 0, 77);
 }
 
 
-#form {
+#contactForm {
     display: flex;
     gap: 5vh;
     flex-direction: column;
