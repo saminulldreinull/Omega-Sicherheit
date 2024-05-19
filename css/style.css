@@ -1,0 +1,769 @@
+html {
+    /* scroll-behavior: smooth; 
+    scroll-snap-type: y mandatory;  overflow-y: scroll; 
+      overflow-x: hidden;   */
+      overflow-x: hidden;
+    font-family: "Inter Tight", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+section {
+    overflow-x: hidden;
+}
+
+.logo-link {
+    display: block; /* Ermöglicht, dass das Element die volle Breite einnimmt */
+    position: relative; /* Für Positionierungskontext */
+    width: 100%; /* Breite auf 100% des Elternelements setzen */
+    height: 100%; /* Höhe auf 100% des Elternelements setzen */
+    text-decoration: none; /* Entfernt Unterstreichung von Links */
+}
+
+.logo-container {
+    padding-top: 0.6vh;
+    position: absolute;
+    top: 0;
+    left: 3%;
+    height: auto;
+    width: auto;
+}
+
+.logo {
+    width: 7.5vw;
+    height: 7.5vh;
+    color: white;
+}
+.logo path {
+    fill: white;
+}
+
+.logo-shrinked path {
+    fill: #fff;
+}
+.logo {
+    position: absolute;
+    flex: 0 0 auto;
+    width: clamp(3.5rem, 8vw, 5rem);
+    height: clamp(3.5rem, 8vh, 5rem);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+header {
+    opacity: 100%;
+    background-color: transparent;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: clamp(4.5rem, 7.5vh, 5.5rem);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-branding {
+    width: auto;
+    font-size: clamp(2rem, 1.5vw, 1.25rem);
+    margin-left: 2%;
+    padding-top: 2vh;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-branding span {
+    padding-left: 0.5rem;
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+body.open-nav-branding {
+    overflow: hidden;
+}
+
+.nav-menu {
+    color: white;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    padding-right: 4vh;
+    font-weight: bold;
+}
+
+a.nav-link:hover {
+    color: black;
+    transition: 0.7s ease;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.logo img {
+    width: 40px;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    padding-left: 6vw;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: 0.15s ease-in-out;
+}
+
+span.menu {
+    width: 100%;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {
+    display: none;
+}
+@media (max-width: 1028px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        gap: 5vh;
+        right: -100%;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.2s ease-in-out;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+    }
+
+    .menu li {
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li a {
+        flex: 0 1 auto;
+        width: 80%;
+        text-align: left;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .menu li a:hover {
+        color: #ccc;
+    }
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
+
+:root {
+    --color2: rgb(0, 0, 77);
+}
+video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(60%);
+}
+
+#landing-page {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes fadeInLeftToRight {
+    from {
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes fadeOutRightToLeft {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+    }
+}
+
+#typewriter {
+    will-change: transform;
+    color: white;
+    z-index: 250;
+    position: absolute;
+    left: 50%;
+    font-size: clamp(1rem, 2vw, 2rem);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+}
+
+#typewriter::after {
+    content: "|";
+    font-weight: bold;
+    color: white;
+    margin-left: 0.2em;
+    opacity: 1;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.explained-section {
+    overflow-y: hidden;
+    margin-top: 10vh;
+    gap: 30vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(250, 253, 255);
+    height: 100vh;
+    font-weight: 800;
+}
+
+.explained-content {
+    width: 100%;
+    padding-left: clamp(1vmax, 1.5vmax, 6vw);
+    padding-right: clamp(1vw, 3vw, 4vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30vh;
+}
+
+.about-us-text-container {
+    will-change: transform;
+    transform: translateZ(0);
+    padding-top: 12%;
+    font-size: clamp(2.3rem, 4.3vmax, 6vw);
+    font-weight: 800;
+    word-break: keep-all;
+    width: 100vw;
+}
+
+@media (max-width: 400px) {
+    .explained-content {
+        padding-top: 10vh;
+        gap: 20vh;
+    }
+    .fact-container {
+        margin-bottom: 10vh;
+    }
+    .break-s {
+        display: inline;
+    }
+}
+
+@media (min-width: 400px) {
+    .explained-content {
+        padding-top: 5vh;
+        gap: 20vh;
+    }
+    .fact-container {
+        margin-bottom: 5vh;
+    }
+
+    .break-s {
+        display: inline;
+    }
+}
+
+@media (min-width: 576px) {
+    .break-s {
+        display: none;
+    }
+    .break-m {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    .break-m,
+    .break-s {
+        display: none;
+    }
+    .break-l {
+        display: inline;
+    }
+}
+
+@media (min-width: 1028px) {
+    .fact-container {
+        margin-bottom: 2vh;
+    }
+
+    .break-l,
+    .break-m,
+    .break-s {
+        display: none;
+    }
+    .break-xl {
+        display: inline;
+    }
+}
+
+.fact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: flex-start;
+}
+
+.facts {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.key-figure-container {
+    position: absolute;
+    bottom: 100%;
+}
+
+.key-figure {
+    font-size: clamp(3.5vmax, 6vmax, 3.5rem);
+    font-weight: 900;
+    width: 100%;
+}
+
+.key-figure {
+    color: rgb(0, 0, 77);
+}
+.key-number {
+    will-change: transform;
+}
+
+.label {
+    font-weight: bold;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.key-figure-container,
+.label {
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.keyword,
+.label {
+    color: rgb(129, 164, 205);
+}
+
+@media screen and (max-width: 768px) {
+    .facts {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+ #service-section {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    background-color: #f8f9fa;
+    transform: translateZ(0);
+    position: relative;
+    z-index: 3;
+    scroll-snap-type: none;
+    margin-bottom: 50vh;/* beachte */
+}
+
+.races {
+    will-change: transform;
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    margin-left: 5vmax;
+    padding-top: 10vh;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    gap: 4vw;
+}
+.service-container {
+      transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: 65vh;
+    width: auto;
+    display: flex;
+    position: relative;
+}
+
+.service-image {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    border-radius: 22px;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.service-text-container {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    gap: 1.5vh;
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: clamp(2.5rem, 9vw, 6rem);
+    padding-left: clamp(1rem, 3vw, 2rem);
+}
+
+.service-description-container {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    text-wrap: wrap;
+    font-size: clamp(1rem, 1.3vw, 2rem);
+    letter-spacing: 0.06rem;
+    font-weight: 500;
+    text-wrap: wrap;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.service-label-container {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.button-container {
+    will-change: transform;
+    transform: translateZ(0);
+    top: clamp(75%, 78%, 80%);
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.button-container:hover {
+    cursor: pointer;
+}
+
+.service-button {
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+.button-icon {
+    padding-left: 8px;
+    display: flex;
+    height: clamp(1rem, 4vh, 1.5rem);
+}
+
+.button-icon path {
+    fill: #ffffff;
+}
+
+.service-image {
+    filter: brightness(80%);
+    transition: opacity 0.5s;
+}
+
+@media (min-width: 370px) {
+    .races {
+        padding-right: clamp(20vmax, 40vmax, 50vmax);
+    }
+    .service-container,
+    .image-container {
+        width: 85vw;
+        height: clamp(50vw, 65vw, 75vw);
+    }
+
+    .service-text-container {
+        gap: 2vmin;
+        padding-left: 8vw;
+        padding-bottom: 15vh;
+    }
+}
+
+@media (min-width: 576px) {
+    .races {
+        padding-right: clamp(10vmax, 25vmax, 34vmax);
+    }
+
+    .service-text-container {
+        gap: 2vh;
+        padding-left: 6vw;
+        padding-bottom: 15vh;
+    }
+}
+@media (min-width: 767px) {
+    .races {
+        padding-right: clamp(15vmax, 28vmax, 40vmax);
+    }
+    .service-container,
+    .image-container {
+        width: 60vw;
+        height: 40vw;
+    }
+    .service-text-container {
+        padding-left: 3vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .service-text-container {
+        padding-left: 2vw;
+    }
+    .races {
+        padding-right: 10vmax;
+    }
+    .service-container,
+    .image-container {
+        width: 50vw;
+        height: 60vh;
+    }
+}
+
+.contact-section {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    padding:0 10vw;
+    background-color: rgb(129, 164, 205);
+    margin-top: 10vh;
+}
+
+
+
+.contact-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 12vh;
+    padding-top: 14vh;
+    height: 80vh;
+}
+
+.contact-information-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.marking {
+    border: 1px solid rgb(0, 0, 77);
+    width: 4vw;
+}
+
+.mandatory {
+color: rgb(0, 0, 77);
+}
+.contact-heading-container {
+}
+.contact-information-wrapper > div {
+    width: 35vw;
+}
+.contact-heading {
+    font-weight: 500;
+    font-size: clamp(2.4rem,18vh,4.4rem);
+}
+
+.contact-text1 {
+    font-size: clamp(1rem,10vh,2rem);
+    font-weight: 400;
+}
+
+.contact-text2 {
+    font-weight: 400;
+}
+
+.form-wrapper {
+    flex:1;
+}
+
+
+#contactForm {
+    display: flex;
+    gap: 5vh;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+input,textarea {
+    border-radius: 15px;
+    padding-left: 1vw;
+    border: none;
+    height: 6vh;
+}
+
+
+
+#message {
+    height: 10vh;
+}
+.form-button-range-slider {
+    width: 100%; /* Set to 100% width to fill the parent */
+    height: auto;
+  }
+  
+  .form-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 100%; /* Make sure it fills the parent container height */
+    width: 100%; /* Make sure it fills the parent container width */
+    border-radius: 15px;
+    color: white;
+    position: relative; /* Make sure it's positioned relative for the button to fill */
+  }
+  
+  .form-button {
+    gap: 5px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure the button fills the container */
+    height: 100%; /* Ensure the button fills the container */
+    border: none;
+    background: none; /* Remove any default button styling */
+    cursor: pointer; /* Ensure it still acts like a button */
+  }
+  
+  
+  
+  .form-button-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-button-icon {
+    width: 24px; /* Adjust as necessary */
+    height: 50px; /* Adjust as necessary */
+    fill: black; /* Ensure the fill color is set */
+  }
+  
+  .form-button-icon path {
+    fill: black;
+  }
+  
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.input-container-privacy {
+    top: 96%;
+    padding-left: 10px;
+position: absolute;
+display: flex;
+flex-direction: row;
+}
+#privacy {
+    height: 10px;
+}
+
+.approval-text {
+    color: white;
+    font-size: 10px;
+}
