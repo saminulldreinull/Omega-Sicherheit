@@ -617,13 +617,10 @@ video {
 }
 
 .contact-section {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
     color: white;
     height: 100vh;
     width: 100vw;
     padding:0 10vw;
-    background-color: rgb(129, 164, 205);
     margin-top: 10vh;
 }
 
@@ -635,15 +632,35 @@ video {
     margin-top: 12vh;
     padding-top: 14vh;
     height: 80vh;
+    z-index: 20;
 }
 
 .contact-information-wrapper {
+    justify-self: flex-end;
+    align-self: flex-end;
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 4vh;
 }
 
+
+/* .contact-image-container {
+    z-index: -100;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+ */
+.contact-image-container img {
+z-index: -100;
+object-fit: cover;
+position: absolute;
+left: 0;
+width: 100%;
+height: 100%;
+}
 .marking {
     border: 1px solid rgb(0, 0, 77);
     width: 4vw;
@@ -678,10 +695,12 @@ color: rgb(0, 0, 77);
 
 #contactForm {
     display: flex;
-    gap: 5vh;
     flex-direction: column;
 }
 
+label {
+    color: white;
+}
 .input-container {
     display: flex;
     flex-direction: column;
@@ -689,13 +708,20 @@ color: rgb(0, 0, 77);
 }
 
 input,textarea {
+    margin-bottom: 5vh;
     border-radius: 15px;
     padding-left: 1vw;
     border: none;
     height: 6vh;
+    background-color: rgb(43,47,55);
+    color: white;
+    opacity: 80%;
 }
 
-
+input::placeholder,textarea::placeholder {
+    opacity: 1;
+    color: white;
+}
 
 #message {
     height: 10vh;
@@ -704,6 +730,7 @@ input,textarea {
     width: 100%; /* Set to 100% width to fill the parent */
     height: auto;
   }
+  
   
   .form-button-container {
     display: flex;
@@ -757,17 +784,14 @@ input,textarea {
 }
 
 .input-container-privacy {
-    top: 96%;
-    padding-left: 10px;
-position: absolute;
-display: flex;
-flex-direction: row;
+    height: 15px;
 }
 #privacy {
+
     height: 10px;
 }
 
 .approval-text {
     color: white;
-    font-size: 10px;
+    font-size: 14px;
 }
