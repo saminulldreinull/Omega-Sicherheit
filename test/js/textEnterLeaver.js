@@ -1,5 +1,5 @@
 // Corrected JavaScript code
-const textContainers = document.getElementsByClassName('text-container'); // Remove the dot
+const textContainers = document.getElementsByClassName('contact-text-container'); // Remove the dot
 
 // Convert HTMLCollection to an array
 const textContainersArray = Array.from(textContainers);

@@ -13,11 +13,11 @@ html, body {
 body {
     overflow-x: hidden;
 }
-#image {
+#contact-section {
     min-height: 620vh; /* Große Höhe für Scrolling-Effekt */
     background-color: rgb(0,0,77); /* Hintergrundfarbe */
 }
-#image img {
+#contact-image {
     filter: brightness(80%);
     position: sticky; /* Sticky-Positionierung */
     top: 0; /* Haftet am oberen Rand */
@@ -26,22 +26,17 @@ body {
     height: 100vh; /* Höhe des Viewports */
 }
 
-
-h1 {
-    padding: 30px;
-}
-
 .service-section {
     background-color: grey;
     height: 100vh; /* Höhe des Viewports */
     width: 100vw;
 }
 
-.text-wrapper {
+.contact-text-wrapper {
     margin-top: -50vh; /* Versatz nach oben für Überlagerung */
 }
 
-.text-container {
+.contact-text-container {
     padding: 0 10%;
     position: relative;
     margin: 40vh 0;
@@ -49,15 +44,15 @@ h1 {
     transition: opacity 0.8s;
 }
 
-.text-container.visible {
+.contact-text-container.visible {
     opacity: 1;
 }
-.text-container {
+.contact-text-container {
     padding: 0 10%;
     position: relative;
     margin: 40vh 0;
 }
-h2 {
+.contact-text-container-element {
     color: white;
     text-align: left;
     font-size: clamp(3rem,4rem,5rem);
