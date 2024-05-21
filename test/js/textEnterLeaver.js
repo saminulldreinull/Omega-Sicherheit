@@ -1,17 +1,13 @@
-let headings = gsap.utils.toArray("h1");
+const h2s = document.querySelectorAll('h2')
 
-headings.forEach(function (element, index) {
-  gsap.to(element, {
-    backgroundImage: "linear-gradient(45deg, #000 100%, #eee 200%, #000 300%)",
-    duration: 2,
-    ease: "none",
-    scrollTrigger: {
-      trigger: element,
-      start: "top 75%",
-      end: "top 25%",
-      scrub: true,
-      markers: true
+const observer = new IntersectionObserver((entries) => {
+	for (const entry of entries) {
+  	if (entry.isIntersecting) {
+	    entry.target.classList.add('visible')
+    } else {
+			entry.target.classList.remove('visible')
     }
-  });
-});
-
+  }
+}, { threshold: 1.0, rootMargin: '20%' })
+  
+h2s.forEach(el => observer.observe(el))

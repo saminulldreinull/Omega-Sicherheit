@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+/* gsap.registerPlugin(ScrollTrigger);
 
 const imageElement = document.getElementById("imageElement");
 
@@ -16,7 +16,7 @@ const tl = gsap.timeline({
 tl.from("#image img", {
     scale: 0.9,
     duration: 1,
-    transformOrigin: "center ",
+    transformOrigin: "center",
 }).to({}, {
     duration: 1
 });
@@ -30,3 +30,4 @@ ScrollTrigger.create({
     scrub: 0.8,
     pinSpacing: true
 });
+  */
