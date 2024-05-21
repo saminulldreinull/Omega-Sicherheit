@@ -28,8 +28,10 @@
   <script src="js/changingHeader.js" defer ></script>
   <script src="js/textRevealAnimation.js" defer ></script>
   <script src="js/animateKeyNumbers.js" defer ></script>
-  <script src="js/buttonHover.js" defer ></script>
   <script src="js/horizontalScrolling.js" defer ></script>
+  <script src="js/buttonHover.js" defer ></script>
+  <!-- <script src ="../test/js/imageScale.js" defer></script> -->
+  <!-- <script src ="../test/js/textEnterLeaver.js" defer></script> -->
   <script src="js/contactForm.js" defer ></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -362,72 +364,95 @@
     </div>
   </section>
 
-  <section class="contact-section">
-    <div class="contact-image-container">
-      <img src="images/omega_buero.webp" alt="">
-    </div>
-    <div class="contact-content-wrapper">
-      <div class="contact-information-wrapper">
-        <div class="contact-heading-container">
-          <h4 class="contact-heading">Kontakt</h4>
-        </div>
-        <span class="marking"></span>
-        <div class="contact-text-container contact-text1-container">
-          <p class="contact-text1">Womit Sie sich bei uns sicher sein können:</p>
-        </div>
-        <div class="contact-text-container contact-text2-container">
-          <ul class="benefits">
-            <li><span>Maßgeschneiderte Lösungen: Weil kein Unternehmen dem Standard entspricht.</span></li>
-            <li><span>Zuverlässig: Hunderte zufriedener Kunden und erfolgreiche Projekte.</span></li>
-            <li><span>ISO- und DIN zertifiziert: Unsere maßgeschneiderten Lösungen entsprechen höchsten internationalen und deutschen Qualitäts- und Sicherheitsstandards.</span></li>
-            <li><span>Rund um die Uhr erreichbar: 24/7 Support für Ihre Anliegen.</span></li>
-            <li><span>Diskret: Höchste Vertraulichkeit garantiert.</span></li>
-          </ul>
-        </div>
+  <section id="contact-section">
+    <img id="contact-image" src="../public/images/omega_buero.webp" alt = ""/>
+
+    <div class="contact-text-wrapper">
+      <div class="contact-text-container">
+        <h2 class = "contact-text-container-element">Womit Sie sich bei uns sicher sein können:</h2>
       </div>
-      <div class="form-wrapper">
-        <form id="contactForm" action="/contact/send-email" method="POST">
-          <div class="input-container">
-            <label for="name">Name<span class="mandatory">*</span></label>
-            <input type="text" id="name" name="name" autocomplete="name" placeholder="Vollständiger Name" required>
-          </div>
-          <div class="input-container">
-            <label for="email">Email<span class="mandatory">*</span></label>
-            <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
-          </div>
-          <div class="input-container">
-            <label for="company">Unternehmen</label>
-            <input type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
-          </div>
-          <div class="input-container">
-            <label for="message">Nachricht<span class="mandatory">*</span></label>
-            <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht hier..." required></textarea>
-          </div>
-          <div class="form-button-range-slider">
-            <div class="form-button-container">
-              <button type="submit" class="form-button">
-                <div class="form-button-icon-container">
-                  <svg class="form-button-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                    <g id="SVGRepo_iconCarrier">
-                      <g>
-                        <path style="fill:black;" d="M181.512,363.024c100.083,0,181.513-81.43,181.513-181.512C363.025,81.424,281.595,0,181.512,0 C81.422,0,0,81.424,0,181.513C0,281.595,81.422,363.024,181.512,363.024z M181.512,11.71c93.633,0,169.803,76.176,169.803,169.803 c0,93.632-76.17,169.802-169.803,169.802c-91.656,0-166.545-73.014-169.656-163.936l189.944,0.366l-32.959,32.959l8.28,8.279 l47.065-47.06l-47.885-47.885l-8.28,8.28l33.722,33.725l-189.892-0.375C14.956,84.744,89.844,11.71,181.512,11.71z"/>
-                      </g>
-                    </g>
-                  </svg>
-                </div>
-                Kontaktieren Sie Uns!
-              </button>
+
+      <div class="contact-text-container">
+        <h2 class = "contact-text-container-element">Maßgeschneiderte Lösungen.</h2>
+      </div>
+      <div class="contact-text-container">
+        <h2 class = "contact-text-container-element">Weil kein Unternehmen dem Standard entspricht.</h2>
+      </div>
+      <div class="contact-text-container">
+        <h2 class = "contact-text-container-element">ISO- & DIN zertifiziert.</h2>
+      </div>
+      <div class="contact-text-container">
+        <h2 class = "contact-text-container-element">
+          Unsere Lösungen entsprechen höchsten internationalen und deutschen
+          Qualitätsstandards.
+        </h2>
+      </div>
+
+      <div class="contact-text-container">
+          <h2 class = "contact-text-container-element">
+            Rund um die Uhr erreichbar.
+          </h2>
+        </div>
+
+        <div class="contact-text-container">
+          <h2 class = "contact-text-container-element">
+              24/7 Support für Ihre Anliegen.
+          </h2>
+        </div>
+
+        <div class="contact-text-container">
+          <h2 class = "contact-text-container-element">
+              Kontaktieren Sie uns!
+          </h2>
+        </div>
+
+
+
+
+      <div class="form-wrapper contact-text-container">
+          <form id="contactForm" action="/contact/send-email" method="POST">
+            <div class="input-container">
+              <label for="name">Name<span class="mandatory">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Vollständiger Name" required>
             </div>
-          </div>
-          <div class="input-container-privacy">
-            <input type="checkbox" id="privacy" name="privacy" required> 
-            <span class = "approval-text">Ich stimme der <a class = "approval-text" href="/privacy-policy" target="_blank">Datenschutzerklärung</a> zu.</span>
-          </div>
-        </form>
-      </div>
+            <div class="input-container">
+              <label for="email">Email<span class="mandatory">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
+            </div>
+            <div class="input-container">
+              <label for="company">Unternehmen</label>
+              <input type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
+            </div>
+            <div class="input-container">
+              <label for="message">Nachricht<span class="mandatory">*</span></label>
+              <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht hier..." required></textarea>
+            </div>
+            <div class="form-button-range-slider">
+              <div class="form-button-container">
+                <button type="submit" class="form-button">
+                  <div class="form-button-icon-container">
+                    <svg class="form-button-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                      <g id="SVGRepo_iconCarrier">
+                        <g>
+                          <path style="fill:black;" d="M181.512,363.024c100.083,0,181.513-81.43,181.513-181.512C363.025,81.424,281.595,0,181.512,0 C81.422,0,0,81.424,0,181.513C0,281.595,81.422,363.024,181.512,363.024z M181.512,11.71c93.633,0,169.803,76.176,169.803,169.803 c0,93.632-76.17,169.802-169.803,169.802c-91.656,0-166.545-73.014-169.656-163.936l189.944,0.366l-32.959,32.959l8.28,8.279 l47.065-47.06l-47.885-47.885l-8.28,8.28l33.722,33.725l-189.892-0.375C14.956,84.744,89.844,11.71,181.512,11.71z"/>
+                        </g>
+                      </g>
+                    </svg>
+                  </div>
+                  Kontaktieren Sie Uns!
+                </button>
+              </div>
+            </div>
+            <div class="input-container-privacy">
+              <input type="checkbox" id="privacy" name="privacy" required> 
+              <span class = "approval-text">Ich stimme der <a class = "approval-text" href="/privacy-policy" target="_blank">Datenschutzerklärung</a> zu.</span>
+            </div>
+          </form>
+        </div>
     </div>
   </section>
+  <footer></footer>
 </body>
 </html>

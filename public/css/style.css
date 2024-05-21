@@ -616,76 +616,160 @@ video {
     }
 }
 
-.contact-section {
-    color: white;
-    height: 100vh;
-    width: 100vw;
-    padding:0 10vw;
+
+#contact-section {
     margin-top: 10vh;
+    min-height: 620vh; /* Große Höhe für Scrolling-Effekt */
+    background-color: rgb(0,0,77); /* Hintergrundfarbe */
+}
+#contact-image {
+    filter: brightness(80%);
+    position: sticky; /* Sticky-Positionierung */
+    top: 0; /* Haftet am oberen Rand */
+    width: 100%;
+    object-fit: cover;
+    height: 100vh; /* Höhe des Viewports */
+}
+.contact-text-wrapper {
+    margin-top: -50vh; /* Versatz nach oben für Überlagerung */
+}
+
+.contact-text-container {
+    padding: 0 10%;
+    position: relative;
+    margin: 40vh 0;
+    opacity: 0;  
+    transition: opacity 0.8s;
+}
+
+.contact-text-container.visible {
+    opacity: 1;
+}
+.contact-text-container {
+    padding: 0 10%;
+    position: relative;
+    margin: 40vh 0;
+}
+.contact-text-container-element {
+    color: white;
+    text-align: left;
+    font-size: clamp(3rem,4rem,5rem);
+    font-weight: 900;
+}
+
+footer {
+    height: 90vh;
+    width: 100vw;
+    background-color: rebeccapurple;
 }
 
 
+.form-wrapper {
+    flex:1;
+}
 
-.contact-content-wrapper {
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: white;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+input,textarea {
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    padding-left: 1vw;
+    border: none;
+    height: 6vh;
+    background-color: rgb(43,47,55);
+    color: white;
+    opacity: 80%;
+}
+
+input::placeholder,textarea::placeholder {
+    opacity: 1;
+    color: white;
+}
+
+#message {
+    height: 10vh;
+}
+.form-button-range-slider {
+    width: 100%; /* Set to 100% width to fill the parent */
+    height: auto;
+  }
+  
+  
+  .form-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 100%; /* Make sure it fills the parent container height */
+    width: 100%; /* Make sure it fills the parent container width */
+    border-radius: 15px;
+    color: white;
+    position: relative; /* Make sure it's positioned relative for the button to fill */
+  }
+  
+  .form-button {
+    gap: 5px;
+    color: black;
+    text-decoration: none;
     display: flex;
     flex-direction: row;
-    margin-top: 12vh;
-    padding-top: 14vh;
-    height: 80vh;
-    z-index: 20;
-}
-
-.contact-information-wrapper {
-    justify-self: flex-end;
-    align-self: flex-end;
-    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure the button fills the container */
+    height: 100%; /* Ensure the button fills the container */
+    border: none;
+    background: none; /* Remove any default button styling */
+    cursor: pointer; /* Ensure it still acts like a button */
+  }
+  
+  
+  
+  .form-button-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-button-icon {
+    width: 24px; /* Adjust as necessary */
+    height: 50px; /* Adjust as necessary */
+    fill: black; /* Ensure the fill color is set */
+  }
+  
+  .form-button-icon path {
+    fill: black;
+  }
+  
+.benefits {
     display: flex;
     flex-direction: column;
     gap: 4vh;
 }
 
+.input-container-privacy {
+    height: 15px;
+}
+#privacy {
 
-/* .contact-image-container {
-    z-index: -100;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
- */
-.contact-image-container img {
-z-index: -100;
-object-fit: cover;
-position: absolute;
-left: 0;
-width: 100%;
-height: 100%;
-}
-.marking {
-    border: 1px solid rgb(0, 0, 77);
-    width: 4vw;
+    height: 10px;
 }
 
-.mandatory {
-color: rgb(0, 0, 77);
-}
-.contact-heading-container {
-}
-.contact-information-wrapper > div {
-    width: 35vw;
-}
-.contact-heading {
-    font-weight: 500;
-    font-size: clamp(2.4rem,18vh,4.4rem);
-}
-
-.contact-text1 {
-    font-size: clamp(1rem,10vh,2rem);
-    font-weight: 400;
-}
-
-.contact-text2 {
-    font-weight: 400;
+.approval-text {
+    color: white;
+    font-size: 14px;
 }
 
 .form-wrapper {
