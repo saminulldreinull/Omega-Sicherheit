@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 #image {
-    min-height: 600vh; /* Große Höhe für Scrolling-Effekt */
+    min-height: 620vh; /* Große Höhe für Scrolling-Effekt */
     background-color: rgb(0,0,77); /* Hintergrundfarbe */
 }
 #image img {
@@ -36,31 +36,141 @@ h1 {
     width: 100vw;
 }
 
-.text-container {
+.text-wrapper {
     margin-top: -50vh; /* Versatz nach oben für Überlagerung */
 }
 
-h2 {
+.text-container {
     opacity: 0;  
     transition: opacity 0.8s;
 }
 
-h2.visible {
+.text-container.visible {
     opacity: 1;
 }
-
-h2 {
+.text-container {
+    padding: 0 10%;
+    position: relative;
     margin: 40vh 0;
+}
+h2 {
     color: white;
     text-align: left;
     font-size: clamp(3rem,4rem,5rem);
     font-weight: 900;
-    padding: 0 10%;
-    position: relative;
 }
 
 footer {
     height: 90vh;
     width: 100vw;
     background-color: rebeccapurple;
+}
+
+
+.form-wrapper {
+    flex:1;
+}
+
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: white;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+input,textarea {
+    margin-bottom: 5vh;
+    border-radius: 15px;
+    padding-left: 1vw;
+    border: none;
+    height: 6vh;
+    background-color: rgb(43,47,55);
+    color: white;
+    opacity: 80%;
+}
+
+input::placeholder,textarea::placeholder {
+    opacity: 1;
+    color: white;
+}
+
+#message {
+    height: 10vh;
+}
+.form-button-range-slider {
+    width: 100%; /* Set to 100% width to fill the parent */
+    height: auto;
+  }
+  
+  
+  .form-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 100%; /* Make sure it fills the parent container height */
+    width: 100%; /* Make sure it fills the parent container width */
+    border-radius: 15px;
+    color: white;
+    position: relative; /* Make sure it's positioned relative for the button to fill */
+  }
+  
+  .form-button {
+    gap: 5px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure the button fills the container */
+    height: 100%; /* Ensure the button fills the container */
+    border: none;
+    background: none; /* Remove any default button styling */
+    cursor: pointer; /* Ensure it still acts like a button */
+  }
+  
+  
+  
+  .form-button-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-button-icon {
+    width: 24px; /* Adjust as necessary */
+    height: 50px; /* Adjust as necessary */
+    fill: black; /* Ensure the fill color is set */
+  }
+  
+  .form-button-icon path {
+    fill: black;
+  }
+  
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+.input-container-privacy {
+    height: 15px;
+}
+#privacy {
+
+    height: 10px;
+}
+
+.approval-text {
+    color: white;
+    font-size: 14px;
 }

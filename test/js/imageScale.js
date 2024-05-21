@@ -30,4 +30,4 @@ ScrollTrigger.create({
     scrub: 0.8,
     pinSpacing: true
 });
-  */
+   */
