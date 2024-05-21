@@ -1,4 +1,4 @@
-/* gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const imageElement = document.getElementById("imageElement");
 
@@ -13,7 +13,7 @@ const tl = gsap.timeline({
     }
 });
 
-tl.from("#image img", {
+tl.from(imageElement, {
     scale: 0.9,
     duration: 1,
     transformOrigin: "center",
@@ -24,10 +24,21 @@ tl.from("#image img", {
 ScrollTrigger.create({
     trigger: "#image",
     start: "top top",
-    end: "+=200%",
-    pin: true,
+    end: "+=520%",
     animation: tl,
     scrub: 0.8,
-    pinSpacing: true
+    pin: imageElement,
+    pinSpacing: false,
+    onUpdate: (self) => {
+        if (self.progress < 1) {
+            imageElement.style.position = 'fixed';
+            imageElement.style.top = '0';
+            imageElement.style.width = '100%';
+            imageElement.style.height = '100vh';
+        } else {
+            imageElement.style.position = 'relative';
+            imageElement.style.top = 'auto';
+            imageElement.style.height = 'auto';
+        }
+    }
 });
-   */
