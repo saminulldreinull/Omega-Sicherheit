@@ -1,5 +1,4 @@
-// Contact-image/section scaling
-const imageElement = document.getElementById("contact-image");
+ const imageElement = document.getElementById("contact-image");
 gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline({
   ease: "none",
@@ -18,7 +17,7 @@ tl.from(imageElement, {
   transformOrigin: "center",
 }).to({}, {
   duration: 1
-});
+}); 
 
 ScrollTrigger.create({
   trigger: "#contact-section",
@@ -42,4 +41,4 @@ ScrollTrigger.create({
     imageElement.style.height = 'auto';
   }
 });
-
+ 

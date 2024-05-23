@@ -664,19 +664,22 @@ video {
 .contact-text-container.visible {
     opacity: 1;
 }
-.contact-text-container {
-    padding: 0 10%;
-    position: relative;
-    margin: 40vh 0;
-}
+
 .contact-text-container-element {
     color: white;
     text-align: left;
-    font-size: clamp(3rem,4rem,5rem);
-    font-weight: 900;
+    font-size: clamp(5vmax,15vmax,3rem);
+    font-weight: 700;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
-
+@media (max-width:400px) { 
+    .contact-text-container {
+        font-size: clamp(5vmax,15vmax,3rem);
+    padding: 0 10%;
+}
+}
 
   form {
     display: flex;
