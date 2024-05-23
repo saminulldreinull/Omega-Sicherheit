@@ -682,20 +682,6 @@ footer {
     background-color: rebeccapurple;
 }
 
-.image-container {
-    position: fixed;
-    z-index: -2;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   form {
     display: flex;
     justify-content: center;
