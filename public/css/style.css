@@ -22,7 +22,7 @@ html {
 	text-align:center;
   font-size:30px;
 	box-shadow: 2px 2px 3px #999;
-  z-index:100;
+  z-index:9000;
 }
 
 .my-float{
@@ -676,261 +676,159 @@ video {
     font-weight: 900;
 }
 
-footer {
-    height: 90vh;
-    width: 100vw;
-    background-color: rebeccapurple;
-}
 
 
-.form-wrapper {
-    flex:1;
-}
-
-
-#contactForm {
+  form {
     display: flex;
-    flex-direction: column;
-}
-
-label {
-    color: white;
-}
-.input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-input,textarea {
-    margin-bottom: 5vh;
-    border-radius: 15px;
-    padding-left: 1vw;
-    border: none;
-    height: 6vh;
-    background-color: rgb(43,47,55);
-    color: white;
-    opacity: 80%;
-}
-
-input::placeholder,textarea::placeholder {
-  
-    opacity: 1;
-    color: white;
-}
-
-.textarea-container {
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
     width: 100%;
-    height: 200px; /* Die Höhe der Textarea */
-}
+  }
 
-.textarea-container textarea {
+  .form-content-wrapper {
+    padding: 0.5rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+
+  select,
+  input,
+  textarea {
+    height: 3rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: black;
+  }
+
+  select {
+    border-bottom: 5px solid #ccc;
+  }
+
+  input {
+    border-bottom: 5px solid #ccc;
+  }
+
+  textarea {
+    min-height: 6rem;
+    max-height: 12rem;
+    border-bottom: 5px solid #ccc;
+    resize: vertical; /* Allows vertical resizing only */
+    overflow: auto; /* Show scrollbar only when necessary */
+    padding: 1rem;
+    display: flex;
+    align-items: center; /* Vertical centering for placeholder */
+  }
+
+  textarea::placeholder {
+    color: #888;
+    opacity: 1;
+  }
+
+  .form-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(0,0,77);
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  .form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    padding-top: 20px; /* Platz für den zentrierten Placeholder */
-    padding-left: 10px;
-    box-sizing: border-box;
-    resize: none;
-    background-color: white;
-    color: black;
-}
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+  }
 
-.textarea-container label {
+  .form-button-icon {
+    margin-right: 0.5rem;
+    width: 24px;
+    height: 24px;
+    fill: white!important;
+  }
+
+  #form-button-icon-path {
+    fill: white!important;
+  }
+  .input-container-privacy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  #privacy {
+    margin-right: 0.5rem;
+    margin-top: 15px;
+    width: 1.2em; /* Reduzierte Größe der Checkbox */
+    height: 1.2em; /* Reduzierte Größe der Checkbox */
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  #privacy:checked {
+    background-color: rgb(0,0,77); /* Hintergrundfarbe der Checkbox, wenn ausgewählt */
+    border: 1px solid rgb(0,0,77);
+  }
+
+  #privacy:checked::after {
+    content: '';
     position: absolute;
     top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    color: #999;
-    pointer-events: none;
-    transition: all 0.2s ease;
-}
+    left: 50%;
+    width: 0.3em; /* Kleinere Breite des Hakens */
+    height: 0.6em; /* Kleinere Höhe des Hakens */
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
 
-.textarea-container textarea:focus + label,
-.textarea-container textarea:not(:placeholder-shown) + label {
-    top: 5px;
-    transform: translateY(0);
-    font-size: 0.8em;
-}
-#message {
-    height: 10vh;
-}
-.form-button-range-slider {
-    width: 100%; /* Set to 100% width to fill the parent */
-    height: auto;
-  }
-  
-  
-  .form-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 100%; /* Make sure it fills the parent container height */
-    width: 100%; /* Make sure it fills the parent container width */
-    border-radius: 15px;
-    color: white;
-    position: relative; /* Make sure it's positioned relative for the button to fill */
-  }
-  
-  .form-button {
-    gap: 5px;
+  .approval-text {
     color: black;
-    text-decoration: none;
+    font-size: 0.825rem;
+  }
+
+  .approval-text a {
+    color:rgb(0,0,77)
+  }
+  .salutation-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Ensure the button fills the container */
-    height: 100%; /* Ensure the button fills the container */
-    border: none;
-    background: none; /* Remove any default button styling */
-    cursor: pointer; /* Ensure it still acts like a button */
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
-  
-  
-  
-  .form-button-icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .salutation-container .form-content-container {
+    flex: 1;
+    margin-bottom: 0; /* Remove margin-bottom for inline elements */
   }
-  
-  .form-button-icon {
-    width: 24px; /* Adjust as necessary */
-    height: 50px; /* Adjust as necessary */
-    fill: black; /* Ensure the fill color is set */
-  }
-  
-  .form-button-icon path {
-    fill: black;
-  }
-  
-.benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 4vh;
-}
-
-.input-container-privacy {
-    height: 15px;
-}
-#privacy {
-
-    height: 10px;
-}
-
-.approval-text {
-    color: white;
-    font-size: 14px;
-}
-
-.form-wrapper {
-    width: 60vw;
-    flex:1;
-}
-
-
-#contactForm {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    color: white;
-}
-.input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-input,textarea {
-    margin-bottom: 5vh;
-    border-radius: 15px;
-    padding-left: 1vw;
-    border: none;
-    height: 6vh;
-    /* background-color: rgb(43,47,55); */
-    background-color: white;
-    color: white;
-    opacity: 80%;
-}
-
-input::placeholder,textarea::placeholder {
-    opacity: 1;
-    color: rgb(43,47,55);
-}
-
-#message {
-    height: 10vh;
-}
-.form-button-range-slider {
-    width: 100%; /* Set to 100% width to fill the parent */
-    height: auto;
-  }
-  
-  
-  .form-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 100%; /* Make sure it fills the parent container height */
-    width: 100%; /* Make sure it fills the parent container width */
-    border-radius: 15px;
-    color: white;
-    position: relative; /* Make sure it's positioned relative for the button to fill */
-  }
-  
-  .form-button {
-    gap: 5px;
-    color: black;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%; /* Ensure the button fills the container */
-    height: 100%; /* Ensure the button fills the container */
-    border: none;
-    background: none; /* Remove any default button styling */
-    cursor: pointer; /* Ensure it still acts like a button */
-  }
-  
-  
-  
-  .form-button-icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .form-button-icon {
-    width: 24px; /* Adjust as necessary */
-    height: 50px; /* Adjust as necessary */
-    fill: black; /* Ensure the fill color is set */
-  }
-  
-  .form-button-icon path {
-    fill: black;
-  }
-  
-.benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 4vh;
-}
-
-.input-container-privacy {
-    height: 15px;
-}
-#privacy {
-
-    height: 10px;
-}
-
-.approval-text {
-    color: white;
-    font-size: 14px;
-}

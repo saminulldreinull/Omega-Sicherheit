@@ -1,112 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Image Scroll</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="js/imageScale.js" defer></script>
-    <script src="js/textEnterLeaver.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Batak&family=Patua+One&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="service-section"></section>
-    <section id="contact-section">
-      <img id="contact-image" src="../public/images/omega_buero.webp" alt = ""/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      font-family: "Inter Tight", sans-serif;
+    }
 
-      <div class="contact-text-wrapper">
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">Womit Sie sich bei uns sicher sein können:</h2>
+    .image-container {
+      position: fixed;
+      z-index: -2;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      width: 100%;
+    }
+
+    .form-content-wrapper {
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-content-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      color: black;
+      margin-bottom: 0.5rem;
+    }
+
+    select,
+    input,
+    textarea {
+      height: 3rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      color: black;
+    }
+
+    select {
+      border-bottom: 5px solid #ccc;
+    }
+
+    input {
+      border-bottom: 5px solid #ccc;
+    }
+
+    textarea {
+      min-height: 6rem;
+      max-height: 12rem;
+      border-bottom: 5px solid #ccc;
+      resize: vertical; /* Allows vertical resizing only */
+      overflow: auto; /* Show scrollbar only when necessary */
+      padding: 1rem;
+      display: flex;
+      align-items: center; /* Vertical centering for placeholder */
+    }
+
+    textarea::placeholder {
+      color: #888;
+      opacity: 1;
+    }
+
+    .form-button-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color:rgb(0,0,77);
+      border-radius: 15px;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .form-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 1rem;
+      color: white;
+      font-weight: bold;
+    }
+
+    .form-button-icon {
+      margin-right: 0.5rem;
+      width: 24px;
+      height: 24px;
+      fill: white!important;
+    }
+
+    #form-button-icon-path {
+      fill: white!important;
+    }
+    .input-container-privacy {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    #privacy {
+      margin-right: 0.5rem;
+      margin-top: 15px;
+      width: 1.2em; /* Reduzierte Größe der Checkbox */
+      height: 1.2em; /* Reduzierte Größe der Checkbox */
+      background-color: white;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 1px solid #ddd;
+      -webkit-appearance: none;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    #privacy:checked {
+      background-color: rgb(0,0,77); /* Hintergrundfarbe der Checkbox, wenn ausgewählt */
+      border: 1px solid rgb(0,0,77);
+    }
+
+    #privacy:checked::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0.3em; /* Kleinere Breite des Hakens */
+      height: 0.6em; /* Kleinere Höhe des Hakens */
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .approval-text {
+      color: black;
+      font-size: 0.825rem;
+    }
+
+    .approval-text a {
+      color:rgb(0,0,77)
+    }
+    .salutation-container {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .salutation-container .form-content-container {
+      flex: 1;
+      margin-bottom: 0; /* Remove margin-bottom for inline elements */
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <img src="../public/images/omega_buero.webp" alt="Background Image" />
+  </div>
+  <div class="contact-text-container">
+  <form id = "contactForm" action="/contact/send-email" method="POST">
+    <div class="form-content-wrapper">
+      <div class="salutation-container">
+        <div class="form-content-container">
+          <label for="salutation">Anrede</label>
+          <select name="salutation" id="salutation" required>
+            <option>Herr</option>
+            <option>Frau</option>
+          </select>
         </div>
-
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">Maßgeschneiderte Lösungen.</h2>
+        <div class="form-content-container">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Name" autocomplete = "name" required/>
         </div>
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">Weil kein Unternehmen dem Standard entspricht.</h2>
-        </div>
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">ISO- & DIN zertifiziert.</h2>
-        </div>
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">
-            Unsere Lösungen entsprechen höchsten internationalen und deutschen
-            Qualitätsstandards.
-          </h2>
-        </div>
-
-        <div class="contact-text-container">
-            <h2 class = "contact-text-container-element">
-              Rund um die Uhr erreichbar.
-            </h2>
-          </div>
-
-          <div class="contact-text-container">
-            <h2 class = "contact-text-container-element">
-                24/7 Support für Ihre Anliegen.
-            </h2>
-          </div>
-
-          <div class="contact-text-container">
-            <h2 class = "contact-text-container-element">
-                Kontaktieren Sie uns!
-            </h2>
-          </div>
-
-
-
-
-        <div class="form-wrapper contact-text-container">
-            <form id="contactForm" action="/contact/send-email" method="POST">
-              <div class="input-container">
-                <label for="name">Name<span class="mandatory">*</span></label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="Vollständiger Name" required>
-              </div>
-              <div class="input-container">
-                <label for="email">Email<span class="mandatory">*</span></label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
-              </div>
-              <div class="input-container">
-                <label for="company">Unternehmen</label>
-                <input type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
-              </div>
-              <div class="input-container">
-                <label for="message">Nachricht<span class="mandatory">*</span></label>
-                <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht" required></textarea>
-              </div>
-              <div class="form-button-range-slider">
-                <div class="form-button-container">
-                  <button type="submit" class="form-button">
-                    <div class="form-button-icon-container">
-                      <svg class="form-button-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                        <g id="SVGRepo_iconCarrier">
-                          <g>
-                            <path style="fill:black;" d="M181.512,363.024c100.083,0,181.513-81.43,181.513-181.512C363.025,81.424,281.595,0,181.512,0 C81.422,0,0,81.424,0,181.513C0,281.595,81.422,363.024,181.512,363.024z M181.512,11.71c93.633,0,169.803,76.176,169.803,169.803 c0,93.632-76.17,169.802-169.803,169.802c-91.656,0-166.545-73.014-169.656-163.936l189.944,0.366l-32.959,32.959l8.28,8.279 l47.065-47.06l-47.885-47.885l-8.28,8.28l33.722,33.725l-189.892-0.375C14.956,84.744,89.844,11.71,181.512,11.71z"/>
-                          </g>
-                        </g>
-                      </svg>
-                    </div>
-                    Kontaktieren Sie Uns!
-                  </button>
-                </div>
-              </div>
-              <div class="input-container-privacy">
-                <input type="checkbox" id="privacy" name="privacy" required> 
-                <span class = "approval-text">Ich stimme der <a class = "approval-text" href="/privacy-policy" target="_blank">Datenschutzerklärung</a> zu.</span>
-              </div>
-            </form>
-          </div>
       </div>
-    </section>
-    <footer></footer>
-  </body>
+      <div class="form-content-container">
+        <label for="company">Unternehmen</label>
+        <input  type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
+      </div>
+      <div class="form-content-container">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
+      </div>
+      <div class="form-content-container">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht" required></textarea>
+      </div>
+      <div class="form-button-container">
+        <button type="submit" class="form-button">
+          <svg class="form-button-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <path style="fill:white" d="M181.512,363.024c100.083,0,181.513-81.43,181.513-181.512C363.025,81.424,281.595,0,181.512,0 C81.422,0,0,81.424,0,181.513C0,281.595,81.422,363.024,181.512,363.024z M181.512,11.71c93.633,0,169.803,76.176,169.803,169.803 c0,93.632-76.17,169.802-169.803,169.802c-91.656,0-166.545-73.014-169.656-163.936l189.944,0.366l-32.959,32.959l8.28,8.279 l47.065-47.06l-47.885-47.885l-8.28,8.28l33.722,33.725l-189.892-0.375C14.956,84.744,89.844,11.71,181.512,11.71z"/>
+              </g>
+            </g>
+          </svg>
+          Kontaktieren Sie Uns!
+        </button>
+      </div>
+      <div class="input-container-privacy">
+        <input type="checkbox" id="privacy" name="privacy" required />
+        <span class="approval-text">
+          Ich stimme der
+          <a href="/privacy-policy" target="_blank">Datenschutzerklärung</a>
+          zu.
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
 </html>

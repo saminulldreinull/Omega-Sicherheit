@@ -369,7 +369,7 @@
   </section>
 
   <section id="contact-section">
-    <img id="contact-image" src="../public/images/omega_buero.webp" alt = ""/>
+    <img id="contact-image" src="images/omega_buero.webp" alt = ""/>
 
     <div class="contact-text-wrapper">
       <div class="contact-text-container">
@@ -413,45 +413,56 @@
 
 
 
-      <div class="form-wrapper contact-text-container">
-          <form id="contactForm" action="/contact/send-email" method="POST">
-            <div class="input-container">
-              <label for="name">Name<span class="mandatory">*</span></label>
-              <input type="text" id="name" name="name" autocomplete="name" placeholder="Vollständiger Name" required>
-            </div>
-            <div class="input-container">
-              <label for="email">Email<span class="mandatory">*</span></label>
-              <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
-            </div>
-            <div class="input-container">
-              <label for="company">Unternehmen</label>
-              <input type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
-            </div>
-            <div class="input-container">
-              <label for="message">Nachricht<span class="mandatory">*</span></label>
-              <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht" required></textarea>
-            </div>
-            <div class="form-button-range-slider">
+        <div class="contact-text-container">
+          <form id = "contactForm" action="/contact/send-email" method="POST">
+            <div class="form-content-wrapper">
+              <div class="salutation-container">
+                <div class="form-content-container">
+                  <label for="salutation">Anrede</label>
+                  <select name="salutation" id="salutation" required>
+                    <option>Herr</option>
+                    <option>Frau</option>
+                  </select>
+                </div>
+                <div class="form-content-container">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="Name" autocomplete = "name" required/>
+                </div>
+              </div>
+              <div class="form-content-container">
+                <label for="company">Unternehmen</label>
+                <input  type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
+              </div>
+              <div class="form-content-container">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
+              </div>
+              <div class="form-content-container">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht" required></textarea>
+              </div>
               <div class="form-button-container">
                 <button type="submit" class="form-button">
-                  <div class="form-button-icon-container">
-                    <svg class="form-button-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                      <g id="SVGRepo_iconCarrier">
-                        <g>
-                          <path style="fill:black;" d="M181.512,363.024c100.083,0,181.513-81.43,181.513-181.512C363.025,81.424,281.595,0,181.512,0 C81.422,0,0,81.424,0,181.513C0,281.595,81.422,363.024,181.512,363.024z M181.512,11.71c93.633,0,169.803,76.176,169.803,169.803 c0,93.632-76.17,169.802-169.803,169.802c-91.656,0-166.545-73.014-169.656-163.936l189.944,0.366l-32.959,32.959l8.28,8.279 l47.065-47.06l-47.885-47.885l-8.28,8.28l33.722,33.725l-189.892-0.375C14.956,84.744,89.844,11.71,181.512,11.71z"/>
-                        </g>
+                  <svg class="form-button-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 363.025 363.024" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                    <g id="SVGRepo_iconCarrier">
+                      <g>
+                        <path style="fill:white" d="M181.512,363.024c100.083,0,181.513-81.43,181.513-181.512C363.025,81.424,281.595,0,181.512,0 C81.422,0,0,81.424,0,181.513C0,281.595,81.422,363.024,181.512,363.024z M181.512,11.71c93.633,0,169.803,76.176,169.803,169.803 c0,93.632-76.17,169.802-169.803,169.802c-91.656,0-166.545-73.014-169.656-163.936l189.944,0.366l-32.959,32.959l8.28,8.279 l47.065-47.06l-47.885-47.885l-8.28,8.28l33.722,33.725l-189.892-0.375C14.956,84.744,89.844,11.71,181.512,11.71z"/>
                       </g>
-                    </svg>
-                  </div>
+                    </g>
+                  </svg>
                   Kontaktieren Sie Uns!
                 </button>
               </div>
-            </div>
-            <div class="input-container-privacy">
-              <input type="checkbox" id="privacy" name="privacy" required> 
-              <span class = "approval-text">Ich stimme der <a class = "approval-text" href="/privacy-policy" target="_blank">Datenschutzerklärung</a> zu.</span>
+              <div class="input-container-privacy">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <span class="approval-text">
+                  Ich stimme der
+                  <a href="/privacy-policy" target="_blank">Datenschutzerklärung</a>
+                  zu.
+                </span>
+              </div>
             </div>
           </form>
         </div>
