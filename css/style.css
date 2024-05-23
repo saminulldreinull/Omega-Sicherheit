@@ -678,7 +678,12 @@ video {
     align-items: center;
     height: 60vh;
     width: 100%;
+    container-type: inline-size;
   }
+
+label {
+    font-size: 3cqb;
+}
 
   .form-content-wrapper {
     padding: 0.5rem 2rem;
