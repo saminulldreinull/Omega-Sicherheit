@@ -1,15 +1,15 @@
 function linear(x) {
-    return x; // Einfache lineare Interpolation, weitere Easing-Funktionen möglich
+    return x; // Simple linear interpolation, other easing functions possible
 }
 
 function animateValue(obj, start, end, duration) {
-    obj.style.willChange = 'transform'; // Aktivieren von will-change vor der Animation
+    obj.style.willChange = 'transform'; // Enable will-change before animation
     let startTimestamp = null;
 
     const step = (timestamp) => {
         if (!startTimestamp) startTimestamp = timestamp;
         const elapsed = timestamp - startTimestamp;
-        let progress = Math.min(elapsed / duration, 1); // Sicherstellen, dass der Fortschritt nicht >1 ist
+        let progress = Math.min(elapsed / duration, 1); // Ensure progress does not exceed 1
         progress = linear(progress);
 
         const currentValue = Math.floor(progress * (end - start) + start);
@@ -19,7 +19,7 @@ function animateValue(obj, start, end, duration) {
             window.requestAnimationFrame(step);
         } else {
             obj.textContent = "+" + end;
-            obj.style.willChange = 'auto'; // Deaktivieren von will-change nach der Animation
+            obj.style.willChange = 'auto'; // Disable will-change after animation
         }
     };
     window.requestAnimationFrame(step);
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 const target = entry.target;
                 animateValue(target, 0, parseInt(target.getAttribute('data-target')), 2000);
-                observer.unobserve(target); // Beobachtung beenden, sobald die Animation gestartet wurde
+                observer.unobserve(target); // Stop observing once animation starts
             }
         });
-    }, { threshold: 0.5 }); // Schwellenwert bei 50%, bedeutet, dass das Element zur Hälfte sichtbar sein muss
+    }, { threshold: 0.5 }); // Threshold set to 50%, element must be half-visible
 
     document.querySelectorAll('.key-number').forEach(element => {
         observer.observe(element);

@@ -14,3 +14,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 1.0, rootMargin: '20%' });
 
 textContainersArray.forEach(el => observer.observe(el));
+ 
