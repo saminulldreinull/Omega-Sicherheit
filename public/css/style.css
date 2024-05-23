@@ -696,11 +696,11 @@ video {
   }
 
 label {
-    font-size: 3cqb;
+    font-size: 2.2cqb;
 }
 
   .form-content-wrapper {
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     max-width: 500px;
