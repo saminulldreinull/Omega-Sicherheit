@@ -44,7 +44,6 @@ function refreshServiceSection() {
 
 createScrollAnimation();
 
-// Contact-image/section scaling
 const imageElement = document.getElementById("contact-image");
 
 const tl = gsap.timeline({
@@ -88,7 +87,7 @@ ScrollTrigger.create({
     imageElement.style.height = 'auto';
   }
 });
-
+ 
 // Intersection observer for text containers
 const textContainers = document.getElementsByClassName('contact-text-container');
 const textContainersArray = Array.from(textContainers);
@@ -104,3 +103,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 1.0, rootMargin: '20%' });
 
 textContainersArray.forEach(el => observer.observe(el));
+ 

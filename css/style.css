@@ -471,6 +471,7 @@ video {
     transform: translateZ(0);
     transform: translate3d(0, 0, 0);
     margin-left: 5vmax;
+    padding-right: 10vmax;
     padding-top: 10vh;
     width: -moz-fit-content;
     width: fit-content;
@@ -497,6 +498,8 @@ video {
     height: 100%;
     width: 100%;
     object-fit: fill;
+    filter: brightness(80%);
+    transition: opacity 0.5s;
 }
 
 .service-text-container {
@@ -574,15 +577,10 @@ video {
     fill: #ffffff;
 }
 
-.service-image {
-    filter: brightness(80%);
-    transition: opacity 0.5s;
-}
+
 
 @media (min-width: 370px) {
-    .races {
-        padding-right: clamp(20vmax, 40vmax, 50vmax);
-    }
+
     .service-container,
     .image-container {
         width: 85vw;
@@ -597,9 +595,6 @@ video {
 }
 
 @media (min-width: 576px) {
-    .races {
-        padding-right: clamp(10vmax, 25vmax, 34vmax);
-    }
 
     .service-text-container {
         gap: 2vh;
@@ -608,9 +603,7 @@ video {
     }
 }
 @media (min-width: 767px) {
-    .races {
-        padding-right: clamp(15vmax, 28vmax, 40vmax);
-    }
+
     .service-container,
     .image-container {
         width: 60vw;
@@ -625,9 +618,7 @@ video {
     .service-text-container {
         padding-left: 2vw;
     }
-    .races {
-        padding-right: 10vmax;
-    }
+
     .service-container,
     .image-container {
         width: 50vw;
@@ -664,19 +655,22 @@ video {
 .contact-text-container.visible {
     opacity: 1;
 }
-.contact-text-container {
-    padding: 0 10%;
-    position: relative;
-    margin: 40vh 0;
-}
+
 .contact-text-container-element {
     color: white;
     text-align: left;
-    font-size: clamp(3rem,4rem,5rem);
-    font-weight: 900;
+    font-size: clamp(5vmax,15vmax,3rem);
+    font-weight: 700;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
-
+@media (max-width:400px) { 
+    .contact-text-container {
+        font-size: clamp(5vmax,15vmax,3rem);
+    padding: 0 10%;
+}
+}
 
   form {
     display: flex;
