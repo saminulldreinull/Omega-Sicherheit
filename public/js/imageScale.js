@@ -1,19 +1,22 @@
 const imageElement = document.getElementById("contact-image");
 
-function setFullSize() {
-  imageElement.style.borderRadius = '0';
-  imageElement.style.width = '100%';
-  imageElement.style.height = '100vh';
-  imageElement.style.position = 'fixed';
-  imageElement.style.top = '0';
+function makeSticky() {
+  imageElement.classList.add('sticky');
 }
 
-function resetSize() {
-  imageElement.style.borderRadius = '15px';
-  imageElement.style.width = 'auto';
-  imageElement.style.height = 'auto';
-  imageElement.style.position = 'relative';
-  imageElement.style.top = 'auto';
+function removeSticky() {
+  imageElement.classList.remove('sticky');
+}
+
+function checkPosition() {
+  const contactSection = document.getElementById("contact-section");
+  const rect = contactSection.getBoundingClientRect();
+  
+  if (rect.top <= 0 && rect.bottom >= 0) {
+    makeSticky();
+  } else {
+    removeSticky();
+  }
 }
 
 function initAnimation() {
@@ -45,33 +48,19 @@ function initAnimation() {
     pin: imageElement,
     pinSpacing: false,
     onEnter: () => {
-      imageElement.classList.add('sticky');
-      imageElement.style.position = 'fixed';
-      imageElement.style.top = '0';
-      imageElement.style.width = '100%';
-      imageElement.style.height = '100vh';
+      makeSticky();
     },
     onLeaveBack: () => {
-      imageElement.classList.remove('sticky');
-      imageElement.style.position = 'relative';
-      imageElement.style.top = 'auto';
-      imageElement.style.height = 'auto';
+      removeSticky();
     }
   });
 }
 
-// Medienabfrage für mobile Geräte
-if (window.matchMedia("(max-width: 768px)").matches) {
-  setFullSize();
-  window.addEventListener('scroll', function() {
-    const contactSection = document.getElementById("contact-section");
-    const rect = contactSection.getBoundingClientRect();
-    if (rect.top <= 0 && rect.bottom >= 0) {
-      setFullSize();
-    } else {
-      resetSize();
-    }
-  });
-} else {
-  initAnimation();
-}
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    checkPosition();
+    window.addEventListener('scroll', checkPosition);
+  } else {
+    initAnimation();
+  }
+});
