@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
 
- <script>
+  <script src="js/checkBrowser.js" defer ></script>
+<script>
     document.addEventListener("DOMContentLoaded", function() {
       var baseTag = document.createElement('base');
       if (window.location.hostname === 'localhost') {
@@ -15,6 +16,7 @@
       document.head.appendChild(baseTag);
     });
   </script>
+  
 
   <base id="dynamicBase"> 
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
@@ -106,7 +108,7 @@
       <h1 id="typewriter">Omega Security</h1>
     </div>
 
-    <video autoplay loop muted playsinline muted preload>
+    <video id = "video" autoplay loop muted playsinline muted preload>
       <source src = "images/landing-page-video.webm" type="video/mp4" />
     </video>
   </section>
