@@ -1,5 +1,5 @@
- const imageElement = document.getElementById("contact-image");
-gsap.registerPlugin(ScrollTrigger);
+const imageElement = document.getElementById("contact-image");
+
 const tl = gsap.timeline({
   ease: "none",
   onUpdate: function() {
@@ -17,7 +17,7 @@ tl.from(imageElement, {
   transformOrigin: "center",
 }).to({}, {
   duration: 1
-}); 
+});
 
 ScrollTrigger.create({
   trigger: "#contact-section",
