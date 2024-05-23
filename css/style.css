@@ -632,14 +632,28 @@ video {
     min-height: 620vh; /* Große Höhe für Scrolling-Effekt */
     /* background-color: rgb(0,0,77);  */
 }
+
 #contact-image {
     filter: brightness(80%);
-    position: sticky; /* Sticky-Positionierung */
-    top: 0; /* Haftet am oberen Rand */
+    position: relative; /* Initial nicht sticky */
+    top: 0;
     width: 100%;
+    height: 100vh; /* Immer die volle Höhe des Viewports */
     object-fit: cover;
-    height: 100vh; /* Höhe des Viewports */
+    transition: border-radius 0.3s;
 }
+
+@media (max-width: 768px) {
+    #contact-image.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+  
 .contact-text-wrapper {
     margin-top: -50vh; /* Versatz nach oben für Überlagerung */
 }
@@ -682,11 +696,11 @@ video {
   }
 
 label {
-    font-size: 3cqb;
+    font-size: 2.2cqb;
 }
 
   .form-content-wrapper {
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     max-width: 500px;
