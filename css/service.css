@@ -285,6 +285,11 @@ justify-content: center;
     .service-text-content-container {
         margin-top: 5vh;
     }
+   /*  .service-text-content-container p,h4 {
+        word-wrap: break-word;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    } */
 }
 @media(max-width:768px) {
 
