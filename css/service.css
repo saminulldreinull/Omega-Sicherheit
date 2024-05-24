@@ -260,7 +260,7 @@ display: none;
     display: flex;
     align-items: center;
 justify-content: center;
-    background-color: rgb(129, 164, 205);
+    background-color: rgb(0, 0, 77);
     height: 3rem;
     border-radius: 30px;
     color: white;
@@ -285,11 +285,6 @@ justify-content: center;
     .service-text-content-container {
         margin-top: 5vh;
     }
-   /*  .service-text-content-container p,h4 {
-        word-wrap: break-word;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-    } */
 }
 @media(max-width:768px) {
 

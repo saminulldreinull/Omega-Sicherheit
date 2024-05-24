@@ -415,7 +415,7 @@ video {
 }
 
 .key-figure {
-    font-size: clamp(3.5vmax, 6vmax, 3.5rem);
+    font-size: clamp(3vmax, 6vmax, 3.5rem);
     font-weight: 900;
     width: 100%;
 }
@@ -548,6 +548,7 @@ video {
     width: fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    
 }
 
 .button-container:hover {
