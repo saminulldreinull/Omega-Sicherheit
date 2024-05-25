@@ -1,8 +1,5 @@
 html {
-    /* scroll-behavior: smooth; 
-    scroll-snap-type: y mandatory;  overflow-y: scroll; 
-      overflow-x: hidden;   */
-      overflow-x: hidden;
+    overflow-x: hidden;
     font-family: "Inter Tight", sans-serif;
 }
 * {
@@ -10,23 +7,23 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:9000;
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 9000;
 }
 
-.my-float{
-	margin-top:16px;
+.my-float {
+    margin-top: 16px;
 }
 
 section {
@@ -142,7 +139,7 @@ a.nav-link:hover {
 .menu li {
     padding-left: 6vw;
 }
-.menu li a {
+.menu > li > .nav-link {
     display: inline-block;
     text-decoration: none;
     color: var(--color1);
@@ -150,7 +147,7 @@ a.nav-link:hover {
     transition: 0.15s ease-in-out;
     position: relative;
 }
-.menu li a::after {
+.menu li .nav-link::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -164,7 +161,7 @@ span.menu {
     width: 100%;
 }
 
-.menu li a:hover:after {
+.menu li .nav-link:hover:after {
     width: 100%;
 }
 .open-menu,
@@ -214,7 +211,7 @@ span.menu {
         justify-content: center;
     }
 
-    .menu li a {
+    .menu li .nav-link {
         flex: 0 1 auto;
         width: 80%;
         text-align: left;
@@ -449,7 +446,7 @@ video {
         justify-content: space-evenly;
     }
 }
- #service-section {
+#service-section {
     transform: translateZ(0);
     transform: translate3d(0, 0, 0);
     will-change: transform;
@@ -458,13 +455,12 @@ video {
     position: relative;
     z-index: 3;
     scroll-snap-type: none;
-    margin-bottom: 50vh;/* beachte */
+    margin-bottom: 50vh; /* beachte */
 }
 
 .racesWrapper {
     overflow: hidden;
 }
-
 
 .races {
     will-change: transform;
@@ -479,7 +475,7 @@ video {
     gap: 4vw;
 }
 .service-container {
-      transform: translateZ(0);
+    transform: translateZ(0);
     transform: translate3d(0, 0, 0);
     will-change: transform;
     box-sizing: border-box;
@@ -577,10 +573,7 @@ video {
     fill: #ffffff;
 }
 
-
-
 @media (min-width: 370px) {
-
     .service-container,
     .image-container {
         width: 85vw;
@@ -595,7 +588,6 @@ video {
 }
 
 @media (min-width: 576px) {
-
     .service-text-container {
         gap: 2vh;
         padding-left: 6vw;
@@ -603,7 +595,6 @@ video {
     }
 }
 @media (min-width: 767px) {
-
     .service-container,
     .image-container {
         width: 60vw;
@@ -629,8 +620,7 @@ video {
 #contact-section {
     width: 100vw;
     margin-top: 10vh;
-    min-height: 620vh; /* Große Höhe für Scrolling-Effekt */
-    /* background-color: rgb(0,0,77);  */
+    min-height: 620vh;
 }
 
 #contact-image {
@@ -653,7 +643,6 @@ video {
     }
 }
 
-  
 .contact-text-wrapper {
     margin-top: -50vh; /* Versatz nach oben für Überlagerung */
 }
@@ -662,7 +651,7 @@ video {
     padding: 0 10%;
     position: relative;
     margin: 40vh 0;
-    opacity: 0;  
+    opacity: 0;
     transition: opacity 0.8s;
 }
 
@@ -673,72 +662,72 @@ video {
 .contact-text-container-element {
     color: white;
     text-align: left;
-    font-size: clamp(5vmax,15vmax,3rem);
+    font-size: clamp(5vmax, 15vmax, 3rem);
     font-weight: 700;
     -webkit-hyphens: auto;
     hyphens: auto;
 }
 
-@media (max-width:400px) { 
+@media (max-width: 400px) {
     .contact-text-container {
-        font-size: clamp(5vmax,15vmax,3rem);
-    padding: 0 10%;
-}
+        font-size: clamp(5vmax, 15vmax, 3rem);
+        padding: 0 10%;
+    }
 }
 
-  form {
+#contactForm {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60vh;
     width: 100%;
     container-type: inline-size;
-  }
+}
 
-label {
+.form-label {
     font-size: 2.2cqb;
 }
 
-  .form-content-wrapper {
+.form-content-wrapper {
     padding: 1rem 2rem;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     max-width: 500px;
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  .form-content-container {
+.form-content-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
-  }
+}
 
-  label {
+label {
     color: black;
     margin-bottom: 0.5rem;
-  }
+}
 
-  select,
-  input,
-  textarea {
+select,
+input,
+textarea {
     height: 3rem;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 1rem;
     color: black;
-  }
+}
 
-  select {
+select {
     border-bottom: 5px solid #ccc;
-  }
+}
 
-  input {
+input {
     border-bottom: 5px solid #ccc;
-  }
+}
 
-  textarea {
+textarea {
     min-height: 6rem;
     max-height: 12rem;
     border-bottom: 5px solid #ccc;
@@ -747,24 +736,24 @@ label {
     padding: 1rem;
     display: flex;
     align-items: center; /* Vertical centering for placeholder */
-  }
+}
 
-  textarea::placeholder {
+textarea::placeholder {
     color: #888;
     opacity: 1;
-  }
+}
 
-  .form-button-container {
+.form-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:rgb(0,0,77);
+    background-color: rgb(0, 0, 77);
     border-radius: 15px;
     color: white;
     margin-bottom: 1rem;
-  }
+}
 
-  .form-button {
+.form-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -776,29 +765,29 @@ label {
     padding: 1rem;
     color: white;
     font-weight: bold;
-  }
+}
 
-  .form-button-icon {
+.form-button-icon {
     margin-right: 0.5rem;
     width: 24px;
     height: 24px;
-    fill: white!important;
-  }
+    fill: white !important;
+}
 
-  #form-button-icon-path {
-    fill: white!important;
-  }
-  .input-container-privacy {
+#form-button-icon-path {
+    fill: white !important;
+}
+.input-container-privacy {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-  }
+}
 
-  #privacy {
+#privacy {
     margin-right: 0.5rem;
     margin-top: 15px;
-    width: 1.2em; /* Reduzierte Größe der Checkbox */
-    height: 1.2em; /* Reduzierte Größe der Checkbox */
+    width: 1em; /* Reduzierte Größe der Checkbox */
+    height: 1em; /* Reduzierte Größe der Checkbox */
     background-color: white;
     border-radius: 50%;
     vertical-align: middle;
@@ -808,15 +797,15 @@ label {
     outline: none;
     cursor: pointer;
     position: relative;
-  }
+}
 
-  #privacy:checked {
-    background-color: rgb(0,0,77); /* Hintergrundfarbe der Checkbox, wenn ausgewählt */
-    border: 1px solid rgb(0,0,77);
-  }
+#privacy:checked {
+    background-color: rgb(0, 0, 77); /* Hintergrundfarbe der Checkbox, wenn ausgewählt */
+    border: 1px solid rgb(0, 0, 77);
+}
 
-  #privacy:checked::after {
-    content: '';
+#privacy:checked::after {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -825,142 +814,105 @@ label {
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(45deg);
-  }
+}
 
-  .approval-text {
+.approval-text {
     color: black;
     font-size: 0.825rem;
-  }
+}
 
-  .approval-text a {
-    color:rgb(0,0,77)
-  }
-  .salutation-container {
+.approval-text a {
+    color: rgb(0, 0, 77);
+}
+.salutation-container {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-  }
+}
 
-  .salutation-container .form-content-container {
+.salutation-container .form-content-container {
     flex: 1;
     margin-bottom: 0; /* Remove margin-bottom for inline elements */
-  }
+}
 
-  /*!
- * Bootstrap v4.5.3 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-body {
-    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
-  
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
-  
-  a {
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease; }
-    a, a:hover {
-      text-decoration: none !important; }
-  
-  .content {
-    height: 70vh; }
-  
-  .footer-14398 {
+a {
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+}
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+.content {
+    height: 70vh;
+}
+
+.footer-14398 {
     z-index: 20000;
     padding: 7rem 0;
-    background: rgb(0,0,77);
-    color: #777; }
-    .footer-14398 .footer-site-logo {
-      color: #fff;
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      display: block; }
-    .footer-14398 h3 {
-      color: #fff;
-      font-size: 16px;
-      margin-bottom: 20px; }
-    .footer-14398 .links li {
-      margin-bottom: 10px; }
-      .footer-14398 .links li a {
-        color: #999; }
-        .footer-14398 .links li a:hover {
-          color: #fff; }
-    .footer-14398 .link-menu li {
-      display: inline-block; }
-      .footer-14398 .link-menu li a {
-        color: #fff;
-        display: inline-block;
-        padding: 10px; }
-    .footer-14398 .link-menu.nav-left li:first-child a {
-      padding-left: 0; }
-    .footer-14398 .link-menu.nav-right li:last-child a {
-      padding-left: 0; }
-    .footer-14398 .social li {
-      display: inline-block; }
-      .footer-14398 .social li a {
-        display: inline-block;
-        padding: 10px;
-        color: #ccc; }
-      .footer-14398 .social li:last-child a {
-        padding-right: 0; }
-    .footer-14398 .line {
-      border-top: 1px solid rgba(255, 255, 255, 0.2); }
-  
+    background: rgb(0, 0, 77);
+    color: #777;
+}
+.footer-14398 .footer-site-logo {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: block;
+}
+.footer-14398 h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.footer-14398 .links li {
+    margin-bottom: 10px;
+}
+.footer-14398 .links li a {
+    color: #999;
+}
+.footer-14398 .links li a:hover {
+    color: #fff;
+}
+.footer-14398 .link-menu li {
+    display: inline-block;
+}
+.footer-14398 .link-menu li a {
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+}
+.footer-14398 .link-menu.nav-left li:first-child a {
+    padding-left: 0;
+}
+.footer-14398 .link-menu.nav-right li:last-child a {
+    padding-left: 0;
+}
+.footer-14398 .social li {
+    display: inline-block;
+}
+.footer-14398 .social li a {
+    display: inline-block;
+    padding: 10px;
+    color: #ccc;
+}
+.footer-14398 .social li:last-child a {
+    padding-right: 0;
+}
+.footer-14398 .line {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 
 :root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-        "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-html {
-    -webkit-tap-highlight-color: transparent;
-}
-body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        Segoe UI,
-        Roboto,
-        Helvetica Neue,
-        Arial,
-        Noto Sans,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji,
-        Segoe UI Symbol,
-        Noto Color Emoji;
-}
+
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
     color: inherit;
@@ -969,15 +921,7 @@ a:not([href]):not([class]):hover {
 .h2,
 .h3,
 h2,
-h3 {
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-}
 .h2,
-h2 {
-    font-size: 2rem;
-}
 .h3,
 h3 {
     font-size: 1.75rem;
@@ -1112,75 +1056,13 @@ a.bg-light:hover {
         min-width: 992px !important;
     }
 }
-/*!
- * Bootstrap Reboot v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
- */
-*,
-:after,
-:before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-footer {
-    display: block;
-}
-body {
-    background-color: #fff;
-    color: #212529;
-    font-family:
-        Roboto,
-        -apple-system,
-        BlinkMacSystemFont,
-        Segoe UI,
-        Helvetica Neue,
-        Arial,
-        Noto Sans,
-        sans-serif,
-        Apple Color Emoji,
-        Segoe UI Emoji,
-        Segoe UI Symbol,
-        Noto Color Emoji;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
-}
+
 h2,
 h3 {
     margin-bottom: 0.5rem;
     margin-top: 0;
 }
-p,
-ul {
-    margin-bottom: 1rem;
-    margin-top: 0;
-}
-ul ul {
-    margin-bottom: 0;
-}
-small {
-    font-size: 80%;
-}
-a {
-    background-color: transparent;
-    color: #007bff;
-    text-decoration: none;
-}
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
+
 a:not([href]):not([tabindex]),
 a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
@@ -1194,23 +1076,7 @@ a:not([href]):not([tabindex]):focus {
     -webkit-appearance: button;
     font: inherit;
 }
-/*!
- * Bootstrap Grid v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-html {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
-}
-*,
-:after,
-:before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -1323,10 +1189,9 @@ html {
 }
 
 .certificate {
-   
     height: 15vh;
 }
 
 footer {
-z-index: 2000;
+    z-index: 2000;
 }
