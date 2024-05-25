@@ -15,10 +15,10 @@
       }
       document.head.appendChild(baseTag);
     });
-  </script>
+  </script> 
   
 
-  <base id="dynamicBase">  
+   <base id="dynamicBase"> 
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
@@ -48,16 +48,16 @@
   <script src="https://unpkg.com/split-type"></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
 
-  <script src="js/animateLandingSectionWords.js" defer ></script>
+   <script src="js/animateLandingSectionWords.js" defer ></script> 
   <script src="js/parallaxScrolling.js" defer ></script>
-  <script src="js/changingHeader.js" defer ></script>
-  <script src="js/textRevealAnimation.js" defer ></script>
-  <script src="js/animateKeyNumbers.js" defer ></script>
+  <script src="js/changingHeader.js" defer ></script> 
+  <script src="js/textRevealAnimation.js" defer ></script> 
+   <script src="js/animateKeyNumbers.js" defer ></script>
+   <script src="js/buttonHover.js" defer ></script>
   <script src="js/horizontalScrolling.js" defer ></script>
   <script src="js/imageScale.js" defer ></script>
   <script src="js/textEnterLeaver.js" defer ></script>
-  <script src="js/buttonHover.js" defer ></script>
-  <script src="js/contactForm.js" defer ></script>
+ <script src="js/contactForm.js" defer ></script> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -442,27 +442,27 @@
             <div class="form-content-wrapper">
               <div class="salutation-container">
                 <div class="form-content-container">
-                  <label for="salutation">Anrede</label>
+                  <label class = "form-label" for="salutation">Anrede</label>
                   <select name="salutation" id="salutation" required>
                     <option>Herr</option>
                     <option>Frau</option>
                   </select>
                 </div>
                 <div class="form-content-container">
-                  <label for="name">Name</label>
+                  <label class = "form-label" class = "form-label" for="name">Name</label>
                   <input type="text" id="name" placeholder="Name" autocomplete = "name" required/>
                 </div>
               </div>
               <div class="form-content-container">
-                <label for="company">Unternehmen</label>
+                <label class = "form-label" for="company">Unternehmen</label>
                 <input  type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
               </div>
               <div class="form-content-container">
-                <label for="email">E-Mail</label>
+                <label class = "form-label" for="email">E-Mail</label>
                 <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
               </div>
               <div class="form-content-container">
-                <label for="message">Nachricht</label>
+                <label class = "form-label" for="message">Nachricht</label>
                 <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht" required></textarea>
               </div>
               <div class="form-button-container">
@@ -492,6 +492,71 @@
         </div>
     </div>
   </section>
-  <footer></footer>
+  <section style="height: 100vh; background-color:blueviolet; z-index:20000;"></section>
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p>Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>NÜTZLICHE LINKS</h3>
+          <ul class="list-unstyled links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Über Uns</a></li>
+            <li><a href="#">Leistungen</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="#">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><img class = "certificate"src = "../public/images/dekra_siegel1.png" alt = ""></li>
+            <li><img class = "certificate"src = "../public/images/dekra_siegel2.png" alt = ""></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="#">Datenschutzerklärung</a></li>
+            <li><a href="#">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-twitter"></span></a></li>
+            <li><a href="#"><span class="icon-instagram"></span></a></li>
+            <li><a href="#"><span class="icon-facebook"></span></a></li>
+            <li><a href="#"><span class="icon-pinterest"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, fuga. Ex at maxime eum odio quibusdam pariatur expedita explicabo harum! Consectetur ducimus delectus nemo, totam odit!</small></p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</footer>
 </body>
 </html>
