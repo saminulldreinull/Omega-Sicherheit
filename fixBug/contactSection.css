@@ -1,0 +1,228 @@
+#contact-section {
+    width: 100vw;
+    margin-top: 10vh;
+    min-height: 620vh;
+}
+  
+#contact-image {
+    transform: translate3d(0px, 0px, 0px) scale(1.00212, 1.00212);
+    filter: brightness(80%);
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: border-radius 0.3s;
+}
+
+#contact-image.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+}
+
+@media (max-width: 768px) {
+    #contact-image {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+.contact-text-wrapper {
+    margin-top: -50vh;
+}
+
+.contact-text-container {
+    padding: 0 10%;
+    position: relative;
+    margin: 40vh 0;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.contact-text-container.visible {
+    opacity: 1;
+}
+
+.contact-text-container-element {
+    color: white;
+    text-align: left;
+    font-size: clamp(5vmax, 15vmax, 3rem);
+    font-weight: 700;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@media (max-width: 400px) {
+    .contact-text-container {
+        font-size: clamp(5vmax, 15vmax, 3rem);
+        padding: 0 10%;
+    }
+}
+
+#contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100%;
+    container-type: inline-size;
+}
+
+.form-label {
+    font-size: 2.2cqb;
+}
+
+.form-content-wrapper {
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-content-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+select,
+input,
+textarea {
+    height: 3rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+select {
+    border-bottom: 5px solid #ccc;
+}
+
+input {
+    border-bottom: 5px solid #ccc;
+}
+
+textarea {
+    min-height: 6rem;
+    max-height: 12rem;
+    border-bottom: 5px solid #ccc;
+    resize: vertical;
+    overflow: auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+textarea::placeholder {
+    color: #888;
+    opacity: 1;
+}
+
+.form-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 77);
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.form-button-icon {
+    margin-right: 0.5rem;
+    width: 24px;
+    height: 24px;
+    fill: white !important;
+}
+
+#form-button-icon-path {
+    fill: white !important;
+}
+
+.input-container-privacy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#privacy {
+    margin-right: 0.5rem;
+    margin-top: 15px;
+    width: 1em;
+    height: 1em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#privacy:checked {
+    background-color: rgb(0, 0, 77);
+    border: 1px solid rgb(0, 0, 77);
+}
+
+#privacy:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.3em;
+    height: 0.6em;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.approval-text {
+    color: black;
+    font-size: 0.825rem;
+}
+
+.approval-text a {
+    color: rgb(0, 0, 77);
+}
+
+.salutation-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.salutation-container .form-content-container {
+    flex: 1;
+    margin-bottom: 0;
+}
