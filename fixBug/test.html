@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+</head>
+<style>html {
+  font-family: "Inter Tight", sans-serif;
+  background-color: red;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.randomSection {
+  height: 250vh;
+  width: 100vw;
+  background-color: lightblue;
+}
+
+footer {
+  background-color: pink !important;
+   height: 50vh !important;
+
+}
+
+.content {
+  height: 70vh;
+}
+
+#contact-section {
+  width: 100vw;
+  margin-top: 10vh;
+  min-height: 620vh;
+}
+
+#contact-image {
+  transform: translate3d(0px, 0px, 0px) scale(1.00212, 1.00212);
+  filter: brightness(80%);
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: border-radius 0.3s;
+}
+
+@media (max-width: 768px) {
+  #contact-image {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+.contact-text-wrapper {
+  margin-top: -50vh;
+}
+
+.contact-text-container {
+  padding: 0 10%;
+  position: relative;
+  margin: 40vh 0;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.contact-text-container.visible {
+  opacity: 1;
+}
+
+.contact-text-container-element {
+  color: white;
+  text-align: left;
+  font-size: clamp(5vmax, 15vmax, 3rem);
+  font-weight: 700;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@media (max-width: 400px) {
+  .contact-text-container {
+    font-size: clamp(5vmax, 15vmax, 3rem);
+    padding: 0 10%;
+  }
+}
+
+form {
+  height: 50vh;
+  width: 50vw;
+}
+
+.div1 {
+  height: 20vh;
+  width:20vw;
+  background-color: chartreuse;
+
+}
+
+</style>
+<body>
+  <section class="randomSection"></section>
+  <section id="contact-section">
+    <img id="contact-image" src="https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?cs=srgb&dl=pexels-olly-853151.jpg&fm=jpg" alt="" />
+
+    <div class="contact-text-wrapper">
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">LOREM</h2>
+      </div>
+
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">IPSUM</h2>
+      </div>
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">DOLOR</h2>
+      </div>
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">AMIT</h2>
+      </div>
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">
+          SINIPUS
+        </h2>
+      </div>
+
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">
+          CORPUS
+        </h2>
+      </div>
+
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">
+          TRINIZIA
+        </h2>
+      </div>
+
+      <div class="contact-text-container">
+        <h2 class="contact-text-container-element">
+          TRITUS
+        </h2>
+      </div>
+
+      <div class="contact-text-container">
+        <form id="contactForm" action="/contact/send-email" method="POST">
+
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="randomSection">
+    <div class="div1"></div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const imageElement = document.getElementById("contact-image");
+  const sections = document.querySelectorAll("section");
+  const body = document.body;
+  const textContainers = document.getElementsByClassName(
+    "contact-text-container"
+  );
+
+  const textContainersArray = Array.from(textContainers);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          textContainersArray.forEach((container) => {
+            if (container !== entry.target) {
+              container.classList.remove("visible");
+            }
+          });
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    { threshold: 0.5, rootMargin: "0px 0px -20% 0px" }
+  );
+
+  textContainersArray.forEach((el) => observer.observe(el));
+
+  function setBodyHeight() {
+    let totalHeight = 0;
+    sections.forEach((section) => {
+      totalHeight += section.clientHeight;
+    });
+    body.style.height = `${totalHeight}px`;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#contact-section",
+      start: "top top",
+      end: "bottom bottom", //the second value is bottom because the footer is to short
+      scrub: 0.8,
+      pin: imageElement,
+      pinSpacing: false,
+      markers: true
+    }
+  });
+
+  tl.from(imageElement, {
+    scale: 0.9,
+    duration: 1,
+    transformOrigin: "center",
+    borderRadius: "15px",
+  }).to(imageElement, {
+    scale: 1,
+    borderRadius: "0px",
+    duration: 1,
+  });
+
+  // Initial height setting
+  setBodyHeight();
+
+  // Update height on window resize
+  window.addEventListener("resize", setBodyHeight);
+
+  // Using matchMedia to handle different screen sizes
+  const mediaQuery = window.matchMedia("(max-width: 768px)");
+  mediaQuery.addEventListener("change", setBodyHeight);
+});
+
+  </script>
+</body>
+</html>

@@ -314,7 +314,7 @@
 
     <div class="contact-text-container">
       <h2 class="contact-text-container-element">
-        TRITUS
+        
       </h2>
     </div>
 
@@ -373,6 +373,7 @@
     </div>
   </div>
 </section>
+
 <footer class="footer-14398">
   <div class="container">
     <div class="row mb-5">
@@ -439,151 +440,4 @@
   </div>
 </footer>
 </body>
-<!-- <script>
-    window.onload = () => {
-        gsap.registerPlugin(ScrollTrigger);
-
-// Horizontal scrolling in service-section/#service-area
-const races = document.querySelector(".races");
-
-function getScrollAmount() {
-  let racesWidth = races.scrollWidth;
-  return -(racesWidth - window.innerWidth);
-}
-
-let tween, scrollTriggerInstance;
-
-function createScrollAnimation() {
-  tween = gsap.to(races, {
-    x: () => getScrollAmount(),
-    duration: 3,
-    ease: "none",
-    force3D: true
-  });
-
-  scrollTriggerInstance = ScrollTrigger.create({
-    trigger: ".racesWrapper",
-    start: "top 20%",
-    end: () => `+=${races.scrollWidth}`,
-    pin: true,
-    animation: tween,
-    scrub: true,
-    invalidateOnRefresh: true
-  });
-}
-
-function refreshServiceSection() {
-  if (tween) {
-    tween.kill(); 
-  }
-
-  if (scrollTriggerInstance) {
-    scrollTriggerInstance.kill();
-  }
-
-  createScrollAnimation();
-  ScrollTrigger.refresh();
-}
-
-createScrollAnimation();
-
-
-const textContainers = document.getElementsByClassName('contact-text-container');
-const textContainersArray = Array.from(textContainers);
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      textContainersArray.forEach((container) => {
-        if (container !== entry.target) {
-          container.classList.remove('visible');
-        }
-      });
-      entry.target.classList.add('visible');
-    } else {
-      entry.target.classList.remove('visible');
-    }
-  });
-}, { threshold: 0.5, rootMargin: '0px 0px -20% 0px' });
-
-textContainersArray.forEach(el => observer.observe(el));
-
-        const imageElement = document.getElementById("contact-image");
-
-function makeSticky() {
-    imageElement.classList.add('sticky');
-}
-
-function removeSticky() {
-    imageElement.classList.remove('sticky');
-}
-
-function checkPosition() {
-    const contactSection = document.getElementById("contact-section");
-    const rect = contactSection.getBoundingClientRect();
-
-    if (rect.top <= 0 && rect.bottom >= 0) {
-        makeSticky();
-    } else {
-        removeSticky();
-    }
-}
-
-function initAnimation() {
-    const tl = gsap.timeline({
-        ease: "none",
-        onUpdate: function () {
-            if (tl.progress() > 0.5) {
-                imageElement.style.borderRadius = '0';
-            } else {
-                imageElement.style.borderRadius = '15px';
-            }
-        }
-    });
-
-    tl.from(imageElement, {
-        scale: 0.9,
-        duration: 1,
-        transformOrigin: "center",
-    }).to({}, {
-        duration: 1
-    });
-
-    ScrollTrigger.create({
-        trigger: "#contact-section",
-        start: "top top",
-        end: "bottom top",
-        animation: tl,
-        scrub: 0.8,
-        pin: imageElement,
-        pinSpacing: false,
-        onEnter: () => {
-            makeSticky();
-        },
-        onLeaveBack: () => {
-            removeSticky();
-        }
-    });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        checkPosition();
-        window.addEventListener('scroll', checkPosition);
-    } else {
-        initAnimation();
-    }
-});
-
-window.addEventListener('resize', () => {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        window.removeEventListener('scroll', checkPosition);
-        window.addEventListener('scroll', checkPosition);
-    } else {
-        window.removeEventListener('scroll', checkPosition);
-        initAnimation();
-    }
-});
-    }
-</script> -->
 </html>

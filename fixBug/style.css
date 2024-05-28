@@ -1,10 +1,13 @@
 html {
     font-family: "Inter Tight", sans-serif;
-    padding: 0;
-    box-sizing:border-box;
-    margin: 0;
     background-color: red;
   }
+
+  
+  * {padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
   #service-section {
     transform: translateZ(0);
     transform: translate3d(0, 0, 0);
@@ -192,7 +195,9 @@ html {
   }
   
   .footer-14398 {
-    z-index: 20000;
+    position: absolute;
+    width: 100vw;
+    z-index: 20000000;
     padding: 7rem 0;
     background: rgb(0, 0, 77);
     color: #777;

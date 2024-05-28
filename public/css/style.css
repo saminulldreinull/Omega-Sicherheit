@@ -6,6 +6,9 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+footer {
+    overflow: hidden;
+}
 .float {
     position: fixed;
     width: 60px;
@@ -25,8 +28,6 @@ html {
     margin-top: 16px;
 }
 
-section {
-}
 
 .logo-link {
     display: block; /* Ermöglicht, dass das Element die volle Breite einnimmt */
@@ -299,6 +300,7 @@ video {
 }
 
 .explained-section {
+    overflow-x: hidden;
     overflow-y: hidden;
     margin-top: 10vh;
     gap: 30vh;
@@ -615,63 +617,68 @@ video {
     }
 }
 
-#contact-section {
+  .content {
+    height: 70vh;
+  }
+  
+  #contact-section {
     width: 100vw;
     margin-top: 10vh;
     min-height: 620vh;
-}
-
-#contact-image {
+  }
+  
+  #contact-image {
+    transform: translate3d(0px, 0px, 0px) scale(1.00212, 1.00212);
     filter: brightness(80%);
-    position: relative; /* Initial nicht sticky */
+    position: relative;
     top: 0;
     width: 100%;
-    height: 100vh; /* Immer die volle Höhe des Viewports */
+    height: 100vh;
     object-fit: cover;
     transition: border-radius 0.3s;
-}
-
-@media (max-width: 768px) {
-    #contact-image.sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-        border-radius: 0;
+  }
+  
+  @media (max-width: 768px) {
+    #contact-image {
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      border-radius: 0;
     }
-}
-
-.contact-text-wrapper {
-    margin-top: -50vh; /* Versatz nach oben für Überlagerung */
-}
-
-.contact-text-container {
+  }
+  
+  .contact-text-wrapper {
+    margin-top: -50vh;
+  }
+  
+  .contact-text-container {
     padding: 0 10%;
     position: relative;
     margin: 40vh 0;
     opacity: 0;
     transition: opacity 0.8s;
-}
-
-.contact-text-container.visible {
+  }
+  
+  .contact-text-container.visible {
     opacity: 1;
-}
-
-.contact-text-container-element {
+  }
+  
+  .contact-text-container-element {
     color: white;
     text-align: left;
     font-size: clamp(5vmax, 15vmax, 3rem);
     font-weight: 700;
     -webkit-hyphens: auto;
     hyphens: auto;
-}
-
-@media (max-width: 400px) {
+  }
+  
+  @media (max-width: 400px) {
     .contact-text-container {
-        font-size: clamp(5vmax, 15vmax, 3rem);
-        padding: 0 10%;
+      font-size: clamp(5vmax, 15vmax, 3rem);
+      padding: 0 10%;
     }
-}
+  }
 
 #contactForm {
     display: flex;
@@ -729,11 +736,11 @@ textarea {
     min-height: 6rem;
     max-height: 12rem;
     border-bottom: 5px solid #ccc;
-    resize: vertical; /* Allows vertical resizing only */
-    overflow: auto; /* Show scrollbar only when necessary */
+    resize: vertical;
+    overflow: auto;
     padding: 1rem;
     display: flex;
-    align-items: center; /* Vertical centering for placeholder */
+    align-items: center;
 }
 
 textarea::placeholder {
@@ -775,6 +782,7 @@ textarea::placeholder {
 #form-button-icon-path {
     fill: white !important;
 }
+
 .input-container-privacy {
     display: flex;
     align-items: center;
@@ -784,8 +792,8 @@ textarea::placeholder {
 #privacy {
     margin-right: 0.5rem;
     margin-top: 15px;
-    width: 1em; /* Reduzierte Größe der Checkbox */
-    height: 1em; /* Reduzierte Größe der Checkbox */
+    width: 1em;
+    height: 1em;
     background-color: white;
     border-radius: 50%;
     vertical-align: middle;
@@ -798,7 +806,7 @@ textarea::placeholder {
 }
 
 #privacy:checked {
-    background-color: rgb(0, 0, 77); /* Hintergrundfarbe der Checkbox, wenn ausgewählt */
+    background-color: rgb(0, 0, 77);
     border: 1px solid rgb(0, 0, 77);
 }
 
@@ -807,8 +815,8 @@ textarea::placeholder {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 0.3em; /* Kleinere Breite des Hakens */
-    height: 0.6em; /* Kleinere Höhe des Hakens */
+    width: 0.3em;
+    height: 0.6em;
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(45deg);
@@ -822,6 +830,7 @@ textarea::placeholder {
 .approval-text a {
     color: rgb(0, 0, 77);
 }
+
 .salutation-container {
     display: flex;
     gap: 1rem;
@@ -830,8 +839,9 @@ textarea::placeholder {
 
 .salutation-container .form-content-container {
     flex: 1;
-    margin-bottom: 0; /* Remove margin-bottom for inline elements */
+    margin-bottom: 0;
 }
+
 
 a {
     -webkit-transition: 0.3s all ease;
@@ -843,12 +853,12 @@ a:hover {
     text-decoration: none !important;
 }
 
-.content {
-    height: 70vh;
-}
+
 
 .footer-14398 {
-    z-index: 20000;
+    width: 100vw;
+    height: auto;
+    z-index:900;
     padding: 7rem 0;
     background: rgb(0, 0, 77);
     color: #777;
@@ -1188,8 +1198,4 @@ a:not([href]):not([tabindex]):focus {
 
 .certificate {
     height: 15vh;
-}
-
-footer {
-    z-index: 2000;
 }

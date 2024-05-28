@@ -1,26 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const imageElement = document.getElementById("contact-image");
-    const contactSection = document.getElementById("contact-section");
-
-    function makeSticky() {
-        imageElement.classList.add('sticky');
-    }
-
-    function removeSticky() {
-        imageElement.classList.remove('sticky');
-    }
-
-    function checkPosition() {
-        const rect = contactSection.getBoundingClientRect();
-
-        if (rect.top <= 0 && rect.bottom >= 0) {
-            makeSticky();
-        } else {
-            removeSticky();
-        }
-    }
 
     function initAnimation() {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
         const tl = gsap.timeline({
             ease: "none",
             onUpdate: function () {
@@ -47,30 +30,35 @@ document.addEventListener('DOMContentLoaded', () => {
             animation: tl,
             scrub: 0.8,
             pin: imageElement,
-            pinSpacing: false,
-            onEnter: () => {
-                makeSticky();
-            },
-            onLeaveBack: () => {
-                removeSticky();
-            }
+            pinSpacing: false
         });
     }
 
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        checkPosition();
-        window.addEventListener('scroll', checkPosition);
-    } else {
-        initAnimation();
+    function handleResize() {
+        ScrollTrigger.refresh();
     }
 
-    window.addEventListener('resize', () => {
-        if (window.matchMedia("(max-width: 768px)").matches) {
-            window.removeEventListener('scroll', checkPosition);
+    gsap.matchMedia().add({
+        "(max-width: 768px)": function() {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             window.addEventListener('scroll', checkPosition);
-        } else {
+        },
+        "(min-width: 769px)": function() {
             window.removeEventListener('scroll', checkPosition);
             initAnimation();
         }
     });
+
+    window.addEventListener('resize', handleResize);
+
+    function checkPosition() {
+        const rect = document.getElementById("contact-section").getBoundingClientRect();
+        if (rect.top <= 0 && rect.bottom >= 0) {
+            imageElement.style.position = 'fixed';
+            imageElement.style.top = '0';
+        } else {
+            imageElement.style.position = 'relative';
+            imageElement.style.top = '0';
+        }
+    }
 });

@@ -1,4 +1,4 @@
-const textContainers = document.getElementsByClassName('contact-text-container');
+/* const textContainers = document.getElementsByClassName('contact-text-container');
 const textContainersArray = Array.from(textContainers);
 
 const observer = new IntersectionObserver((entries) => {
@@ -17,3 +17,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5, rootMargin: '0px 0px -20% 0px' });
 
 textContainersArray.forEach(el => observer.observe(el));
+ */
