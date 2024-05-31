@@ -576,8 +576,8 @@ video {
 @media (min-width: 370px) {
     .service-container,
     .image-container {
-        width: 85vw;
-        height: clamp(50vw, 65vw, 75vw);
+        width: 85vmin;
+        height: clamp(50vmin, 65vmin, 75vmin);
     }
 
     .service-text-container {
@@ -614,6 +614,16 @@ video {
     .image-container {
         width: 50vw;
         height: 60vh;
+    }
+}
+
+
+@media (min-width: 767px) and (max-height:430px) and (orientation: landscape) {
+  
+    .service-container,
+    .image-container {
+        width: 50vw;
+        height: 65svh;
     }
 }
 
