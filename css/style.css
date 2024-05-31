@@ -235,6 +235,7 @@ span.menu {
     --color2: rgb(0, 0, 77);
 }
 video {
+    will-change: transform;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -535,7 +536,6 @@ video {
 .button-container {
     will-change: transform;
     transform: translateZ(0);
-    top: clamp(75%, 78%, 80%);
     position: absolute;
     justify-content: center;
     display: flex;
@@ -580,6 +580,10 @@ video {
         height: clamp(50vmin, 65vmin, 75vmin);
     }
 
+    .button-container {
+        top: clamp(64%, 67%, 70%);
+    }
+
     .service-text-container {
         gap: 2vmin;
         padding-left: 8vw;
@@ -592,6 +596,9 @@ video {
         gap: 2vh;
         padding-left: 6vw;
         padding-bottom: 15vh;
+    }
+    .button-container {
+        top: clamp(75%, 78%, 80%);
     }
 }
 @media (min-width: 767px) {
