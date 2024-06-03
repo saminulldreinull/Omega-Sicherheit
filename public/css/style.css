@@ -6,9 +6,6 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-footer {
-    overflow: hidden;
-}
 .float {
     position: fixed;
     width: 60px;
@@ -855,6 +852,9 @@ a:hover {
 
 
 
+footer {
+    overflow: hidden;
+}
 .footer-14398 {
     width: 100vw;
     height: auto;
