@@ -110,7 +110,6 @@ $(function() {
       getWidthFrom: '',
       widthFromWrapper: true, // works only when .getWidthFrom is empty
       responsiveWidth: false,
-      zIndex: 'inherit'
     },
     $window = $(window),
     $document = $(document),
