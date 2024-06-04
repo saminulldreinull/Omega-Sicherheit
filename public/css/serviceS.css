@@ -9,6 +9,7 @@ body {
     font-family: "Inter Tight", sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 :root {
     --blue: #007bff;
@@ -1040,7 +1041,6 @@ a:not([href]):not([tabindex]):focus {
 }
 
 .landing-page {
-    height: 100vh;
     width: 100vw;
 }
 
@@ -1061,6 +1061,7 @@ a:not([href]):not([tabindex]):focus {
     width: 60vw;
     display: flex;
     flex-direction: column;
+   
 }
 
 h4.service-heading {
@@ -1123,17 +1124,16 @@ h4.service-heading {
 }
 
 @media (min-width: 577px) {
-    body {
-        /* overflow: hidden; */
+    .landing-page {
+        height: 100vh;
     }
+    
     .service-text-content-container {
-        top: 55%;
+        gap: 4vh;
+        top: 60%;
     }
 }
 
-.service-attention-text,.service-text {
-
-}
 @media (max-width: 576px) {
     .service-text-content-container {
         top: 70%;
@@ -1142,7 +1142,12 @@ h4.service-heading {
         gap: 2vh;
     }
 
+    .landing-page {
+        height: 105vh;
+    }
+
     .service-attention-text { 
         width: 55vw; 
     }
 }
+
