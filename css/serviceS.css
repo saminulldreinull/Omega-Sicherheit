@@ -870,10 +870,15 @@ footer {
 .footer-14398 {
     width: 100vw;
     height: auto;
-    padding: 7rem 0;
+
     background: rgb(0, 0, 77);
     color: #777;
 }
+
+.pf-footer {
+    padding: 7rem 0 !important;
+}
+
 .footer-14398 .footer-site-logo {
     color: #fff;
     font-size: 26px;
@@ -1288,7 +1293,12 @@ h4.service-heading {
         top: 60%;
     }
 
+    .pforten-footer {
+        padding: 7rem 0;
+    }
+
     footer {
+        padding: 7rem 0;
         z-index: 900;
     }
 }
@@ -1300,7 +1310,7 @@ h4.service-heading {
         height: 80vh;
         gap: 2vh;
     }
-   
+
     .footer-14398 .footer-site-logo {
         margin-top: 25px;
     }
