@@ -148,6 +148,9 @@ h3,
     font-size: 1.75rem;
 }
 
+.col-12  {
+    font-size: 14px;
+}
 .container {
     width: 100%;
     padding-right: 15px;
