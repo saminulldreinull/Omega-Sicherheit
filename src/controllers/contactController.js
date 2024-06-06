@@ -2,18 +2,20 @@ const nodemailer = require('nodemailer');
 const Contact = require('../models/contact');
 
 const sendEmail = async (req, res) => {
-  const { name, email, company, message, privacy } = req.body;
+  const { salutation, name, email, company, message, privacy } = req.body;
 
   if (privacy !== 'on') {
     return res.status(400).send('Datenschutzerklärung muss akzeptiert werden.');
   }
 
   const contact = new Contact({
+    salutation,
     name,
     email,
     company,
     message,
-    privacy: true
+    privacy: true,
+    timestamp: new Date() // Hinzugefügt
   });
 
   try {
@@ -37,15 +39,15 @@ const sendEmail = async (req, res) => {
   const mailOptionsToYou = {
     from: email,
     to: process.env.EMAIL,
-    subject: `Neue Nachricht von ${name} (${company})`,
-    text: `Name: ${name}\nEmail: ${email}\nCompany: ${company}\nMessage: ${message}`
+    subject: `Neue Nachricht von ${salutation} ${name} (${company})`, // Aktualisiert
+    text: `Anrede: ${salutation}\nName: ${name}\nEmail: ${email}\nUnternehmen: ${company}\nNachricht: ${message}`
   };
 
   const mailOptionsToSender = {
     from: process.env.EMAIL,
     to: email,
     subject: 'Ihre Nachricht an Omega Security GmbH',
-    text: `Hallo ${name},\n\nwir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.\n\nMit freundlichen Grüßen,\nOmega Security GmbH`
+    text: `Hallo ${salutation} ${name},\n\nwir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.\n\nMit freundlichen Grüßen,\nOmega Security GmbH`
   };
 
   transporter.sendMail(mailOptionsToYou, (error, info) => {
