@@ -48,7 +48,10 @@ const sendEmail = async (req, res) => {
     from: email,
     to: process.env.EMAIL,
     subject: `Nachricht von ${salutation} ${name} (${company})`,
-    text: `${salutation} ${name}\n(Unternehmen: ${company})\nschrieb am ${timestamp} folgende Nachricht:\n\n,,${message} \n\nEmail: ${email}\n\n Dies ist eine automatisch erstellte Mail und wurde durch die Nutzung unseres Kontaktformulars unserer unternehmenseigenen Website initiiert. `,
+    html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${timestamp} folgende Nachricht:</p>
+           <p>,,${message}"</p>
+           <p>Email: ${email}</p>
+           <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail und wurde durch die Nutzung unseres auf unserer unternehmenseigenen Website befindlichen Kontaktformulars initiiert.</p>`,
   };
 
   const salutationFormatted =
@@ -57,7 +60,9 @@ const sendEmail = async (req, res) => {
     from: process.env.EMAIL,
     to: email,
     subject: "Ihre Nachricht an Omega Security GmbH",
-    text: `${salutationFormatted} ${name},\n\nwir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.\n\nMit freundlichen Grüßen,\nOmega Security GmbH`,
+    html: `<p>${salutationFormatted} ${name},</p>
+           <p>wir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.</p>
+           <p>Mit freundlichen Grüßen,<br>Omega Security GmbH</p>`,
   };
 
   try {
