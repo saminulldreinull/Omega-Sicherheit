@@ -111,11 +111,6 @@ a {
     background-color: transparent;
 }
 
-a:hover {
-    color: rgb(0, 0, 77);
-    text-decoration: underline;
-}
-
 a:not([href]):not([tabindex]) {
     color: inherit;
     text-decoration: none;
@@ -356,10 +351,6 @@ h3,
     color: #007bff !important;
 }
 
-a.text-primary:hover,
-a.text-primary:focus {
-    color: #0056b3 !important;
-}
 
 @media print {
     *,
@@ -598,9 +589,7 @@ a:hover {
     display: inline-block;
     text-decoration: none !important;
 }
-.site-navbar .site-navigation .site-menu > li > a:hover {
-    color: #007bff;
-}
+
 .site-navbar .site-navigation .site-menu .has-children {
     position: relative;
 }
@@ -693,11 +682,7 @@ a:hover {
     background: #f8f9fa;
     color: #ced4da;
 }
-.site-navbar .site-navigation .site-menu .has-children:hover > a,
-.site-navbar .site-navigation .site-menu .has-children:focus > a,
-.site-navbar .site-navigation .site-menu .has-children:active > a {
-    color: rgb(0, 0, 77);
-}
+
 .site-navbar .site-navigation .site-menu .has-children:hover,
 .site-navbar .site-navigation .site-menu .has-children:focus,
 .site-navbar .site-navigation .site-menu .has-children:active {
@@ -1272,6 +1257,11 @@ h4.service-heading {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.contact-button:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .button-icon {
