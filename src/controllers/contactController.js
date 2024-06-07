@@ -1,21 +1,31 @@
 const nodemailer = require('nodemailer');
+const { validationResult } = require('express-validator');
 const Contact = require('../models/contact');
+const { encrypt, decrypt } = require('../utils/encryption');
 
 const sendEmail = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+
   const { salutation, name, email, company, message, privacy } = req.body;
 
   if (privacy !== 'on') {
     return res.status(400).send('Datenschutzerklärung muss akzeptiert werden.');
   }
 
+  const encryptedMessage = encrypt(message);
+  const timestamp = new Date();
+
   const contact = new Contact({
     salutation,
     name,
     email,
     company,
-    message,
+    message: encryptedMessage,
     privacy: true,
-    timestamp: new Date() // Hinzugefügt
+    timestamp,
   });
 
   try {
@@ -39,7 +49,7 @@ const sendEmail = async (req, res) => {
   const mailOptionsToYou = {
     from: email,
     to: process.env.EMAIL,
-    subject: `Neue Nachricht von ${salutation} ${name} (${company})`, // Aktualisiert
+    subject: `Neue Nachricht von ${salutation} ${name} (${company})`,
     text: `Anrede: ${salutation}\nName: ${name}\nEmail: ${email}\nUnternehmen: ${company}\nNachricht: ${message}`
   };
 
@@ -68,10 +78,14 @@ const sendEmail = async (req, res) => {
   });
 };
 
-const getContacts = async (req, res) => {
+const getDecryptedContacts = async (req, res) => {
   try {
     const contacts = await Contact.find();
-    res.status(200).json(contacts);
+    const decryptedContacts = contacts.map((contact) => ({
+      ...contact._doc,
+      message: decrypt(contact.message),
+    }));
+    res.status(200).json(decryptedContacts);
   } catch (error) {
     console.error('Fehler beim Abrufen der Kontakte:', error);
     res.status(500).send('Fehler beim Abrufen der Kontakte.');
@@ -80,5 +94,5 @@ const getContacts = async (req, res) => {
 
 module.exports = {
   sendEmail,
-  getContacts
+  getDecryptedContacts
 };

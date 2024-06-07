@@ -1,44 +1,75 @@
-// src/index.js
-const fs = require('fs');
-const https = require('https');
+require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const https = require('https');
+const fs = require('fs');
 const path = require('path');
-
-const adminRoutes = require('./routes/admin');
-const contactRoutes = require('./routes/contact');
-
-dotenv.config({ path: path.resolve(__dirname, '../.env') });
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+const cors = require('cors');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
 
 const app = express();
-const port = process.env.PORT || 3001;
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../public')));
+// Sicherheitsheader hinzufügen
+app.use(helmet());
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log('Mit MongoDB verbunden');
-  })
-  .catch(err => {
-    console.error('MongoDB Verbindungsfehler:', err);
-  });
+// Angepasste Content Security Policy (CSP)
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'cdn.jsdelivr.net', 'cdnjs.cloudflare.com', 'ajax.googleapis.com', 'maxcdn.bootstrapcdn.com', 'unpkg.com', 'stackpath.bootstrapcdn.com', 'code.jquery.com'],
+      styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'cdnjs.cloudflare.com', 'maxcdn.bootstrapcdn.com', 'stackpath.bootstrapcdn.com'],
+      imgSrc: ["'self'", 'data:', 'cdn.jsdelivr.net', 'cdnjs.cloudflare.com'],
+      connectSrc: ["'self'", 'api.example.com'],
+      fontSrc: ["'self'", 'fonts.gstatic.com', 'cdnjs.cloudflare.com', 'maxcdn.bootstrapcdn.com', 'stackpath.bootstrapcdn.com'],
+      objectSrc: ["'none'"],
+      mediaSrc: ["'self'"],
+      frameSrc: ["'none'"]
+  }
+}));
+
+// CORS-Konfiguration
+app.use(cors());
+
+// Rate Limiting für Anmelde- und Registrierungsrouten
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 Minuten
+    max: 100, // Beschränkung auf 100 Anfragen pro IP und Fenster
+    message: 'Zu viele Anfragen von dieser IP, bitte versuchen Sie es später erneut.',
+});
+app.use('/admin/login', limiter);
+app.use('/admin/register', limiter);
+
+// Middleware für JSON-Parsing
+app.use(express.json());
+
+// Logging hinzufügen
+app.use(morgan('combined'));
+
+// Statische Dateien bereitstellen
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
+const options = {
+    key: fs.readFileSync(path.join(__dirname, '../server.key')),
+    cert: fs.readFileSync(path.join(__dirname, '../server.cert')),
+};
+
+// Beispielrouten
+const adminRoutes = require('./routes/admin');
+const contactRoutes = require('./routes/contact');
 
 app.use('/admin', adminRoutes);
 app.use('/contact', contactRoutes);
 
-const options = {
-  key: fs.readFileSync('../server.key'),
-  cert: fs.readFileSync('../server.cert')
-};
+// Verbindung zur MongoDB
+mongoose.connect(process.env.MONGO_URI, {
+  serverSelectionTimeoutMS: 30000, // Timeout auf 30 Sekunden setzen
+})
+.then(() => console.log('Mit MongoDB verbunden'))
+.catch(err => console.error('Fehler bei der Verbindung zur MongoDB:', err));
 
-https.createServer(options, app).listen(443, () => {
-  console.log('HTTPS Server läuft auf Port 443');
-});
-
-app.listen(port, () => {
-  console.log(`HTTP Server läuft auf Port ${port}`);
+// HTTPS-Server starten
+https.createServer(options, app).listen(process.env.PORT, () => {
+    console.log(`Server läuft auf https://localhost:${process.env.PORT}`);
 });

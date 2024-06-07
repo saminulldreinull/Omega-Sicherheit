@@ -1,4 +1,3 @@
-// src/utils/encryption.js
 const crypto = require('crypto');
 const dotenv = require('dotenv');
 const path = require('path');
@@ -6,9 +5,6 @@ const path = require('path');
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
-
-console.log('ENCRYPTION_KEY in encryption.js:', ENCRYPTION_KEY);
-
 const IV_LENGTH = 16;
 
 function encrypt(text) {

@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const AdminUser = require('../models/adminUser');
 
+// Admin Login
 const loginAdmin = async (req, res) => {
   const { email, password } = req.body;
 
@@ -26,6 +27,7 @@ const loginAdmin = async (req, res) => {
   }
 };
 
+// Admin Registrierung
 const registerAdmin = async (req, res) => {
   const { email, password, name, privacy } = req.body;
 
@@ -40,6 +42,7 @@ const registerAdmin = async (req, res) => {
   }
 };
 
+// Alle Benutzer abrufen
 const getUsers = async (req, res) => {
   try {
     const users = await AdminUser.find();
@@ -50,6 +53,7 @@ const getUsers = async (req, res) => {
   }
 };
 
+// Benutzer nach ID abrufen
 const getUser = async (req, res) => {
   const userId = req.params.id;
 
