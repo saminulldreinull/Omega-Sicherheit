@@ -13,7 +13,7 @@ html {
     bottom: 40px;
     right: 40px;
     background-color: #25d366;
-    color: #fff;
+    color: #F0F0F0;
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
@@ -53,7 +53,7 @@ html {
 }
 
 .logo-shrinked path {
-    fill: #fff;
+    fill: #F0F0F0;
 }
 .logo {
     position: absolute;
@@ -272,7 +272,7 @@ video {
     left: 50%;
     font-size: clamp(1rem, 2vw, 2rem);
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
     font-weight: bold;
     white-space: nowrap;
     display: inline-block;
@@ -303,7 +303,6 @@ video {
     gap: 30vh;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(250, 253, 255);
     height: 100vh;
     width: 100vw;
     font-weight: 800;
@@ -398,6 +397,8 @@ video {
 }
 
 .facts {
+    left:50%;
+    transform: translate(-50%,-50%);
     position: relative;
     display: flex;
     flex-direction: row;
@@ -427,7 +428,7 @@ video {
 }
 
 .key-figure-container,
-.label {
+.label { 
     min-width: 50%;
     min-height: 50%;
 }
@@ -443,16 +444,8 @@ video {
         justify-content: space-evenly;
     }
 }
-#service-section {
-    transform: translateZ(0);
-    transform: translate3d(0, 0, 0);
-    will-change: transform;
-    background-color: #f8f9fa;
-    transform: translateZ(0);
-    position: relative;
-    z-index: 3;
-    scroll-snap-type: none;
-    margin-bottom: 50vh; /* beachte */
+#service-area,.explained-section,#contact-section,.pin-spacer,body {
+    background-color: #F0F0F0;
 }
 
 .racesWrapper {
@@ -567,7 +560,7 @@ video {
 }
 
 .button-icon path {
-    fill: #ffffff;
+    fill: #F0F0F0;
 }
 
 @media (min-width: 370px) {
@@ -850,8 +843,6 @@ a:hover {
     text-decoration: none !important;
 }
 
-
-
 footer {
     overflow: hidden;
 }
@@ -861,17 +852,17 @@ footer {
     z-index:900;
     padding: 7rem 0;
     background: rgb(0, 0, 77);
-    color: #777;
+   color: #F0F0F0;
 }
 .footer-14398 .footer-site-logo {
-    color: #fff;
+    color: #F0F0F0;
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 30px;
     display: block;
 }
 .footer-14398 h3 {
-    color: #fff;
+    color: #F0F0F0;
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -879,16 +870,16 @@ footer {
     margin-bottom: 10px;
 }
 .footer-14398 .links li a {
-    color: #999;
+    color: #F0F0F0;
 }
 .footer-14398 .links li a:hover {
-    color: #fff;
+    color: #F0F0F0;
 }
 .footer-14398 .link-menu li {
     display: inline-block;
 }
 .footer-14398 .link-menu li a {
-    color: #fff;
+    color: #F0F0F0;
     display: inline-block;
     padding: 10px;
 }
@@ -904,7 +895,7 @@ footer {
 .footer-14398 .social li a {
     display: inline-block;
     padding: 10px;
-    color: #ccc;
+    color: #F0F0F0;
 }
 .footer-14398 .social li:last-child a {
     padding-right: 0;

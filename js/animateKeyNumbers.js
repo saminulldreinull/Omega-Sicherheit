@@ -13,12 +13,12 @@ function animateValue(obj, start, end, duration) {
         progress = linear(progress);
 
         const currentValue = Math.floor(progress * (end - start) + start);
-        obj.textContent = "+" + currentValue;
+        obj.textContent =  currentValue +  "+";
 
         if (elapsed < duration) {
             window.requestAnimationFrame(step);
         } else {
-            obj.textContent = "+" + end;
+            obj.textContent = end + "+";
             obj.style.willChange = 'auto'; // Disable will-change after animation
         }
     };
