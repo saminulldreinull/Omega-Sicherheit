@@ -846,6 +846,11 @@ a:hover {
 footer {
     overflow: hidden;
 }
+
+#mobile-text {
+    padding-bottom: 25px;
+}
+
 .footer-14398 {
     width: 100vw;
     height: auto;
