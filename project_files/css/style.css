@@ -272,7 +272,7 @@ video {
     left: 50%;
     font-size: clamp(1rem, 2vw, 2rem);
     top: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     font-weight: bold;
     white-space: nowrap;
     display: inline-block;
@@ -397,8 +397,6 @@ video {
 }
 
 .facts {
-    left:50%;
-    transform: translate(-50%,-50%);
     position: relative;
     display: flex;
     flex-direction: row;
@@ -843,14 +841,11 @@ a:hover {
     text-decoration: none !important;
 }
 
+
+
 footer {
     overflow: hidden;
 }
-
-#mobile-text {
-    padding-bottom: 25px;
-}
-
 .footer-14398 {
     width: 100vw;
     height: auto;
