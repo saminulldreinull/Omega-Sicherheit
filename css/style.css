@@ -6,6 +6,10 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: auto !important;
+}
 .float {
     position: fixed;
     width: 60px;
@@ -615,6 +619,7 @@ video {
     width: 100vw;
     margin-top: 10vh;
     min-height: 620vh;
+    border: 0.1px solid transparent;
   }
   
   #contact-image {
