@@ -15,7 +15,14 @@ for branch in $(git branch | sed 's/\*//'); do
   if [ "$branch" != "$current_branch" ]; then
     echo "Merging $branch into branch $current_branch..."
     git checkout "$branch"
-    git pull origin "$branch"
+    
+    # Check if the branch has a remote ref
+    if git show-ref --quiet refs/remotes/origin/"$branch"; then
+      git pull origin "$branch"
+    else
+      echo "No remote ref for branch $branch. Skipping pull."
+    fi
+    
     git checkout "$current_branch"
     git merge "$branch"
 
