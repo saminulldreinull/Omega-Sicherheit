@@ -539,11 +539,12 @@ a:hover {
 .site-navbar {
     margin-bottom: 0px;
     z-index: 1999;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding: 1rem;
     /* background: rgb(0, 0, 77); */
     background-color: transparent;
+
 
 }
 
