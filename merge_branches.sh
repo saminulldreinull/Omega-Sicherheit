@@ -20,10 +20,10 @@ for branch in $(git branch | sed 's/\*//'); do
     git checkout "$branch"
     
     # Check if the branch has a remote ref
-    if git show-ref --quiet refs/remotes/origin/"$branch"; then
-      git pull origin "$branch"
+    if git show-ref --quiet refs/heads/"$branch"; then
+      echo "Merging changes from $branch"
     else
-      echo "No remote ref for branch $branch. Skipping pull." | tee -a $log_file
+      echo "No local ref for branch $branch. Skipping pull." | tee -a $log_file
     fi
     
     git checkout "$current_branch"
