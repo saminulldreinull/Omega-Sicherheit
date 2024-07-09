@@ -1,5 +1,8 @@
 #!/bin/bash
 
+log_file="merge_log.txt"
+echo "Merge process started at $(date)" > $log_file
+
 # Speichere den aktuellen Branch
 current_branch=$(git branch --show-current)
 
@@ -13,14 +16,14 @@ for branch in $(git branch | sed 's/\*//'); do
 
   # Skip the current branch
   if [ "$branch" != "$current_branch" ]; then
-    echo "Merging $branch into branch $current_branch..."
+    echo "Merging $branch into branch $current_branch..." | tee -a $log_file
     git checkout "$branch"
     
     # Check if the branch has a remote ref
     if git show-ref --quiet refs/remotes/origin/"$branch"; then
       git pull origin "$branch"
     else
-      echo "No remote ref for branch $branch. Skipping pull."
+      echo "No remote ref for branch $branch. Skipping pull." | tee -a $log_file
     fi
     
     git checkout "$current_branch"
@@ -28,10 +31,11 @@ for branch in $(git branch | sed 's/\*//'); do
 
     # Check if the merge was successful
     if [ $? -ne 0 ]; then
-      echo "Merge conflict with branch $branch. Please resolve manually."
+      echo "Merge conflict with branch $branch. Please resolve manually." | tee -a $log_file
       exit 1
     fi
   fi
 done
 
-echo "All branches have been merged into $current_branch."
+echo "All branches have been merged into $current_branch." | tee -a $log_file
+echo "Merge process completed at $(date)" | tee -a $log_file
