@@ -1,4 +1,4 @@
-let logo = document.getElementById('logo');
+/* let logo = document.getElementById('logo');
 let logoContainer = document.getElementById('logo-container');
 let header = document.querySelector('header');
 let landingPage = document.getElementById('landing-page');
@@ -9,18 +9,17 @@ function checkSection() {
 
     if (window.scrollY < landingPageTop + landingPageHeight) {
         header.style.backgroundColor = 'transparent';
-        header.style.willChange = 'background-color';  // Hinzufügen des will-change
+        header.style.willChange = 'background-color';
         logo.classList.remove('logo-shrinked');
         logoContainer.classList.remove('logo-container-shrinked');
     } else {
         header.style.backgroundColor = 'rgb(0,0,77)';
-        header.style.willChange = 'background-color';  // Hinzufügen des will-change
+        header.style.willChange = 'background-color';
         logo.classList.add('logo-shrinked');
         logoContainer.classList.add('logo-container-shrinked');
     }
 }
 
-//Responsive Header
 window.onload = () => {
     let openMenu = document.querySelector(".open-menu");
   
@@ -61,3 +60,4 @@ window.addEventListener('resize', () => {
 window.addEventListener('scroll', checkSection);
 
 document.addEventListener('DOMContentLoaded', checkSection);
+ */
