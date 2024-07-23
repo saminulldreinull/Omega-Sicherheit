@@ -40,7 +40,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
-  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://unpkg.com/split-type"defer></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
 
    <script src="js/animateLandingSectionWords.js" defer ></script> 
@@ -50,8 +50,9 @@
    <script src="js/animateKeyNumbers.js" defer ></script>
    <script src="js/buttonHover.js" defer ></script>
   <script src="js/horizontalScrolling.js" defer ></script>
-  <script src="js/imageScale.js" defer ></script>
-  <script src="js/textEnterLeaver.js" defer ></script>
+  <script src = "js/textHighlightOnScroll.js"defer></script>
+  <!-- <script src="js/imageScale.js" defer ></script> -->
+  <!-- <script src="js/textEnterLeaver.js" defer ></script> -->
  <script src="js/contactForm.js" defer ></script> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
@@ -352,40 +353,43 @@
 
   <section id="contact-section">
     <img id="contact-image" src="images/omega_buero.webp" alt = ""/>
-    <div class="contact-text-wrapper">
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">Womit Sie sich bei uns sicher sein können:</h2>
+    <div id="contact-text-wrapper">
+      <div class = "contact-text-container-first">
+        <p class="contact-text-container-element-first"><span class="highlight-dark">Womit</span> <span class="highlight-light">Sie</span><span class="highlight-dark"> sich bei uns</span> <span class="highlight-light">sicher sein können</span><span>:</span></p>
       </div>
-
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">Maßgeschneiderte Lösungen.</h2>
+      <div class="contact-text-container" id="section1">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">MAßGESCHNEIDERTE</span><br>
+          <span class="highlight-dark">LÖSUNGEN</span><span class="highlight-dark">.</span>
+        </p>
       </div>
-  <!--     <div class="contact-text-container">
-         <h2 class = "contact-text-container-element">Weil kein Unternehmen dem Standard entspricht.</h2> 
-      </div> -->
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">ISO- & DIN zertifiziert.</h2>
+      <div class="contact-text-container" id="section2">
+        <p class="contact-text-container-element">
+          <span class="highlight-dark">ISO- &amp; DIN</span><br>
+          <span class="highlight-light">ZERTIFIZIERT</span><span class="highlight-dark">.</span>
+        </p>
       </div>
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">
-          Unsere Lösungen entsprechen höchsten
-          Qualitätsstandards.
-        </h2>
+      <div class="contact-text-container" id="section3">
+        <p class="contact-text-container-element">
+          <span class="highlight-dark">UNSERE LÖSUNGEN</span><br>
+          <span class="highlight-dark">ENTSPRECHEN</span> <span class="highlight-light">HÖCHSTEN</span><br>
+          <span class="highlight-light">QUALITÄTSSTANDARDS</span><span class="highlight-dark">.</span>
+        </p>
       </div>
+      <div class="contact-text-container" id="section4">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">24/7 SUPPORT</span><br>
+          <span class="highlight-dark">FÜR IHRE ANLIEGEN</span><span class="highlight-dark">.</span>
+        </p>
+      </div>
+      <div class="contact-text-container" id="section5">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">KONTAKTIEREN SIE UNS</span><span class="highlight-dark">!</span>
+        </p>
+      </div>
+ 
 
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">
-              24/7 Support für Ihre Anliegen.
-          </h2>
-        </div>
-
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">
-              Kontaktieren Sie Uns!
-          </h2>
-        </div>
-
-        <div class="contact-text-container">
+        <!-- <div class="contact-text-container">
           <form id="contactForm" action="/contact/send-email" method="POST">
             <div class="form-content-wrapper">
                 <div class="salutation-container">
@@ -428,7 +432,7 @@
                     </span>
                 </div>
             </div>
-        </form>
+        </form> -->
         
         </div>
     </div>
