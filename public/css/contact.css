@@ -47,8 +47,8 @@ body {
 .contact-medium {
     text-decoration: underline !important;
     color: black;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 form {
@@ -63,18 +63,25 @@ form {
 .name-content-container > .form-content-container {
     flex-grow: 1;
 }
-
 .text-input,
 textarea,
 select {
-    border: none;
-    border-bottom: 1px solid rgb(142, 137, 137);
+    border: none; /* Entfernt alle Randlinien */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Setzt nur die untere Randlinie */
     font-family: "Inter Tight", sans-serif;
     font-size: 14px;
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
-    appearance: none; /* Entfernt standardmäßige Browserstile */
+    appearance: none;
+    outline: none; /* Entfernt die Standard-Fokus-Ränder */
+}
+
+.text-input:focus,
+textarea:focus,
+select:focus {
+    border-bottom: 1px solid black; /* Setzt nur die untere Randlinie auf Schwarz */
+    outline: none; /* Entfernt die Standard-Fokus-Ränder */
 }
 
 /* Safari-spezifische Stile */
@@ -160,7 +167,7 @@ label {
 
 #privacy {
     margin-right: 0.5rem;
-    margin-top: 0; /* Entferne margin-top, um sicherzustellen, dass die Checkbox und der Text auf derselben Linie sind */
+    margin-top: 0;
     width: 1em;
     height: 1em;
     background-color: white;
@@ -194,13 +201,19 @@ label {
 .approval-text {
     color: black;
     font-size: 0.825rem;
-    margin-top: 0; /* Füge diese Zeile hinzu, um sicherzustellen, dass der Text und die Checkbox auf derselben Linie sind */
+    margin-top: 0;
 }
 
 .approval-text a {
     color: rgb(0, 0, 77);
 }
 
+#remaining-information-section {
+    height: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding-top: 80px;
+    margin-top: 160px;
+}
 header,
 main,
 nav {

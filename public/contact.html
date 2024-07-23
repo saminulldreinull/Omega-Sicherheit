@@ -93,7 +93,7 @@
             </div>
             <div class="form-content-container">
                 <label class="form-label" for="message">Nachricht</label>
-                <textarea id="message" name="message" autocomplete="off" required></textarea>
+                <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
             </div>
             <div class="input-container-privacy">
                 <input type="checkbox" id="privacy" name="privacy" required />
@@ -113,7 +113,9 @@
         </form>
     </div>
   </section>
-  
+  <section id = "remaining-information-section">
+
+  </section>
   <footer class="footer-14398">
     <div class="container">
       <div class="row mb-5">
@@ -178,6 +180,22 @@
 
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var inputs = document.querySelectorAll('.text-input, textarea, select');
+        inputs.forEach(function (input) {
+            input.addEventListener('focus', function () {
+                this.style.borderBottom = '1px solid black';
+                this.style.outline = 'none'; // Entfernt die Standard-Fokus-Ränder
+            });
+            input.addEventListener('blur', function () {
+                this.style.borderBottom = '1px solid rgba(0, 0, 0, 0.2)';
+            });
+        });
+    });
+    </script>
+    
+    
 </body>
 
 </html>
