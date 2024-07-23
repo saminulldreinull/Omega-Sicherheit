@@ -60,61 +60,84 @@
   </header>
   <section id="form-section">
     <div class="text-wrapper">
-        <div class="contact-heading-container">
-            <h6 class="contact-heading"><span class = "highlight-dark">WOMIT KÖNNEN</span><br class = "break-m break-l"><span class = "highlight-light"> WIR IHNEN</span><br class = "break-m"> <span class = "highlight-dark">WEITER</span><span class = "highlight-light">HELFEN</span><span class = "highlight-dark">?</span></h6>
-        </div>
-        <div class="contact-media-container">
-            <a class = "contact-medium" href="mailto:kontakt-osg@outlook.de">KONTAKT-OSG@OUTLOOK.DE</a>
-            <a class = "contact-medium" href="tel:+4917664871676">+49 176 648 71 676</a>
-        </div>
+      <div class="contact-heading-container">
+        <h6 class="contact-heading"><span class="highlight-dark">WOMIT KÖNNEN</span><br class="break-m break-l"><span class="highlight-light"> WIR IHNEN</span><br class="break-m"> <span class="highlight-dark">WEITER</span><span class="highlight-light">HELFEN</span><span class="highlight-dark">?</span></h6>
+      </div>
+      <div class="contact-media-container">
+        <a class="contact-medium" href="mailto:kontakt-osg@outlook.de">KONTAKT-OSG@OUTLOOK.DE</a>
+        <a class="contact-medium" href="tel:+4917664871676">+49 176 648 71 676</a>
+      </div>
 
-        <form id = "contactForm" action="/contact/send-email" method="POST">
-            <div class="salutation-container">
-                <div class="name-content-container">
-                <div class="form-content-container">
-                    <label class="form-label" for="salutation">Anrede</label>
-                    <select name="salutation" id="salutation" required>
-                        <option>Herr</option>
-                        <option>Frau</option>
-                    </select>
-                </div>
+      <form id="contactForm" action="/contact/send-email" method="POST">
+        <div class="salutation-container">
+          <div class="name-content-container">
             <div class="form-content-container">
-                <label class="form-label" for="name">Name</label>
-                <input class = "text-input" type="text" id="name" name="name" autocomplete="name" required/>
-            </div>
-        </div>
-            <div class="form-content-container">
-                <label class="form-label" for="company">Unternehmen</label>
-                <input class = "text-input" type="text" id="company" name="company" autocomplete="organization">
+              <label class="form-label" for="salutation">Anrede</label>
+              <select name="salutation" id="salutation" required>
+                <option>Herr</option>
+                <option>Frau</option>
+              </select>
             </div>
             <div class="form-content-container">
-                <label class="form-label" for="email">E-Mail</label>
-                <input class = "text-input" type="email" id="email" name="email" autocomplete="email" required>
+              <label class="form-label" for="name">Name</label>
+              <input class="text-input" type="text" id="name" name="name" autocomplete="name" required />
             </div>
-            <div class="form-content-container">
-                <label class="form-label" for="message">Nachricht</label>
-                <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
-            </div>
-            <div class="input-container-privacy">
-                <input type="checkbox" id="privacy" name="privacy" required />
-                <span class="approval-text">
-                    Ich stimme der
-                    <a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a>
-                    zu.
-                </span>
-            </div>
-            <div class="form-button-container">
-                <button type="submit" class="form-button">
-                  <img  class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
-                    Absenden
-                </button>
-            </div>
-          
-        </form>
+          </div>
+          <div class="form-content-container">
+            <label class="form-label" for="company">Unternehmen</label>
+            <input class="text-input" type="text" id="company" name="company" autocomplete="organization">
+          </div>
+          <div class="form-content-container">
+            <label class="form-label" for="email">E-Mail</label>
+            <input class="text-input" type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-content-container">
+            <label class="form-label" for="message">Nachricht</label>
+            <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
+          </div>
+          <div class="input-container-privacy">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <span class="approval-text">
+              Ich stimme der
+              <a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a>
+              zu.
+            </span>
+          </div>
+          <div class="form-button-container">
+            <button type="submit" class="form-button">
+              <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+              Absenden
+            </button>
+          </div>
+
+      </form>
     </div>
   </section>
-  <section id = "remaining-information-section">
+  <section id="remaining-information-section">
+    <div class="information-wrapper">
+      <h4 class="social-media-heading">FOLGEN SIE UNS</h4>
+      <div class="information-list">
+        <h3 class="list-item"><a href="">LINKEDIN</a></h3>
+        <h3 class="list-item"><a href="">XING</a></h3>
+      </div>
+    </div>
 
+    <div class="information-wrapper">
+        <h4 class="social-media-heading">UNSER BÜRO</h4>
+        <div class="information-list">
+          <h3 class="list-item"><a href="">KREFELDER STRAßE 17 <br> 10555 BERLIN</a></h3>
+        </div>
+      </div>
+
+      <div class="information-wrapper">
+        <h4 class="social-media-heading">UNSERE ÖFFNUNGSZEITEN</h4>
+        <div class="information-list">
+          <h3 class="list-item information-item">MONTAG - SAMSTAG: <br> 08:00 - 20:00</h3>
+        </div>
+        <div class="information-list">
+            <h3 class="list-item information-item">SONNTAG: <br>08:00 - 19:00</h3>
+        </div>
+      </div>
   </section>
   <footer class="footer-14398">
     <div class="container">
@@ -181,21 +204,19 @@
     </div>
   </footer>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var inputs = document.querySelectorAll('.text-input, textarea, select');
-        inputs.forEach(function (input) {
-            input.addEventListener('focus', function () {
-                this.style.borderBottom = '1px solid black';
-                this.style.outline = 'none'; // Entfernt die Standard-Fokus-Ränder
-            });
-            input.addEventListener('blur', function () {
-                this.style.borderBottom = '1px solid rgba(0, 0, 0, 0.2)';
-            });
+    document.addEventListener('DOMContentLoaded', function() {
+      var inputs = document.querySelectorAll('.text-input, textarea, select');
+      inputs.forEach(function(input) {
+        input.addEventListener('focus', function() {
+          this.style.borderBottom = '1px solid black';
+          this.style.outline = 'none'; // Entfernt die Standard-Fokus-Ränder
         });
+        input.addEventListener('blur', function() {
+          this.style.borderBottom = '1px solid rgba(0, 0, 0, 0.2)';
+        });
+      });
     });
-    </script>
-    
-    
+  </script>
 </body>
 
 </html>
