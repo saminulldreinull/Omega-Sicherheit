@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Batak&family=Patua+One&family=Titan+One&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a></a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto " role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="#services-section" class="nav-link">HOME</a></li>
+              <li><a href="#home-section" class="nav-link">ÜBER UNS</a></li>
+
+              <li class="has-children">
+                <a href="#about-section" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="#services-section" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+
+  </header>
+  <section id="form-section">
+    <div class="text-wrapper">
+        <div class="contact-heading-container">
+            <h6 class="contact-heading"><span class = "highlight-dark">WOMIT KÖNNEN</span><br class = "break-m break-l"><span class = "highlight-light"> WIR IHNEN</span><br class = "break-m"> <span class = "highlight-dark">WEITER</span><span class = "highlight-light">HELFEN</span><span class = "highlight-dark">?</span></h6>
+        </div>
+        <div class="contact-media-container">
+            <a class = "contact-medium" href="mailto:kontakt-osg@outlook.de">KONTAKT-OSG@OUTLOOK.DE</a>
+            <a class = "contact-medium" href="tel:+4917664871676">+49 176 648 71 676</a>
+        </div>
+
+        <form>
+            <div class="salutation-container">
+                <div class="name-content-container">
+                <div class="form-content-container">
+                    <label class="form-label" for="salutation">Anrede</label>
+                    <select name="salutation" id="salutation" required>
+                        <option>Herr</option>
+                        <option>Frau</option>
+                    </select>
+                </div>
+            <div class="form-content-container">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required/>
+            </div>
+        </div>
+            <div class="form-content-container">
+                <label class="form-label" for="company">Unternehmen</label>
+                <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-content-container">
+                <label class="form-label" for="email">E-Mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-content-container">
+                <label class="form-label" for="message">Nachricht</label>
+                <textarea id="message" name="message" autocomplete="off" required></textarea>
+            </div>
+            <div class="form-button-container">
+                <button type="submit" class="form-button">
+                  <img  class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                    Absenden
+                </button>
+            </div>
+        </form>
+    </div>
+  </section>
+  
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>MENÜ</h3>
+          <ul class="list-unstyled links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Über Uns</a></li>
+            <li><a href="#">Leistungen</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="#">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><img class="certificate" src="images/dekra_siegel1.png" alt=""></li>
+            <li><img class="certificate" src="images/dekra_siegel2.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html" target="_blank">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-xing"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </footer>
+</body>
+
+</html>

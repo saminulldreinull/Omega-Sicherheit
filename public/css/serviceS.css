@@ -873,32 +873,32 @@ a:hover {
 
 /* header end */
 
-/* footer */
+
 footer {
-    position: relative;
     overflow: hidden;
 }
+
+#mobile-text {
+    padding-bottom: 25px;
+}
+
 .footer-14398 {
     width: 100vw;
     height: auto;
-
+    z-index: 900;
+    padding: 7rem 0;
     background: rgb(0, 0, 77);
-    color: #777;
+    color: #f0f0f0;
 }
-
-.pf-footer {
-    padding: 7rem 0 !important;
-}
-
 .footer-14398 .footer-site-logo {
-    color: #fff;
+    color: #f0f0f0;
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 30px;
     display: block;
 }
 .footer-14398 h3 {
-    color: #fff;
+    color: #f0f0f0;
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -906,16 +906,16 @@ footer {
     margin-bottom: 10px;
 }
 .footer-14398 .links li a {
-    color: #999;
+    color: #f0f0f0;
 }
 .footer-14398 .links li a:hover {
-    color: #fff;
+    color: #f0f0f0;
 }
 .footer-14398 .link-menu li {
     display: inline-block;
 }
 .footer-14398 .link-menu li a {
-    color: #fff;
+    color: #f0f0f0;
     display: inline-block;
     padding: 10px;
 }
@@ -931,7 +931,7 @@ footer {
 .footer-14398 .social li a {
     display: inline-block;
     padding: 10px;
-    color: #ccc;
+    color: #f0f0f0;
 }
 .footer-14398 .social li:last-child a {
     padding-right: 0;
@@ -945,7 +945,14 @@ a:not([href]):not([class]):hover {
     color: inherit;
     text-decoration: none;
 }
-
+.h2,
+.h3,
+h2,
+.h2,
+.h3,
+h3 {
+    font-size: 1.75rem;
+}
 .small,
 small {
     font-size: 80%;
@@ -1077,6 +1084,12 @@ a.bg-light:hover {
     }
 }
 
+h2,
+h3 {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
 a:not([href]):not([tabindex]),
 a:not([href]):not([tabindex]):focus,
 a:not([href]):not([tabindex]):hover {
@@ -1205,6 +1218,7 @@ a:not([href]):not([tabindex]):focus {
 .certificate {
     height: 15vh;
 }
+
 
 .landing-page {
     height: 100%;
