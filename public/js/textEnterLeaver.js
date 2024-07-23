@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleMediaQueryChange(e) {
     if (e.matches) {
       // Medienweite ist mindestens 768px, Script ausführen
-      const textContainers = document.querySelectorAll('.contact-text-container, .contact-text-container-first');
+      const textContainers = document.querySelectorAll('.contact-text-container, .contact-text-container-first','.form-container');
       const textContainersArray = Array.from(textContainers);
 
       const observer = new IntersectionObserver((entries) => {
