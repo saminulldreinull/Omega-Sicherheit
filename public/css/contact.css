@@ -11,23 +11,107 @@ body {
     box-sizing: border-box;
 }
 
-#form-section {
-    height: auto;
-    padding: 24vh 5vw 0;
+@media (max-width: 767px) {
+    #form-section {
+        padding: 24vh 5vw 0;
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px;
+    }
+
+    .contact-heading {
+        font-size: 32px;
+    }
+
+    .break-m {
+        display: block;
+    }
+
+    .break-l {
+        display: none;
+    }
+
+    .contact-media-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 6vh;
+    }
+
+    .contact-medium {
+        font-size: 24px;
+    }
+
+    .form-button-container {
+        width: 200px;
+    }
+
+    label {
+        font-size: 14px;
+    }
 }
 
-.text-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 32px;
+@media (min-width: 768px) {
+    #form-section {
+        padding: 24vh 60px 0;
+        height: auto;
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .media-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 55px;
+    }
+
+    .contact-heading {
+        font-size: clamp(4vw, 5vw, 6vw);
+    }
+
+    .contact-media-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-size: 28px;
+        flex-basis: 40%; /* Sie können den Wert nach Bedarf anpassen */
+    }
+
+    form {
+        padding-top: 2vh;
+        flex-basis: 60%;
+    }
+
+    .form-button-container {
+        width: 300px;
+    }
+
+    .break-m {
+        display: none;
+    }
+
+    .break-l {
+        display: block;
+    }
 }
 
-.contact-heading-container {
+
+@media (min-width: 992px) {
+    #form-section {
+        padding: 24vh 120px 0;
+        height: auto;
+    }
 }
 
 .contact-heading {
-    font-size: 32px;
     font-weight: 800;
 }
 .highlight-dark {
@@ -38,30 +122,10 @@ body {
     color: rgb(129, 164, 205);
 }
 
-.contact-media-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 6vh;
-}
 .contact-medium {
     text-decoration: underline !important;
     color: black;
-    font-size: 24px;
     font-weight: 700;
-}
-
-form {
-}
-.name-content-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 14vw;
-}
-
-.name-content-container > .form-content-container {
-    flex-grow: 1;
 }
 .text-input,
 textarea,
@@ -74,14 +138,19 @@ select {
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
-    appearance: none;
-    outline: none; /* Entfernt die Standard-Fokus-Ränder */
 }
 
 .text-input:focus,
 textarea:focus,
 select:focus {
     border-bottom: 1px solid black; /* Setzt nur die untere Randlinie auf Schwarz */
+    outline: none; /* Entfernt die Standard-Fokus-Ränder */
+}
+
+.text-input,
+textarea,
+select {
+    appearance: none;
     outline: none; /* Entfernt die Standard-Fokus-Ränder */
 }
 
@@ -102,11 +171,21 @@ select:focus {
     }
 }
 
+.name-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+.name-content-container > .form-content-container {
+    flex-grow: 1;
+}
+
 label {
     color: black;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 14px;
 }
 
 .form-content-container {
@@ -117,7 +196,6 @@ label {
 }
 
 .form-button-container {
-    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,14 +290,11 @@ label {
 #remaining-information-section {
     height: auto;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 60px 5vw ;
+    padding: 60px 5vw;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 80px;
-}
-
-#remaining-information-section {
 }
 
 .information-wrapper {
@@ -228,14 +303,11 @@ label {
     gap: 40px;
 }
 
-.social-media-heading {
-    
-}
-
-.list-item > a,.list-item {
+.list-item > a,
+.list-item {
     font-weight: 700;
     font-size: 24px;
-    text-decoration: underline!important;
+    text-decoration: underline !important;
     color: black;
 }
 
