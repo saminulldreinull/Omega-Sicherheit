@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('fonts/InterTight-Regular.woff2') format('woff2'),
+         url('fonts/InterTight-Regular.woff') format('woff'),
+         url('fonts/InterTight-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Weitere Schriftarten wie Bold, Italic etc. einbinden, falls gewünscht */
+@font-face {
+    font-family: 'Inter Tight';
+    src: url('fonts/InterTight-Bold.woff2') format('woff2'),
+         url('fonts/InterTight-Bold.woff') format('woff'),
+         url('fonts/InterTight-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Anwendung der Schriftart in Ihrem CSS */
+body {
+    font-family: 'Inter Tight', sans-serif;
+}
