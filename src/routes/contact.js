@@ -14,7 +14,7 @@ const sendEmail = async (req, res) => {
   }
 
   const encryptedMessage = encrypt(message);
-  const timestamp = moment().format("DD.MM.YYYY HH:mm:ss");
+  const timestamp = moment().toDate(); // Konvertiert das Datum direkt in ein JavaScript-Datum
 
   const contact = new Contact({
     salutation,
@@ -48,7 +48,7 @@ const sendEmail = async (req, res) => {
     from: email,
     to: process.env.EMAIL,
     subject: `Nachricht von ${salutation} ${name} (${company})`,
-    html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${timestamp} folgende Nachricht:</p>
+    html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format('DD.MM.YYYY HH:mm:ss')} folgende Nachricht:</p>
            <p>,,${message}"</p>
            <p>Email: ${email}</p>
            <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail. Ihre Erstellung und ihre Zusendung wurde durch die Nutzung unseres auf unserer unternehmenseigenen Website befindlichen Kontaktformulars initiiert.</p>`,
