@@ -53,6 +53,16 @@ body {
     label {
         font-size: 14px;
     }
+
+    #remaining-information-section {
+        flex-direction: column;
+    }
+
+    .list-item > a,
+    .list-item {
+        font-size: 22px;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -101,13 +111,30 @@ body {
     .break-l {
         display: block;
     }
-}
 
+    #remaining-information-section {
+        flex-direction: row;
+    }
+
+    .information-wrapper {
+        margin: 0 auto;
+    }
+
+    .list-item > a,
+    .list-item {
+        font-size: 20px;
+    }
+}
 
 @media (min-width: 992px) {
     #form-section {
         padding: 24vh 120px 0;
         height: auto;
+    }
+
+    .list-item > a,
+    .list-item {
+        font-size: 24px;
     }
 }
 
@@ -293,7 +320,6 @@ label {
     padding: 60px 5vw;
     margin-top: 100px;
     display: flex;
-    flex-direction: column;
     gap: 80px;
 }
 
@@ -306,7 +332,6 @@ label {
 .list-item > a,
 .list-item {
     font-weight: 700;
-    font-size: 24px;
     text-decoration: underline !important;
     color: black;
 }
