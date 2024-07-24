@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const target = entry.target;
-                animateValue(target, 0, parseInt(target.getAttribute('data-target')), 2000);
+                animateValue(target, 0, parseInt(target.getAttribute('data-target')), 950);
                 observer.unobserve(target); // Stop observing once animation starts
             }
         });
