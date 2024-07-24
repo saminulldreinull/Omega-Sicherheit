@@ -32,7 +32,7 @@ body {
 
 @media (max-width: 767px) {
     #form-section {
-        padding: 12vh 5vw 0;
+        padding: 20vh 5vw 0;
     }
 
     .text-wrapper {
@@ -88,7 +88,7 @@ body {
 
 @media (min-width: 768px) {
     #form-section {
-        padding: 20vh 60px 0;
+        padding: 24vh 60px 0;
         height: auto;
     }
 
@@ -885,7 +885,6 @@ a:hover {
 }
 
 .site-navbar {
-    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
     margin-bottom: 0px;
     z-index: 1999;
     position: fixed;
