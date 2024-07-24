@@ -3,8 +3,7 @@
   
 <head>
   <meta charset="UTF-8" />
-
-  <script src="js/checkBrowser.js" defer ></script>
+<script src="js/checkBrowser.js" defer ></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       if (window.location.hostname !== 'localhost') {
@@ -40,7 +39,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
-  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://unpkg.com/split-type"defer></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
 
    <script src="js/animateLandingSectionWords.js" defer ></script> 
@@ -50,9 +49,9 @@
    <script src="js/animateKeyNumbers.js" defer ></script>
    <script src="js/buttonHover.js" defer ></script>
   <script src="js/horizontalScrolling.js" defer ></script>
+   <script src = "js/textHighlightOnScroll.js"defer></script>
   <script src="js/imageScale.js" defer ></script>
   <script src="js/textEnterLeaver.js" defer ></script>
- <script src="js/contactForm.js" defer ></script> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/ico.css">
@@ -76,29 +75,25 @@
   <div class="site-mobile-menu-body"></div>
 </div>
 
-
 <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
   <div class="container">
     <div class="row align-items-center position-relative">
       <div class="site-logo">
-        <a role = "button" aria-label="zum Seitenanfang" href = "index.html#landing-page"  class="logo-link">
-
-          <img  class="logo" id="logo"  src="images/logo.svg" alt="Logo von Omega Security GmbH">
+        <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+          <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
         </a></a>
-    </div>
-
-  
+      </div>
 
       <div class="col-12">
         <nav class="site-navigation text-center ml-auto " role="navigation">
 
           <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-            <li><a href="#services-section" class="nav-link">HOME</a></li>
-            <li><a href="#home-section" class="nav-link">ÜBER UNS</a></li>
+            <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+            <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
 
             <li class="has-children">
-              <a href="#about-section" class="nav-link">LEISTUNGEN</a>
+              <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
               <ul class="dropdown arrow-top">
                 <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
                 <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
@@ -108,11 +103,11 @@
                 <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
                 <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
                 <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
-               
+
               </ul>
             </li>
 
-            <li><a href="#services-section" class="nav-link">KONTAKT</a></li>
+            <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
           </ul>
         </nav>
 
@@ -352,85 +347,40 @@
 
   <section id="contact-section">
     <img id="contact-image" src="images/omega_buero.webp" alt = ""/>
-    <div class="contact-text-wrapper">
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">Womit Sie sich bei uns sicher sein können:</h2>
+    <div id="contact-text-wrapper">
+      <div class = "contact-text-container-first">
+        <p class="contact-text-container-element-first"><span class="highlight-dark">Womit</span> <span class="highlight-light">Sie</span><span class="highlight-dark"> sich bei uns</span> <span class="highlight-light">sicher sein können</span><span>:</span></p>
       </div>
-
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">Maßgeschneiderte Lösungen.</h2>
+      <div class="contact-text-container" id="section1">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">Maßgeschneiderte</span><br>
+          <span class="highlight-dark">Lösungen</span><span class="highlight-dark">.</span>
+        </p>
       </div>
-  <!--     <div class="contact-text-container">
-         <h2 class = "contact-text-container-element">Weil kein Unternehmen dem Standard entspricht.</h2> 
-      </div> -->
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">ISO- & DIN zertifiziert.</h2>
+      <div class="contact-text-container" id="section2">
+        <p class="contact-text-container-element">
+          <span class="highlight-dark">ISO &amp; DIN</span><br>
+          <span class="highlight-light">zertifiziert</span><span class="highlight-dark">.</span>
+        </p>
       </div>
-      <div class="contact-text-container">
-        <h2 class = "contact-text-container-element">
-          Unsere Lösungen entsprechen höchsten
-          Qualitätsstandards.
-        </h2>
+      <div class="contact-text-container" id="section3">
+        <p class="contact-text-container-element">
+          <span class="highlight-dark">Unsere Lösungen</span><br>
+          <span class="highlight-dark">entsprechen</span> <span class="highlight-light">höchsten</span><br>
+          <span class="highlight-light">Qualitätsstandards</span><span class="highlight-dark">.</span>
+        </p>
       </div>
-
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">
-              24/7 Support für Ihre Anliegen.
-          </h2>
-        </div>
-
-        <div class="contact-text-container">
-          <h2 class = "contact-text-container-element">
-              Kontaktieren Sie Uns!
-          </h2>
-        </div>
-
-        <div class="contact-text-container">
-          <form id="contactForm" action="/contact/send-email" method="POST">
-            <div class="form-content-wrapper">
-                <div class="salutation-container">
-                    <div class="form-content-container">
-                        <label class="form-label" for="salutation">Anrede</label>
-                        <select name="salutation" id="salutation" required>
-                            <option>Herr</option>
-                            <option>Frau</option>
-                        </select>
-                    </div>
-                    <div class="form-content-container">
-                        <label class="form-label" for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required/>
-                    </div>
-                </div>
-                <div class="form-content-container">
-                    <label class="form-label" for="company">Unternehmen</label>
-                    <input type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
-                </div>
-                <div class="form-content-container">
-                    <label class="form-label" for="email">E-Mail</label>
-                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
-                </div>
-                <div class="form-content-container">
-                    <label class="form-label" for="message">Nachricht</label>
-                    <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht" required></textarea>
-                </div>
-                <div class="form-button-container">
-                    <button type="submit" class="form-button">
-                      <img  class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
-                        Absenden
-                    </button>
-                </div>
-                <div class="input-container-privacy">
-                    <input type="checkbox" id="privacy" name="privacy" required />
-                    <span class="approval-text">
-                        Ich stimme der
-                        <a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a>
-                        zu.
-                    </span>
-                </div>
-            </div>
-        </form>
-        
-        </div>
+      <div class="contact-text-container" id="section4">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">24/7 Support</span><br>
+          <span class="highlight-dark">Für Ihre Anliegen</span><span class="highlight-dark">.</span>
+        </p>
+      </div>
+      <div class="contact-text-container" id="section5">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">Kontaktieren Sie uns</span><span class="highlight-dark">!</span>
+        </p>
+      </div>
     </div>
   </section>
   <footer class="footer-14398">
@@ -454,7 +404,7 @@
           <ul class="list-unstyled links footer-contact">
             <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
             <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
-            <li><a href="#">kontakt-osg@outlook.de</a></li>
+            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
             <li>Montag - Samstag:<br> 08:00 - 20:00</li>
             <li>Sonntag:<br> 08:00 - 19:00</li>
 
@@ -497,5 +447,8 @@
     
   </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>   
 </body>
 </html>
