@@ -557,7 +557,7 @@ a:hover {
 .site-navbar {
     margin-bottom: 0px;
     z-index: 1999;
-    position: relative;
+    position: fixed;
     width: 100%;
     padding: 1rem;
     background: rgb(0, 0, 77);

@@ -14,7 +14,7 @@ body {
 
 @media (max-width: 767px) {
     #form-section {
-        padding: 24vh 5vw 0;
+        padding: 12vh 5vw 0;
     }
 
     .text-wrapper {
@@ -70,7 +70,7 @@ body {
 
 @media (min-width: 768px) {
     #form-section {
-        padding: 24vh 60px 0;
+        padding: 20vh 60px 0;
         height: auto;
     }
 
@@ -142,7 +142,7 @@ body {
 
 @media (min-width: 992px) {
     #form-section {
-        padding: 24vh 120px 0;
+        padding: 20vh 120px 0;
         height: auto;
     }
 

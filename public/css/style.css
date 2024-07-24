@@ -35,6 +35,81 @@ nav {
     display: block;
 }
 
+
+.logo-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.logo-container {
+    padding-top: 0.6vh;
+    height: auto;
+    width: auto;
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    color: white;
+}
+.logo path {
+    fill: white;
+}
+
+.logo-shrinked path {
+    fill: #fff;
+}
+
+.icon-menu {
+    color: white;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul ul {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    background-color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+a:not([href]):not([tabindex]):hover,
+a:not([href]):not([tabindex]):focus {
+    color: inherit;
+    text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus {
+    outline: 0;
+}
+
+
+
+header,
+main,
+nav {
+    display: block;
+}
+
 .logo-link {
     display: block;
     position: relative;
@@ -158,7 +233,7 @@ h3,
     font-size: 1.75rem;
 }
 
-.col-12 {
+.col-12  {
     font-size: 14px;
 }
 .container {
@@ -369,6 +444,7 @@ h3,
     color: #007bff !important;
 }
 
+
 @media print {
     *,
     *::before,
@@ -525,6 +601,22 @@ h3,
     display: none;
 }
 
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
 a {
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
@@ -535,15 +627,23 @@ a:hover {
     text-decoration: none !important;
 }
 
+.top-bar {
+    padding: 0.5rem 0;
+    background: #eee;
+}
+.top-bar a {
+    color: #666666;
+}
+
 .site-navbar {
     margin-bottom: 0px;
     z-index: 1999;
     position: fixed;
     width: 100%;
     padding: 1rem;
-    /* background: rgb(0, 0, 77); */
-    background-color: transparent;
+    background: transparent; 
 }
+
 
 .site-navbar .toggle-button {
     position: absolute;

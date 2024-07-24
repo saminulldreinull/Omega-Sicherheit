@@ -3,8 +3,7 @@
   
 <head>
   <meta charset="UTF-8" />
-
-  <script src="js/checkBrowser.js" defer ></script>
+<!--   <script src="js/checkBrowser.js" defer ></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       if (window.location.hostname !== 'localhost') {
@@ -13,7 +12,7 @@
         document.head.appendChild(baseTag);
       }
     });
-  </script>
+  </script> -->
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
@@ -53,7 +52,6 @@
    <script src = "js/textHighlightOnScroll.js"defer></script>
   <script src="js/imageScale.js" defer ></script>
   <script src="js/textEnterLeaver.js" defer ></script>
- <script src="js/contactForm.js" defer ></script> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/ico.css">
@@ -77,29 +75,25 @@
   <div class="site-mobile-menu-body"></div>
 </div>
 
-
 <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
   <div class="container">
     <div class="row align-items-center position-relative">
       <div class="site-logo">
-        <a role = "button" aria-label="zum Seitenanfang" href = "index.html#landing-page"  class="logo-link">
-
-          <img  class="logo" id="logo"  src="images/logo.svg" alt="Logo von Omega Security GmbH">
+        <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+          <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
         </a></a>
-    </div>
-
-  
+      </div>
 
       <div class="col-12">
         <nav class="site-navigation text-center ml-auto " role="navigation">
 
           <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-            <li><a href="#services-section" class="nav-link">HOME</a></li>
-            <li><a href="#home-section" class="nav-link">ÜBER UNS</a></li>
+            <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+            <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
 
             <li class="has-children">
-              <a href="#about-section" class="nav-link">LEISTUNGEN</a>
+              <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
               <ul class="dropdown arrow-top">
                 <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
                 <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
@@ -109,11 +103,11 @@
                 <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
                 <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
                 <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
-               
+
               </ul>
             </li>
 
-            <li><a href="#services-section" class="nav-link">KONTAKT</a></li>
+            <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
           </ul>
         </nav>
 
@@ -388,52 +382,6 @@
         </p>
       </div>
     </div>
-
-  <!--       <div class="form-container">
-          <form id="contactForm" action="/contact/send-email" method="POST">
-            <div class="form-content-wrapper">
-                <div class="salutation-container">
-                    <div class="form-content-container">
-                        <label class="form-label" for="salutation">Anrede</label>
-                        <select name="salutation" id="salutation" required>
-                            <option>Herr</option>
-                            <option>Frau</option>
-                        </select>
-                    </div>
-                    <div class="form-content-container">
-                        <label class="form-label" for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required/>
-                    </div>
-                </div>
-                <div class="form-content-container">
-                    <label class="form-label" for="company">Unternehmen</label>
-                    <input type="text" id="company" name="company" autocomplete="organization" placeholder="Unternehmen">
-                </div>
-                <div class="form-content-container">
-                    <label class="form-label" for="email">E-Mail</label>
-                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Email-Adresse" required>
-                </div>
-                <div class="form-content-container">
-                    <label class="form-label" for="message">Nachricht</label>
-                    <textarea id="message" name="message" autocomplete="off" placeholder="Ihre Nachricht" required></textarea>
-                </div>
-                <div class="form-button-container">
-                    <button type="submit" class="form-button">
-                      <img  class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
-                        Absenden
-                    </button>
-                </div>
-                <div class="input-container-privacy">
-                    <input type="checkbox" id="privacy" name="privacy" required />
-                    <span class="approval-text">
-                        Ich stimme der
-                        <a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a>
-                        zu.
-                    </span>
-                </div>
-            </div>
-        </form>
-    </div> -->
   </section>
   <footer class="footer-14398">
     <div class="container">
@@ -499,5 +447,8 @@
     
   </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>   
 </body>
 </html>

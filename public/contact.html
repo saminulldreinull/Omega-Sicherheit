@@ -1,25 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt</title>
-  <link rel="stylesheet" href="css/contact.css" />
-  <link rel="stylesheet" href="css/ico.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Batak&family=Patua+One&family=Titan+One&display=swap" rel="stylesheet" />
-</head>
-
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hostname !== 'localhost') {
+          var baseTag = document.createElement('base');
+          baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+          document.head.appendChild(baseTag);
+        }
+      });
+    </script>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Batak&family=Patua+One&family=Titan+One&display=swap" rel="stylesheet" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/ico.css">
+    <script src="js/contactForm.js" defer ></script> 
+  </head> 
 <body>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
   <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
 
     <div class="container">
       <div class="row align-items-center position-relative">
         <div class="site-logo">
           <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
-
             <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
           </a></a>
         </div>
@@ -28,11 +64,11 @@
           <nav class="site-navigation text-center ml-auto " role="navigation">
 
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-              <li><a href="#services-section" class="nav-link">HOME</a></li>
-              <li><a href="#home-section" class="nav-link">ÜBER UNS</a></li>
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
 
               <li class="has-children">
-                <a href="#about-section" class="nav-link">LEISTUNGEN</a>
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
                 <ul class="dropdown arrow-top">
                   <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
                   <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
@@ -46,7 +82,7 @@
                 </ul>
               </li>
 
-              <li><a href="#services-section" class="nav-link">KONTAKT</a></li>
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
             </ul>
           </nav>
 
@@ -64,55 +100,55 @@
         <h6 class="contact-heading"><span class="highlight-dark">WOMIT KÖNNEN</span><br class="break-m"><span class="highlight-light"> WIR IHNEN</span><br class="break-m"> <span class="highlight-dark">WEITER</span><span class="highlight-light">HELFEN</span><span class="highlight-dark">?</span></h6>
       </div>
       <div class="media-wrapper">
-      <div class="contact-media-container">
-        <a class="contact-medium" href="mailto:kontakt-osg@outlook.de">KONTAKT-OSG@OUTLOOK.DE</a>
-        <a class="contact-medium" href="tel:+4917664871676">+49 176 648 71 676</a>
+        <div class="contact-media-container">
+          <a class="contact-medium" href="mailto:kontakt-osg@outlook.de">KONTAKT-OSG@OUTLOOK.DE</a>
+          <a class="contact-medium" href="tel:+4917664871676">+49 176 648 71 676</a>
+        </div>
+
+        <form id="contactForm" action="/contact/send-email" method="POST">
+          <div class="salutation-container">
+            <div class="name-content-container">
+              <div class="form-content-container">
+                <label class="form-label" for="salutation">Anrede</label>
+                <select name="salutation" id="salutation" required>
+                  <option>Herr</option>
+                  <option>Frau</option>
+                </select>
+              </div>
+              <div class="form-content-container">
+                <label class="form-label" for="name">Name</label>
+                <input class="text-input" type="text" id="name" name="name" autocomplete="name" required />
+              </div>
+            </div>
+            <div class="form-content-container">
+              <label class="form-label" for="company">Unternehmen</label>
+              <input class="text-input" type="text" id="company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-content-container">
+              <label class="form-label" for="email">E-Mail</label>
+              <input class="text-input" type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-content-container">
+              <label class="form-label" for="message">Nachricht</label>
+              <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
+            </div>
+            <div class="input-container-privacy">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <span class="approval-text">
+                Ich stimme der
+                <a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a>
+                zu.
+              </span>
+            </div>
+            <div class="form-button-container">
+              <button type="submit" class="form-button">
+                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                Absenden
+              </button>
+            </div>
+
+        </form>
       </div>
-
-      <form id="contactForm" action="/contact/send-email" method="POST">
-        <div class="salutation-container">
-          <div class="name-content-container">
-            <div class="form-content-container">
-              <label class="form-label" for="salutation">Anrede</label>
-              <select name="salutation" id="salutation" required>
-                <option>Herr</option>
-                <option>Frau</option>
-              </select>
-            </div>
-            <div class="form-content-container">
-              <label class="form-label" for="name">Name</label>
-              <input class="text-input" type="text" id="name" name="name" autocomplete="name" required />
-            </div>
-          </div>
-          <div class="form-content-container">
-            <label class="form-label" for="company">Unternehmen</label>
-            <input class="text-input" type="text" id="company" name="company" autocomplete="organization">
-          </div>
-          <div class="form-content-container">
-            <label class="form-label" for="email">E-Mail</label>
-            <input class="text-input" type="email" id="email" name="email" autocomplete="email" required>
-          </div>
-          <div class="form-content-container">
-            <label class="form-label" for="message">Nachricht</label>
-            <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
-          </div>
-          <div class="input-container-privacy">
-            <input type="checkbox" id="privacy" name="privacy" required />
-            <span class="approval-text">
-              Ich stimme der
-              <a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a>
-              zu.
-            </span>
-          </div>
-          <div class="form-button-container">
-            <button type="submit" class="form-button">
-              <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
-              Absenden
-            </button>
-          </div>
-
-      </form>
-    </div>
     </div>
   </section>
   <section id="remaining-information-section">
@@ -125,21 +161,21 @@
     </div>
 
     <div class="information-wrapper">
-        <h4 class="social-media-heading">UNSER <span class = "highlight-light">BÜRO</span></h4>
-        <div class="information-list">
-          <h3 class="list-item"><a href="">KREFELDER STRAßE 17 <br> 10555 BERLIN</a></h3>
-        </div>
+      <h4 class="social-media-heading">UNSER <span class="highlight-light">BÜRO</span></h4>
+      <div class="information-list">
+        <h3 class="list-item"><a href="">KREFELDER STRAßE 17 <br> 10555 BERLIN</a></h3>
       </div>
+    </div>
 
-      <div class="information-wrapper">
-        <h4 class="social-media-heading">UNSERE <span class = "highlight-light">ÖFFNUNGSZEITEN</span></h4>
-        <div class="information-list">
-          <h3 class="list-item information-item">MONTAG - SAMSTAG: <br>08:00 - 20:00</h3>
-        </div>
-        <div class="information-list">
-            <h3 class="list-item information-item">SONNTAG: <br>08:00 - 19:00</h3>
-        </div>
+    <div class="information-wrapper">
+      <h4 class="social-media-heading">UNSERE <span class="highlight-light">ÖFFNUNGSZEITEN</span></h4>
+      <div class="information-list">
+        <h3 class="list-item information-item">MONTAG - SAMSTAG: <br>08:00 - 20:00</h3>
       </div>
+      <div class="information-list">
+        <h3 class="list-item information-item">SONNTAG: <br>08:00 - 19:00</h3>
+      </div>
+    </div>
   </section>
   <footer class="footer-14398">
     <div class="container">
@@ -211,7 +247,7 @@
       inputs.forEach(function(input) {
         input.addEventListener('focus', function() {
           this.style.borderBottom = '1px solid black';
-          this.style.outline = 'none'; // Entfernt die Standard-Fokus-Ränder
+          this.style.outline = 'none';
         });
         input.addEventListener('blur', function() {
           this.style.borderBottom = '1px solid rgba(0, 0, 0, 0.2)';
@@ -219,6 +255,9 @@
       });
     });
   </script>
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script> 
 </body>
 
 </html>
