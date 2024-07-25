@@ -1566,6 +1566,40 @@ body {
         transition: color 0.3s ease;
     }
 
+    .contact-text-container-element a {
+        position: relative;
+        display: inline-block;
+        color: gray;
+        transition: color 0.3s ease;
+    }
+
+    .contact-text-container-element a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #000;
+        transition: width 0.5s ease;
+    }
+
+    .contact-text-container.active .contact-text-container-element a {
+        color: rgb(0, 0, 77);
+    }
+    
+    .contact-text-container.active .contact-text-container-element a::after {
+        width: 100%;
+    }
+    
+    .contact-text-container.inactive .contact-text-container-element a {
+        color: gray;
+    }
+    
+    .contact-text-container.inactive .contact-text-container-element a::after {
+        width: 0;
+    }
+
     .highlight-dark {
         color: rgb(0, 0, 77);
     }
