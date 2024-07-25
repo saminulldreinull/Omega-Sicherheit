@@ -1532,6 +1532,10 @@ body {
         -webkit-hyphens: auto;
         hyphens: auto;
     }
+
+    .contact-text-container-element a {
+        color: white!important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1555,8 +1559,8 @@ body {
     }
 
     .contact-text-container-first {
-        font-weight: 700;
-        font-size: 16px;
+        font-weight: 800;
+        font-size: 18px;
     }
   
     .contact-text-container-element {
@@ -1647,7 +1651,7 @@ a:hover {
 }
 
 footer {
-    overflow: hidden;
+     overflow: hidden; 
 }
 
 #mobile-text {
@@ -1655,6 +1659,7 @@ footer {
 }
 
 .footer-14398 {
+    position: absolute;
     width: 100vw;
     height: auto;
     z-index: 900;
