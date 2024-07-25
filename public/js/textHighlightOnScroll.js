@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       containers.forEach((container, index) => {
-        // ScrollTrigger für das Aktivieren/Deaktivieren des Containers
         ScrollTrigger.create({
           trigger: container,
           start: "top 40%",
@@ -27,12 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const highlightElement = container.querySelector('a span');
         if (highlightElement && highlightElement.textContent.includes("Kontaktieren Sie uns")) {
-          // ScrollTrigger für das Starten/Stoppen der Animation
           ScrollTrigger.create({
             trigger: container,
             start: "top 40%",
             end: "bottom 35%",
-            markers: true,
+            markers: false,
             onEnter: () => startBounceAnimation(highlightElement),
             onEnterBack: () => startBounceAnimation(highlightElement), // Start animation when re-entering from below
             onLeave: () => stopBounceAnimation(highlightElement),
@@ -89,20 +87,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }, i * 0.05 + 0.1);
     });
 
-    element.timeline = timeline; // Save the timeline to stop it later
+    element.timeline = timeline;
   }
 
   function stopBounceAnimation(element) {
     if (element.timeline) {
       element.timeline.kill();
-      element.timeline = null; // Clear the reference to the timeline
-      element.innerHTML = element.textContent; // Reset the content to original text
+      element.timeline = null;
+      element.innerHTML = element.textContent;
     }
   }
 
-  // Initial check
   handleMediaQueryChange(mediaQuery);
 
-  // Listen for changes
   mediaQuery.addEventListener("change", handleMediaQueryChange);
 });
