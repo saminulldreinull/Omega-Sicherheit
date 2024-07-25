@@ -22,7 +22,6 @@ const loginAdmin = async (req, res) => {
     const token = jwt.sign({ id: adminUser._id, email: adminUser.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.status(200).json({ token });
   } catch (error) {
-    console.error('Fehler beim Login:', error);
     res.status(500).send('Serverfehler');
   }
 };
@@ -37,7 +36,6 @@ const registerAdmin = async (req, res) => {
     await newAdminUser.save();
     res.status(201).send('Admin Benutzer erfolgreich erstellt');
   } catch (error) {
-    console.error('Fehler beim Erstellen des Admin Benutzers:', error);
     res.status(500).send('Serverfehler');
   }
 };
@@ -48,7 +46,6 @@ const getUsers = async (req, res) => {
     const users = await AdminUser.find();
     res.status(200).json(users);
   } catch (error) {
-    console.error('Fehler beim Abrufen der Benutzer:', error);
     res.status(500).send('Fehler beim Abrufen der Benutzer.');
   }
 };
@@ -65,7 +62,6 @@ const getUser = async (req, res) => {
       res.status(404).send('Benutzer nicht gefunden');
     }
   } catch (error) {
-    console.error('Fehler beim Abrufen des Benutzers:', error);
     res.status(500).send('Fehler beim Abrufen des Benutzers.');
   }
 };

@@ -1,16 +1,18 @@
+const { validationResult } = require('express-validator');
+const nodemailer = require('nodemailer');
+const moment = require('moment');
+const Contact = require('../models/contact');
+const { encrypt } = require('../utils/encryption');
+
 const sendEmail = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    console.log('Validation errors:', errors.array());
     return res.status(400).json({ errors: errors.array() });
   }
 
   const { salutation, name, email, company, message, privacy } = req.body;
 
-  console.log(req.body); // Debugging
-
   if (privacy !== 'on') {
-    console.log('Privacy policy not accepted');
     return res.status(400).json({ message: 'Datenschutzerklärung muss akzeptiert werden.' });
   }
 
@@ -29,9 +31,7 @@ const sendEmail = async (req, res) => {
 
   try {
     await contact.save();
-    console.log('Kontakt erfolgreich gespeichert');
   } catch (error) {
-    console.error('Fehler beim Speichern des Kontakts:', error);
     return res.status(500).json({ message: 'Fehler beim Speichern des Kontakts.' });
   }
 
@@ -67,18 +67,13 @@ const sendEmail = async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptionsToYou);
-    console.log('E-Mail an Sie erfolgreich gesendet');
-
     await transporter.sendMail(mailOptionsToSender);
-    console.log('Bestätigungs-E-Mail erfolgreich gesendet');
-
-    const successResponse = { message: 'E-Mail erfolgreich gesendet!' };
-    console.log('Response:', successResponse);
-    res.status(200).json(successResponse);
+    res.status(200).json({ message: 'E-Mail erfolgreich gesendet!' });
   } catch (error) {
-    console.error('Fehler beim Senden der E-Mail:', error);
-    const errorResponse = { message: 'Fehler beim Senden der E-Mail.' };
-    console.log('Response:', errorResponse);
-    res.status(500).json(errorResponse);
+    res.status(500).json({ message: 'Fehler beim Senden der E-Mail.' });
   }
+};
+
+module.exports = {
+  sendEmail
 };

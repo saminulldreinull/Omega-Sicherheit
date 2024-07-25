@@ -31,7 +31,6 @@ app.use(helmet.contentSecurityPolicy({
   }
 }));
 
-
 // CORS-Konfiguration
 app.use(cors());
 
