@@ -33,8 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
                   if (i === index) {
                       container.classList.add('active');
                       container.classList.remove('inactive');
-                      if (container.querySelector('a span').textContent.includes("Kontaktieren Sie uns")) {
-                          startBounceAnimation(container.querySelector('a span'));
+                      const highlightElement = container.querySelector('a span');
+                      if (highlightElement && highlightElement.textContent.includes("Kontaktieren Sie uns")) {
+                          startBounceAnimation(highlightElement);
                       }
                   } else {
                       container.classList.add('inactive');
