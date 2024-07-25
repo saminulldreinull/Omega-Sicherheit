@@ -1494,6 +1494,10 @@ body {
         border: 0.1px solid transparent;
     }
 
+    .contact-text-container-element a {
+        color: white!important;
+    }
+
     #contact-image {
         transform: translate3d(0px, 0px, 0px) scale(1.00212, 1.00212);
         filter: brightness(80%);
