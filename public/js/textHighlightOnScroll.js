@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: container,
             start: "top 30%",
             end: "bottom 25%",
-            /* markers: true, */
+            markers: false,
+            markers: {startColor:"pink", endColor:"purple"}, 
             onEnter: () => highlightContainer(index),
             onLeaveBack: () => resetContainer(index),
             onEnterBack: () => highlightContainer(index),

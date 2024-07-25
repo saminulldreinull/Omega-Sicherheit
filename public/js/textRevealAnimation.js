@@ -41,8 +41,8 @@ document.querySelectorAll('.reveal-type').forEach((element) => {
         stagger: 0.02,
         scrollTrigger: {
             trigger: element,
-            start: 'top 75%',
-            end: 'top 30%',
+            start: 'top 90%',
+            end: 'top 20%',
             scrub: true,
             markers: false,
             toggleActions: 'play none none reverse'

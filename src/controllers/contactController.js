@@ -1,18 +1,17 @@
-const nodemailer = require('nodemailer');
-const { validationResult } = require('express-validator');
-const Contact = require('../models/contact');
-const { encrypt, decrypt } = require('../utils/encryption');
-
 const sendEmail = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
+    console.log('Validation errors:', errors.array());
     return res.status(400).json({ errors: errors.array() });
   }
 
   const { salutation, name, email, company, message, privacy } = req.body;
 
+  console.log(req.body); // Debugging
+
   if (privacy !== 'on') {
-    return res.status(400).send('Datenschutzerklärung muss akzeptiert werden.');
+    console.log('Privacy policy not accepted');
+    return res.status(400).json({ message: 'Datenschutzerklärung muss akzeptiert werden.' });
   }
 
   const encryptedMessage = encrypt(message);
@@ -33,7 +32,7 @@ const sendEmail = async (req, res) => {
     console.log('Kontakt erfolgreich gespeichert');
   } catch (error) {
     console.error('Fehler beim Speichern des Kontakts:', error);
-    return res.status(500).send('Fehler beim Speichern des Kontakts.');
+    return res.status(500).json({ message: 'Fehler beim Speichern des Kontakts.' });
   }
 
   const transporter = nodemailer.createTransport({
@@ -50,49 +49,36 @@ const sendEmail = async (req, res) => {
     from: email,
     to: process.env.EMAIL,
     subject: `Neue Nachricht von ${salutation} ${name} (${company})`,
-    text: `Anrede: ${salutation}\nName: ${name}\nEmail: ${email}\nUnternehmen: ${company}\nNachricht: ${message}`
+    html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format('DD.MM.YYYY HH:mm:ss')} folgende Nachricht:</p>
+           <p>${message}</p>
+           <p>Email: ${email}</p>
+           <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail. Ihre Erstellung und ihre Zusendung wurde durch die Nutzung unseres auf unserer unternehmenseigenen Website befindlichen Kontaktformulars initiiert.</p>`
   };
 
+  const salutationFormatted = salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
   const mailOptionsToSender = {
     from: process.env.EMAIL,
     to: email,
     subject: 'Ihre Nachricht an Omega Security GmbH',
-    text: `Hallo ${salutation} ${name},\n\nwir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.\n\nMit freundlichen Grüßen,\nOmega Security GmbH`
+    html: `<p>${salutationFormatted} ${name},</p>
+           <p>wir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.</p>
+           <p>Mit freundlichen Grüßen,<br>Omega Security GmbH</p>`
   };
 
-  transporter.sendMail(mailOptionsToYou, (error, info) => {
-    if (error) {
-      console.error('Fehler beim Senden der E-Mail an Sie:', error);
-      return res.status(500).send('Fehler beim Senden der E-Mail.');
-    }
-    console.log('E-Mail an Sie erfolgreich gesendet:', info.response);
-
-    transporter.sendMail(mailOptionsToSender, (error, info) => {
-      if (error) {
-        console.error('Fehler beim Senden der Bestätigungs-E-Mail:', error);
-        return res.status(500).send('Fehler beim Senden der Bestätigungs-E-Mail.');
-      }
-      console.log('Bestätigungs-E-Mail erfolgreich gesendet:', info.response);
-      res.status(200).send('E-Mail erfolgreich gesendet!');
-    });
-  });
-};
-
-const getDecryptedContacts = async (req, res) => {
   try {
-    const contacts = await Contact.find();
-    const decryptedContacts = contacts.map((contact) => ({
-      ...contact._doc,
-      message: decrypt(contact.message),
-    }));
-    res.status(200).json(decryptedContacts);
-  } catch (error) {
-    console.error('Fehler beim Abrufen der Kontakte:', error);
-    res.status(500).send('Fehler beim Abrufen der Kontakte.');
-  }
-};
+    await transporter.sendMail(mailOptionsToYou);
+    console.log('E-Mail an Sie erfolgreich gesendet');
 
-module.exports = {
-  sendEmail,
-  getDecryptedContacts
+    await transporter.sendMail(mailOptionsToSender);
+    console.log('Bestätigungs-E-Mail erfolgreich gesendet');
+
+    const successResponse = { message: 'E-Mail erfolgreich gesendet!' };
+    console.log('Response:', successResponse);
+    res.status(200).json(successResponse);
+  } catch (error) {
+    console.error('Fehler beim Senden der E-Mail:', error);
+    const errorResponse = { message: 'Fehler beim Senden der E-Mail.' };
+    console.log('Response:', errorResponse);
+    res.status(500).json(errorResponse);
+  }
 };

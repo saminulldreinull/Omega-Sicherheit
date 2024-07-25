@@ -5,6 +5,8 @@ const moment = require("moment");
 const Contact = require("../models/contact");
 const { encrypt, decrypt } = require("../utils/encryption");
 const authMiddleware = require("../middleware/auth");
+const multer = require("multer");
+const upload = multer();
 
 const sendEmail = async (req, res) => {
   const { salutation, name, email, company, message, privacy } = req.body;
@@ -14,7 +16,7 @@ const sendEmail = async (req, res) => {
   }
 
   const encryptedMessage = encrypt(message);
-  const timestamp = moment().toDate(); // Konvertiert das Datum direkt in ein JavaScript-Datum
+  const timestamp = moment().toDate();
 
   const contact = new Contact({
     salutation,
@@ -48,14 +50,15 @@ const sendEmail = async (req, res) => {
     from: email,
     to: process.env.EMAIL,
     subject: `Nachricht von ${salutation} ${name} (${company})`,
-    html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format('DD.MM.YYYY HH:mm:ss')} folgende Nachricht:</p>
-           <p>,,${message}"</p>
+    html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format(
+      "DD.MM.YYYY HH:mm:ss"
+    )} folgende Nachricht:</p>
+           <p>${message}</p>
            <p>Email: ${email}</p>
            <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail. Ihre Erstellung und ihre Zusendung wurde durch die Nutzung unseres auf unserer unternehmenseigenen Website befindlichen Kontaktformulars initiiert.</p>`,
   };
 
-  const salutationFormatted =
-    salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
+  const salutationFormatted = salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
   const mailOptionsToSender = {
     from: process.env.EMAIL,
     to: email,
@@ -94,7 +97,7 @@ const getDecryptedContacts = async (req, res) => {
 };
 
 // Öffentliche Route für das Kontaktformular
-router.post("/send-email", sendEmail);
+router.post("/send-email", upload.none(), sendEmail);
 
 // Private Route zum Abrufen der Kontakte
 router.get("/get-decrypted-contacts", authMiddleware, getDecryptedContacts);

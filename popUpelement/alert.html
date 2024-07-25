@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hello, world!</title>
+    <style>
+      /* Container to center the alerts */
+      .alert-center-container {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+      }
+      .alert {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .alert-danger {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+      }
+      .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+      }
+      .alert .close {
+        background: none;
+        border: none;
+        color: inherit;
+        font-size: 1.5rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 1rem;
+      }
+      .alert .close span {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-center-container">
+      <div class="alert alert-danger" role="alert">
+          <span><strong>Ihre Nachricht konnte nicht versendet werden!</strong> Bitte versuchen Sie es erneut.</span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="alert alert-success" role="alert">
+          <span><strong>Ihre Nachricht wurde versendet!</strong> Wir werden uns in Kürze bei Ihnen melden.</span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+    </div>
+
+    <div>
+      <!-- Andere Elemente, die du später hinzufügen möchtest -->
+    </div>
+
+    <script>
+      // Bootstrap Alert Dismiss JavaScript
+      (function() {
+        var closeButtons = document.querySelectorAll('.alert .close');
+        closeButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            var alert = this.closest('.alert');
+            alert.parentNode.removeChild(alert);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
