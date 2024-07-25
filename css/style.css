@@ -1494,6 +1494,10 @@ body {
         border: 0.1px solid transparent;
     }
 
+    .contact-text-container-element a {
+        color: white!important;
+    }
+
     #contact-image {
         transform: translate3d(0px, 0px, 0px) scale(1.00212, 1.00212);
         filter: brightness(80%);
@@ -1532,10 +1536,6 @@ body {
         -webkit-hyphens: auto;
         hyphens: auto;
     }
-
-    .contact-text-container-element a {
-        color: white!important;
-    }
 }
 
 @media (max-width: 767px) {
@@ -1559,8 +1559,8 @@ body {
     }
 
     .contact-text-container-first {
-        font-weight: 800;
-        font-size: 18px;
+        font-weight: 700;
+        font-size: 16px;
     }
   
     .contact-text-container-element {
@@ -1651,7 +1651,7 @@ a:hover {
 }
 
 footer {
-     overflow: hidden; 
+    overflow: hidden;
 }
 
 #mobile-text {
@@ -1659,7 +1659,6 @@ footer {
 }
 
 .footer-14398 {
-    position: absolute;
     width: 100vw;
     height: auto;
     z-index: 900;
