@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var contactForm = document.getElementById('contactForm');
+  let contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(event) {
       event.preventDefault();
 
-      var privacyCheckbox = document.getElementById('privacy');
+      let privacyCheckbox = document.getElementById('privacy');
       if (!privacyCheckbox.checked) {
         alert('Bitte akzeptieren Sie die Datenschutzerklärung.');
         return;
       }
 
-      var formData = new FormData(this);
-      var jsonObject = {};
+      let formData = new FormData(this);
+      let jsonObject = {};
       formData.forEach((value, key) => {
         jsonObject[key] = value;
       });
