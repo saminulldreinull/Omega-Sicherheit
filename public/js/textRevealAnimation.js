@@ -3,9 +3,9 @@ document.querySelectorAll('.reveal-type').forEach((element) => {
     const bgColor = element.dataset.bgColor; // Hintergrundfarbe aus den Datenattributen
     const fgColor = element.dataset.fgColor; // Vordergrundfarbe aus den Datenattributen
     let isFirstOccurrenceHandled = false;
+
     // Highlight-Funktion für spezielle Wörter
     function highlightText(text) {
-       
         const specialWords = ["Omega Security GmbH", "2021", "Wir", "Beitrag", "Berlins"];
         const firstOccurrenceOnly = "Sicherheit";
 
@@ -29,6 +29,30 @@ document.querySelectorAll('.reveal-type').forEach((element) => {
     element.innerHTML = originalText.split('<br>').map(line => highlightText(line)).join('<br>');
     const text = new SplitType(element, { types: 'chars' });
 
+    // Definiere die Trigger-Positionen für verschiedene Bildschirmgrößen
+    const triggerPositions = {
+        desktop: {
+            start: 'top 90%',
+            end: 'top 20%'
+        },
+        tablet: {
+            start: 'top 85%',
+            end: 'top 25%'
+        },
+        mobile: {
+            start: 'top 80%',
+            end: 'top 20%'
+        }
+    };
+
+    // Wähle die richtigen Trigger-Positionen basierend auf der Bildschirmgröße
+    let selectedTriggerPositions = triggerPositions.desktop;
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        selectedTriggerPositions = triggerPositions.mobile;
+    } else if (window.matchMedia('(max-width: 1024px)').matches) {
+        selectedTriggerPositions = triggerPositions.tablet;
+    }
+
     // Animate text color changes on scroll
     gsap.fromTo(text.chars, {
         color: bgColor, // Start with the background color
@@ -41,12 +65,11 @@ document.querySelectorAll('.reveal-type').forEach((element) => {
         stagger: 0.02,
         scrollTrigger: {
             trigger: element,
-            start: 'top 90%',
-            end: 'top 20%',
+            start: selectedTriggerPositions.start,
+            end: selectedTriggerPositions.end,
             scrub: true,
             markers: false,
             toggleActions: 'play none none reverse'
         }
     });
 });
-

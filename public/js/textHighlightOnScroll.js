@@ -17,10 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
         containers.forEach((container, index) => {
           ScrollTrigger.create({
             trigger: container,
-            start: "top 30%",
-            end: "bottom 25%",
-            markers: false,
-            markers: {startColor:"pink", endColor:"purple"}, 
+            start: "top 40%",
+            end: "bottom 35%",
+             markers: false,
             onEnter: () => highlightContainer(index),
             onLeaveBack: () => resetContainer(index),
             onEnterBack: () => highlightContainer(index),
