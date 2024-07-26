@@ -1498,6 +1498,17 @@ body {
         color: white!important;
     }
 
+    #link-arrow {
+        display: block;
+        height: 16px;
+        width: 16px;
+    }
+
+    #contact-reference {
+        display: flex;
+        gap: 2px;
+    }
+
     #contact-image {
         transform: translate3d(0px, 0px, 0px) scale(1.00212, 1.00212);
         filter: brightness(80%);
@@ -1588,6 +1599,9 @@ body {
         transition: width 0.5s ease;
     }
 
+    #link-arrow {
+        display: none;
+    }
     .contact-text-container.active .contact-text-container-element a {
         color: rgb(0, 0, 77);
     }
