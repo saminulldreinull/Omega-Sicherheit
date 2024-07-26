@@ -1,63 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const mediaQuery = window.matchMedia("(max-width: 767px)");
+  gsap.registerPlugin(ScrollTrigger);
 
-  function handleMediaQueryChange(e) {
-    if (e.matches) {
-      gsap.registerPlugin(ScrollTrigger);
+  const containers = document.querySelectorAll('.contact-text-container');
 
-      const containers = document.querySelectorAll('.contact-text-container');
+  containers.forEach(container => {
+    container.classList.add('inactive');
+    container.classList.remove('active');
+  });
 
-      containers.forEach(container => {
+  containers.forEach((container, index) => {
+    ScrollTrigger.create({
+      trigger: container,
+      start: "top 40%",
+      end: "bottom 35%",
+      markers:false,
+      onEnter: () => highlightContainer(index),
+      onLeaveBack: () => resetContainer(index),
+      onEnterBack: () => highlightContainer(index),
+      onLeave: () => resetContainer(index)
+    });
+
+    const highlightElement = container.querySelector('a span');
+    if (highlightElement && highlightElement.textContent.includes("Kontaktieren Sie uns")) {
+      ScrollTrigger.create({
+        trigger: container,
+        start: "top 40%",
+        end: "bottom 35%",
+        markers: false,
+        onEnter: () => startBounceAnimation(highlightElement),
+        onEnterBack: () => startBounceAnimation(highlightElement), // Start animation when re-entering from below
+        onLeave: () => stopBounceAnimation(highlightElement),
+        onLeaveBack: () => stopBounceAnimation(highlightElement) // Stop animation when leaving from above
+      });
+    }
+  });
+
+  function highlightContainer(index) {
+    containers.forEach((container, i) => {
+      if (i === index) {
+        container.classList.add('active');
+        container.classList.remove('inactive');
+      } else {
         container.classList.add('inactive');
         container.classList.remove('active');
-      });
-
-      containers.forEach((container, index) => {
-        ScrollTrigger.create({
-          trigger: container,
-          start: "top 40%",
-          end: "bottom 35%",
-          markers: false,
-          onEnter: () => highlightContainer(index),
-          onLeaveBack: () => resetContainer(index),
-          onEnterBack: () => highlightContainer(index),
-          onLeave: () => resetContainer(index)
-        });
-
-        const highlightElement = container.querySelector('a span');
-        if (highlightElement && highlightElement.textContent.includes("Kontaktieren Sie uns")) {
-          ScrollTrigger.create({
-            trigger: container,
-            start: "top 40%",
-            end: "bottom 35%",
-            markers: false,
-            onEnter: () => startBounceAnimation(highlightElement),
-            onEnterBack: () => startBounceAnimation(highlightElement), // Start animation when re-entering from below
-            onLeave: () => stopBounceAnimation(highlightElement),
-            onLeaveBack: () => stopBounceAnimation(highlightElement) // Stop animation when leaving from above
-          });
-        }
-      });
-
-      function highlightContainer(index) {
-        containers.forEach((container, i) => {
-          if (i === index) {
-            container.classList.add('active');
-            container.classList.remove('inactive');
-          } else {
-            container.classList.add('inactive');
-            container.classList.remove('active');
-          }
-        });
       }
+    });
+  }
 
-      function resetContainer(index) {
-        containers.forEach((container) => {
-          container.classList.add('inactive');
-          container.classList.remove('active');
-        });
-      }
-    }
+  function resetContainer(index) {
+    containers.forEach((container) => {
+      container.classList.add('inactive');
+      container.classList.remove('active');
+    });
   }
 
   function startBounceAnimation(element) {
@@ -97,8 +91,4 @@ document.addEventListener("DOMContentLoaded", () => {
       element.innerHTML = element.textContent;
     }
   }
-
-  handleMediaQueryChange(mediaQuery);
-
-  mediaQuery.addEventListener("change", handleMediaQueryChange);
 });
