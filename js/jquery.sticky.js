@@ -28,7 +28,7 @@ $(function() {
 
         $this.find('> ul').attr({
           'class' : 'collapse',
-          'id' : 'collapseItem' + counter,
+          'id' : '#collapseItem' + counter,
         });
 
         counter++;
@@ -72,7 +72,7 @@ $(function() {
 			}
 		}) 
 
-		// click outisde offcanvas
+		// click outside offcanvas
 		$(document).mouseup(function(e) {
 	    var container = $(".site-mobile-menu");
 	    if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -81,6 +81,16 @@ $(function() {
 				}
 	    }
 		});
+    
+    // Add the event listener for closing the menu on link click
+    $('body').on('click', '.site-mobile-menu .site-nav-wrap a', function(e) {
+      var $this = $(this);
+
+      if ($('body').hasClass('offcanvas-menu')) {
+        $('body').removeClass('offcanvas-menu');
+        $('.js-menu-toggle').removeClass('active');
+      }
+    });
 	}; 
 	siteMenuClone();
 
@@ -361,3 +371,13 @@ $(function() {
     setTimeout(scroller, 0);
   });
 }));
+
+// Add the event listener for closing the menu on link click
+$('body').on('click', '.site-mobile-menu .site-nav-wrap a', function(e) {
+  var $this = $(this);
+
+  if ($('body').hasClass('offcanvas-menu')) {
+      $('body').removeClass('offcanvas-menu');
+      $('.js-menu-toggle').removeClass('active');
+  }
+});
