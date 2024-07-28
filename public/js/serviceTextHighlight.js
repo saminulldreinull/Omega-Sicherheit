@@ -1,23 +1,21 @@
 function initAnimations() {
     document.querySelectorAll('.reveal-type').forEach((element) => {
-        const bgColor = element.dataset.bgColor; // Hintergrundfarbe aus den Datenattributen
-        const fgColorLight = element.dataset.fgColorLight; // Vordergrundfarbe für highlight-light aus den Datenattributen
-        const fgColorDark = element.dataset.fgColorDark; // Vordergrundfarbe für highlight-dark aus den Datenattributen
+        const bgColor = element.dataset.bgColor; 
+        const fgColorLight = element.dataset.fgColorLight; 
+        const fgColorDark = element.dataset.fgColorDark; 
 
-        const text = new SplitType(element, { types: 'words' }); // Text in Wörter statt Zeichen aufteilen
+        console.log('Initializing SplitType for element:', element);
+        const text = new SplitType(element, { types: 'words' }); 
 
-        // Definiere die Trigger-Positionen für die maximale Bildschirmbreite von 767 px
         const triggerPositions = {
-            start: 'top 80%', // Angepasster Startwert
-            end: 'bottom 55%' // Angepasster Endwert
+            start: 'top 80%', 
+            end: 'bottom 55%' 
         };
 
-        // Animate text color changes on scroll
         gsap.fromTo(text.words, {
-            color: bgColor, // Start with the background color
+            color: bgColor, 
         }, {
             color: (i) => {
-                // Anpassen der Farbe basierend auf der Klasse
                 if (text.words[i].parentNode.className.includes('highlight-light')) {
                     return fgColorLight;
                 } else if (text.words[i].parentNode.className.includes('highlight-dark')) {
@@ -25,13 +23,13 @@ function initAnimations() {
                 }
             },
             duration: 0.3,
-            stagger: 0.1, // Erhöhe den Stagger-Wert für eine langsamere Verzögerung zwischen den Wörtern
+            stagger: 0.1, 
             scrollTrigger: {
                 trigger: element,
                 start: triggerPositions.start,
                 end: triggerPositions.end,
-                scrub: 0.1, // Erhöhe die Scrub-Dauer für eine langsamere Animation
-                markers: false,
+                scrub: 0.1,
+                markers: true,  // Fügen Sie dies hinzu, um die ScrollTrigger-Marker zu sehen
                 toggleActions: 'play none none reverse'
             }
         });
@@ -39,6 +37,7 @@ function initAnimations() {
 }
 
 function resetAnimations() {
+    console.log('Resetting animations');
     gsap.killTweensOf('.reveal-type *');
     document.querySelectorAll('.reveal-type').forEach((element) => {
         const bgColor = element.dataset.bgColor;
@@ -51,17 +50,18 @@ function resetAnimations() {
 }
 
 function checkWindowSize() {
+    console.log('Checking window size:', window.innerWidth);
     if (window.innerWidth <= 767) {
+        console.log("Initializing animations for mobile view");
         initAnimations();
     } else {
+        console.log("Resetting animations for larger view");
         resetAnimations();
     }
 }
 
-// Initial check
-checkWindowSize();
+document.addEventListener('DOMContentLoaded', checkWindowSize);
 
-// Check window size on resize
 window.addEventListener('resize', () => {
     checkWindowSize();
 });
