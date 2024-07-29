@@ -73,7 +73,9 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch(err => console.error('Fehler bei der Verbindung zur MongoDB:', err));
 
 // HTTPS-Server starten
-https.createServer(options, app).listen(process.env.PORT, '0.0.0.0', () => {
-  console.log(`Server läuft auf https://localhost:${process.env.PORT}`);
-});
+const PORT = process.env.PORT || 5500;
+const HOST = '192.168.0.93';
 
+https.createServer(options, app).listen(PORT, HOST, () => {
+  console.log(`Server läuft auf https://${HOST}:${PORT}`);
+});
