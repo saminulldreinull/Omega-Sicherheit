@@ -1,11 +1,13 @@
+let animationsInitialized = false;
+
 function initAnimations() {
     document.querySelectorAll('.reveal-type').forEach((element) => {
         const bgColor = element.dataset.bgColor; 
         const fgColorLight = element.dataset.fgColorLight; 
         const fgColorDark = element.dataset.fgColorDark; 
 
-        console.log('Initializing SplitType for element:', element);
         const text = new SplitType(element, { types: 'words' }); 
+        text.words.forEach(word => word.classList.add('split-word'));
 
         const triggerPositions = {
             start: 'top 80%', 
@@ -29,34 +31,33 @@ function initAnimations() {
                 start: triggerPositions.start,
                 end: triggerPositions.end,
                 scrub: 0.1,
-                markers: true,  // Fügen Sie dies hinzu, um die ScrollTrigger-Marker zu sehen
+                markers: false,
                 toggleActions: 'play none none reverse'
             }
         });
     });
+
+    animationsInitialized = true;
 }
 
 function resetAnimations() {
-    console.log('Resetting animations');
     gsap.killTweensOf('.reveal-type *');
     document.querySelectorAll('.reveal-type').forEach((element) => {
-        const bgColor = element.dataset.bgColor;
-        const text = new SplitType(element, { types: 'words' });
-
-        text.words.forEach((word) => {
-            word.style.color = bgColor;
-        });
+        element.innerHTML = element.textContent; // Restore the original text content
     });
+
+    animationsInitialized = false;
 }
 
 function checkWindowSize() {
-    console.log('Checking window size:', window.innerWidth);
     if (window.innerWidth <= 767) {
-        console.log("Initializing animations for mobile view");
-        initAnimations();
+        if (!animationsInitialized) {
+            initAnimations();
+        }
     } else {
-        console.log("Resetting animations for larger view");
-        resetAnimations();
+        if (animationsInitialized) {
+            resetAnimations();
+        }
     }
 }
 
