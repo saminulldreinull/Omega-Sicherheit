@@ -11,6 +11,13 @@
           document.head.appendChild(baseTag);
         }
       });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll('.reveal-type span');
+        elements.forEach(function(el) {
+          el.innerHTML = el.innerHTML.replace(/([.,!?])/g, '<span class="highlight-light">$1</span>');
+        });
+      });
     </script>
     <title>Gemeinschaftsunterkünfte</title>
     <link
@@ -65,7 +72,7 @@
           <div class="site-logo">
             <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
               <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
-            </a></a>
+            </a>
           </div>
           <div class="col-12">
             <nav class="site-navigation text-center ml-auto" role="navigation">
@@ -112,7 +119,7 @@
         </div>
         <div class="about-us-text-container">
           <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
-            <span class="highlight-dark">Unser Sicherheitsdienst</span> <span class="highlight-light">ist auf den Schutz von Gemeinschaftsunterkünften spezialisiert, </span><span class="highlight-dark">wo besondere Aufmerksamkeit und Fürsorge nötig sind</span>. <span class="highlight-light">Wir bieten maßgeschneiderte Lösungen</span> <span class="highlight-dark">für Wohnheime<span class="highlight-light">, </span>Flüchtlingsunterkünfte und andere Einrichtungen</span><span class="highlight-light">.&nbsp;Unsere erfahrenen Sicherheitskräfte sorgen für eine sichere Umgebung</span><span class="highlight-dark">und unterstützen das Personal, um die Sicherheit aller Bewohner zu gewährleisten<span class="highlight-light">.</span></span>
+            <span class="highlight-dark">Unser Sicherheitsdienst</span> <span class="highlight-light">ist auf den Schutz von Gemeinschaftsunterkünften spezialisiert,</span> <span class="highlight-dark">wo besondere Aufmerksamkeit und Fürsorge nötig sind</span>.<span class="highlight-light">Wir bieten maßgeschneiderte Lösungen</span> <span class="highlight-dark">für Wohnheime<span class="highlight-light">,</span> Flüchtlingsunterkünfte und andere Einrichtungen</span><span class="highlight-light">.&nbsp;Unsere erfahrenen Sicherheitskräfte sorgen für eine sichere Umgebung</span><span class="highlight-dark">und unterstützen das Personal, um die Sicherheit aller Bewohner zu gewährleisten<span class="highlight-light">.</span></span>
           </p>
         </div>
         <div class="button-range-slider">
