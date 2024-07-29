@@ -2,8 +2,11 @@
 <html lang="de">
 
 <head>
+  <!-- Zeichencodierung und Viewport-Setup für mobile Geräte -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Script zur dynamischen Basis-URL für nicht-lokale Umgebungen -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       if (window.location.hostname !== 'localhost') {
@@ -13,8 +16,11 @@
       }
     });
   </script>
+
+  <!-- Titel der Seite -->
   <title>Doorman</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Favicon und Icons für verschiedene Plattformen und Geräte -->
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
@@ -35,6 +41,9 @@
   <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
   <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/ico.css">
   <link rel="stylesheet" href="css/service.css">
@@ -42,9 +51,12 @@
 </head>
 
 <body>
+  <!-- WhatsApp-Button -->
   <a href="https://wa.me/4917664871676" class="float">
     <i class="fa fa-whatsapp my-float"></i>
   </a>
+
+  <!-- Mobile Menü -->
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close mt-3">
@@ -54,23 +66,23 @@
     <div class="site-mobile-menu-body"></div>
   </div>
 
+  <!-- Header mit Navigation -->
   <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-
     <div class="container">
       <div class="row align-items-center position-relative">
+        <!-- Logo -->
         <div class="site-logo">
           <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
             <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
-          </a></a>
+          </a>
         </div>
 
+        <!-- Navigation für größere Bildschirme -->
         <div class="col-12">
-          <nav class="site-navigation text-center ml-auto " role="navigation">
-
+          <nav class="site-navigation text-center ml-auto" role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
               <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
-
               <li class="has-children">
                 <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
                 <ul class="dropdown arrow-top">
@@ -80,26 +92,28 @@
                   <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
                   <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
                   <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
-                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstaltungsschutz</a></li>
                   <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
-
                 </ul>
               </li>
-
               <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
             </ul>
           </nav>
-
         </div>
 
-        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
+        <!-- Toggle Button für mobile Navigation -->
+        <div class="toggle-button d-inline-block d-lg-none">
+          <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+            <span class="icon-menu h3"></span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
-  <section class="landing-page">
-    <img class="doorman-image" src="images/doorman.webp" alt="" />
 
+  <!-- Hauptinhalt der Seite -->
+  <section class="landing-page">
+    <img class="doorman-image" src="images/doorman.webp" alt="Doorman Image" />
     <div class="service-text-content-container">
       <div class="service-heading-container">
         <h4 class="service-heading">
@@ -108,16 +122,14 @@
       </div>
       <div class="service-text-container">
         <p class="service-text service-intro">
-          <span class="highlight-dark"> Doorman in Umgebung </span><span class="highlight-light">Berlin Brandenburg</span><span class="highlight-dark">. Mit Sicherheit sicher zum </span><span class="highlight-light">Erfolg</span>.
+          <span class="highlight-dark">Doorman in Umgebung</span><span class="highlight-light">Berlin Brandenburg</span><span class="highlight-dark">. Mit Sicherheit sicher zum</span><span class="highlight-light">Erfolg</span>.
         </p>
       </div>
-
       <div class="about-us-text-container">
         <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
-          <span class="highlight-dark">Ein guter Doorman</span> <span class="highlight-light">trägt entscheidend zum ersten Eindruck bei</span> <span class="highlight-dark">Ihren Besuchern bei<span class="highlight-light">.</span></span> <span class="highlight-light">Mit unserer Unterstützung gewährleisten Sie Sicherheit und eine</span> <span class="highlight-dark">einladende Atmosphäre<span class="highlight-light">.</span></span>
+          <span class="highlight-dark">Ein guter Doorman</span><span class="highlight-light">trägt entscheidend zum ersten Eindruck bei</span><span class="highlight-dark">Ihren Besuchern bei.</span><span class="highlight-light">Mit unserer Unterstützung gewährleisten Sie Sicherheit und eine</span><span class="highlight-dark">einladende Atmosphäre.</span>
         </p>
       </div>
-
       <div class="button-range-slider">
         <div class="button-container">
           <a class="contact-button" href="contact.html">
@@ -130,6 +142,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
   <footer class="footer-14398">
     <div class="container">
       <div class="row mb-5">
@@ -152,15 +166,15 @@
             <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
             <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
             <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
-            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
-            <li>Sonntag:<br> 08:00 - 19:00</li>
+            <li>Montag - Samstag:<br>08:00 - 20:00</li>
+            <li>Sonntag:<br>08:00 - 19:00</li>
           </ul>
         </div>
         <div class="col-md-2 ml-auto">
           <h3>ZERTIFIKATE</h3>
           <ul class="list-unstyled links certificate-list">
-            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
-            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+            <li><a href="https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt="DEKRA Zertifikat 1"></a></li>
+            <li><a href="https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt="DEKRA Zertifikat 2"></a></li>
           </ul>
         </div>
       </div>
@@ -192,6 +206,7 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>

@@ -1,8 +1,11 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Favicon und Apple Touch Icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
@@ -16,29 +19,41 @@
   <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
   <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" />
-  <meta name="application-name" content="&nbsp;"/>
+  
+  <!-- Microsoft-specific Meta Tags -->
+  <meta name="application-name" content="&nbsp;" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="mstile-144x144.png" />
   <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
   <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
   <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  
+  <!-- Title and Stylesheets -->
   <title>Kontakt</title>
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/ico.css">
   <link rel="stylesheet" href="css/fonts.css">
+  
+  <!-- JavaScript Files -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="js/contactForm.js" defer ></script>
+  <script src="js/contactForm.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>  
-  <script src="js/buttonHover.js" defer ></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/buttonHover.js" defer></script>
 </head>
+
 <body>
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
+  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/4917664871676" class="float">
     <i class="fa fa-whatsapp my-float"></i>
   </a>
+  
+  <!-- Mobile Menu -->
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close mt-3">
@@ -48,14 +63,18 @@
     <div class="site-mobile-menu-body"></div>
   </div>
 
+  <!-- Header/Navbar -->
   <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
     <div class="container">
       <div class="row align-items-center position-relative">
+        <!-- Logo -->
         <div class="site-logo">
           <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
             <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
           </a>
         </div>
+        
+        <!-- Navigation Menu -->
         <div class="col-12">
           <nav class="site-navigation text-center ml-auto" role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
@@ -70,7 +89,7 @@
                   <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
                   <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
                   <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
-                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstaltungsschutz</a></li>
                   <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
                 </ul>
               </li>
@@ -78,6 +97,8 @@
             </ul>
           </nav>
         </div>
+        
+        <!-- Mobile Menu Toggle Button -->
         <div class="toggle-button d-inline-block d-lg-none">
           <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
         </div>
@@ -85,6 +106,7 @@
     </div>
   </header>
   
+  <!-- Alert Messages -->
   <div class="alert-center-container" id="alert-container">
     <div class="alert alert-danger" role="alert" id="alert-danger" style="display: none;">
       <span><strong>Ihre Nachricht konnte nicht versendet werden!</strong> Bitte versuchen Sie es erneut.</span>
@@ -100,18 +122,25 @@
     </div>
   </div>
 
+  <!-- Contact Form Section -->
   <section id="form-section">
     <div class="text-wrapper">
       <div class="contact-heading-container">
-        <h6 class="contact-heading"><span class="highlight-dark">WOMIT KÖNNEN</span><br class="break-m"><span class="highlight-light"> WIR IHNEN</span><br class="break-m"> <span class="highlight-dark">WEITER</span><span class="highlight-light">HELFEN</span><span class="highlight-dark">?</span></h6>
+        <h6 class="contact-heading">
+          <span class="highlight-dark">WOMIT KÖNNEN</span><br class="break-m">
+          <span class="highlight-light"> WIR IHNEN</span><br class="break-m">
+          <span class="highlight-dark">WEITER</span><span class="highlight-light">HELFEN</span><span class="highlight-dark">?</span>
+        </h6>
       </div>
       <div class="media-wrapper">
         <div class="contact-media-container">
           <a class="contact-medium" href="mailto:kontakt-osg@outlook.de">KONTAKT-OSG@OUTLOOK.DE</a>
           <a class="contact-medium" href="tel:+4917664871676">+49 176 648 71 676</a>
         </div>
-
+        
+        <!-- Contact Form -->
         <form id="contactForm" action="/contact/send-email" method="POST">
+          <input type="hidden" name="_csrf" id="csrfToken">
           <div class="salutation-container">
             <div class="name-content-container">
               <div class="form-content-container">
@@ -158,6 +187,7 @@
     </div>
   </section>
   
+  <!-- Additional Information Section -->
   <section id="remaining-information-section">
     <div class="information-wrapper">
       <h4 class="social-media-heading">FOLGEN SIE UNS</h4>
@@ -183,6 +213,7 @@
     </div>
   </section>
   
+  <!-- Footer -->
   <footer class="footer-14398">
     <div class="container">
       <div class="row mb-5">
@@ -212,8 +243,8 @@
         <div class="col-md-2 ml-auto">
           <h3>ZERTIFIKATE</h3>
           <ul class="list-unstyled links certificate-list">
-            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
-            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+            <li><a href="https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt="DEKRA Zertifikat 1"></a></li>
+            <li><a href="https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt="DEKRA Zertifikat 2"></a></li>
           </ul>
         </div>
       </div>
@@ -245,4 +276,5 @@
     </div>
   </footer>
 </body>
+
 </html>

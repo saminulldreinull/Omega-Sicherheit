@@ -1,6 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
   var contactForm = document.getElementById('contactForm');
   if (contactForm) {
+    // CSRF-Token abrufen und im Formularfeld speichern
+    fetch('/get-csrf-token')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        document.getElementById('csrfToken').value = data.csrfToken;
+      })
+      .catch(error => console.error('Error fetching CSRF token:', error));
+
     contactForm.addEventListener('submit', function(event) {
       event.preventDefault();
 
@@ -19,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch('/contact/send-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'CSRF-Token': document.getElementById('csrfToken').value // CSRF-Token hinzufügen
         },
         body: JSON.stringify(jsonObject),
       })
