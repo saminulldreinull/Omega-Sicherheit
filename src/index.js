@@ -16,20 +16,59 @@ const app = express();
 // Sicherheitsheader hinzufügen
 app.use(helmet());
 
-// Angepasste Content Security Policy (CSP)
 app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
-    scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", 'cdn.jsdelivr.net', 'cdnjs.cloudflare.com', 'ajax.googleapis.com', 'maxcdn.bootstrapcdn.com', 'unpkg.com', 'stackpath.bootstrapcdn.com', 'code.jquery.com'],
-    styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'cdnjs.cloudflare.com', 'maxcdn.bootstrapcdn.com', 'stackpath.bootstrapcdn.com'],
-    imgSrc: ["'self'", 'data:', 'cdn.jsdelivr.net', 'cdnjs.cloudflare.com'],
-    connectSrc: ["'self'", 'api.example.com'],
-    fontSrc: ["'self'", 'fonts.gstatic.com', 'cdnjs.cloudflare.com', 'maxcdn.bootstrapcdn.com'],
+    scriptSrc: [
+      "'self'",
+      "'unsafe-inline'",
+      "'unsafe-eval'",
+      'cdn.jsdelivr.net',
+      'cdnjs.cloudflare.com',
+      'ajax.googleapis.com',
+      'maxcdn.bootstrapcdn.com',
+      'unpkg.com',
+      'stackpath.bootstrapcdn.com',
+      'code.jquery.com',
+      'www.googletagmanager.com',
+      'www.google-analytics.com'
+    ],
+    styleSrc: [
+      "'self'",
+      "'unsafe-inline'",
+      'fonts.googleapis.com',
+      'cdnjs.cloudflare.com',
+      'maxcdn.bootstrapcdn.com',
+      'stackpath.bootstrapcdn.com'
+    ],
+    imgSrc: [
+      "'self'",
+      'data:',
+      'cdn.jsdelivr.net',
+      'cdnjs.cloudflare.com',
+      'www.google-analytics.com'
+    ],
+    connectSrc: [
+      "'self'",
+      'api.example.com',
+      'www.google-analytics.com',
+      'https://region1.google-analytics.com',
+      'https://www.googletagmanager.com'
+    ],
+    fontSrc: [
+      "'self'",
+      'fonts.gstatic.com',
+      'cdnjs.cloudflare.com',
+      'maxcdn.bootstrapcdn.com'
+    ],
     objectSrc: ["'none'"],
     mediaSrc: ["'self'"],
     frameSrc: ["'none'"]
   }
 }));
+
+
+
 
 // CORS-Konfiguration
 app.use(cors());

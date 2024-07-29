@@ -2,8 +2,10 @@
 <html lang="de">
 
 <head>
-  <meta charset="UTF-8" />
-  <script src="js/checkBrowser.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omega Security GmbH</title>
+
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       if (window.location.hostname !== 'localhost') {
@@ -13,35 +15,52 @@
       }
     });
   </script>
-  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" />
-  <meta name="application-name" content="&nbsp;" />
-  <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GR5TRY8TE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4GR5TRY8TE');
+  </script>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128">
+  <meta name="application-name" content="&nbsp;">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <!-- JavaScript Dateien -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
   <script src="https://unpkg.com/split-type" defer></script>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
-
   <script src="js/animateLandingSectionWords.js" defer></script>
   <script src="js/parallaxScrolling.js" defer></script>
   <script src="js/changingHeader.js" defer></script>
@@ -52,11 +71,7 @@
   <script src="js/textHighlightOnScroll.js" defer></script>
   <script src="js/imageScale.js" defer></script>
   <script src="js/textEnterLeaver.js" defer></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/ico.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <title>Omega Security GmbH</title>
+  <script src="js/checkBrowser.js" defer></script>
 </head>
 
 <body>
@@ -74,22 +89,19 @@
   </div>
 
   <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-
     <div class="container">
       <div class="row align-items-center position-relative">
         <div class="site-logo">
           <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
             <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
-          </a></a>
+          </a>
         </div>
 
         <div class="col-12">
-          <nav class="site-navigation text-center ml-auto " role="navigation">
-
+          <nav class="site-navigation text-center ml-auto" role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
               <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
-
               <li class="has-children">
                 <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
                 <ul class="dropdown arrow-top">
@@ -101,36 +113,35 @@
                   <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
                   <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
                   <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
-
                 </ul>
               </li>
-
               <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
             </ul>
           </nav>
-
         </div>
 
-        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
+        <div class="toggle-button d-inline-block d-lg-none">
+          <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+            <span class="icon-menu h3"></span>
+          </a>
+        </div>
       </div>
     </div>
-
   </header>
+
   <section id="landing-page">
     <div class="w-full h-full flex justify-center items-center">
       <h1 id="typewriter">Omega Security</h1>
     </div>
-
     <video id="video" autoplay loop muted playsinline muted preload>
-      <source src="images/landing-page-video.webm" type="video/mp4" />
+      <source src="images/landing-page-video.webm" type="video/mp4">
     </video>
   </section>
 
   <section id="explained-section" class="explained-section">
     <div class="explained-content">
       <div class="about-us-text-container">
-        <p class="reveal-type " data-bg-color="#cccccc" data-fg-color="rgb(0,0,77)">
+        <p class="reveal-type" data-bg-color="#cccccc" data-fg-color="rgb(0,0,77)">
           Omega Security <br class="break-s">GmbH.<br class="break-xl break-l break-m break-s">
           Hier wird Ihnen <br class="break-s"> mit Sicherheit<br class="break-l break-m break-s"> weitergeholfen.<br class="break-xl break-s">
           Wir leisten <br class="break-s">unseren Beitrag zur <br class="break-xl break-m break-s">Sicherheit Berlins.
@@ -167,13 +178,13 @@
       </div>
     </div>
   </section>
-  <section id="service-area" class="service-section">
 
+  <section id="service-area" class="service-section">
     <div class="racesWrapper">
       <div class="races">
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Alarmaufschaltung" src="images/alarmaufschaltung.webp" />
+            <img class="service-image" alt="Alarmaufschaltung" src="images/alarmaufschaltung.webp">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -194,7 +205,7 @@
 
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Baustellenbewachung" src="images/berliner_baustelle.webp" />
+            <img class="service-image" alt="Baustellenbewachung" src="images/berliner_baustelle.webp">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -215,7 +226,7 @@
 
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Doorman" src="images/doorman.webp" />
+            <img class="service-image" alt="Doorman" src="images/doorman.webp">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -236,7 +247,7 @@
 
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Empfangs- und Pfortendienst" src="images/pforte.webp" />
+            <img class="service-image" alt="Empfangs- und Pfortendienst" src="images/pforte.webp">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -257,7 +268,7 @@
 
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Gemeinschaftsunterkünfte" src="images/gemeinschaftsunterkünfte.jpg" />
+            <img class="service-image" alt="Gemeinschaftsunterkünfte" src="images/gemeinschaftsunterkünfte.jpg">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -279,7 +290,7 @@
 
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Revier- und Streifendienst" src="images/security car parked.webp" />
+            <img class="service-image" alt="Revier- und Streifendienst" src="images/security car parked.webp">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -300,7 +311,7 @@
 
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Veranstaltungsschutz" src="images/veranstaltungsschutz.webp" />
+            <img class="service-image" alt="Veranstaltungsschutz" src="images/veranstaltungsschutz.webp">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -321,7 +332,7 @@
 
         <div class="service-container">
           <div class="image-container">
-            <img class="service-image" alt="Werk- und Objektschutz" src="images/werk-_objektschutz.webp" />
+            <img class="service-image" alt="Werk- und Objektschutz" src="images/werk-_objektschutz.webp">
           </div>
           <div class="service-text-container">
             <div class="service-description-container">
@@ -344,7 +355,7 @@
   </section>
 
   <section id="contact-section">
-    <img id="contact-image" src="images/omega_buero.webp" alt="" />
+    <img id="contact-image" src="images/omega_buero.webp" alt="">
     <div id="contact-text-wrapper">
       <div class="contact-text-container-first">
         <p class="contact-text-container-element-first"><span class="highlight-dark">Womit</span> <span class="highlight-light">Sie</span><span class="highlight-dark"> sich bei uns</span> <span class="highlight-light">sicher sein können</span><span>:</span></p>
@@ -381,6 +392,7 @@
       </div>
     </div>
   </section>
+
   <footer class="footer-14398">
     <div class="container">
       <div class="row mb-5">
@@ -392,7 +404,7 @@
           <h3>MENÜ</h3>
           <ul class="list-unstyled links">
             <li><a href="index.html#landing-section">Home</a></li>
-            <li><a href="index#explained-section">Über Uns</a></li>
+            <li><a href="index.html#explained-section">Über Uns</a></li>
             <li><a href="index.html#service-area">Leistungen</a></li>
             <li><a href="contact.html">Kontakt</a></li>
           </ul>
@@ -405,14 +417,13 @@
             <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
             <li>Montag - Samstag:<br> 08:00 - 20:00</li>
             <li>Sonntag:<br> 08:00 - 19:00</li>
-
           </ul>
         </div>
         <div class="col-md-2 ml-auto">
           <h3>ZERTIFIKATE</h3>
           <ul class="list-unstyled links certificate-list">
-            <li><img class="certificate" src="images/dekra_siegel1.png" alt=""></li>
-            <li><img class="certificate" src="images/dekra_siegel2.png" alt=""></li>
+            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
           </ul>
         </div>
       </div>
@@ -442,9 +453,8 @@
         </div>
       </div>
     </div>
-
-    </div>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
