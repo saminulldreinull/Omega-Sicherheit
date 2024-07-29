@@ -1307,7 +1307,6 @@ a:not([href]):not([tabindex]):focus {
 
     .about-us-text-container {
         width: 80vw;
-        height: 30vh;
     }
 
     .service-detail-text {

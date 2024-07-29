@@ -2,9 +2,7 @@ const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
 const moment = require("moment");
-const Contact = require("../models/contact");
-const { encrypt, decrypt } = require("../utils/encryption");
-const authMiddleware = require("../middleware/auth");
+const { encrypt } = require("../utils/encryption");
 const multer = require("multer");
 const upload = multer();
 
@@ -17,24 +15,6 @@ const sendEmail = async (req, res) => {
 
   const encryptedMessage = encrypt(message);
   const timestamp = moment().toDate();
-
-  const contact = new Contact({
-    salutation,
-    name,
-    email,
-    company,
-    message: encryptedMessage,
-    privacy: true,
-    timestamp,
-  });
-
-  try {
-    await contact.save();
-    console.log("Kontakt erfolgreich gespeichert");
-  } catch (error) {
-    console.error("Fehler beim Speichern des Kontakts:", error);
-    return res.status(500).send("Fehler beim Speichern des Kontakts.");
-  }
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -82,24 +62,10 @@ const sendEmail = async (req, res) => {
   }
 };
 
-const getDecryptedContacts = async (req, res) => {
-  try {
-    const contacts = await Contact.find();
-    const decryptedContacts = contacts.map((contact) => ({
-      ...contact._doc,
-      message: decrypt(contact.message),
-    }));
-    res.status(200).json(decryptedContacts);
-  } catch (error) {
-    console.error("Fehler beim Abrufen der Kontakte:", error);
-    res.status(500).send("Fehler beim Abrufen der Kontakte.");
-  }
-};
-
 // Öffentliche Route für das Kontaktformular
-router.post("/send-email", upload.none(), sendEmail);
-
-// Private Route zum Abrufen der Kontakte
-router.get("/get-decrypted-contacts", authMiddleware, getDecryptedContacts);
+router.post("/send-email", upload.none(), (req, res, next) => {
+  // Hier wird der CSRF-Token validiert
+  next();
+}, sendEmail);
 
 module.exports = router;

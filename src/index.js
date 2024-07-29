@@ -7,9 +7,10 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
 const multer = require('multer');
 const upload = multer();
+const csurf = require('csurf');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
@@ -67,11 +68,26 @@ app.use(helmet.contentSecurityPolicy({
   }
 }));
 
-
-
-
 // CORS-Konfiguration
 app.use(cors());
+
+// Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
+app.use(cookieParser());
+
+// CSRF-Middleware hinzufügen
+app.use(csurf({ cookie: true }));
+
+// Middleware für JSON-Parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Logging hinzufügen
+app.use(morgan('combined'));
+
+// CSRF-Token-Route definieren
+app.get('/get-csrf-token', (req, res) => {
+  res.json({ csrfToken: req.csrfToken() });
+});
 
 // Rate Limiting für Anmelde- und Registrierungsrouten
 const limiter = rateLimit({
@@ -82,13 +98,6 @@ const limiter = rateLimit({
 app.use('/admin/login', limiter);
 app.use('/admin/register', limiter);
 
-// Middleware für JSON-Parsing
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Logging hinzufügen
-app.use(morgan('combined'));
-
 // Statische Dateien bereitstellen
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
@@ -98,22 +107,22 @@ const options = {
 };
 
 // Beispielrouten
-const adminRoutes = require('./routes/admin');
 const contactRoutes = require('./routes/contact');
 
-app.use('/admin', adminRoutes);
 app.use('/contact', contactRoutes);
 
-// Verbindung zur MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  serverSelectionTimeoutMS: 30000, // Timeout auf 30 Sekunden setzen
-})
-  .then(() => console.log('Mit MongoDB verbunden'))
-  .catch(err => console.error('Fehler bei der Verbindung zur MongoDB:', err));
+// Fehlerbehandlung für CSRF-Fehler
+app.use((err, req, res, next) => {
+  if (err.code === 'EBADCSRFTOKEN') {
+    res.status(403).send('Ungültiger CSRF-Token');
+  } else {
+    next(err);
+  }
+});
 
 // HTTPS-Server starten
 const PORT = process.env.PORT || 5500;
-const HOST = '192.168.0.93';
+const HOST = '0.0.0.0';
 
 https.createServer(options, app).listen(PORT, HOST, () => {
   console.log(`Server läuft auf https://${HOST}:${PORT}`);

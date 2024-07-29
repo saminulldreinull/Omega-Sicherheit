@@ -2,462 +2,471 @@
 <html lang="de">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omega Security GmbH</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Security GmbH</title>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      if (window.location.hostname !== 'localhost') {
-        var baseTag = document.createElement('base');
-        baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
-        document.head.appendChild(baseTag);
-      }
-    });
-  </script>
+    <!-- Basislink für nicht-lokale Umgebungen -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.hostname !== 'localhost') {
+                var baseTag = document.createElement('base');
+                baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+                document.head.appendChild(baseTag);
+            }
+        });
+    </script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GR5TRY8TE"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GR5TRY8TE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4GR5TRY8TE');
+    </script>
 
-    gtag('config', 'G-4GR5TRY8TE');
-  </script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128">
+    <meta name="application-name" content="&nbsp;">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128">
-  <meta name="application-name" content="&nbsp;">
-  <meta name="msapplication-TileColor" content="#FFFFFF">
-  <meta name="msapplication-TileImage" content="mstile-144x144.png">
-  <meta name="msapplication-square70x70logo" content="mstile-70x70.png">
-  <meta name="msapplication-square150x150logo" content="mstile-150x150.png">
-  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png">
-  <meta name="msapplication-square310x310logo" content="mstile-310x310.png">
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/ico.css">
-  <link rel="stylesheet" href="css/fonts.css">
-
-  <!-- JavaScript Dateien -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
-  <script src="https://unpkg.com/split-type" defer></script>
-  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
-  <script src="js/animateLandingSectionWords.js" defer></script>
-  <script src="js/parallaxScrolling.js" defer></script>
-  <script src="js/changingHeader.js" defer></script>
-  <script src="js/textRevealAnimation.js" defer></script>
-  <script src="js/animateKeyNumbers.js" defer></script>
-  <script src="js/buttonHover.js" defer></script>
-  <script src="js/horizontalScrolling.js" defer></script>
-  <script src="js/textHighlightOnScroll.js" defer></script>
-  <script src="js/imageScale.js" defer></script>
-  <script src="js/textEnterLeaver.js" defer></script>
-  <script src="js/checkBrowser.js" defer></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ico.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    
+    <!-- JavaScript Dateien (Deferred) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
+    <script src="https://unpkg.com/split-type" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
+    <script src="js/animateLandingSectionWords.js" defer></script>
+    <script src="js/parallaxScrolling.js" defer></script>
+    <script src="js/changingHeader.js" defer></script>
+    <script src="js/textRevealAnimation.js" defer></script>
+    <script src="js/animateKeyNumbers.js" defer></script>
+    <script src="js/buttonHover.js" defer></script>
+    <script src="js/horizontalScrolling.js" defer></script>
+    <script src="js/textHighlightOnScroll.js" defer></script>
+    <script src="js/imageScale.js" defer></script>
+    <script src="js/textEnterLeaver.js" defer></script>
+    <script src="js/checkBrowser.js" defer></script>
 </head>
 
 <body>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <a href="https://wa.me/4917664871676" class="float">
-    <i class="fa fa-whatsapp my-float"></i>
-  </a>
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-      </div>
+    <!-- WhatsApp Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/4917664871676" class="float">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- Mobile Menu -->
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
     </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
 
-  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-    <div class="container">
-      <div class="row align-items-center position-relative">
-        <div class="site-logo">
-          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
-            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
-          </a>
-        </div>
-
-        <div class="col-12">
-          <nav class="site-navigation text-center ml-auto" role="navigation">
-            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
-              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
-              <li class="has-children">
-                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
-                <ul class="dropdown arrow-top">
-                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
-                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
-                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
-                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
-                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
-                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
-                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
-                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="toggle-button d-inline-block d-lg-none">
-          <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
-            <span class="icon-menu h3"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section id="landing-page">
-    <div class="w-full h-full flex justify-center items-center">
-      <h1 id="typewriter">Omega Security</h1>
-    </div>
-    <video id="video" autoplay loop muted playsinline muted preload>
-      <source src="images/landing-page-video.webm" type="video/mp4">
-    </video>
-  </section>
-
-  <section id="explained-section" class="explained-section">
-    <div class="explained-content">
-      <div class="about-us-text-container">
-        <p class="reveal-type" data-bg-color="#cccccc" data-fg-color="rgb(0,0,77)">
-          Omega Security <br class="break-s">GmbH.<br class="break-xl break-l break-m break-s">
-          Hier wird Ihnen <br class="break-s"> mit Sicherheit<br class="break-l break-m break-s"> weitergeholfen.<br class="break-xl break-s">
-          Wir leisten <br class="break-s">unseren Beitrag zur <br class="break-xl break-m break-s">Sicherheit Berlins.
-        </p>
-      </div>
-
-      <div class="facts">
-        <div class="fact-container">
-          <div class="key-figure-container">
-            <p class="key-figure key-number" data-target="100">+0</p>
-          </div>
-          <div class="label-container">
-            <p class="label">Sichere Kunden</p>
-          </div>
-        </div>
-
-        <div class="fact-container">
-          <div class="key-figure-container">
-            <p class="key-figure key-number" data-target="120">+0</p>
-          </div>
-          <div class="label-container">
-            <p class="label">Mitarbeiter</p>
-          </div>
-        </div>
-
-        <div class="fact-container">
-          <div class="key-figure-container">
-            <h4 class="key-figure">Berlin</h4>
-          </div>
-          <div class="label-container">
-            <p class="label">Einsatzgebiet</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="service-area" class="service-section">
-    <div class="racesWrapper">
-      <div class="races">
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Alarmaufschaltung" src="images/alarmaufschaltung.webp">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">Effiziente Alarmaufschaltung, zuverlässiger Service.</p>
-            </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Alarmaufschaltung</h4>
-            </div>
-            <div class="button-container">
-              <a href="alarmaufschaltung.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+    <!-- Header -->
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+        <div class="container">
+            <div class="row align-items-center position-relative">
+                <div class="site-logo">
+                    <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+                        <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+                    </a>
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Baustellenbewachung" src="images/berliner_baustelle.webp">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">Absicherung von Baustellen</p>
-            </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Baustellenbewachung</h4>
-            </div>
-            <div class="button-container">
-              <a href="baustellenbewachung.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                <div class="col-12">
+                    <nav class="site-navigation text-center ml-auto" role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                            <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+                            <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+                            <li class="has-children">
+                                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                                <ul class="dropdown arrow-top">
+                                    <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                                    <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                                    <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                                    <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                                    <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                                    <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                                    <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                                    <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+                        </ul>
+                    </nav>
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Doorman" src="images/doorman.webp">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">Stilvoller Empfang, effektiver Schutz</p>
-            </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Doorman</h4>
-            </div>
-            <div class="button-container">
-              <a href="doorman.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                <div class="toggle-button d-inline-block d-lg-none">
+                    <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+                        <span class="icon-menu h3"></span>
+                    </a>
                 </div>
-              </a>
             </div>
-          </div>
         </div>
+    </header>
 
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Empfangs- und Pfortendienst" src="images/pforte.webp">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">Empfangsdienste mit Stil</p>
+    <!-- Landing Page Section -->
+    <section id="landing-page">
+        <div class="w-full h-full flex justify-center items-center">
+            <h1 id="typewriter">Omega Security</h1>
+        </div>
+        <video id="video" autoplay loop muted playsinline preload>
+            <source src="images/landing-page-video.webm" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- Explained Section -->
+    <section id="explained-section" class="explained-section">
+        <div class="explained-content">
+            <div class="about-us-text-container">
+                <p class="reveal-type" data-bg-color="#cccccc" data-fg-color="rgb(0,0,77)">
+                    Omega Security <br class="break-s">GmbH.<br class="break-xl break-l break-m break-s">
+                    Hier wird Ihnen <br class="break-s"> mit Sicherheit<br class="break-l break-m break-s"> weitergeholfen.<br class="break-xl break-s">
+                    Wir leisten <br class="break-s">unseren Beitrag zur <br class="break-xl break-m break-s">Sicherheit Berlins.
+                </p>
             </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Empfangs- und Pfortendienst</h4>
-            </div>
-            <div class="button-container">
-              <a href="empfangs-pfortendienst.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+
+            <div class="facts">
+                <div class="fact-container">
+                    <div class="key-figure-container">
+                        <p class="key-figure key-number" data-target="100">+0</p>
+                    </div>
+                    <div class="label-container">
+                        <p class="label">Sichere Kunden</p>
+                    </div>
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Gemeinschaftsunterkünfte" src="images/gemeinschaftsunterkünfte.jpg">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">
-                Sicherung und Überwachung von Gemeinschaftsunterkünften</p>
-            </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Gemeinschaftsunterkünfte</h4>
-            </div>
-            <div class="button-container">
-              <a href="gemeinschaftsunterkünfte.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                <div class="fact-container">
+                    <div class="key-figure-container">
+                        <p class="key-figure key-number" data-target="120">+0</p>
+                    </div>
+                    <div class="label-container">
+                        <p class="label">Mitarbeiter</p>
+                    </div>
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Revier- und Streifendienst" src="images/security car parked.webp">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">Mobile Überwachung rundum</p>
-            </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Revier- und Streifendienst</h4>
-            </div>
-            <div class="button-container">
-              <a href="revier-_streifendienst.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                <div class="fact-container">
+                    <div class="key-figure-container">
+                        <h4 class="key-figure">Berlin</h4>
+                    </div>
+                    <div class="label-container">
+                        <p class="label">Einsatzgebiet</p>
+                    </div>
                 </div>
-              </a>
             </div>
-          </div>
         </div>
+    </section>
 
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Veranstaltungsschutz" src="images/veranstaltungsschutz.webp">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">Sicherheit für Ihre Events</p>
-            </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Veranstaltungsschutz</h4>
-            </div>
-            <div class="button-container">
-              <a href="veranstaltungsschutz.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+    <!-- Service Area Section -->
+    <section id="service-area" class="service-section">
+        <div class="racesWrapper">
+            <div class="races">
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Alarmaufschaltung" src="images/alarmaufschaltung.webp">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Effiziente Alarmaufschaltung, zuverlässiger Service.</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Alarmaufschaltung</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="alarmaufschaltung.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="service-container">
-          <div class="image-container">
-            <img class="service-image" alt="Werk- und Objektschutz" src="images/werk-_objektschutz.webp">
-          </div>
-          <div class="service-text-container">
-            <div class="service-description-container">
-              <p class="service-description">Schutz für Anlagen & Gebäude</p>
-            </div>
-            <div class="service-label-container">
-              <h4 class="service-label">Werk- und Objektschutz</h4>
-            </div>
-            <div class="button-container">
-              <a href="werk_-objektschutz.html" class="service-button">ERFAHREN SIE MEHR
-                <div class="button-icon-container">
-                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Baustellenbewachung" src="images/berliner_baustelle.webp">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Absicherung von Baustellen</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Baustellenbewachung</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="baustellenbewachung.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </a>
+
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Doorman" src="images/doorman.webp">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Stilvoller Empfang, effektiver Schutz</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Doorman</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="doorman.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Empfangs- und Pfortendienst" src="images/pforte.webp">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Empfangsdienste mit Stil</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Empfangs- und Pfortendienst</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="empfangs-pfortendienst.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Gemeinschaftsunterkünfte" src="images/gemeinschaftsunterkünfte.jpg">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Sicherung und Überwachung von Gemeinschaftsunterkünften</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Gemeinschaftsunterkünfte</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="gemeinschaftsunterkünfte.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Revier- und Streifendienst" src="images/security car parked.webp">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Mobile Überwachung rundum</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Revier- und Streifendienst</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="revier-_streifendienst.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Veranstaltungsschutz" src="images/veranstaltungsschutz.webp">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Sicherheit für Ihre Events</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Veranstaltungsschutz</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="veranstaltungsschutz.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-container">
+                    <div class="image-container">
+                        <img class="service-image" alt="Werk- und Objektschutz" src="images/werk-_objektschutz.webp">
+                    </div>
+                    <div class="service-text-container">
+                        <div class="service-description-container">
+                            <p class="service-description">Schutz für Anlagen & Gebäude</p>
+                        </div>
+                        <div class="service-label-container">
+                            <h4 class="service-label">Werk- und Objektschutz</h4>
+                        </div>
+                        <div class="button-container">
+                            <a href="werk_-objektschutz.html" class="service-button">ERFAHREN SIE MEHR
+                                <div class="button-icon-container">
+                                    <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact-section">
-    <img id="contact-image" src="images/omega_buero.webp" alt="">
-    <div id="contact-text-wrapper">
-      <div class="contact-text-container-first">
-        <p class="contact-text-container-element-first"><span class="highlight-dark">Womit</span> <span class="highlight-light">Sie</span><span class="highlight-dark"> sich bei uns</span> <span class="highlight-light">sicher sein können</span><span>:</span></p>
-      </div>
-      <div class="contact-text-container" id="section1">
-        <p class="contact-text-container-element">
-          <span class="highlight-light">Maßgeschneiderte</span><br>
-          <span class="highlight-dark">Lösungen</span><span class="highlight-dark">.</span>
-        </p>
-      </div>
-      <div class="contact-text-container" id="section2">
-        <p class="contact-text-container-element">
-          <span class="highlight-dark">ISO &amp; DIN</span><br>
-          <span class="highlight-light">zertifiziert</span><span class="highlight-dark">.</span>
-        </p>
-      </div>
-      <div class="contact-text-container" id="section3">
-        <p class="contact-text-container-element">
-          <span class="highlight-dark">Unsere Lösungen</span><br>
-          <span class="highlight-dark">entsprechen</span> <span class="highlight-light">höchsten</span><br>
-          <span class="highlight-light">Qualitätsstandards</span><span class="highlight-dark">.</span>
-        </p>
-      </div>
-      <div class="contact-text-container" id="section4">
-        <p class="contact-text-container-element">
-          <span class="highlight-light">24/7 Support</span><br>
-          <span class="highlight-dark">Für Ihre Anliegen</span><span class="highlight-dark">.</span>
-        </p>
-      </div>
-      <div class="contact-text-container" id="section5">
-        <p class="contact-text-container-element">
-          <a id="contact-reference" href="contact.html"><span class="highlight-light">Kontaktieren Sie uns</span><span class="highlight-dark">!</span><img id="link-arrow" src="images/link_arrow.svg" alt="Verweis auf Kontaktseite"></a>
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact-section">
+        <img id="contact-image" src="images/omega_buero.webp" alt="">
+        <div id="contact-text-wrapper">
+            <div class="contact-text-container-first">
+                <p class="contact-text-container-element-first"><span class="highlight-dark">Womit</span> <span class="highlight-light">Sie</span><span class="highlight-dark"> sich bei uns</span> <span class="highlight-light">sicher sein können</span><span>:</span></p>
+            </div>
+            <div class="contact-text-container" id="section1">
+                <p class="contact-text-container-element">
+                    <span class="highlight-light">Maßgeschneiderte</span><br>
+                    <span class="highlight-dark">Lösungen</span><span class="highlight-dark">.</span>
+                </p>
+            </div>
+            <div class="contact-text-container" id="section2">
+                <p class="contact-text-container-element">
+                    <span class="highlight-dark">ISO &amp; DIN</span><br>
+                    <span class="highlight-light">zertifiziert</span><span class="highlight-dark">.</span>
+                </p>
+            </div>
+            <div class="contact-text-container" id="section3">
+                <p class="contact-text-container-element">
+                    <span class="highlight-dark">Unsere Lösungen</span><br>
+                    <span class="highlight-dark">entsprechen</span> <span class="highlight-light">höchsten</span><br>
+                    <span class="highlight-light">Qualitätsstandards</span><span class="highlight-dark">.</span>
+                </p>
+            </div>
+            <div class="contact-text-container" id="section4">
+                <p class="contact-text-container-element">
+                    <span class="highlight-light">24/7 Support</span><br>
+                    <span class="highlight-dark">Für Ihre Anliegen</span><span class="highlight-dark">.</span>
+                </p>
+            </div>
+            <div class="contact-text-container" id="section5">
+                <p class="contact-text-container-element">
+                    <a id="contact-reference" href="contact.html"><span class="highlight-light">Kontaktieren Sie uns</span><span class="highlight-dark">!</span><img id="link-arrow" src="images/link_arrow.svg" alt="Verweis auf Kontaktseite"></a>
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <footer class="footer-14398">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-md-3">
-          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
-          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
-        </div>
-        <div class="col-md-2 ml-auto">
-          <h3>MENÜ</h3>
-          <ul class="list-unstyled links">
-            <li><a href="index.html#landing-section">Home</a></li>
-            <li><a href="index.html#explained-section">Über Uns</a></li>
-            <li><a href="index.html#service-area">Leistungen</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 ml-auto">
-          <h3>KONTAKT</h3>
-          <ul class="list-unstyled links footer-contact">
-            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
-            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
-            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
-            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
-            <li>Sonntag:<br> 08:00 - 19:00</li>
-          </ul>
-        </div>
-        <div class="col-md-2 ml-auto">
-          <h3>ZERTIFIKATE</h3>
-          <ul class="list-unstyled links certificate-list">
-            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
-            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
-          </ul>
-        </div>
-      </div>
+    <!-- Footer -->
+    <footer class="footer-14398">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-3">
+                    <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+                    <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+                </div>
+                <div class="col-md-2 ml-auto">
+                    <h3>MENÜ</h3>
+                    <ul class="list-unstyled links">
+                        <li><a href="index.html#landing-section">Home</a></li>
+                        <li><a href="index.html#explained-section">Über Uns</a></li>
+                        <li><a href="index.html#service-area">Leistungen</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 ml-auto">
+                    <h3>KONTAKT</h3>
+                    <ul class="list-unstyled links footer-contact">
+                        <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+                        <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+                        <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+                        <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+                        <li>Sonntag:<br> 08:00 - 19:00</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 ml-auto">
+                    <h3>ZERTIFIKATE</h3>
+                    <ul class="list-unstyled links certificate-list">
+                        <li><a href="https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+                        <li><a href="https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
 
-      <div class="row mb-4">
-        <div class="col-12 pb-4">
-          <div class="line"></div>
-        </div>
-        <div class="col-md-6 text-md-left">
-          <ul class="list-unstyled link-menu nav-left">
-            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
-            <li><a href="impressum.html" target="_blank">Impressum</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 text-md-right">
-          <ul class="list-unstyled social nav-right">
-            <li><a href="#"><span class="icon-xing"></span></a></li>
-            <li><a href="#"><span class="icon-linkedin"></span></a></li>
-            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
-          </ul>
-        </div>
-      </div>
+            <div class="row mb-4">
+                <div class="col-12 pb-4">
+                    <div class="line"></div>
+                </div>
+                <div class="col-md-6 text-md-left">
+                    <ul class="list-unstyled link-menu nav-left">
+                        <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+                        <li><a href="impressum.html" target="_blank">Impressum</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <ul class="list-unstyled social nav-right">
+                        <li><a href="#"><span class="icon-xing"></span></a></li>
+                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                        <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+                    </ul>
+                </div>
+            </div>
 
-      <div class="row">
-        <div class="col-md-7">
-          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+            <div class="row">
+                <div class="col-md-7">
+                    <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
+    <!-- JavaScript Dateien -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
 </body>
 
 </html>

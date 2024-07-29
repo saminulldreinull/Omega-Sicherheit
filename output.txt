@@ -1,116 +1,3037 @@
-Files in the public directory:
-public/empfangs-pfortendienst.html
-public/alarmaufschaltung.html
-public/doorman.html
-public/index.html
-public/.DS_Store
-public/css/service.css
-public/css/serviceS.css
-public/css/ico.css
-public/css/contact.css
-public/css/impressum.css
-public/css/style.css
-public/css/fonts.css
-public/css/normalize.css
-public/css/footerHeader.css
-public/contact.html
-public/images/doorman.webp
-public/images/alarmaufschaltung.webp
-public/images/buttonArrow.svg
-public/images/.DS_Store
-public/images/security car parked.webp
-public/images/landing-page-video.webm
-public/images/veranstaltungsschutz.webp
-public/images/favicomatic/favicon-16x16.png
-public/images/favicomatic/mstile-310x310.png
-public/images/favicomatic/mstile-144x144.png
-public/images/favicomatic/favicon.ico
-public/images/favicomatic/apple-touch-icon-120x120.png
-public/images/favicomatic/favicon-196x196.png
-public/images/favicomatic/mstile-70x70.png
-public/images/favicomatic/apple-touch-icon-152x152.png
-public/images/favicomatic/code.txt
-public/images/favicomatic/mstile-310x150.png
-public/images/favicomatic/apple-touch-icon-114x114.png
-public/images/favicomatic/apple-touch-icon-76x76.png
-public/images/favicomatic/favicon-128.png
-public/images/favicomatic/favicon-96x96.png
-public/images/favicomatic/apple-touch-icon-57x57.png
-public/images/favicomatic/apple-touch-icon-72x72.png
-public/images/favicomatic/mstile-150x150.png
-public/images/favicomatic/apple-touch-icon-60x60.png
-public/images/favicomatic/apple-touch-icon-144x144.png
-public/images/favicomatic/favicon-32x32.png
-public/images/berliner_baustelle.webp
-public/images/dekra_siegel2.png
-public/images/dekra_siegel1.png
-public/images/omega_buero.webp
-public/images/landing-page-video.mp4
-public/images/logo.svg
-public/images/gemeinschaftsunterkünfte.jpg
-public/images/pforte.webp
-public/images/werk-_objektschutz.webp
-public/js/textRevealAnimation.js
-public/js/animateLandingSectionWords.js
-public/js/jquery.sticky.js
-public/js/.DS_Store
-public/js/textEnterLeaver.js
-public/js/changingHeader.js
-public/js/checkBrowser.js
-public/js/alerts.js
-public/js/buttonHover.js
-public/js/animatedTicker.js
-public/js/script.js
-public/js/imageScale.js
-public/js/contactForm.js
-public/js/animateKeyNumbers.js
-public/js/parallaxScrolling.js
-public/js/horizontalScrolling.js
-public/js/textHighlightOnScroll.js
-public/revier-_streifendienst.html
-public/baustellenbewachung.html
-public/werk_-objektschutz.html
-public/veranstaltungsschutz.html
-public/datenschutzerklärung.html
-public/icomoon/.DS_Store
-public/icomoon/fonts/icomoon.ttf
-public/icomoon/fonts/icomoon.woff
-public/icomoon/fonts/icomoon.eot
-public/icomoon/fonts/icomoon.svg
-public/.nojekyll
-public/impressum.html
-public/gemeinschaftsunterkünfte.html
-public/fonts/static/InterTight-SemiBold.ttf
-public/fonts/static/InterTight-ExtraBold.ttf
-public/fonts/static/InterTight-ExtraBoldItalic.ttf
-public/fonts/static/InterTight-Thin.ttf
-public/fonts/static/InterTight-Bold.ttf
-public/fonts/static/InterTight-ExtraLightItalic.ttf
-public/fonts/static/InterTight-SemiBoldItalic.ttf
-public/fonts/static/InterTight-Light.ttf
-public/fonts/static/InterTight-Medium.ttf
-public/fonts/static/InterTight-Regular.ttf
-public/fonts/static/InterTight-MediumItalic.ttf
-public/fonts/static/InterTight-Italic.ttf
-public/fonts/static/InterTight-LightItalic.ttf
-public/fonts/static/InterTight-Black.ttf
-public/fonts/static/InterTight-BlackItalic.ttf
-public/fonts/static/InterTight-ExtraLight.ttf
-public/fonts/static/InterTight-ThinItalic.ttf
-public/fonts/static/InterTight-BoldItalic.ttf
-public/fonts/OFL.txt
-public/fonts/InterTight-Italic-VariableFont_wght.ttf
-public/fonts/README.txt
-public/fonts/InterTight-VariableFont_wght.ttf
+===========================
+Datei: public/empfangs-pfortendienst.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
 
-Files in the src directory:
-src/middleware/auth.js
-src/.DS_Store
-src/index.js
-src/utils/encryption.js
-src/models/adminUser.js
-src/models/contact.js
-src/controllers/contactController.js
-src/controllers/adminController.js
-src/routes/contact.js
-src/routes/admin.js
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.hostname !== 'localhost') {
+        var baseTag = document.createElement('base');
+        baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+        document.head.appendChild(baseTag);
+      }
+    });
+  </script>
+  <title>Empfangs- und Pfortendienst</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+  <a href="https://wa.me/4917664871676" class="float">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+              <li class="has-children">
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none">
+          <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+            <span class="icon-menu h3"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="landing-page">
+    <img class="doorman-image" src="images/pforte.webp" alt="" />
+    <div class="service-text-content-container">
+      <div class="service-heading-container">
+        <h4 class="service-heading">
+          <span class="highlight-light">Zuverlässiger Pfortendienst</span><span class="highlight-dark">: Ihr Tor zur Sicherheit und </span><span class="highlight-dark">Ordnung</span>.
+        </h4>
+      </div>
+      <div class="service-text-container">
+        <p class="service-text service-intro">
+          <span class="highlight-dark">Sicherheit und </span><span class="highlight-light">Professionalität</span><span class="highlight-dark"> für Ihre Unternehmenszentrale</span>.
+        </p>
+      </div>
+
+      <div class="about-us-text-container">
+        <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+          <span class="highlight-dark">Unser Pfortendienst</span> <span class="highlight-light">kontrolliert und überwacht alle Zugangspunkte Ihres Geländes, einschließlich der Identitäts- und Fahrzeugkontrollen.</span><span class="highlight-dark"> Durch die permanente Präsenz unserer Sicherheitskräfte gewährleisten wir</span><span class="highlight-light">, dass nur Befugte Zutritt erhalten und potenzielle Sicherheitsrisiken frühzeitig erkannt werden.</span>
+        </p>
+      </div>
+
+      <div class="button-range-slider">
+        <div class="button-container">
+          <a class="contact-button" href="contact.html">
+            <div class="button-icon-container">
+              <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
+            </div>
+            Kontaktieren Sie Uns!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>MENÜ</h3>
+          <ul class="list-unstyled links">
+            <li><a href="index.html#landing-section">Home</a></li>
+            <li><a href="index.html#explained-section">Über Uns</a></li>
+            <li><a href="index.html#service-area">Leistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html" target="_blank">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-xing"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="js/buttonHover.js" async></script>
+  <script src="js/serviceTextHighlight.js" async></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+</body>
+
+</html>
+
+
+===========================
+Datei: public/alarmaufschaltung.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.hostname !== 'localhost') {
+        var baseTag = document.createElement('base');
+        baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+        document.head.appendChild(baseTag);
+      }
+    });
+  </script>
+  <title>Alarmaufschaltung</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+  <a href="https://wa.me/4917664871676" class="float">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a></a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto " role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+
+              <li class="has-children">
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+
+  </header>
+  <section class="landing-page">
+    <img class="doorman-image" src="images/alarmaufschaltung.webp" alt="" />
+
+    <div class="service-text-content-container">
+      <div class="service-heading-container">
+        <h4 class="service-heading">
+          <span class="highlight-light">Alarmgesichert</span><span class="highlight-dark">: Sicherheit auf Knopfdruck!</span>
+        </h4>
+      </div>
+      <div class="service-text-container">
+        <p class="service-text service-intro">
+          <span class="highlight-dark">Alarmaktiv? Wir reagieren sofort für Ihre Sicherheit.</span>
+        </p>
+      </div>
+
+      <div class="about-us-text-container">
+        <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+          <span class = "highlight-dark">Unsere Alarmaufschaltung</span>
+          <span class = "highlight-light">gewährleistet eine</span>
+          <span class = "highlight-dark">direkte Verbindung</span>
+          <span class = "highlight-light">zu</span>
+          <span class = "highlight-dark">Ihrem</span>
+          <span class = "highlight-light">Sicherheitssystem.</span>
+          <span class = "highlight-light">Bei jedem</span>
+          <span class = "highlight-dark">Alaram sind wir sofort zur Stelle<span class = "highlight-light">,</span><span class = "highlight-light">um rasch und effektiv zu intervenieren und für <span class = "highlight-dark">Ihren Schutz</span></span></span>
+          <span class = "highlight-light">zu</span>
+          <span class = "highlight-dark">sorgen<span class = "highlight-light">.</span></span>
+        </p>
+      </div>
+      <div class="button-range-slider">
+        <div class="button-container">
+          <a class="contact-button" href="contact.html">
+            <div class="button-icon-container">
+              <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+            </div>
+            Kontaktieren Sie Uns!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>MENÜ</h3>
+          <ul class="list-unstyled links">
+            <li><a href="index.html#landing-section">Home</a></li>
+            <li><a href="index.html#explained-section">Über Uns</a></li>
+            <li><a href="index.html#service-area">Leistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html" target="_blank">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-xing"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="js/serviceTextHighlight.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+</body>
+
+</html>
+
+
+===========================
+Datei: public/doorman.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.hostname !== 'localhost') {
+        var baseTag = document.createElement('base');
+        baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+        document.head.appendChild(baseTag);
+      }
+    });
+  </script>
+  <title>Doorman</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+  <a href="https://wa.me/4917664871676" class="float">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a></a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto " role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+
+              <li class="has-children">
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+  </header>
+  <section class="landing-page">
+    <img class="doorman-image" src="images/doorman.webp" alt="" />
+
+    <div class="service-text-content-container">
+      <div class="service-heading-container">
+        <h4 class="service-heading">
+          <span class="highlight-light">Sicherheit</span><span class="highlight-dark"> mit Stil? Überlassen Sie das uns!</span>
+        </h4>
+      </div>
+      <div class="service-text-container">
+        <p class="service-text service-intro">
+          <span class="highlight-dark"> Doorman in Umgebung </span><span class="highlight-light">Berlin Brandenburg</span><span class="highlight-dark">. Mit Sicherheit sicher zum </span><span class="highlight-light">Erfolg</span>.
+        </p>
+      </div>
+
+      <div class="about-us-text-container">
+        <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+          <span class="highlight-dark">Ein guter Doorman</span> <span class="highlight-light">trägt entscheidend zum ersten Eindruck bei</span> <span class="highlight-dark">Ihren Besuchern bei<span class="highlight-light">.</span></span> <span class="highlight-light">Mit unserer Unterstützung gewährleisten Sie Sicherheit und eine</span> <span class="highlight-dark">einladende Atmosphäre<span class="highlight-light">.</span></span>
+        </p>
+      </div>
+
+      <div class="button-range-slider">
+        <div class="button-container">
+          <a class="contact-button" href="contact.html">
+            <div class="button-icon-container">
+              <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
+            </div>
+            Kontaktieren Sie Uns!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>MENÜ</h3>
+          <ul class="list-unstyled links">
+            <li><a href="index.html#landing-section">Home</a></li>
+            <li><a href="index.html#explained-section">Über Uns</a></li>
+            <li><a href="index.html#service-area">Leistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html" target="_blank">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-xing"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="js/buttonHover.js" async></script>
+  <script src="js/serviceTextHighlight.js" async></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+</body>
+
+</html>
+
+
+===========================
+Datei: public/index.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omega Security GmbH</title>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.hostname !== 'localhost') {
+        var baseTag = document.createElement('base');
+        baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+        document.head.appendChild(baseTag);
+      }
+    });
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4GR5TRY8TE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4GR5TRY8TE');
+  </script>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128">
+  <meta name="application-name" content="&nbsp;">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
+  <!-- JavaScript Dateien -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
+  <script src="https://unpkg.com/split-type" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js" defer></script>
+  <script src="js/animateLandingSectionWords.js" defer></script>
+  <script src="js/parallaxScrolling.js" defer></script>
+  <script src="js/changingHeader.js" defer></script>
+  <script src="js/textRevealAnimation.js" defer></script>
+  <script src="js/animateKeyNumbers.js" defer></script>
+  <script src="js/buttonHover.js" defer></script>
+  <script src="js/horizontalScrolling.js" defer></script>
+  <script src="js/textHighlightOnScroll.js" defer></script>
+  <script src="js/imageScale.js" defer></script>
+  <script src="js/textEnterLeaver.js" defer></script>
+  <script src="js/checkBrowser.js" defer></script>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://wa.me/4917664871676" class="float">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+              <li class="has-children">
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none">
+          <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+            <span class="icon-menu h3"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="landing-page">
+    <div class="w-full h-full flex justify-center items-center">
+      <h1 id="typewriter">Omega Security</h1>
+    </div>
+    <video id="video" autoplay loop muted playsinline muted preload>
+      <source src="images/landing-page-video.webm" type="video/mp4">
+    </video>
+  </section>
+
+  <section id="explained-section" class="explained-section">
+    <div class="explained-content">
+      <div class="about-us-text-container">
+        <p class="reveal-type" data-bg-color="#cccccc" data-fg-color="rgb(0,0,77)">
+          Omega Security <br class="break-s">GmbH.<br class="break-xl break-l break-m break-s">
+          Hier wird Ihnen <br class="break-s"> mit Sicherheit<br class="break-l break-m break-s"> weitergeholfen.<br class="break-xl break-s">
+          Wir leisten <br class="break-s">unseren Beitrag zur <br class="break-xl break-m break-s">Sicherheit Berlins.
+        </p>
+      </div>
+
+      <div class="facts">
+        <div class="fact-container">
+          <div class="key-figure-container">
+            <p class="key-figure key-number" data-target="100">+0</p>
+          </div>
+          <div class="label-container">
+            <p class="label">Sichere Kunden</p>
+          </div>
+        </div>
+
+        <div class="fact-container">
+          <div class="key-figure-container">
+            <p class="key-figure key-number" data-target="120">+0</p>
+          </div>
+          <div class="label-container">
+            <p class="label">Mitarbeiter</p>
+          </div>
+        </div>
+
+        <div class="fact-container">
+          <div class="key-figure-container">
+            <h4 class="key-figure">Berlin</h4>
+          </div>
+          <div class="label-container">
+            <p class="label">Einsatzgebiet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service-area" class="service-section">
+    <div class="racesWrapper">
+      <div class="races">
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Alarmaufschaltung" src="images/alarmaufschaltung.webp">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">Effiziente Alarmaufschaltung, zuverlässiger Service.</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Alarmaufschaltung</h4>
+            </div>
+            <div class="button-container">
+              <a href="alarmaufschaltung.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Baustellenbewachung" src="images/berliner_baustelle.webp">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">Absicherung von Baustellen</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Baustellenbewachung</h4>
+            </div>
+            <div class="button-container">
+              <a href="baustellenbewachung.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Doorman" src="images/doorman.webp">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">Stilvoller Empfang, effektiver Schutz</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Doorman</h4>
+            </div>
+            <div class="button-container">
+              <a href="doorman.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Empfangs- und Pfortendienst" src="images/pforte.webp">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">Empfangsdienste mit Stil</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Empfangs- und Pfortendienst</h4>
+            </div>
+            <div class="button-container">
+              <a href="empfangs-pfortendienst.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Gemeinschaftsunterkünfte" src="images/gemeinschaftsunterkünfte.jpg">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">
+                Sicherung und Überwachung von Gemeinschaftsunterkünften</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Gemeinschaftsunterkünfte</h4>
+            </div>
+            <div class="button-container">
+              <a href="gemeinschaftsunterkünfte.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Revier- und Streifendienst" src="images/security car parked.webp">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">Mobile Überwachung rundum</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Revier- und Streifendienst</h4>
+            </div>
+            <div class="button-container">
+              <a href="revier-_streifendienst.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Veranstaltungsschutz" src="images/veranstaltungsschutz.webp">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">Sicherheit für Ihre Events</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Veranstaltungsschutz</h4>
+            </div>
+            <div class="button-container">
+              <a href="veranstaltungsschutz.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-container">
+          <div class="image-container">
+            <img class="service-image" alt="Werk- und Objektschutz" src="images/werk-_objektschutz.webp">
+          </div>
+          <div class="service-text-container">
+            <div class="service-description-container">
+              <p class="service-description">Schutz für Anlagen & Gebäude</p>
+            </div>
+            <div class="service-label-container">
+              <h4 class="service-label">Werk- und Objektschutz</h4>
+            </div>
+            <div class="button-container">
+              <a href="werk_-objektschutz.html" class="service-button">ERFAHREN SIE MEHR
+                <div class="button-icon-container">
+                  <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-section">
+    <img id="contact-image" src="images/omega_buero.webp" alt="">
+    <div id="contact-text-wrapper">
+      <div class="contact-text-container-first">
+        <p class="contact-text-container-element-first"><span class="highlight-dark">Womit</span> <span class="highlight-light">Sie</span><span class="highlight-dark"> sich bei uns</span> <span class="highlight-light">sicher sein können</span><span>:</span></p>
+      </div>
+      <div class="contact-text-container" id="section1">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">Maßgeschneiderte</span><br>
+          <span class="highlight-dark">Lösungen</span><span class="highlight-dark">.</span>
+        </p>
+      </div>
+      <div class="contact-text-container" id="section2">
+        <p class="contact-text-container-element">
+          <span class="highlight-dark">ISO &amp; DIN</span><br>
+          <span class="highlight-light">zertifiziert</span><span class="highlight-dark">.</span>
+        </p>
+      </div>
+      <div class="contact-text-container" id="section3">
+        <p class="contact-text-container-element">
+          <span class="highlight-dark">Unsere Lösungen</span><br>
+          <span class="highlight-dark">entsprechen</span> <span class="highlight-light">höchsten</span><br>
+          <span class="highlight-light">Qualitätsstandards</span><span class="highlight-dark">.</span>
+        </p>
+      </div>
+      <div class="contact-text-container" id="section4">
+        <p class="contact-text-container-element">
+          <span class="highlight-light">24/7 Support</span><br>
+          <span class="highlight-dark">Für Ihre Anliegen</span><span class="highlight-dark">.</span>
+        </p>
+      </div>
+      <div class="contact-text-container" id="section5">
+        <p class="contact-text-container-element">
+          <a id="contact-reference" href="contact.html"><span class="highlight-light">Kontaktieren Sie uns</span><span class="highlight-dark">!</span><img id="link-arrow" src="images/link_arrow.svg" alt="Verweis auf Kontaktseite"></a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>MENÜ</h3>
+          <ul class="list-unstyled links">
+            <li><a href="index.html#landing-section">Home</a></li>
+            <li><a href="index.html#explained-section">Über Uns</a></li>
+            <li><a href="index.html#service-area">Leistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html" target="_blank">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-xing"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+</body>
+
+</html>
+
+
+===========================
+Datei: public/contact.html
+===========================
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="js/contactForm.js" defer ></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>  
+  <script src="js/buttonHover.js" defer ></script>
+</head>
+<body>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://wa.me/4917664871676" class="float">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a>
+        </div>
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+              <li class="has-children">
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="toggle-button d-inline-block d-lg-none">
+          <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="alert-center-container" id="alert-container">
+    <div class="alert alert-danger" role="alert" id="alert-danger" style="display: none;">
+      <span><strong>Ihre Nachricht konnte nicht versendet werden!</strong> Bitte versuchen Sie es erneut.</span>
+      <button type="button" class="close" aria-label="Close" onclick="closeAlert()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="alert alert-success" role="alert" id="alert-success" style="display: none;">
+      <span><strong>Ihre Nachricht wurde versendet!</strong> Wir werden uns in Kürze bei Ihnen melden.</span>
+      <button type="button" class="close" aria-label="Close" onclick="closeAlert()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <section id="form-section">
+    <div class="text-wrapper">
+      <div class="contact-heading-container">
+        <h6 class="contact-heading"><span class="highlight-dark">WOMIT KÖNNEN</span><br class="break-m"><span class="highlight-light"> WIR IHNEN</span><br class="break-m"> <span class="highlight-dark">WEITER</span><span class="highlight-light">HELFEN</span><span class="highlight-dark">?</span></h6>
+      </div>
+      <div class="media-wrapper">
+        <div class="contact-media-container">
+          <a class="contact-medium" href="mailto:kontakt-osg@outlook.de">KONTAKT-OSG@OUTLOOK.DE</a>
+          <a class="contact-medium" href="tel:+4917664871676">+49 176 648 71 676</a>
+        </div>
+
+        <form id="contactForm" action="/contact/send-email" method="POST">
+          <input type="hidden" name="_csrf" id="csrfToken">
+          <div class="salutation-container">
+            <div class="name-content-container">
+              <div class="form-content-container">
+                <label class="form-label" for="salutation">Anrede</label>
+                <select name="salutation" id="salutation" required>
+                  <option>Herr</option>
+                  <option>Frau</option>
+                </select>
+              </div>
+              <div class="form-content-container">
+                <label class="form-label" for="name">Name</label>
+                <input class="text-input" type="text" id="name" name="name" autocomplete="name" required />
+              </div>
+            </div>
+            <div class="form-content-container">
+              <label class="form-label" for="company">Unternehmen</label>
+              <input class="text-input" type="text" id="company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-content-container">
+              <label class="form-label" for="email">E-Mail</label>
+              <input class="text-input" type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-content-container">
+              <label class="form-label" for="message">Nachricht</label>
+              <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
+            </div>
+            <div class="input-container-privacy">
+              <input type="checkbox" id="privacy" name="privacy" value="on" required />
+              <span class="approval-text">
+                Ich stimme der
+                <a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a>
+                zu.
+              </span>
+            </div>
+            <div class="form-button-container">
+              <button type="submit" class="form-button">
+                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+                Absenden
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <section id="remaining-information-section">
+    <div class="information-wrapper">
+      <h4 class="social-media-heading">FOLGEN SIE UNS</h4>
+      <div class="information-list">
+        <h3 class="list-item"><a href="">LINKEDIN</a></h3>
+        <h3 class="list-item"><a href="">XING</a></h3>
+      </div>
+    </div>
+    <div class="information-wrapper">
+      <h4 class="social-media-heading">UNSER <span class="highlight-light">BÜRO</span></h4>
+      <div class="information-list">
+        <h3 class="list-item"><a href="">KREFELDER STRAßE 17 <br> 10555 BERLIN</a></h3>
+      </div>
+    </div>
+    <div class="information-wrapper">
+      <h4 class="social-media-heading">UNSERE <span class="highlight-light">ÖFFNUNGSZEITEN</span></h4>
+      <div class="information-list">
+        <h3 class="list-item information-item">MONTAG - SAMSTAG: <br>08:00 - 20:00</h3>
+      </div>
+      <div class="information-list">
+        <h3 class="list-item information-item">SONNTAG: <br>08:00 - 19:00</h3>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>MENÜ</h3>
+          <ul class="list-unstyled links">
+            <li><a href="index.html#landing-section">Home</a></li>
+            <li><a href="index.html#explained-section">Über Uns</a></li>
+            <li><a href="index.html#service-area">Leistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html" target="_blank">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-xing"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+===========================
+Datei: public/revier-_streifendienst.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hostname !== 'localhost') {
+          var baseTag = document.createElement('base');
+          baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+          document.head.appendChild(baseTag);
+        }
+      });
+    </script>
+    <title>Revier- und Streifendienst</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ico.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/fonts.css">
+  </head>
+
+  <body>
+    <a href="https://wa.me/4917664871676" class="float">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="site-logo">
+            <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+              <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+            </a></a>
+          </div>
+          <div class="col-12">
+            <nav class="site-navigation text-center ml-auto" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+                <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+                <li class="has-children">
+                  <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                    <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                    <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                    <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                    <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                    <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                    <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                    <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="toggle-button d-inline-block d-lg-none">
+            <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+              <span class="icon-menu h3"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="landing-page">
+      <img class="doorman-image" src="images/security car parked.webp" alt="" />
+      <div class="service-text-content-container">
+        <div class="service-heading-container">
+          <h4 class="service-heading">
+            <span class="highlight-light">Effizienter Revier- und Streifendienst</span><span class="highlight-light">:</span> <span class="highlight-dark">Sicherheit rund um die Uhr</span>
+          </h4>
+        </div>
+        <div class="service-text-container">
+          <p class="service-text service-intro">
+            <span class="highlight-dark">Individueller Revier- und Streifendienst</span> <span class="highlight-light">für Ihre Sicherheit</span><span class="highlight-light"><span class="highlight-dark">.</span></span>
+          </p>
+        </div>
+        <div class="about-us-text-container">
+          <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+            <span class="highlight-dark">Unser Streifendienst</span> <span class="highlight-light">überwacht gezielt ausgewählte Gebiete</span> <span class="highlight-dark">und</span> <span class="highlight-light">reagiert unverzüglich auf Notfälle</span><span class="highlight-light">.</span> <span class="highlight-dark">Mit moderner Technik und geschultem Personal</span> <span class="highlight-light">bieten wir eine Schutzmaßnahme</span><span class="highlight-light">,</span> <span class="highlight-dark">die präventiv gegen Sicherheitsbedrohungen wirkt</span> <span class="highlight-light">und</span> <span class="highlight-dark">schnell interveniert</span><span class="highlight-light">,</span> <span class="highlight-dark">wenn erforderlich</span><span class="highlight-light">.</span>
+          </p>
+        </div>
+        <div class="button-range-slider">
+          <div class="button-container">
+            <a class="contact-button" href="contact.html">
+              <div class="button-icon-container">
+                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
+              </div>
+              Kontaktieren Sie Uns!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-14398">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+            <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>MENÜ</h3>
+            <ul class="list-unstyled links">
+              <li><a href="index.html#landing-section">Home</a></li>
+              <li><a href="index.html#explained-section">Über Uns</a></li>
+              <li><a href="index.html#service-area">Leistungen</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>KONTAKT</h3>
+            <ul class="list-unstyled links footer-contact">
+              <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+              <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+              <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+              <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+              <li>Sonntag:<br> 08:00 - 19:00</li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>ZERTIFIKATE</h3>
+            <ul class="list-unstyled links certificate-list">
+              <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+              <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row mb-4">
+          <div class="col-12 pb-4">
+            <div class="line"></div>
+          </div>
+          <div class="col-md-6 text-md-left">
+            <ul class="list-unstyled link-menu nav-left">
+              <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+              <li><a href="impressum.html" target="_blank">Impressum</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <ul class="list-unstyled social nav-right">
+              <li><a href="#"><span class="icon-xing"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-7">
+            <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/buttonHover.js" async></script>
+    <script src="js/serviceTextHighlight.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+  </body>
+</html>
+
+
+===========================
+Datei: public/baustellenbewachung.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.location.hostname !== 'localhost') {
+        var baseTag = document.createElement('base');
+        baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+        document.head.appendChild(baseTag);
+      }
+    });
+  </script>
+  <title>Baustellenbewachung</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/ico.css">
+  <link rel="stylesheet" href="css/service.css">
+  <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+  <a href="https://wa.me/4917664871676" class="float">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto" role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+
+              <li class="has-children">
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+  </header>
+  <section class="landing-page">
+    <img class="doorman-image" src="images/berliner_baustelle.webp" alt="" />
+
+    <div class="service-text-content-container">
+      <div class="service-heading-container">
+        <h4 class="service-heading">
+          <span class="highlight-light">Baustellenwache</span><span class="highlight-light">:</span> <span class="highlight-dark">Sicher bauen, sicher stehen</span><span class="highlight-dark">!</span>
+        </h4>
+      </div>
+      <div class="service-text-container">
+        <p class="service-text service-intro">
+          <span class="highlight-dark">Bewacht bauen</span><span class="highlight-light">:</span> <span class="highlight-dark">Unser Schutz</span> <span class="highlight-light">für Ihre Baustelle</span><span class="highlight-dark">.</span>
+        </p>
+      </div>
+
+      <div class="about-us-text-container">
+        <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+          <span class="highlight-dark">Unsere Baustellenbewachungsdienste</span> <span class="highlight-light">sorgen dafür</span><span class="highlight-light">,</span> <span class="highlight-dark">dass Ihre Bauprojekte vor Diebstahl</span><span class="highlight-light">,</span> <span class="highlight-dark">Vandalismus</span> <span class="highlight-light">und unbefugtem Zutritt geschützt sind</span><span class="highlight-light">.</span> <span class="highlight-light">Wir bieten individuell angepasste Sicherheitslösungen</span><span class="highlight-light">,</span> <span class="highlight-dark">die speziell auf die Anforderungen und Risiken Ihrer Baustelle zugeschnitten sind</span><span class="highlight-light">.</span>
+        </p>
+      </div>
+
+      <div class="button-range-slider">
+        <div class="button-container">
+          <a class="contact-button" href="contact.html">
+            <div class="button-icon-container">
+              <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
+            </div>
+            Kontaktieren Sie Uns!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-14398">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+          <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>MENÜ</h3>
+          <ul class="list-unstyled links">
+            <li><a href="index.html#landing-section">Home</a></li>
+            <li><a href="index.html#explained-section">Über Uns</a></li>
+            <li><a href="index.html#service-area">Leistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>KONTAKT</h3>
+          <ul class="list-unstyled links footer-contact">
+            <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+            <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+            <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+            <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+            <li>Sonntag:<br> 08:00 - 19:00</li>
+          </ul>
+        </div>
+        <div class="col-md-2 ml-auto">
+          <h3>ZERTIFIKATE</h3>
+          <ul class="list-unstyled links certificate-list">
+            <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+            <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-12 pb-4">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-6 text-md-left">
+          <ul class="list-unstyled link-menu nav-left">
+            <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+            <li><a href="impressum.html" target="_blank">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-right">
+          <ul class="list-unstyled social nav-right">
+            <li><a href="#"><span class="icon-xing"></span></a></li>
+            <li><a href="#"><span class="icon-linkedin"></span></a></li>
+            <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-7">
+          <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="js/buttonHover.js" async></script>
+  <script src="js/serviceTextHighlight.js" async></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+</body>
+
+</html>
+
+
+===========================
+Datei: public/werk_-objektschutz.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hostname !== 'localhost') {
+          var baseTag = document.createElement('base');
+          baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+          document.head.appendChild(baseTag);
+        }
+      });
+    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V9VGZCJ09L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V9VGZCJ09L');
+</script>
+    <title>Werk- und Objektschutz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ico.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/fonts.css">
+  </head>
+
+  <body>
+    <a href="https://wa.me/4917664871676" class="float">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="site-logo">
+            <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+              <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+            </a></a>
+          </div>
+          <div class="col-12">
+            <nav class="site-navigation text-center ml-auto" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+                <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+                <li class="has-children">
+                  <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                    <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                    <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                    <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                    <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                    <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                    <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                    <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="toggle-button d-inline-block d-lg-none">
+            <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+              <span class="icon-menu h3"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="landing-page">
+      <img class="doorman-image" src="images/werk-_objektschutz.webp" alt="" />
+      <div class="service-text-content-container">
+        <div class="service-heading-container">
+          <h4 class="service-heading">
+            <span class="highlight-light">Rundum geschützt</span><span class="highlight-dark">,Tag und Nacht</span><span class="highlight-light"><span class="highlight-dark">!</span></span>
+          </h4>
+        </div>
+        <div class="service-text-container">
+          <p class="service-text service-intro">
+            <span class="highlight-dark">Individueller Werk- und Objektschutz</span> <span class="highlight-light">für Ihre Sicherheit</span><span class="highlight-light"><span class="highlight-dark">.</span></span>
+          </p>
+        </div>
+        <div class="about-us-text-container">
+          <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+            <span class="highlight-dark">Wir</span> <span class="highlight-light">bieten spezialisierten Werk- und Objektschutz</span> <span class="highlight-dark">für Berlin</span> <span class="highlight-light">und die umliegende Region</span><span class="highlight-light">,</span> <span class="highlight-dark">um Ihre Anlagen und Gebäude</span> <span class="highlight-light">vor unerlaubtem Zugriff</span><span class="highlight-light">,</span> <span class="highlight-dark">Vandalismus</span> <span class="highlight-light">und anderen Sicherheitsrisiken zu schützen</span><span class="highlight-light">.</span> <span class="highlight-dark">Unsere maßgeschneiderten Sicherheitslösungen</span> <span class="highlight-light">werden speziell auf die Bedürfnisse Ihrer Einrichtung abgestimmt</span><span class="highlight-light">,</span> <span class="highlight-dark">um maximale Sicherheit zu gewährleisten</span><span class="highlight-light">.</span>
+          </p>
+        </div>
+        <div class="button-range-slider">
+          <div class="button-container">
+            <a class="contact-button" href="contact.html">
+              <div class="button-icon-container">
+                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
+              </div>
+              Kontaktieren Sie Uns!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-14398">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+            <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>MENÜ</h3>
+            <ul class="list-unstyled links">
+              <li><a href="index.html#landing-section">Home</a></li>
+              <li><a href="index.html#explained-section">Über Uns</a></li>
+              <li><a href="index.html#service-area">Leistungen</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>KONTAKT</h3>
+            <ul class="list-unstyled links footer-contact">
+              <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+              <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+              <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+              <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+              <li>Sonntag:<br> 08:00 - 19:00</li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>ZERTIFIKATE</h3>
+            <ul class="list-unstyled links certificate-list">
+              <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+              <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row mb-4">
+          <div class="col-12 pb-4">
+            <div class="line"></div>
+          </div>
+          <div class="col-md-6 text-md-left">
+            <ul class="list-unstyled link-menu nav-left">
+              <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+              <li><a href="impressum.html" target="_blank">Impressum</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <ul class="list-unstyled social nav-right">
+              <li><a href="#"><span class="icon-xing"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-7">
+            <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/buttonHover.js" async></script>
+    <script src="js/serviceTextHighlight.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+  </body>
+</html>
+
+
+===========================
+Datei: public/veranstaltungsschutz.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hostname !== 'localhost') {
+          var baseTag = document.createElement('base');
+          baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+          document.head.appendChild(baseTag);
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll('.reveal-type span');
+        elements.forEach(function(el) {
+          el.innerHTML = el.innerHTML.replace(/([.,!?])/g, '<span class="highlight-light">$1</span>');
+        });
+      });
+    </script>
+    <title>Veranstaltungsschutz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" ></script>
+    <script src="https://unpkg.com/split-type" ></script>
+    <script src="js/buttonHover.js" async></script>
+    <script src="js/serviceTextHighlight.js" async></script>
+    <link rel="stylesheet" href="css/ico.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <a href="https://wa.me/4917664871676" class="float">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="site-logo">
+            <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+              <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+            </a>
+          </div>
+  
+          <div class="col-12">
+            <nav class="site-navigation text-center ml-auto " role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+                <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+                <li class="has-children">
+                  <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                    <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                    <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                    <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                    <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                    <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                    <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                    <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+              </ul>
+            </nav>
+          </div>
+  
+          <div class="toggle-button d-inline-block d-lg-none">
+            <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+              <span class="icon-menu h3"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="landing-page">
+      <img class="doorman-image" src="images/veranstaltungsschutz.webp" alt="" />
+  
+      <div class="service-text-content-container">
+        <div class="service-heading-container">
+          <h4 class="service-heading">
+            <span class="highlight-light">SICHERHEIT</span><span class="highlight-dark">, <br class="break-m"></span class="highlight-dark"><span class="highlight-dark">FÜR JEDES</span> <span class="highlight-light">EVENT</span>!
+          </h4>
+        </div>
+        <div class="service-text-container">
+          <p class="service-text service-intro">
+            <span class="highlight-dark">Maßgeschneiderter Veranstaltungsschutz</span> <span class="highlight-dark">für unvergessliche Erlebnisse.</span>
+          </p>
+        </div>
+        <div class="about-us-text-container">
+          <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+            <span class="highlight-light">Mit</span>
+            <span class="highlight-dark">präventiven Maßnahmen</span>
+            <span class="highlight-light">und</span>
+            <span class="highlight-dark">erfahrenen Sicherheitskräften</span>
+            <span class="highlight-light">gewährleisten wir den</span>
+            <span class="highlight-dark">reibungslosen Ablauf Ihrer Events<span class="highlight-light">.</span></span>
+            <span class="highlight-dark">Unser Team</span>
+            <span class="highlight-light">ist darauf trainiert,</span>
+            <span class="highlight-dark">Risiken frühzeitig</span>
+            <span class="highlight-light">zu</span>
+            <span class="highlight-dark">erkennen</span>
+            <span class="highlight-light">und</span>
+            <span class="highlight-dark">diskret</span>
+            <span class="highlight-light">zu</span>
+            <span class="highlight-dark">handeln,</span>
+            <span class="highlight-light">um die</span>
+            <span class="highlight-dark">Sicherheit</span>
+            <span class="highlight-light">aller</span>
+            <span class="highlight-dark">Gäste</span>
+            <span class="highlight-light">und</span>
+            <span class="highlight-dark">Mitarbeiter</span>
+            <span class="highlight-light">zu</span>
+            <span class="highlight-dark">sichern</span>
+            <span class="highlight-light">und das</span>
+            <span class="highlight-dark">Eventerlebnis</span>
+            <span class="highlight-light">zu</span>
+            <span class="highlight-dark">bewahren<span class="highlight-light">.</span></span>
+          </p>
+        </div>
+        <div class="button-range-slider">
+          <div class="button-container">
+            <a class="contact-button" href="contact.html">
+              <div class="button-icon-container">
+                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
+              </div>
+              Kontaktieren Sie Uns!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-14398">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+            <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>MENÜ</h3>
+            <ul class="list-unstyled links">
+              <li><a href="index.html#landing-section">Home</a></li>
+              <li><a href="index.html#explained-section">Über Uns</a></li>
+              <li><a href="index.html#service-area">Leistungen</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>KONTAKT</h3>
+            <ul class="list-unstyled links footer-contact">
+              <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+              <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+              <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+              <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+              <li>Sonntag:<br> 08:00 - 19:00</li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>ZERTIFIKATE</h3>
+            <ul class="list-unstyled links certificate-list">
+              <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+              <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row mb-4">
+          <div class="col-12 pb-4">
+            <div class="line"></div>
+          </div>
+          <div class="col-md-6 text-md-left">
+            <ul class="list-unstyled link-menu nav-left">
+              <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+              <li><a href="impressum.html" target="_blank">Impressum</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <ul class="list-unstyled social nav-right">
+              <li><a href="#"><span class="icon-xing"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-7">
+            <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+  </body>
+</html>
+
+
+===========================
+Datei: public/datenschutzerklärung.html
+===========================
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hostname !== 'localhost') {
+          var baseTag = document.createElement('base');
+          baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+          document.head.appendChild(baseTag);
+        }
+      });
+    </script>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <title>Impressum</title>
+    <link rel="stylesheet" href="css/ico.css">
+    <link rel="stylesheet" href="css/impressum.css">
+    <link rel="stylesheet" href="css/fonts.css">
+  </head> 
+  <body>
+   
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="container">
+      <div class="row align-items-center position-relative">
+        <div class="site-logo">
+          <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+            <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+          </a></a>
+        </div>
+
+        <div class="col-12">
+          <nav class="site-navigation text-center ml-auto " role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+              <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+
+              <li class="has-children">
+                <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                <ul class="dropdown arrow-top">
+                  <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                  <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                  <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                  <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                  <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                  <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                  <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                  <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+
+  </header>
+
+      <div class = "impressum-wrapper">
+        <div id = "impressum-child-1" class = "datenschutz-child-1">
+          <div class="impressum-child-wrapper">
+          <div class="impressum-text-container">
+            <h2 class="impressum-text-heading impressum-heading datenschutz-heading">DATENSCHUTZ</h2>
+          </div>
+     
+        </div>
+        </div>
+        <div id = "impressum-child-2" class = "datenschutz-child-2"> 
+          <h2 class="impressum-text-heading">Datenschutzerklärung</h2>
+
+          <p class="impressum-text disc-text">Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen. Datenschutz hat einen besonders hohen Stellenwert für die Geschäftsleitung der Omega Security GmbH. Eine Nutzung der Internetseiten der Omega Security GmbH ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.</p>
+          
+          <p class="impressum-text disc-text">Die Verarbeitung personenbezogener Daten, beispielsweise des Namens, der Anschrift, E-Mail-Adresse oder Telefonnummer einer betroffenen Person, erfolgt stets im Einklang mit der Datenschutz-Grundverordnung und in Übereinstimmung mit den für die Omega Security GmbH geltenden landesspezifischen Datenschutzbestimmungen. Mittels dieser Datenschutzerklärung möchte unser Unternehmen die Öffentlichkeit über Art, Umfang und Zweck der von uns erhobenen, genutzten und verarbeiteten personenbezogenen Daten informieren. Ferner werden betroffene Personen mittels dieser Datenschutzerklärung über die ihnen zustehenden Rechte aufgeklärt.</p>
+          
+          <p class="impressum-text disc-text">Die Omega Security GmbH hat als für die Verarbeitung Verantwortlicher zahlreiche technische und organisatorische Maßnahmen umgesetzt, um einen möglichst lückenlosen Schutz der über diese Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen grundsätzlich Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht gewährleistet werden kann. Aus diesem Grund steht es jeder betroffenen Person frei, personenbezogene Daten auch auf alternativen Wegen, beispielsweise telefonisch, an uns zu übermitteln.</p>
+          
+          <h2 class="impressum-text-heading">1. Begriffsbestimmungen</h2>
+          <p class="impressum-text disc-text">Die Datenschutzerklärung der Omega Security GmbH beruht auf den Begrifflichkeiten, die durch den Europäischen Richtlinien- und Verordnungsgeber beim Erlass der Datenschutz-Grundverordnung (DS-GVO) verwendet wurden. Unsere Datenschutzerklärung soll sowohl für die Öffentlichkeit als auch für unsere Kunden und Geschäftspartner einfach lesbar und verständlich sein. Um dies zu gewährleisten, möchten wir vorab die verwendeten Begrifflichkeiten erläutern.</p>
+          
+          <p class="impressum-text disc-text">Wir verwenden in dieser Datenschutzerklärung unter anderem die folgenden Begriffe:</p>
+          
+          <ul style="list-style: none">
+          <li><h2 class="impressum-text-heading">a)    personenbezogene Daten</h2>
+          <p class="impressum-text disc-text">Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen. Als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind, identifiziert werden kann.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">b)    betroffene Person</h2>
+          <p class="impressum-text disc-text">Betroffene Person ist jede identifizierte oder identifizierbare natürliche Person, deren personenbezogene Daten von dem für die Verarbeitung Verantwortlichen verarbeitet werden.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">c)    Verarbeitung</h2>
+          <p class="impressum-text disc-text">Verarbeitung ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">d)    Einschränkung der Verarbeitung</h2>
+          <p class="impressum-text disc-text">Einschränkung der Verarbeitung ist die Markierung gespeicherter personenbezogener Daten mit dem Ziel, ihre künftige Verarbeitung einzuschränken.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">e)    Profiling</h2>
+          <p class="impressum-text disc-text">Profiling ist jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte, die sich auf eine natürliche Person beziehen, zu bewerten, insbesondere, um Aspekte bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, persönlicher Vorlieben, Interessen, Zuverlässigkeit, Verhalten, Aufenthaltsort oder Ortswechsel dieser natürlichen Person zu analysieren oder vorherzusagen.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">f)     Pseudonymisierung</h2>
+          <p class="impressum-text disc-text">Pseudonymisierung ist die Verarbeitung personenbezogener Daten in einer Weise, auf welche die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht mehr einer spezifischen betroffenen Person zugeordnet werden können, sofern diese zusätzlichen Informationen gesondert aufbewahrt werden und technischen und organisatorischen Maßnahmen unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren natürlichen Person zugewiesen werden.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">g)    Verantwortlicher oder für die Verarbeitung Verantwortlicher</h2>
+          <p class="impressum-text disc-text">Verantwortlicher oder für die Verarbeitung Verantwortlicher ist die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet. Sind die Zwecke und Mittel dieser Verarbeitung durch das Unionsrecht oder das Recht der Mitgliedstaaten vorgegeben, so kann der Verantwortliche beziehungsweise können die bestimmten Kriterien seiner Benennung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten vorgesehen werden.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">h)    Auftragsverarbeiter</h2>
+          <p class="impressum-text disc-text">Auftragsverarbeiter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">i)      Empfänger</h2>
+          <p class="impressum-text disc-text">Empfänger ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt oder nicht. Behörden, die im Rahmen eines bestimmten Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der Mitgliedstaaten möglicherweise personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">j)      Dritter</h2>
+          <p class="impressum-text disc-text">Dritter ist eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle außer der betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der unmittelbaren Verantwortung des Verantwortlichen oder des Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">k)    Einwilligung</h2>
+          <p class="impressum-text disc-text">Einwilligung ist jede von der betroffenen Person freiwillig für den bestimmten Fall in informierter Weise und unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen bestätigenden Handlung, mit der die betroffene Person zu verstehen gibt, dass sie mit der Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist.</p>
+          </li>
+          </ul>
+          
+          <h2 class="impressum-text-heading">2. Name und Anschrift des für die Verarbeitung Verantwortlichen</h2>
+          <p class="impressum-text disc-text">Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist die:</p>
+          
+          <p class="impressum-text disc-text">Omega Security GmbH</p>
+          <p class="impressum-text disc-text">Krefelder Straße 17</p>
+          <p class="impressum-text disc-text">10555 Berlin</p>
+          <p class="impressum-text disc-text">Deutschland</p>
+          <p class="impressum-text disc-text">Tel.: 017664871676</p>
+          <p class="impressum-text disc-text">E-Mail: kontakt-osg@outlook.de</p>
+          <p class="impressum-text disc-text">Website: www.omega-sicherheit.de</p>
+          
+          <h2 class="impressum-text-heading">3. Erfassung von allgemeinen Daten und Informationen</h2>
+          <p class="impressum-text disc-text">Die Internetseite der Omega Security GmbH erfasst mit jedem Aufruf der Internetseite durch eine betroffene Person oder ein automatisiertes System eine Reihe von allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen werden in den Logfiles des Servers gespeichert. Erfasst werden können die (1) verwendeten Browsertypen und Versionen, (2) das vom zugreifenden System verwendete Betriebssystem, (3) die Internetseite, von welcher ein zugreifendes System auf unsere Internetseite gelangt (sogenannte Referrer), (4) die Unterwebseiten, welche über ein zugreifendes System auf unserer Internetseite angesteuert werden, (5) das Datum und die Uhrzeit eines Zugriffs auf die Internetseite, (6) eine Internet-Protokoll-Adresse (IP-Adresse), (7) der Internet-Service-Provider des zugreifenden Systems und (8) sonstige ähnliche Daten und Informationen, die der Gefahrenabwehr im Falle von Angriffen auf unsere informationstechnologischen Systeme dienen.</p>
+          
+          <p class="impressum-text disc-text">Bei der Nutzung dieser allgemeinen Daten und Informationen zieht die Omega Security GmbH keine Rückschlüsse auf die betroffene Person. Diese Informationen werden vielmehr benötigt, um (1) die Inhalte unserer Internetseite korrekt auszuliefern, (2) die Inhalte unserer Internetseite sowie die Werbung für diese zu optimieren, (3) die dauerhafte Funktionsfähigkeit unserer informationstechnologischen Systeme und der Technik unserer Internetseite zu gewährleisten sowie (4) um Strafverfolgungsbehörden im Falle eines Cyberangriffes die zur Strafverfolgung notwendigen Informationen bereitzustellen. Diese anonym erhobenen Daten und Informationen werden durch die Omega Security GmbH daher einerseits statistisch und ferner mit dem Ziel ausgewertet, den Datenschutz und die Datensicherheit in unserem Unternehmen zu erhöhen, um letztlich ein optimales Schutzniveau für die von uns verarbeiteten personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles werden getrennt von allen durch eine betroffene Person angegebenen personenbezogenen Daten gespeichert.</p>
+          
+          <h2 class="impressum-text-heading">4. Kontaktmöglichkeit über die Internetseite</h2>
+          <p class="impressum-text disc-text">Die Internetseite der Omega Security GmbH enthält aufgrund von gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu unserem Unternehmen sowie eine unmittelbare Kommunikation mit uns ermöglichen, was ebenfalls eine allgemeine Adresse der sogenannten elektronischen Post (E-Mail-Adresse) umfasst. Sofern eine betroffene Person per E-Mail oder über ein Kontaktformular den Kontakt mit dem für die Verarbeitung Verantwortlichen aufnimmt, werden die von der betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. Solche auf freiwilliger Basis von einer betroffenen Person an den für die Verarbeitung Verantwortlichen übermittelten personenbezogenen Daten werden für Zwecke der Bearbeitung oder der Kontaktaufnahme zur betroffenen Person gespeichert. Es erfolgt keine Weitergabe dieser personenbezogenen Daten an Dritte.</p>
+          
+          <h2 class="impressum-text-heading">5. Routinemäßige Löschung und Sperrung von personenbezogenen Daten</h2>
+          <p class="impressum-text disc-text">Der für die Verarbeitung Verantwortliche verarbeitet und speichert personenbezogene Daten der betroffenen Person nur für den Zeitraum, der zur Erreichung des Speicherungszwecks erforderlich ist oder sofern dies durch den Europäischen Richtlinien- und Verordnungsgeber oder einen anderen Gesetzgeber in Gesetzen oder Vorschriften, welchen der für die Verarbeitung Verantwortliche unterliegt, vorgesehen wurde.</p>
+          
+          <p class="impressum-text disc-text">Entfällt der Speicherungszweck oder läuft eine vom Europäischen Richtlinien- und Verordnungsgeber oder einem anderen zuständigen Gesetzgeber vorgeschriebene Speicherfrist ab, werden die personenbezogenen Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gesperrt oder gelöscht.</p>
+          
+          <h2 class="impressum-text-heading">6. Rechte der betroffenen Person</h2>
+          <ul style="list-style: none;">
+          <li><h2 class="impressum-text-heading">a)    Recht auf Bestätigung</h2>
+          <p class="impressum-text disc-text">Jede betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber eingeräumte Recht, von dem für die Verarbeitung Verantwortlichen eine Bestätigung darüber zu verlangen, ob sie betreffende personenbezogene Daten verarbeitet werden. Möchte eine betroffene Person dieses Bestätigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">b)    Recht auf Auskunft</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, jederzeit von dem für die Verarbeitung Verantwortlichen unentgeltliche Auskunft über die zu seiner Person gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner hat der Europäische Richtlinien- und Verordnungsgeber der betroffenen Person Auskunft über folgende Informationen zugestanden:</p>
+          
+          <ul style="list-style: none;">
+          <li class="impressum-text disc-text">die Verarbeitungszwecke</li>
+          <li class="impressum-text disc-text">die Kategorien personenbezogener Daten, die verarbeitet werden</li>
+          <li class="impressum-text disc-text">die Empfänger oder Kategorien von Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden, insbesondere bei Empfängern in Drittländern oder bei internationalen Organisationen</li>
+          <li class="impressum-text disc-text">falls möglich die geplante Dauer, für die die personenbezogenen Daten gespeichert werden, oder, falls dies nicht möglich ist, die Kriterien für die Festlegung dieser Dauer</li>
+          <li class="impressum-text disc-text"> das Bestehen eines Rechts auf Berichtigung oder Löschung der sie betreffenden personenbezogenen Daten oder auf Einschränkung der Verarbeitung durch den Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung</li>
+          <li class="impressum-text disc-text">das Bestehen eines Beschwerderechts bei einer Aufsichtsbehörde</li>
+          <li class="impressum-text disc-text">wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden: Alle verfügbaren Informationen über die Herkunft der Daten</li>
+          <li class="impressum-text disc-text">das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling gemäß Artikel 22 Abs.1 und 4 DS-GVO und — zumindest in diesen Fällen — aussagekräftige Informationen über die involvierte Logik sowie die Tragweite und die angestrebten Auswirkungen einer derartigen Verarbeitung für die betroffene Person</li>
+          
+          </ul>
+          <p class="impressum-text disc-text">Ferner steht der betroffenen Person ein Auskunftsrecht darüber zu, ob personenbezogene Daten an ein Drittland oder an eine internationale Organisation übermittelt wurden. Sofern dies der Fall ist, so steht der betroffenen Person im Übrigen das Recht zu, Auskunft über die geeigneten Garantien im Zusammenhang mit der Übermittlung zu erhalten.</p>
+          
+          <p class="impressum-text disc-text">Möchte eine betroffene Person dieses Auskunftsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">c)    Recht auf Berichtigung</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, die unverzügliche Berichtigung sie betreffender unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person das Recht zu, unter Berücksichtigung der Zwecke der Verarbeitung, die Vervollständigung unvollständiger personenbezogener Daten — auch mittels einer ergänzenden Erklärung — zu verlangen.</p>
+          
+          <p class="impressum-text disc-text">Möchte eine betroffene Person dieses Berichtigungsrecht in Anspruch nehmen, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p></li>
+          <li>
+          <h2 class="impressum-text-heading">d)    Recht auf Löschung (Recht auf Vergessen werden)</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen zu verlangen, dass die sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, sofern einer der folgenden Gründe zutrifft und soweit die Verarbeitung nicht erforderlich ist:</p>
+          
+          <ul style="list-style: none;">
+          <li class="impressum-text disc-text">Die personenbezogenen Daten wurden für solche Zwecke erhoben oder auf sonstige Weise verarbeitet, für welche sie nicht mehr notwendig sind.</li>
+          <li class="impressum-text disc-text">Die betroffene Person widerruft ihre Einwilligung, auf die sich die Verarbeitung gemäß Art. 6 Abs. 1 Buchstabe a DS-GVO oder Art. 9 Abs. 2 Buchstabe a DS-GVO stützte, und es fehlt an einer anderweitigen Rechtsgrundlage für die Verarbeitung.</li>
+          <li class="impressum-text disc-text">Die betroffene Person legt gemäß Art. 21 Abs. 1 DS-GVO Widerspruch gegen die Verarbeitung ein, und es liegen keine vorrangigen berechtigten Gründe für die Verarbeitung vor, oder die betroffene Person legt gemäß Art. 21 Abs. 2 DS-GVO Widerspruch gegen die Verarbeitung ein.</li>
+          <li class="impressum-text disc-text">Die personenbezogenen Daten wurden unrechtmäßig verarbeitet.</li>
+          <li class="impressum-text disc-text">Die Löschung der personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung nach dem Unionsrecht oder dem Recht der Mitgliedstaaten erforderlich, dem der Verantwortliche unterliegt.</li>
+          <li class="impressum-text disc-text">Die personenbezogenen Daten wurden in Bezug auf angebotene Dienste der Informationsgesellschaft gemäß Art. 8 Abs. 1 DS-GVO erhoben.</li>
+          
+          </ul>
+          <p class="impressum-text disc-text">Sofern einer der oben genannten Gründe zutrifft und eine betroffene Person die Löschung von personenbezogenen Daten, die bei der Omega Security GmbH gespeichert sind, veranlassen möchte, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden. Der Mitarbeiter der Omega Security GmbH wird veranlassen, dass dem Löschverlangen unverzüglich nachgekommen wird.</p>
+          
+          <p class="impressum-text disc-text">Wurden die personenbezogenen Daten von der Omega Security GmbH öffentlich gemacht und ist unser Unternehmen als Verantwortlicher gemäß Art. 17 Abs. 1 DS-GVO zur Löschung der personenbezogenen Daten verpflichtet, so trifft die Omega Security GmbH unter Berücksichtigung der verfügbaren Technologie und der Implementierungskosten angemessene Maßnahmen, auch technischer Art, um andere für die Datenverarbeitung Verantwortliche, welche die veröffentlichten personenbezogenen Daten verarbeiten, darüber in Kenntnis zu setzen, dass die betroffene Person von diesen anderen für die Datenverarbeitung Verantwortlichen die Löschung sämtlicher Links zu diesen personenbezogenen Daten oder von Kopien oder Replikationen dieser personenbezogenen Daten verlangt hat, soweit die Verarbeitung nicht erforderlich ist. Der Mitarbeiter der Omega Security GmbH wird im Einzelfall das Notwendige veranlassen.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">e)    Recht auf Einschränkung der Verarbeitung</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, von dem Verantwortlichen die Einschränkung der Verarbeitung zu verlangen, wenn eine der folgenden Voraussetzungen gegeben ist:</p>
+          
+          <ul style="list-style: none;">
+          <li class="impressum-text disc-text">Die Richtigkeit der personenbezogenen Daten wird von der betroffenen Person bestritten, und zwar für eine Dauer, die es dem Verantwortlichen ermöglicht, die Richtigkeit der personenbezogenen Daten zu überprüfen.</li>
+          <li class="impressum-text disc-text">Die Verarbeitung ist unrechtmäßig, die betroffene Person lehnt die Löschung der personenbezogenen Daten ab und verlangt stattdessen die Einschränkung der Nutzung der personenbezogenen Daten.</li>
+          <li class="impressum-text disc-text">Der Verantwortliche benötigt die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger, die betroffene Person benötigt sie jedoch zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</li>
+          <li class="impressum-text disc-text">Die betroffene Person hat Widerspruch gegen die Verarbeitung gem. Art. 21 Abs. 1 DS-GVO eingelegt und es steht noch nicht fest, ob die berechtigten Gründe des Verantwortlichen gegenüber denen der betroffenen Person überwiegen.</li>
+          
+          </ul>
+          <p class="impressum-text disc-text">Sofern eine der oben genannten Voraussetzungen gegeben ist und eine betroffene Person die Einschränkung von personenbezogenen Daten, die bei der Omega Security GmbH gespeichert sind, verlangen möchte, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden. Der Mitarbeiter der Omega Security GmbH wird die Einschränkung der Verarbeitung veranlassen.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">f)     Recht auf Datenübertragbarkeit</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, die sie betreffenden personenbezogenen Daten, welche durch die betroffene Person einem Verantwortlichen bereitgestellt wurden, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Sie hat außerdem das Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen Daten bereitgestellt wurden, zu übermitteln, sofern die Verarbeitung auf der Einwilligung gemäß Art. 6 Abs. 1 Buchstabe a DS-GVO oder Art. 9 Abs. 2 Buchstabe a DS-GVO oder auf einem Vertrag gemäß Art. 6 Abs. 1 Buchstabe b DS-GVO beruht und die Verarbeitung mithilfe automatisierter Verfahren erfolgt, sofern die Verarbeitung nicht für die Wahrnehmung einer Aufgabe erforderlich ist, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, welche dem Verantwortlichen übertragen wurde.</p>
+          
+          <p class="impressum-text disc-text">Ferner hat die betroffene Person bei der Ausübung ihres Rechts auf Datenübertragbarkeit gemäß Art. 20 Abs. 1 DS-GVO das Recht, zu erwirken, dass die personenbezogenen Daten direkt von einem Verantwortlichen an einen anderen Verantwortlichen übermittelt werden, soweit dies technisch machbar ist und sofern hiervon nicht die Rechte und Freiheiten anderer Personen beeinträchtigt werden.</p>
+          
+          <p class="impressum-text disc-text">Zur Geltendmachung des Rechts auf Datenübertragbarkeit kann sich die betroffene Person jederzeit an einen Mitarbeiter der Omega Security GmbH wenden.</p>
+          
+          </li>
+          <li>
+          <h2 class="impressum-text-heading">g) Recht auf Widerspruch</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung sie betreffender personenbezogener Daten, die aufgrund von Art. 6 Abs. 1 Buchstaben e oder f DS-GVO erfolgt, Widerspruch einzulegen. Dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling.</p>
+          
+          <p class="impressum-text disc-text">Die Omega Security GmbH verarbeitet die personenbezogenen Daten im Falle des Widerspruchs nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die den Interessen, Rechten und Freiheiten der betroffenen Person überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
+          
+          <p class="impressum-text disc-text">Verarbeitet die Omega Security GmbH personenbezogene Daten, um Direktwerbung zu betreiben, so hat die betroffene Person das Recht, jederzeit Widerspruch gegen die Verarbeitung der personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen. Dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht. Widerspricht die betroffene Person gegenüber der Omega Security GmbH der Verarbeitung für Zwecke der Direktwerbung, so wird die Omega Security GmbH die personenbezogenen Daten nicht mehr für diese Zwecke verarbeiten.</p>
+          
+          <p class="impressum-text disc-text">Zudem hat die betroffene Person das Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben, gegen die sie betreffende Verarbeitung personenbezogener Daten, die bei der Omega Security GmbH zu wissenschaftlichen oder historischen Forschungszwecken oder zu statistischen Zwecken gemäß Art. 89 Abs. 1 DS-GVO erfolgen, Widerspruch einzulegen, es sei denn, eine solche Verarbeitung ist zur Erfüllung einer im öffentlichen Interesse liegenden Aufgabe erforderlich.</p>
+          
+          <p class="impressum-text disc-text">Zur Ausübung des Rechts auf Widerspruch kann sich die betroffene Person direkt an jeden Mitarbeiter der Omega Security GmbH oder einen anderen Mitarbeiter wenden. Der betroffenen Person steht es ferner frei, im Zusammenhang mit der Nutzung von Diensten der Informationsgesellschaft, ungeachtet der Richtlinie 2002/58/EG, ihr Widerspruchsrecht mittels automatisierter Verfahren auszuüben, bei denen technische Spezifikationen verwendet werden.</p>
+          </li>
+          <li><h2 class="impressum-text-heading">h)    Automatisierte Entscheidungen im Einzelfall einschließlich Profiling</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling — beruhenden Entscheidung unterworfen zu werden, die ihr gegenüber rechtliche Wirkung entfaltet oder sie in ähnlicher Weise erheblich beeinträchtigt, sofern die Entscheidung (1) nicht für den Abschluss oder die Erfüllung eines Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich ist, oder (2) aufgrund von Rechtsvorschriften der Union oder der Mitgliedstaaten, denen der Verantwortliche unterliegt, zulässig ist und diese Rechtsvorschriften angemessene Maßnahmen zur Wahrung der Rechte und Freiheiten sowie der berechtigten Interessen der betroffenen Person enthalten oder (3) mit ausdrücklicher Einwilligung der betroffenen Person erfolgt.</p>
+          
+          <p class="impressum-text disc-text">Ist die Entscheidung (1) für den Abschluss oder die Erfüllung eines Vertrags zwischen der betroffenen Person und dem Verantwortlichen erforderlich oder (2) erfolgt sie mit ausdrücklicher Einwilligung der betroffenen Person, trifft die Omega Security GmbH angemessene Maßnahmen, um die Rechte und Freiheiten sowie die berechtigten Interessen der betroffenen Person zu wahren, wozu mindestens das Recht auf Erwirkung des Eingreifens einer Person seitens des Verantwortlichen, auf Darlegung des eigenen Standpunkts und auf Anfechtung der Entscheidung gehört.</p>
+          
+          <p class="impressum-text disc-text">Möchte die betroffene Person Rechte mit Bezug auf automatisierte Entscheidungen geltend machen, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
+          
+          </li>
+          <li><h2 class="impressum-text-heading">i)      Recht auf Widerruf einer datenschutzrechtlichen Einwilligung</h2>
+          <p class="impressum-text disc-text">Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien- und Verordnungsgeber gewährte Recht, eine Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen.</p>
+          
+          <p class="impressum-text disc-text">Möchte die betroffene Person ihr Recht auf Widerruf einer Einwilligung geltend machen, kann sie sich hierzu jederzeit an einen Mitarbeiter des für die Verarbeitung Verantwortlichen wenden.</p>
+          
+          </li>
+          </ul>
+          <h2 class = "impressum-text-heading">7. Rechtsgrundlage der Verarbeitung</h2 class="impressum-text-heading">
+          <p class="impressum-text disc-text">Art. 6 I lit. a DS-GVO dient unserem Unternehmen als Rechtsgrundlage für Verarbeitungsvorgänge, bei denen wir eine Einwilligung für einen bestimmten Verarbeitungszweck einholen. Ist die Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, erforderlich, wie dies beispielsweise bei Verarbeitungsvorgängen der Fall ist, die für eine Lieferung von Waren oder die Erbringung einer sonstigen Leistung oder Gegenleistung notwendig sind, so beruht die Verarbeitung auf Art. 6 I lit. b DS-GVO. Gleiches gilt für solche Verarbeitungsvorgänge die zur Durchführung vorvertraglicher Maßnahmen erforderlich sind, etwa in Fällen von Anfragen zur unseren Produkten oder Leistungen. Unterliegt unser Unternehmen einer rechtlichen Verpflichtung durch welche eine Verarbeitung von personenbezogenen Daten erforderlich wird, wie beispielsweise zur Erfüllung steuerlicher Pflichten, so basiert die Verarbeitung auf Art. 6 I lit. c DS-GVO. In seltenen Fällen könnte die Verarbeitung von personenbezogenen Daten erforderlich werden, um lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person zu schützen. Dies wäre beispielsweise der Fall, wenn ein Besucher in unserem Betrieb verletzt werden würde und daraufhin sein Name, sein Alter, seine Krankenkassendaten oder sonstige lebenswichtige Informationen an einen Arzt, ein Krankenhaus oder sonstige Dritte weitergegeben werden müssten. Dann würde die Verarbeitung auf Art. 6 I lit. d DS-GVO beruhen.
+          Letztlich könnten Verarbeitungsvorgänge auf Art. 6 I lit. f DS-GVO beruhen. Auf dieser Rechtsgrundlage basieren Verarbeitungsvorgänge, die von keiner der vorgenannten Rechtsgrundlagen erfasst werden, wenn die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich ist, sofern die Interessen, Grundrechte und Grundfreiheiten des Betroffenen nicht überwiegen. Solche Verarbeitungsvorgänge sind uns insbesondere deshalb gestattet, weil sie durch den Europäischen Gesetzgeber besonders erwähnt wurden. Er vertrat insoweit die Auffassung, dass ein berechtigtes Interesse anzunehmen sein könnte, wenn die betroffene Person ein Kunde des Verantwortlichen ist (Erwägungsgrund 47 Satz 2 DS-GVO).
+          </p>
+          
+          <h2 class="impressum-text-heading">8. Berechtigte Interessen an der Verarbeitung, die von dem Verantwortlichen oder einem Dritten verfolgt werden</h2>
+          <p class="impressum-text disc-text">Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I lit. f DS-GVO ist unser berechtigtes Interesse die Durchführung unserer Geschäftstätigkeit zugunsten des Wohlergehens all unserer Mitarbeiter und unserer Anteilseigner.</p>
+          
+          <h2 class="impressum-text-heading">9. Dauer, für die die personenbezogenen Daten gespeichert werden</h2>
+          <p class="impressum-text disc-text">Das Kriterium für die Dauer der Speicherung von personenbezogenen Daten ist die jeweilige gesetzliche Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder Vertragsanbahnung erforderlich sind.</p>
+          
+          <h2 class="impressum-text-heading">10. Gesetzliche oder vertragliche Vorschriften zur Bereitstellung der personenbezogenen Daten; Erforderlichkeit für den Vertragsabschluss; Verpflichtung der betroffenen Person, die personenbezogenen Daten bereitzustellen; mögliche Folgen der Nichtbereitstellung</h2>
+          <p class="impressum-text disc-text">Wir klären Sie darüber auf, dass die Bereitstellung personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (z.B. Steuervorschriften) oder sich auch aus vertraglichen Regelungen (z.B. Angaben zum Vertragspartner) ergeben kann.
+          Mitunter kann es zu einem Vertragsschluss erforderlich sein, dass eine betroffene Person uns personenbezogene Daten zur Verfügung stellt, die in der Folge durch uns verarbeitet werden müssen. Die betroffene Person ist beispielsweise verpflichtet uns personenbezogene Daten bereitzustellen, wenn unser Unternehmen mit ihr einen Vertrag abschließt. Eine Nichtbereitstellung der personenbezogenen Daten hätte zur Folge, dass der Vertrag mit dem Betroffenen nicht geschlossen werden könnte.
+          Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich der Betroffene an einen unserer Mitarbeiter wenden. Unser Mitarbeiter klärt den Betroffenen einzelfallbezogen darüber auf, ob die Bereitstellung der personenbezogenen Daten gesetzlich oder vertraglich vorgeschrieben oder für den Vertragsabschluss erforderlich ist, ob eine Verpflichtung besteht, die personenbezogenen Daten bereitzustellen, und welche Folgen die Nichtbereitstellung der personenbezogenen Daten hätte.
+          </p>
+          
+          <h2 class="impressum-text-heading">11. Bestehen einer automatisierten Entscheidungsfindung</h2>
+          <p class="impressum-text disc-text">Als verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling.</p>
+        </div>
+      </div>
+      <footer class="footer-14398">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-3">
+              <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+              <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>MENÜ</h3>
+              <ul class="list-unstyled links">
+                <li><a href="index.html#landing-section">Home</a></li>
+                <li><a href="index.html#explained-section">Über Uns</a></li>
+                <li><a href="index.html#service-area">Leistungen</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>KONTAKT</h3>
+              <ul class="list-unstyled links footer-contact">
+                <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+                <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+                <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+                <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+                <li>Sonntag:<br> 08:00 - 19:00</li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>ZERTIFIKATE</h3>
+              <ul class="list-unstyled links certificate-list">
+                <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+                <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="row mb-4">
+            <div class="col-12 pb-4">
+              <div class="line"></div>
+            </div>
+            <div class="col-md-6 text-md-left">
+              <ul class="list-unstyled link-menu nav-left">
+                <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+                <li><a href="impressum.html" target="_blank">Impressum</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <ul class="list-unstyled social nav-right">
+                <li><a href="#"><span class="icon-xing"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-7">
+              <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+  </body>
+</html>
+
+===========================
+Datei: public/impressum.html
+===========================
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hostname !== 'localhost') {
+          var baseTag = document.createElement('base');
+          baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+          document.head.appendChild(baseTag);
+        }
+      });
+    </script>
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <title>Impressum</title>
+    <link rel="stylesheet" href="css/ico.css">
+    <link rel="stylesheet" href="css/impressum.css">
+    <link rel="stylesheet" href="css/fonts.css">
+  </head> 
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+  
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+  
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="site-logo">
+            <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+              <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+            </a></a>
+          </div>
+  
+          <div class="col-12">
+            <nav class="site-navigation text-center ml-auto " role="navigation">
+  
+              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+                <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+  
+                <li class="has-children">
+                  <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                    <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                    <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                    <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                    <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                    <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                    <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                    <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+  
+                  </ul>
+                </li>
+  
+                <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+              </ul>
+            </nav>
+  
+          </div>
+  
+          <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+  
+        </div>
+      </div>
+  
+    </header>
+
+      <div class = "impressum-wrapper">
+        <div id = "impressum-child-1">
+          <div class="impressum-child-wrapper">
+          <div class="impressum-text-container">
+            <h2 class="impressum-text-heading impressum-heading">IMPRESSUM</h2>
+          </div>
+          <div class="impressum-text-container">
+            <p  class="impressum-text">Angaben gemäß § 5 DDG:</p>
+            <h2 class="impressum-text-heading">Omega Security GmbH</h2>
+            <p class="impressum-text">Krefelder Straße 17 <br> 10555 Berlin</p>
+            <p class = "impressum-text">Telefon: 0176 648 71 676</p>
+            <p class = "impressum-text">Internet: www.omega-sicherheit.de</p>
+            <p class = "impressum-text">E-Mail: kontakt-osg@outlook.de</p>
+          </div>
+        </div>
+        <div id = "impressum-child-wrapper">
+          <div class="impressum-text-container">
+            <h2 class="impressum-text-heading">Geschäftsführer:</h2>
+            <p class = "impressum-text">Deniz Ragip Durademir</p>
+          </div>
+          <div class="impressum-text-container">
+            <h2 class="impressum-text-heading">Registereintrag:</h2>
+            <p class = "impressum-text">Eintragung im Handelsregister.</p>
+            <h2 class="impressum-text-heading">Registergericht:</h2>
+            <p class="impressum-text">Berlin, Amtsgericht Charlottenburg</p>
+            <h2 class="impressum-text-heading">Registernummer:</h2>
+            <p class="impressum-text">HRB 221370 B</p>
+            <h2 class="impressum-text-heading">Umsatzsteuer-ID: </h2>
+            <p class="impressum-text">DE335123278</p>
+          </div>
+        </div>
+        </div>
+        <div id = "impressum-child-2"> 
+          <h2 class="impressum-text-heading impressum-heading">HAFTUNGSAUSCHLUSS</h2>
+          <div class="impressum-text-container">
+            <h2 class="impressum-text-heading">Haftung für Inhalte</h2>
+            <p class="impressum-text disc-text">
+              Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG (ehemals TMG) für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG (ehemals TMG) sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+            </div>
+              <div class="impressum-text-container">
+                <h2 class="impressum-text-heading">Haftung für Links</h2>
+              <p class="impressum-text disc-text">
+                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+                Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.    
+          </p>
+          </div>
+          <div class="impressum-text-container">
+            <h2 class="impressum-text-heading">Urheberrecht</h2>
+            <p class="impressum-text disc-text">
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+        </p>
+          </div>
+
+        </div>
+      </div>
+      <footer class="footer-14398">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-3">
+              <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+              <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>MENÜ</h3>
+              <ul class="list-unstyled links">
+                <li><a href="index.html#landing-section">Home</a></li>
+                <li><a href="index.html#explained-section">Über Uns</a></li>
+                <li><a href="index.html#service-area">Leistungen</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>KONTAKT</h3>
+              <ul class="list-unstyled links footer-contact">
+                <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+                <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+                <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+                <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+                <li>Sonntag:<br> 08:00 - 19:00</li>
+              </ul>
+            </div>
+            <div class="col-md-2 ml-auto">
+              <h3>ZERTIFIKATE</h3>
+              <ul class="list-unstyled links certificate-list">
+                <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+                <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="row mb-4">
+            <div class="col-12 pb-4">
+              <div class="line"></div>
+            </div>
+            <div class="col-md-6 text-md-left">
+              <ul class="list-unstyled link-menu nav-left">
+                <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+                <li><a href="impressum.html" target="_blank">Impressum</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <ul class="list-unstyled social nav-right">
+                <li><a href="#"><span class="icon-xing"></span></a></li>
+                <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-7">
+              <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+  </body>
+</html>
+
+===========================
+Datei: public/gemeinschaftsunterkünfte.html
+===========================
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hostname !== 'localhost') {
+          var baseTag = document.createElement('base');
+          baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
+          document.head.appendChild(baseTag);
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll('.reveal-type span');
+        elements.forEach(function(el) {
+          el.innerHTML = el.innerHTML.replace(/([.,!?])/g, '<span class="highlight-light">$1</span>');
+        });
+      });
+    </script>
+    <title>Gemeinschaftsunterkünfte</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicomatic/favicona-128.png" sizes="128x128" /> 
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/ico.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/fonts.css">
+  </head>
+
+  <body>
+    <a href="https://wa.me/4917664871676" class="float">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="site-logo">
+            <a role="button" aria-label="zum Seitenanfang" href="index.html#landing-page" class="logo-link">
+              <img class="logo" id="logo" src="images/logo.svg" alt="Logo von Omega Security GmbH">
+            </a>
+          </div>
+          <div class="col-12">
+            <nav class="site-navigation text-center ml-auto" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                <li><a href="index.html#landing-page" class="nav-link">HOME</a></li>
+                <li><a href="index.html#explained-section" class="nav-link">ÜBER UNS</a></li>
+                <li class="has-children">
+                  <a href="index.html#service-area" class="nav-link">LEISTUNGEN</a>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="alarmaufschaltung.html" class="nav-link">Alarmaufschaltung</a></li>
+                    <li><a href="baustellenbewachung.html" class="nav-link">Baustellenbewachung</a></li>
+                    <li><a href="doorman.html" class="nav-link">Doorman</a></li>
+                    <li><a href="empfangs-pfortendienst.html" class="nav-link">Empfangs- und Pfortendienst</a></li>
+                    <li><a href="gemeinschaftsunterkünfte.html" class="nav-link">Gemeinschaftsunterkünfte</a></li>
+                    <li><a href="revier-_streifendienst.html" class="nav-link">Revier- und Streifendienst</a></li>
+                    <li><a href="veranstaltungsschutz.html" class="nav-link">Veranstatltungsschutz</a></li>
+                    <li><a href="werk_-objektschutz.html" class="nav-link">Werk- und Objektschutz</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link">KONTAKT</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="toggle-button d-inline-block d-lg-none">
+            <a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black">
+              <span class="icon-menu h3"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="landing-page">
+      <img class="doorman-image" src="images/gemeinschaftsunterkünfte.jpg" alt="" />
+      <div class="service-text-content-container">
+        <div class="service-heading-container">
+          <h4 class="service-heading" style="hyphens: auto; --webkit-hyphens: auto;">
+            <span class="highlight-light">Schutz für Gemeinschaftsunterkünfte</span>
+          </h4>
+        </div>
+        <div class="service-text-container">
+          <p class="service-text service-intro">
+            <span class="highlight-dark">Zuverlässiger Schutz</span> für <span class="highlight-light">Bewohner und Personal</span>.
+          </p>
+        </div>
+        <div class="about-us-text-container">
+          <p class="reveal-type service-text service-detail-text" data-bg-color="#cccccc" data-fg-color-light="rgb(0,0,77)" data-fg-color-dark="rgb(129, 164, 205)">
+            <span class="highlight-dark">Unser Sicherheitsdienst</span> <span class="highlight-light">ist auf den Schutz von Gemeinschaftsunterkünften spezialisiert,</span> <span class="highlight-dark">wo besondere Aufmerksamkeit und Fürsorge nötig sind</span>.<span class="highlight-light">Wir bieten maßgeschneiderte Lösungen</span> <span class="highlight-dark">für Wohnheime<span class="highlight-light">,</span> Flüchtlingsunterkünfte und andere Einrichtungen</span><span class="highlight-light">.&nbsp;Unsere erfahrenen Sicherheitskräfte sorgen für eine sichere Umgebung</span><span class="highlight-dark">und unterstützen das Personal, um die Sicherheit aller Bewohner zu gewährleisten<span class="highlight-light">.</span></span>
+          </p>
+        </div>
+        <div class="button-range-slider">
+          <div class="button-container">
+            <a class="contact-button" href="contact.html">
+              <div class="button-icon-container">
+                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
+              </div>
+              Kontaktieren Sie Uns!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-14398">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <a href="#" class="footer-site-logo">OMEGA SECURITY GmbH</a>
+            <p id="mobile-text">Hier wird Ihnen mit Sicherheit weitergeholfen.</p>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>MENÜ</h3>
+            <ul class="list-unstyled links">
+              <li><a href="index.html#landing-section">Home</a></li>
+              <li><a href="index.html#explained-section">Über Uns</a></li>
+              <li><a href="index.html#service-area">Leistungen</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>KONTAKT</h3>
+            <ul class="list-unstyled links footer-contact">
+              <li><a href="tel:+0176 648 71 676">0176 648 71 676</a></li>
+              <li><a href="#">Krefelder Straße 17<br>10555 Berlin</a></li>
+              <li><a href="mailto:kontakt-osg@outlook.de">kontakt-osg@outlook.de</a></li>
+              <li>Montag - Samstag:<br> 08:00 - 20:00</li>
+              <li>Sonntag:<br> 08:00 - 19:00</li>
+            </ul>
+          </div>
+          <div class="col-md-2 ml-auto">
+            <h3>ZERTIFIKATE</h3>
+            <ul class="list-unstyled links certificate-list">
+              <li><a href = "https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt=""></a></li>
+              <li><a href = "https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row mb-4">
+          <div class="col-12 pb-4">
+            <div class="line"></div>
+          </div>
+          <div class="col-md-6 text-md-left">
+            <ul class="list-unstyled link-menu nav-left">
+              <li><a href="datenschutzerklärung.html" target="_blank">Datenschutzerklärung</a></li>
+              <li><a href="impressum.html" target="_blank">Impressum</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <ul class="list-unstyled social nav-right">
+              <li><a href="#"><span class="icon-xing"></span></a></li>
+              <li><a href="#"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://wa.me/4917664871676"><span class="icon-whatsapp"></span></a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-7">
+            <p><small>© 2024 OMEGA SECURITY GmbH. ALLE RECHTE VORBEHALTEN.</small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="js/buttonHover.js" async></script>
+    <script src="js/serviceTextHighlight.js" async></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+  </body>
+</html>
+
+
