@@ -53,14 +53,6 @@
     <!-- Inhalt und Styling -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.location.hostname !== 'localhost') {
-                var baseTag = document.createElement('base');
-                baseTag.href = 'https://saminulldreinull.github.io/Omega-Sicherheit/';
-                document.head.appendChild(baseTag);
-            }
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
             var elements = document.querySelectorAll('.reveal-type span');
             elements.forEach(function (el) {
                 el.innerHTML = el.innerHTML.replace(/([.,!?])/g, '<span class="highlight-light">$1</span>');
