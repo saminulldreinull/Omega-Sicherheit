@@ -587,6 +587,7 @@ body {
         margin-top: 10vh;
         min-height: 620vh;
         border: 0.1px solid transparent;
+        position: relative;
     }
 
     .contact-text-container-element a {
@@ -752,4 +753,18 @@ body {
     #contact-image {
         height: 35vh;
     }
+}
+.svg-container {
+    z-index: 5000; /* Höherer Z-Index, damit es über dem Kontaktbild liegt */
+    position: relative; /* Absolut positioniert innerhalb des Kontaktbereichs */
+    top: 90%; /* Startet oben im Container */
+    left: 0; /* Startet links im Container */
+    margin-top: -50px;
+    width: 100%; /* Deckt die gesamte Breite des Containers ab */
+    height: 20vh;
+    pointer-events: none; /* Verhindert, dass das SVG die Interaktionen mit darunterliegenden Elementen blockiert */
+}
+.svg-container img {
+    width: 100%; /* Das Bild dehnt sich über die gesamte Breite des Containers aus */
+    height: 100%;
 }

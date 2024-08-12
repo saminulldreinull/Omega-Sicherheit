@@ -400,3 +400,12 @@ label {
   .alert .close span {
     display: inline-block;
   }
+
+  .svg-container {
+    z-index: 2000!important;
+    position: relative!important;
+    padding: 0!important;
+    width: 110%!important;
+    top: 10%!important;
+    margin-bottom: -16px!important;  /* Negative Margin zum Überlappen der Lücke */
+  }

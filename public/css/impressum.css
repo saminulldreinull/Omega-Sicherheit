@@ -92,3 +92,12 @@ h2.impressum-heading {
     .datenschutz-child-1 {
     }
 }
+
+.svg-container {
+    z-index: 2000;
+    position: relative;
+    padding: 0;
+    width: 110%;
+    top: 10%;
+    margin-bottom: -16px;  /* Negative Margin zum Überlappen der Lücke */
+  }
