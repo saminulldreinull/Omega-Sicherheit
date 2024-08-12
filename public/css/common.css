@@ -847,7 +847,7 @@ footer {
     width: 100vw;
     height: auto;
     z-index: 900;
-    padding: 7rem 0;
+    padding: 4rem 0;
     background: rgb(0, 0, 77);
     color: #f0f0f0;
 }
@@ -1157,6 +1157,8 @@ a:not([href]):not([tabindex]):focus {
     margin-bottom: 1.5rem !important;
 }
 .mb-5 {
+    display: flex;
+    gap: 25px;
     margin-bottom: 3rem !important;
 }
 .pb-4 {
@@ -1176,6 +1178,15 @@ a:not([href]):not([tabindex]):focus {
     gap: 10px;
 }
 
-.certificate {
-    height: 15vh;
+@media(min-width:768px) {
+    .certificate {
+        height: 132px; 
+   }
 }
+
+@media(max-width:767px) {
+    .certificate {
+        height: 100px; 
+   }
+}
+
