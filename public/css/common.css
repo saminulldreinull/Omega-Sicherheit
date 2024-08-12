@@ -1178,15 +1178,51 @@ a:not([href]):not([tabindex]):focus {
     gap: 10px;
 }
 
+.svg-container {
+    
+    z-index: 2000;
+    
+    width: 100%;
+    
+    margin-top: -16px; /* Optional: leichtes Verschieben nach oben */
+}
+
+
+
+.svg-container img {
+    width: 100%;
+    height: 100%;
+    display: block; /* Verhindert, dass unerwünschte Abstände entstehen */
+    object-fit: cover; /* Alternativ: Um sicherzustellen, dass es den Container ausfüllt */
+}
+
 @media(min-width:768px) {
     .certificate {
         height: 132px; 
    }
+
+   .svg-container {
+    position: absolute;
+    top:95%;
+    height: 20vh; /* Höhe des Containers */
+   }
 }
 
 @media(max-width:767px) {
+    .svg-container {
+        margin-top: 10px;
+        margin-bottom: -10px;
+       }
+
     .certificate {
         height: 100px; 
    }
 }
 
+footer {
+    position: relative;
+}
+
+html, body {
+    overflow-x: hidden!important;
+}
