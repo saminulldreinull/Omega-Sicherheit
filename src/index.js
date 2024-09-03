@@ -1,8 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const https = require('https');
-const fs = require('fs');
-const path = require('path');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
@@ -11,6 +8,7 @@ const multer = require('multer');
 const upload = multer();
 const csurf = require('csurf');
 const cookieParser = require('cookie-parser');
+const path = require('path');
 
 const app = express();
 
@@ -69,7 +67,10 @@ app.use(helmet.contentSecurityPolicy({
 }));
 
 // CORS-Konfiguration
-app.use(cors());
+app.use(cors({
+  origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com'], // Deine tatsächliche Domain hier angeben
+  credentials: true
+}));
 
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
@@ -101,10 +102,10 @@ app.use('/admin/register', limiter);
 // Statische Dateien bereitstellen
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-const options = {
-  key: fs.readFileSync(path.join(__dirname, '../server.key')),
-  cert: fs.readFileSync(path.join(__dirname, '../server.cert')),
-};
+// Root-Route hinzufügen
+app.get('/', (req, res) => {
+  res.send('Willkommen auf dem Omega-Sicherheits-Backend!');
+});
 
 // Beispielrouten
 const contactRoutes = require('./routes/contact');
@@ -120,10 +121,10 @@ app.use((err, req, res, next) => {
   }
 });
 
-// HTTPS-Server starten
-const PORT = process.env.PORT || 5500;
+// HTTP-Server starten
+const PORT = process.env.PORT || 8081;
 const HOST = '0.0.0.0';
 
-https.createServer(options, app).listen(PORT, HOST, () => {
-  console.log(`Server läuft auf https://${HOST}:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server läuft auf http://${HOST}:${PORT}`);
 });

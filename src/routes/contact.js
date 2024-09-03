@@ -6,6 +6,7 @@ const { encrypt } = require("../utils/encryption");
 const multer = require("multer");
 const upload = multer();
 
+// E-Mail senden Funktion
 const sendEmail = async (req, res) => {
   const { salutation, name, email, company, message, privacy } = req.body;
 
@@ -16,16 +17,18 @@ const sendEmail = async (req, res) => {
   const encryptedMessage = encrypt(message);
   const timestamp = moment().toDate();
 
+  // Konfiguration für NodeMailer
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
     secure: false,
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.EMAIL_PASSWORD,
+      user: process.env.EMAIL, // Email-Adresse aus Umgebungsvariablen
+      pass: process.env.EMAIL_PASSWORD, // Passwort aus Umgebungsvariablen
     },
   });
 
+  // E-Mail an das Unternehmen
   const mailOptionsToYou = {
     from: email,
     to: process.env.EMAIL,
@@ -38,6 +41,7 @@ const sendEmail = async (req, res) => {
            <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail. Ihre Erstellung und ihre Zusendung wurde durch die Nutzung unseres auf unserer unternehmenseigenen Website befindlichen Kontaktformulars initiiert.</p>`,
   };
 
+  // Bestätigungsmail an den Absender
   const salutationFormatted = salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
   const mailOptionsToSender = {
     from: process.env.EMAIL,
@@ -49,6 +53,7 @@ const sendEmail = async (req, res) => {
   };
 
   try {
+    // E-Mails senden
     await transporter.sendMail(mailOptionsToYou);
     console.log("E-Mail an Sie erfolgreich gesendet");
 

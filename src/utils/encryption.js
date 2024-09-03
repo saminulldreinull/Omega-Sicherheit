@@ -1,11 +1,7 @@
 const crypto = require('crypto');
-const dotenv = require('dotenv');
-const path = require('path');
 
-dotenv.config({ path: path.resolve(__dirname, '../../.env') });
-
-const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
-const IV_LENGTH = 16;
+const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY; // Verwende die Umgebungsvariable direkt
+const IV_LENGTH = 16; // AES IV Länge
 
 function encrypt(text) {
     let iv = crypto.randomBytes(IV_LENGTH);
