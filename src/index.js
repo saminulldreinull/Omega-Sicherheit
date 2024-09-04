@@ -70,13 +70,18 @@ app.use(
   })
 );
 
-// CORS-Konfiguration
+// CORS-Konfiguration mit Optionen
 app.use(
   cors({
     origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'],
+    methods: ['GET', 'POST', 'OPTIONS'],  // Optionen hinzufügen, um Preflight-Anfragen zu erlauben
     credentials: true,
   })
 );
+
+// Middleware für JSON-Parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
@@ -85,10 +90,6 @@ app.use(cookieParser());
 app.get('/get-csrf-token', (req, res) => {
   res.json({ csrfToken: req.csrfToken() });
 });
-
-// Middleware für JSON-Parsing
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
 app.use(csurf({ cookie: true }));
