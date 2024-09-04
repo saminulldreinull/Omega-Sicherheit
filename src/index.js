@@ -78,20 +78,23 @@ app.use(
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
 
-// CSRF-Token-Route definieren - diese Route sollte nicht durch die CSRF-Middleware geschützt sein
-app.get('/get-csrf-token', (req, res) => {
-  res.json({ csrfToken: req.csrfToken() });
-});
-
 // Middleware für JSON-Parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Statische Dateien bereitstellen
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
 app.use(csurf({ cookie: true }));
 
 // Logging hinzufügen
 app.use(morgan('combined'));
+
+// CSRF-Token-Route definieren - diese Route sollte nach der CSRF-Middleware platziert werden
+app.get('/get-csrf-token', (req, res) => {
+  res.json({ csrfToken: req.csrfToken() });
+});
 
 // Rate Limiting für Anmelde- und Registrierungsrouten
 const limiter = rateLimit({
@@ -101,9 +104,6 @@ const limiter = rateLimit({
 });
 app.use('/admin/login', limiter);
 app.use('/admin/register', limiter);
-
-// Statische Dateien bereitstellen
-app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Root-Route hinzufügen
 app.get('/', (req, res) => {
@@ -115,14 +115,12 @@ const contactRoutes = require('./routes/contact');
 
 app.use('/contact', contactRoutes);
 
-// Fehlerbehandlung für CSRF-Fehler und allgemeine Fehler
+// Fehlerbehandlung für CSRF-Fehler
 app.use((err, req, res, next) => {
   if (err.code === 'EBADCSRFTOKEN') {
-    console.error('Ungültiger CSRF-Token:', err);  // CSRF-Fehler protokollieren
     res.status(403).send('Ungültiger CSRF-Token');
   } else {
-    console.error('Ein unerwarteter Fehler ist aufgetreten:', err);  // Allgemeine Fehler protokollieren
-    res.status(500).send('Interner Serverfehler');
+    next(err);
   }
 });
 
