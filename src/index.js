@@ -70,7 +70,7 @@ app.use(
 // CORS-Konfiguration
 app.use(
   cors({
-    origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com'], // Deine tatsächliche Domain hier angeben
+    origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'],
     credentials: true,
   })
 );
