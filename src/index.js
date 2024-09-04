@@ -53,6 +53,9 @@ app.use(
         'www.google-analytics.com',
         'https://region1.google-analytics.com',
         'https://www.googletagmanager.com',
+        'https://backend.omega-sicherheit.com',
+        'https://omega-sicherheit.com',
+        'https://www.omega-sicherheit.com',
       ],
       fontSrc: [
         "'self'",
