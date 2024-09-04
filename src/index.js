@@ -53,9 +53,6 @@ app.use(
         'www.google-analytics.com',
         'https://region1.google-analytics.com',
         'https://www.googletagmanager.com',
-        'https://backend.omega-sicherheit.com',
-        'https://omega-sicherheit.com',
-        'https://www.omega-sicherheit.com',
       ],
       fontSrc: [
         "'self'",
@@ -70,18 +67,13 @@ app.use(
   })
 );
 
-// CORS-Konfiguration mit Optionen
+// CORS-Konfiguration
 app.use(
   cors({
     origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'],
-    methods: ['GET', 'POST', 'OPTIONS'],  // Optionen hinzufügen, um Preflight-Anfragen zu erlauben
     credentials: true,
   })
 );
-
-// Middleware für JSON-Parsing
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
@@ -90,6 +82,10 @@ app.use(cookieParser());
 app.get('/get-csrf-token', (req, res) => {
   res.json({ csrfToken: req.csrfToken() });
 });
+
+// Middleware für JSON-Parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
 app.use(csurf({ cookie: true }));
@@ -119,12 +115,14 @@ const contactRoutes = require('./routes/contact');
 
 app.use('/contact', contactRoutes);
 
-// Fehlerbehandlung für CSRF-Fehler
+// Fehlerbehandlung für CSRF-Fehler und allgemeine Fehler
 app.use((err, req, res, next) => {
   if (err.code === 'EBADCSRFTOKEN') {
+    console.error('Ungültiger CSRF-Token:', err);  // CSRF-Fehler protokollieren
     res.status(403).send('Ungültiger CSRF-Token');
   } else {
-    next(err);
+    console.error('Ein unerwarteter Fehler ist aufgetreten:', err);  // Allgemeine Fehler protokollieren
+    res.status(500).send('Interner Serverfehler');
   }
 });
 
