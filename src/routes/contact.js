@@ -1,17 +1,17 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const nodemailer = require("nodemailer");
-const moment = require("moment");
-const { encrypt } = require("../utils/encryption");
-const multer = require("multer");
+const nodemailer = require('nodemailer');
+const moment = require('moment');
+const { encrypt } = require('../utils/encryption');
+const multer = require('multer');
 const upload = multer();
 
 // E-Mail senden Funktion
 const sendEmail = async (req, res) => {
   const { salutation, name, email, company, message, privacy } = req.body;
 
-  if (privacy !== "on") {
-    return res.status(400).send("Datenschutzerklärung muss akzeptiert werden.");
+  if (privacy !== 'on') {
+    return res.status(400).send('Datenschutzerklärung muss akzeptiert werden.');
   }
 
   const encryptedMessage = encrypt(message);
@@ -19,9 +19,9 @@ const sendEmail = async (req, res) => {
 
   // Konfiguration für NodeMailer
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    secure: process.env.SMTP_SECURE === 'true',
     auth: {
       user: process.env.EMAIL, // Email-Adresse aus Umgebungsvariablen
       pass: process.env.EMAIL_PASSWORD, // Passwort aus Umgebungsvariablen
@@ -30,11 +30,11 @@ const sendEmail = async (req, res) => {
 
   // E-Mail an das Unternehmen
   const mailOptionsToYou = {
-    from: email,
+    from: process.env.EMAIL,
     to: process.env.EMAIL,
     subject: `Nachricht von ${salutation} ${name} (${company})`,
     html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format(
-      "DD.MM.YYYY HH:mm:ss"
+      'DD.MM.YYYY HH:mm:ss'
     )} folgende Nachricht:</p>
            <p>${message}</p>
            <p>Email: ${email}</p>
@@ -42,11 +42,11 @@ const sendEmail = async (req, res) => {
   };
 
   // Bestätigungsmail an den Absender
-  const salutationFormatted = salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
+  const salutationFormatted = salutation === 'Herr' ? 'Sehr geehrter Herr' : 'Sehr geehrte Frau';
   const mailOptionsToSender = {
     from: process.env.EMAIL,
     to: email,
-    subject: "Ihre Nachricht an Omega Security GmbH",
+    subject: 'Ihre Nachricht an Omega Security GmbH',
     html: `<p>${salutationFormatted} ${name},</p>
            <p>wir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.</p>
            <p>Mit freundlichen Grüßen,<br>Omega Security GmbH</p>`,
@@ -55,20 +55,20 @@ const sendEmail = async (req, res) => {
   try {
     // E-Mails senden
     await transporter.sendMail(mailOptionsToYou);
-    console.log("E-Mail an Sie erfolgreich gesendet");
+    console.log('E-Mail an Sie erfolgreich gesendet');
 
     await transporter.sendMail(mailOptionsToSender);
-    console.log("Bestätigungs-E-Mail erfolgreich gesendet");
+    console.log('Bestätigungs-E-Mail erfolgreich gesendet');
 
-    res.status(200).send("E-Mail erfolgreich gesendet!");
+    res.status(200).send('E-Mail erfolgreich gesendet!');
   } catch (error) {
-    console.error("Fehler beim Senden der E-Mail:", error);
-    res.status(500).send("Fehler beim Senden der E-Mail.");
+    console.error('Fehler beim Senden der E-Mail:', error);
+    res.status(500).send('Fehler beim Senden der E-Mail.');
   }
 };
 
 // Öffentliche Route für das Kontaktformular
-router.post("/send-email", upload.none(), (req, res, next) => {
+router.post('/send-email', upload.none(), (req, res, next) => {
   // Hier wird der CSRF-Token validiert
   next();
 }, sendEmail);
