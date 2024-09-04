@@ -14,27 +14,31 @@ const app = express();
 // Sicherheitsheader hinzufügen
 app.use(helmet());
 
-// CORS-Konfiguration
-app.use(
-  cors({
+// Konfiguration für CORS
+const corsOptions = {
     origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'],
     methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'CSRF-Token', 'Authorization'],
     credentials: true,
-    allowedHeaders: ['Content-Type', 'CSRF-Token'], // Erlaube die notwendigen Header
-  })
-);
+};
+
+// CORS-Middleware aktivieren
+app.use(cors(corsOptions));
+
+// OPTIONS-Preflight-Anfragen für alle Routen zulassen
+app.options('*', cors(corsOptions));
 
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
-
-// Middleware für JSON-Parsing
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // CSRF-Token-Route definieren - diese Route sollte nicht durch die CSRF-Middleware geschützt sein
 app.get('/get-csrf-token', (req, res) => {
   res.json({ csrfToken: req.csrfToken() });
 });
+
+// Middleware für JSON-Parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
 app.use(csurf({ cookie: true }));

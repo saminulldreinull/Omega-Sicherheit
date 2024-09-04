@@ -14,6 +14,7 @@ const sendEmail = async (req, res) => {
     return res.status(400).send('Datenschutzerklärung muss akzeptiert werden.');
   }
 
+  const encryptedMessage = encrypt(message);
   const timestamp = moment().toDate();
 
   // Konfiguration für NodeMailer
