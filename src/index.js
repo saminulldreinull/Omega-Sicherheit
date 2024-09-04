@@ -17,33 +17,30 @@ app.use(helmet());
 // CORS-Konfiguration
 app.use(
   cors({
-    origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'],
-    methods: ['GET', 'POST', 'OPTIONS'], // Erlaube GET, POST und OPTIONS
-    allowedHeaders: ['Content-Type', 'CSRF-Token'], // Erlaube diese Header
-    credentials: true,
+    origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'], // Deine tatsächlichen Domains hier angeben
+    methods: ['GET', 'POST'], // Erlaubte Methoden
+    allowedHeaders: ['Content-Type', 'CSRF-Token'], // Erlaubte Header
+    credentials: true, // Cookie-basierte Authentifizierung zulassen
   })
 );
 
-// Handle Preflight-Requests separat
-app.options('*', cors());
-
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
-
-// Middleware für JSON-Parsing
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Logging hinzufügen
-app.use(morgan('combined'));
-
-// CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
-app.use(csurf({ cookie: true }));
 
 // CSRF-Token-Route definieren - diese Route sollte nicht durch die CSRF-Middleware geschützt sein
 app.get('/get-csrf-token', (req, res) => {
   res.json({ csrfToken: req.csrfToken() });
 });
+
+// Middleware für JSON-Parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
+app.use(csurf({ cookie: true }));
+
+// Logging hinzufügen
+app.use(morgan('combined'));
 
 // Rate Limiting für Anmelde- und Registrierungsrouten
 const limiter = rateLimit({
