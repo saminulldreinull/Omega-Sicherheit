@@ -78,20 +78,20 @@ app.use(
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
 
-// CSRF-Middleware hinzufügen
-app.use(csurf({ cookie: true }));
+// CSRF-Token-Route definieren - diese Route sollte nicht durch die CSRF-Middleware geschützt sein
+app.get('/get-csrf-token', (req, res) => {
+  res.json({ csrfToken: req.csrfToken() });
+});
 
 // Middleware für JSON-Parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
+app.use(csurf({ cookie: true }));
+
 // Logging hinzufügen
 app.use(morgan('combined'));
-
-// CSRF-Token-Route definieren
-app.get('/get-csrf-token', (req, res) => {
-  res.json({ csrfToken: req.csrfToken() });
-});
 
 // Rate Limiting für Anmelde- und Registrierungsrouten
 const limiter = rateLimit({
