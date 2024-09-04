@@ -14,23 +14,71 @@ const app = express();
 // Sicherheitsheader hinzufügen
 app.use(helmet());
 
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "'unsafe-eval'",
+        'cdn.jsdelivr.net',
+        'cdnjs.cloudflare.com',
+        'ajax.googleapis.com',
+        'maxcdn.bootstrapcdn.com',
+        'unpkg.com',
+        'stackpath.bootstrapcdn.com',
+        'code.jquery.com',
+        'www.googletagmanager.com',
+        'www.google-analytics.com',
+      ],
+      styleSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        'fonts.googleapis.com',
+        'cdnjs.cloudflare.com',
+        'maxcdn.bootstrapcdn.com',
+        'stackpath.bootstrapcdn.com',
+      ],
+      imgSrc: [
+        "'self'",
+        'data:',
+        'cdn.jsdelivr.net',
+        'cdnjs.cloudflare.com',
+        'www.google-analytics.com',
+      ],
+      connectSrc: [
+        "'self'",
+        'api.example.com',
+        'www.google-analytics.com',
+        'https://region1.google-analytics.com',
+        'https://www.googletagmanager.com',
+      ],
+      fontSrc: [
+        "'self'",
+        'fonts.gstatic.com',
+        'cdnjs.cloudflare.com',
+        'maxcdn.bootstrapcdn.com',
+      ],
+      objectSrc: ["'none'"],
+      mediaSrc: ["'self'"],
+      frameSrc: ["'none'"],
+    },
+  })
+);
+
 // CORS-Konfiguration
 app.use(
   cors({
-    origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'], // Deine tatsächlichen Domains hier angeben
-    methods: ['GET', 'POST'], // Erlaubte Methoden
-    allowedHeaders: ['Content-Type', 'CSRF-Token'], // Erlaubte Header
-    credentials: true, // Cookie-basierte Authentifizierung zulassen
+    origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'CSRF-Token'],
   })
 );
 
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
-
-// CSRF-Token-Route definieren - diese Route sollte nicht durch die CSRF-Middleware geschützt sein
-app.get('/get-csrf-token', (req, res) => {
-  res.json({ csrfToken: req.csrfToken() });
-});
 
 // Middleware für JSON-Parsing
 app.use(express.json());
@@ -38,6 +86,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // CSRF-Middleware hinzufügen - NUR für POST- oder geschützte Routen
 app.use(csurf({ cookie: true }));
+
+// CSRF-Token-Route definieren - diese Route sollte nicht durch die CSRF-Middleware geschützt sein
+app.get('/get-csrf-token', (req, res) => {
+  res.json({ csrfToken: req.csrfToken() });
+});
 
 // Logging hinzufügen
 app.use(morgan('combined'));
