@@ -17,14 +17,15 @@ const sendEmail = async (req, res) => {
   const timestamp = moment().toDate();
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+    host: process.env.SMTP_HOST, // Outlook SMTP Host
+    port: process.env.SMTP_PORT, // Outlook SMTP Port
+    secure: process.env.SMTP_SECURE === 'true', // Verwende `true` für SSL
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.EMAIL_PASSWORD,
+      user: process.env.EMAIL, // Deine E-Mail-Adresse
+      pass: process.env.EMAIL_PASSWORD, // Dein E-Mail-Passwort oder App-Passwort
     },
   });
+  
 
   const mailOptionsToYou = {
     from: email,
