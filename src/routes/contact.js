@@ -63,9 +63,6 @@ const sendEmail = async (req, res) => {
 };
 
 // Öffentliche Route für das Kontaktformular
-router.post("/send-email", upload.none(), (req, res, next) => {
-  // Hier wird der CSRF-Token validiert
-  next();
-}, sendEmail);
+router.post("/send-email", upload.none(), sendEmail);
 
 module.exports = router;
