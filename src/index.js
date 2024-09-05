@@ -14,7 +14,7 @@ const app = express();
 // Sicherheitsheader hinzufügen
 app.use(helmet());
 
-// CORS Middleware direkt nach helmet einfügen
+// CORS-Konfiguration sollte **vor** der CSRF-Konfiguration kommen
 const corsOptions = {
     origin: ['https://omega-sicherheit.com', 'https://www.omega-sicherheit.com', 'https://backend.omega-sicherheit.com'],
     methods: ['GET', 'POST', 'OPTIONS'],
@@ -24,15 +24,7 @@ const corsOptions = {
 
 // CORS-Middleware aktivieren
 app.use(cors(corsOptions));
-
-// OPTIONS-Preflight-Anfragen für alle Routen zulassen
-app.options('*', (req, res) => {
-    res.header('Access-Control-Allow-Origin', req.headers.origin);
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, CSRF-Token, Authorization');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.sendStatus(200);
-});
+app.options('*', cors(corsOptions)); // Preflight für alle Routen
 
 // Cookie Parser verwenden, um CSRF-Token in Cookies zu speichern
 app.use(cookieParser());
@@ -71,7 +63,6 @@ app.get('/', (req, res) => {
 
 // Beispielrouten
 const contactRoutes = require('./routes/contact');
-
 app.use('/contact', contactRoutes);
 
 // Fehlerbehandlung für CSRF-Fehler
