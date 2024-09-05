@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         jsonObject[key] = value;
       });
 
+      // Angepasster fetch-Aufruf ohne CSRF-Token
       fetch('/contact/send-email', {
         method: 'POST',
         headers: {
@@ -62,4 +63,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-//vercel
