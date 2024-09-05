@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Kontakt</title>
+  <meta name="description" content="Erhalten Sie individuelle Beratung und maßgeschneiderte Sicherheitslösungen von Omega Security GmbH in Berlin. Kontaktieren Sie uns einfach per E-Mail, Telefon oder WhatsApp für eine persönliche Beratung und Unterstützung. Erfahren Sie mehr über unsere Öffnungszeiten, unseren Standort und unsere umfassenden Sicherheitsdienste.">
   
   <!-- Favicon und Apple Touch Icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="images/favicomatic/apple-touch-icon-57x57.png" />
@@ -30,7 +32,6 @@
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
   
   <!-- Title and Stylesheets -->
-  <title>Kontakt</title>
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/ico.css">
@@ -141,50 +142,50 @@
         </div>
         
         <!-- Contact Form -->
-        <form id="contactForm" action="/contact/send-email" method="POST">
-          <input type="hidden" name="_csrf" id="csrfToken">
-          <div class="salutation-container">
-            <div class="name-content-container">
-              <div class="form-content-container">
+      <form id="contactForm">
+    <input type="hidden" name="_csrf" id="csrfToken">
+    <div class="salutation-container">
+        <div class="name-content-container">
+            <div class="form-content-container">
                 <label class="form-label" for="salutation">Anrede</label>
                 <select name="salutation" id="salutation" required>
-                  <option>Herr</option>
-                  <option>Frau</option>
+                    <option value="Herr">Herr</option>
+                    <option value="Frau">Frau</option>
                 </select>
-              </div>
-              <div class="form-content-container">
+            </div>
+            <div class="form-content-container">
                 <label class="form-label" for="name">Name</label>
-                <input class="text-input" type="text" id="name" name="name" autocomplete="name" required />
-              </div>
+                <input class="text-input" type="text" id="name" name="name" autocomplete="name" required/>
             </div>
-            <div class="form-content-container">
-              <label class="form-label" for="company">Unternehmen</label>
-              <input class="text-input" type="text" id="company" name="company" autocomplete="organization">
-            </div>
-            <div class="form-content-container">
-              <label class="form-label" for="email">E-Mail</label>
-              <input class="text-input" type="email" id="email" name="email" autocomplete="email" required>
-            </div>
-            <div class="form-content-container">
-              <label class="form-label" for="message">Nachricht</label>
-              <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
-            </div>
-            <div class="input-container-privacy">
-              <input type="checkbox" id="privacy" name="privacy" value="on" required />
-              <span class="approval-text">
+        </div>
+        <div class="form-content-container">
+            <label class="form-label" for="company">Unternehmen</label>
+            <input class="text-input" type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="form-content-container">
+            <label class="form-label" for="email">E-Mail</label>
+            <input class="text-input" type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="form-content-container">
+            <label class="form-label" for="message">Nachricht</label>
+            <textarea id="message" name="message" autocomplete="off" required placeholder="Ihre Nachricht hier ..."></textarea>
+        </div>
+        <div class="input-container-privacy">
+            <input type="checkbox" id="privacy" name="privacy" value="on" required/>
+            <span class="approval-text">
                 Ich stimme der
                 <a href="private_policy.html" target="_blank">Datenschutzerklärung</a>
                 zu.
-              </span>
-            </div>
-            <div class="form-button-container">
-              <button type="submit" class="form-button">
-                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Buton">
+            </span>
+        </div>
+        <div class="form-button-container">
+            <button type="submit" class="form-button">
+                <img class="button-icon" src="images/buttonArrow.svg" alt="Pfeil-Icon für Button">
                 Absenden
-              </button>
-            </div>
-          </div>
-        </form>
+            </button>
+        </div>
+    </div>
+</form>
       </div>
     </div>
   </section>
@@ -245,8 +246,8 @@
         <div class="col-md-2 ml-auto">
           <h3>ZERTIFIKATE</h3>
           <ul class="list-unstyled links certificate-list">
-            <li><a href="https://www.dekra-certification.de/de/din-77200-zertifizierung/"><img class="certificate" src="images/dekra_siegel1.png" alt="DEKRA Zertifikat 1"></a></li>
-            <li><a href="https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_siegel2.png" alt="DEKRA Zertifikat 2"></a></li>
+            <li><a href="https://www.dekra-certification.de/de/din-77200-zertifizierung"><img class="certificate" src="images/dekra_zertifizierungssiegel_din_77200.png" alt="DEKRA Zertifizierungssiegel DIN 77200-1 "></a></li>
+                        <li><a href="https://www.dekra-certification.de/de/iso-9001-zertifizierung/"><img class="certificate" src="images/dekra_zertifizierungssiegel_iso_9001.png" alt="DEKRA Zertifizierungssiegel ISO 9001"></a></li>
           </ul>
         </div>
       </div>

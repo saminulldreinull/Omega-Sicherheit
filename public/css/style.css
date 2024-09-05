@@ -5,6 +5,7 @@
 }
 
 body {
+    overflow-x: hidden;
     height: auto !important;
 }
 
@@ -88,6 +89,18 @@ video {
     height: 100vh;
     width: 100vw;
     font-weight: 800;
+}
+
+.section-heading {
+    width: 100px;
+    font-size: 12px;
+    color: rgb(129, 164, 205);
+    letter-spacing:4px;
+}
+
+.service-section-heading {
+    padding-right: 10px;
+    margin-left: 5%;
 }
 
 .explained-content {
@@ -305,7 +318,11 @@ body {
 .service-label-container {
     width: -moz-fit-content;
     width: fit-content;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.service-label {
+    font-size: clamp(20px,5vw,40px);
+    font-weight: 600;
 }
 
 .button-container {
@@ -397,6 +414,10 @@ body {
     height: 70vh;
 }
 
+.contact-section-heading {
+    margin-top: 40px;
+    margin-left: 5%;
+} 
 @media (max-width: 400px) {
     #contactForm {
         display: flex;
