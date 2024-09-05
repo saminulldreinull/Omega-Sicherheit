@@ -31,7 +31,7 @@ const sendEmail = async (req, res) => {
   const mailOptionsToYou = {
     from: process.env.EMAIL, // Von der authentifizierten E-Mail-Adresse
     to: process.env.EMAIL,
-    subject: `Nachricht von ${salutation} ${name} (${company})`,
+    subject: `Kontaktformular - Nachricht von ${salutation} ${name} (${company})`,
     html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format(
       "DD.MM.YYYY HH:mm:ss"
     )} folgende Nachricht:</p>
