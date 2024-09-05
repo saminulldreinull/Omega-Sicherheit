@@ -18,17 +18,18 @@ const sendEmail = async (req, res) => {
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST, // Outlook SMTP Host
-    port: process.env.SMTP_PORT, // Outlook SMTP Port
+    port: parseInt(process.env.SMTP_PORT), // Outlook SMTP Port
     secure: process.env.SMTP_SECURE === 'true', // Verwende `true` für SSL
     auth: {
       user: process.env.EMAIL, // Deine E-Mail-Adresse
       pass: process.env.EMAIL_PASSWORD, // Dein E-Mail-Passwort oder App-Passwort
     },
   });
-  
+
+  const salutationFormatted = salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
 
   const mailOptionsToYou = {
-    from: email,
+    from: process.env.EMAIL, // Von der authentifizierten E-Mail-Adresse
     to: process.env.EMAIL,
     subject: `Nachricht von ${salutation} ${name} (${company})`,
     html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format(
@@ -39,9 +40,8 @@ const sendEmail = async (req, res) => {
            <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail. Ihre Erstellung und ihre Zusendung wurde durch die Nutzung unseres auf unserer unternehmenseigenen Website befindlichen Kontaktformulars initiiert.</p>`,
   };
 
-  const salutationFormatted = salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
   const mailOptionsToSender = {
-    from: process.env.EMAIL,
+    from: process.env.EMAIL, // Von der authentifizierten E-Mail-Adresse
     to: email,
     subject: "Ihre Nachricht an Omega Security GmbH",
     html: `<p>${salutationFormatted} ${name},</p>
@@ -50,9 +50,11 @@ const sendEmail = async (req, res) => {
   };
 
   try {
+    // E-Mail an dich senden
     await transporter.sendMail(mailOptionsToYou);
     console.log("E-Mail an Sie erfolgreich gesendet");
 
+    // Bestätigungs-E-Mail an den Absender senden
     await transporter.sendMail(mailOptionsToSender);
     console.log("Bestätigungs-E-Mail erfolgreich gesendet");
 
