@@ -1,7 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const https = require('https');
-const fs = require('fs');
 const path = require('path');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
@@ -89,20 +87,15 @@ app.use('/admin/register', limiter);
 // Statische Dateien bereitstellen
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-const options = {
-  key: fs.readFileSync(path.join(__dirname, '../server.key')),
-  cert: fs.readFileSync(path.join(__dirname, '../server.cert')),
-};
-
 // Beispielrouten
 const contactRoutes = require('./routes/contact');
 
 app.use('/contact', contactRoutes);
 
-// HTTPS-Server starten
+// HTTP-Server starten
 const PORT = process.env.PORT || 5500;
 const HOST = '0.0.0.0';
 
-https.createServer(options, app).listen(PORT, HOST, () => {
-  console.log(`Server läuft auf https://${HOST}:${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server läuft auf http://${HOST}:${PORT}`);
 });
