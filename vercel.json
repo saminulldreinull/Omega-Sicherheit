@@ -20,6 +20,46 @@
       "dest": "/public/alarmaufschaltung.html"
     },
     {
+      "src": "/baustellenbewachung",
+      "dest": "/public/baustellenbewachung.html"
+    },
+    {
+      "src": "/doorman",
+      "dest": "/public/doorman.html"
+    },
+    {
+      "src": "/empfangs-pfortendienst",
+      "dest": "/public/empfangs-pfortendienst.html"
+    },
+    {
+      "src": "/gemeinschaftsunterkuenfte",
+      "dest": "/public/gemeinschaftsunterkuenfte.html"
+    },
+    {
+      "src": "/revier_-streifendienst",
+      "dest": "/public/revier_-streifendienst.html"
+    },
+    {
+      "src": "/veranstaltungsschutz",
+      "dest": "/public/veranstaltungsschutz.html"
+    },
+    {
+      "src": "/werk_-objektschutz",
+      "dest": "/public/werk_-objektschutz.html"
+    },
+    {
+      "src": "/impressum",
+      "dest": "/public/impressum.html"
+    },
+    {
+      "src": "/private_policy",
+      "dest": "/public/private_policy.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/public/contact.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/public/$1"
     }
