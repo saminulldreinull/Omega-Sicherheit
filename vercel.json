@@ -16,6 +16,10 @@
       "dest": "src/index.js"
     },
     {
+      "src": "/alarmaufschaltung",
+      "dest": "/public/alarmaufschaltung.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/public/$1"
     }
