@@ -1,3 +1,7 @@
+function closeAlert() {
+  document.getElementById('alert-container').style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   var contactForm = document.getElementById('contactForm');
   if (contactForm) {
@@ -54,13 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    function closeAlert() {
-      document.getElementById('alert-container').style.display = 'none';
-    }
-
     document.querySelectorAll('.close').forEach(function(closeBtn) {
       closeBtn.addEventListener('click', closeAlert);
     });
   }
 });
-//vercel 
