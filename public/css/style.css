@@ -79,7 +79,7 @@ video {
     }
 }
 
-.explained-section {
+.about-us {
     overflow-x: hidden;
     overflow-y: hidden;
     margin-top: 10vh;
@@ -240,7 +240,7 @@ video {
     }
 }
 #service-area,
-.explained-section,
+.about-us,
 #contact-section,
 .pin-spacer,
 body {
