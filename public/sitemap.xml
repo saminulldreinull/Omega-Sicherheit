@@ -9,65 +9,77 @@
     <url>
         <loc>https://www.omega-sicherheit.com/</loc>
         <lastmod>2024-08-10T22:57:07+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>1.00</priority>
     </url>
     
     <!-- Leistungsseiten -->
     <url>
-        <loc>https://www.omega-sicherheit.com/alarmaufschaltung.html</loc>
+        <loc>https://www.omega-sicherheit.com/alarmaufschaltung</loc>
         <lastmod>2024-08-09T18:29:37+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/baustellenbewachung.html</loc>
+        <loc>https://www.omega-sicherheit.com/baustellenbewachung</loc>
         <lastmod>2024-08-09T18:29:37+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/doorman.html</loc>
+        <loc>https://www.omega-sicherheit.com/doorman</loc>
         <lastmod>2024-08-09T18:29:37+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/empfangs-pfortendienst.html</loc>
+        <loc>https://www.omega-sicherheit.com/empfangs-pfortendienst</loc>
         <lastmod>2024-08-09T18:29:38+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/gemeinschaftsunterkuenfte.html</loc>
+        <loc>https://www.omega-sicherheit.com/gemeinschaftsunterkuenfte</loc>
         <lastmod>2024-08-09T18:29:39+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/revier-_streifendienst.html</loc>
+        <loc>https://www.omega-sicherheit.com/revier-_streifendienst</loc>
         <lastmod>2024-08-09T18:29:39+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/veranstaltungsschutz.html</loc>
+        <loc>https://www.omega-sicherheit.com/veranstaltungsschutz</loc>
         <lastmod>2024-08-09T18:29:39+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/werk_-objektschutz.html</loc>
+        <loc>https://www.omega-sicherheit.com/werk_-objektschutz</loc>
         <lastmod>2024-08-09T18:29:39+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     
     <!-- Kontakt- und rechtliche Seiten -->
     <url>
-        <loc>https://www.omega-sicherheit.com/contact.html</loc>
+        <loc>https://www.omega-sicherheit.com/contact</loc>
         <lastmod>2024-08-09T18:29:38+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/private_policy.html</loc>
+        <loc>https://www.omega-sicherheit.com/private_policy</loc>
         <lastmod>2024-08-09T18:29:37+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://www.omega-sicherheit.com/impressum.html</loc>
+        <loc>https://www.omega-sicherheit.com/impressum</loc>
         <lastmod>2024-08-09T18:29:36+00:00</lastmod>
+        <changefreq>yearly</changefreq>
         <priority>0.80</priority>
     </url>
 
