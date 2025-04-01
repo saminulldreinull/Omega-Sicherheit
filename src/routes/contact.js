@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const nodemailer = require("nodemailer");
 const moment = require("moment");
-const { encrypt } = require("../utils/encryption");
 const multer = require("multer");
 const upload = multer();
+const { encrypt } = require("../utils/encryption");
+const getAccessToken = require("../utils/graphAuth");
+const axios = require("axios");
 
 const sendEmail = async (req, res) => {
   const { salutation, name, email, company, message, privacy } = req.body;
@@ -16,56 +17,68 @@ const sendEmail = async (req, res) => {
   const encryptedMessage = encrypt(message);
   const timestamp = moment().toDate();
 
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST, // Outlook SMTP Host
-    port: parseInt(process.env.SMTP_PORT), // Outlook SMTP Port
-    secure: process.env.SMTP_SECURE === 'true', // Verwende `true` für SSL
-    auth: {
-      user: process.env.EMAIL, // Deine E-Mail-Adresse
-      pass: process.env.EMAIL_PASSWORD, // Dein E-Mail-Passwort oder App-Passwort
-    },
-  });
+  const accessToken = await getAccessToken();
+
+  const mailPayloadToYou = {
+    message: {
+      subject: `Kontaktformular - Nachricht von ${salutation} ${name} (${company})`,
+      body: {
+        contentType: "HTML",
+        content: `
+          <p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format("DD.MM.YYYY HH:mm:ss")}:</p>
+          <p>${message}</p>
+          <p>Email: ${email}</p>
+          <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail über das Kontaktformular.</p>
+        `
+      },
+      toRecipients: [
+        {
+          emailAddress: {
+            address: process.env.EMAIL_RECEIVER
+          }
+        }
+      ]
+    }
+  };
 
   const salutationFormatted = salutation === "Herr" ? "Sehr geehrter Herr" : "Sehr geehrte Frau";
 
-  const mailOptionsToYou = {
-    from: process.env.EMAIL, // Von der authentifizierten E-Mail-Adresse
-    to: process.env.EMAIL,
-    subject: `Kontaktformular - Nachricht von ${salutation} ${name} (${company})`,
-    html: `<p>${salutation} ${name} <br>(Unternehmen: ${company})<br> schrieb am ${moment(timestamp).format(
-      "DD.MM.YYYY HH:mm:ss"
-    )} folgende Nachricht:</p>
-           <p>${message}</p>
-           <p>Email: ${email}</p>
-           <p style="font-size: 10px;">Dies ist eine automatisch erstellte Mail. Ihre Erstellung und ihre Zusendung wurde durch die Nutzung unseres auf unserer unternehmenseigenen Website befindlichen Kontaktformulars initiiert.</p>`,
-  };
-
-  const mailOptionsToSender = {
-    from: process.env.EMAIL, // Von der authentifizierten E-Mail-Adresse
-    to: email,
-    subject: "Ihre Nachricht an Omega Security GmbH",
-    html: `<p>${salutationFormatted} ${name},</p>
-           <p>wir haben Ihre Nachricht erhalten und werden uns in Kürze bei Ihnen melden.</p>
-           <p>Mit freundlichen Grüßen,<br>Omega Security GmbH</p>`,
+  const mailPayloadToSender = {
+    message: {
+      subject: "Ihre Nachricht an Omega Security GmbH",
+      body: {
+        contentType: "HTML",
+        content: `
+          <p>${salutationFormatted} ${name},</p>
+          <p>wir haben Ihre Nachricht erhalten und melden uns in Kürze.</p>
+          <p>Mit freundlichen Grüßen,<br>Omega Security GmbH</p>
+        `
+      },
+      toRecipients: [
+        {
+          emailAddress: {
+            address: email
+          }
+        }
+      ]
+    }
   };
 
   try {
-    // E-Mail an dich senden
-    await transporter.sendMail(mailOptionsToYou);
-    console.log("E-Mail an Sie erfolgreich gesendet");
+    const headers = {
+      Authorization: `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    };
 
-    // Bestätigungs-E-Mail an den Absender senden
-    await transporter.sendMail(mailOptionsToSender);
-    console.log("Bestätigungs-E-Mail erfolgreich gesendet");
+    await axios.post(`https://graph.microsoft.com/v1.0/users/${process.env.EMAIL_SENDER}/sendMail`, mailPayloadToYou, { headers });
+    await axios.post(`https://graph.microsoft.com/v1.0/users/${process.env.EMAIL_SENDER}/sendMail`, mailPayloadToSender, { headers });
 
     res.status(200).send("E-Mail erfolgreich gesendet!");
   } catch (error) {
-    console.error("Fehler beim Senden der E-Mail:", error);
-    res.status(500).send("Fehler beim Senden der E-Mail.");
+    console.error("Fehler beim Senden über Graph API:", error.message);
+    res.status(500).send("Fehler beim E-Mail-Versand");
   }
 };
 
-// Öffentliche Route für das Kontaktformular
 router.post("/send-email", upload.none(), sendEmail);
-
 module.exports = router;

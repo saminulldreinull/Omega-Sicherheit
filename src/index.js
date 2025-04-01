@@ -1,4 +1,10 @@
 require('dotenv').config();
+
+if (!process.env.AZURE_CLIENT_ID || !process.env.AZURE_CLIENT_SECRET) {
+  console.warn("⚠️  .env konnte nicht geladen werden oder ENV-Variablen fehlen!");
+} else {
+  console.log("✅ .env erfolgreich geladen");
+}
 const express = require('express');
 const path = require('path');
 const helmet = require('helmet');
