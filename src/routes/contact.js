@@ -19,7 +19,7 @@ const sendEmail = async (req, res) => {
 
   const accessToken = await getAccessToken();
 
-  const mailPayloadToYou = {
+  const mailPayloadToOmega = {
     message: {
       subject: `Kontaktformular - Nachricht von ${salutation} ${name} (${company})`,
       body: {
@@ -34,7 +34,7 @@ const sendEmail = async (req, res) => {
       toRecipients: [
         {
           emailAddress: {
-            address: process.env.EMAIL_RECEIVER
+            address: process.env.EMAIL_SENDER // Omega bekommt die Anfrage
           }
         }
       ]
@@ -57,7 +57,7 @@ const sendEmail = async (req, res) => {
       toRecipients: [
         {
           emailAddress: {
-            address: email
+            address: email // Der Kunde bekommt die Bestätigung
           }
         }
       ]
@@ -70,8 +70,9 @@ const sendEmail = async (req, res) => {
       'Content-Type': 'application/json'
     };
 
-    await axios.post(`https://graph.microsoft.com/v1.0/users/${process.env.EMAIL_SENDER}/sendMail`, mailPayloadToYou, { headers });
-    await axios.post(`https://graph.microsoft.com/v1.0/users/${process.env.EMAIL_SENDER}/sendMail`, mailPayloadToSender, { headers });
+    // Sende beide E-Mails über /me/sendMail, da persönlicher Outlook-Account
+    await axios.post(`https://graph.microsoft.com/v1.0/me/sendMail`, mailPayloadToOmega, { headers });
+    await axios.post(`https://graph.microsoft.com/v1.0/me/sendMail`, mailPayloadToSender, { headers });
 
     res.status(200).send("E-Mail erfolgreich gesendet!");
   } catch (error) {
