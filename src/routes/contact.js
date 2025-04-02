@@ -1,5 +1,3 @@
-const express = require("express");
-const router = express.Router();
 const moment = require("moment");
 const multer = require("multer");
 const upload = multer();
@@ -7,7 +5,20 @@ const { encrypt } = require("../utils/encryption");
 const getAccessToken = require("../utils/graphAuth");
 const axios = require("axios");
 
-const sendEmail = async (req, res) => {
+module.exports = async (req, res) => {
+  // Nur POST akzeptieren
+  if (req.method !== "POST") {
+    return res.status(405).send("Method Not Allowed");
+  }
+
+  // Parsen des Form-Data (falls nötig)
+  await new Promise((resolve, reject) => {
+    upload.none()(req, res, (err) => {
+      if (err) reject(err);
+      else resolve();
+    });
+  });
+
   const { salutation, name, email, company, message, privacy } = req.body;
 
   if (privacy !== "on") {
@@ -95,6 +106,3 @@ const sendEmail = async (req, res) => {
     res.status(500).send("Fehler beim E-Mail-Versand");
   }
 };
-
-router.post("/send-email", upload.none(), sendEmail);
-module.exports = router;
